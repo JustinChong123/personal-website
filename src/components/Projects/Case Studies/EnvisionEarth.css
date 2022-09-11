@@ -1,0 +1,176 @@
+.envisionEarthCover {
+    height: 100vh;
+    color: black;
+    background-color: #C5E0E7;
+    font-family: 'Raleway', sans-serif;
+}
+
+.envisionEarthCover h1 {
+    font-weight: 800;
+    font-size: 5vw;
+    margin-top: 15vh;
+    margin-left: 13vw;
+    margin-bottom: 1vh;
+}
+
+.envisionEarthCover h2 {
+    font-weight: 600;
+    font-size: 2vw;
+    width: 33vw;
+    line-height: 6vh;
+    margin-left: 13vw;
+    margin-top: 7vh;
+}
+
+.envisionEarthCover h3 {
+    font-weight: 600;
+    font-size: 1.5vw;
+    display: inline;
+    padding: 1vh 1.5vw;
+    line-height: 6vh;
+    margin-left: 13vw;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+.envisionEarthCover img {
+    position: absolute;
+    margin-left: 52vw;
+    margin-top: -48vh;
+}
+
+#envisionEarth1 {
+    margin-left: 15vw;
+    margin-top: 5vh;
+}
+
+#envisionEarth2 {
+    margin-left: 19vw;
+    margin-top: 5vh;
+}
+
+#envisionEarth3 {
+    margin-left: 13vw;
+    margin-top: 5vh;
+}
+
+#envisionEarth4 {
+    margin-left: 18vw;
+    margin-top: 5vh;
+}
+
+#envisionEarth5 {
+    margin-left: 18vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth6 {
+    margin-left: 18vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth7 {
+    margin-left: 11.4vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth8 {
+    margin-left: 18vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth9 {
+    margin-left: 18vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth10 {
+    margin-left: 16.5vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth11 {
+    margin-left: 17vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth12 {
+    margin-left: 17vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth13 {
+    margin-left: 17vw;
+    margin-top: 1vh;
+}
+
+#envisionEarth14 {
+    margin-left: 19vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth15 {
+    margin-left: 19vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth16 {
+    margin-left: 19vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth17 {
+    margin-left: 19vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth18 {
+    margin-left: 13vw;
+    margin-top: 2vh;
+}
+
+#envisionEarth19 {
+    margin-left: 9vw;
+    margin-top: 2vh;
+}
+
+#envisionEarth20 {
+    margin-left: 14vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth21 {
+    margin-left: 17vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth22 {
+    margin-left: 10vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth23 {
+    margin-left: 17vw;
+    margin-top: 5vh;
+}
+
+#envisionEarth24 {
+    margin-left: 17vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth25 {
+    margin-left: 17vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth26 {
+    margin-left: 17vw;
+    margin-top: 7vh;
+}
+
+#envisionEarth27 {
+    margin-left: 11vw;
+    margin-top: 7vh;
+    margin-bottom: 20vh;
+}

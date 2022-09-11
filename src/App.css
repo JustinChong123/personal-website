@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Intro {
   color: white;
+  font-family: 'Raleway', sans-serif;
+  margin: 5vh 5vw;
 }
 
-.App-link {
-  color: #61dafb;
+.Intro > h1 {
+  font-size: 5vw;
+  font-weight: 800;
+  margin: 2vh 0vw;
+  display: inline;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Intro > h2 {
+  font-size: 2.5vw;
+  font-weight: 800;
+  width: 55%;
+  letter-spacing: 0.2px;
+}
+
+#linkedinLogo {
+  float: left;
+}
+
+#githubLogo {
+  float: left;
+  margin-left: 1.5%;
+}
+
+.Intro > h3 {
+  font-weight: 600;
+  font-size: 1.5vw;
+  margin: 0vh 0.5vw;
+  float: left;
+}
+
+h3 > a {
+  color: white;
+  text-decoration: none;
+}
+
+.Intro a:hover {
+  color: rgb(71, 187, 223);
+}
+
+.pinkText {
+  color: #DB62B8;
+}
+
+.blueText {
+  color: #99E9FC;
+}
+
+#abstractShapes {
+  position: absolute;
+  top: -40px;
+  right: -50px;
+  z-index: -1;
+}
+
+body {
+  background-color: black;
 }

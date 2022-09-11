@@ -1,0 +1,123 @@
+.projects {
+    margin: 20vh 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 7vh;
+    column-gap: 4vw;
+}
+
+.projects div {
+    color: black;
+    font-family: 'Raleway', sans-serif;
+    border: 3.5px solid black;
+    padding: 2vh 2vw;
+    width: 33vw;
+    min-width: 400px;
+    height: 45vh;
+    box-shadow: 8px 8px black, 10px 10px white;
+}
+
+.projects a {
+    text-decoration: none;
+}
+
+.projects div:hover {
+    cursor: pointer;
+    box-shadow: 10px 10px white;
+}
+
+/* Name of Project */
+.projects div h3 {
+    font-weight: 600;
+    font-size: 1.2vw;
+    margin-bottom: 0vh;
+}
+
+/* Project Description */
+.projects div h2 {
+    font-weight: 800;
+    font-size: 2vw;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    line-height: 5vh;
+}
+
+/* Project Role */
+.projects div h4 {
+    color: white;
+    background-color: black;
+    font-weight: 800;
+    font-size: 1vw;
+    border: 2px solid black;
+    display: inline;
+    padding: 0.6vh 1vw;
+    border-radius: 40px;
+}
+
+#fitwitMockup {
+    position: absolute;
+    margin-left: 1vw;
+}
+
+#chronicleMockup {
+    position: absolute;
+    margin-left: -2vw;
+    margin-top: -4.5vh;
+}
+
+#budgetBalloonMockup {
+    position: absolute;
+    margin-left: 2.5vw;
+}
+
+#ipathMockup {
+    position: absolute;
+    margin-left: 2.5vw;
+}
+
+#envisionEarthMockup {
+    position: absolute;
+    margin-left: -1.5vw;
+}
+
+#dartmouthPathfinderMockup {
+    position: absolute;
+    margin-left: -3vw;
+    margin-top: 4.5vh;
+}
+
+#personalWebsiteMockup {
+    position: absolute;
+    margin-left: -3.5vw;
+    margin-top: 4.5vh;
+}
+
+/* Tile Gradients */
+.projects .fitkitch {
+    background-image: linear-gradient(to bottom left, #F5A879, #C37DD5)
+}
+
+.projects .chronicle {
+    background-image: linear-gradient(to bottom left, #FCE77C, #F48A9D)
+}
+
+.projects .budgetBalloon {
+    background-image: linear-gradient(to bottom left, #F4899E, #9784F2)
+}
+
+.projects .ipath {
+    background-image: linear-gradient(to bottom left, #F8C37A, #E777BD)
+}
+
+.projects .envisionEarth {
+    background-image: linear-gradient(to bottom left, #D487BB, #8D98FA)
+}
+
+.projects .dartmouthPathfinder {
+    background-image: linear-gradient(to bottom left, #F2A991, #BB8DD1)
+}
+
+.projects .personalWebsite {
+    background-image: linear-gradient(to bottom left, #c894c2, #a394e8)
+}

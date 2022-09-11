@@ -1,0 +1,186 @@
+.ipathCover {
+    height: 100vh;
+    color: white;
+    background-color: #2C8784;
+    font-family: 'Raleway', sans-serif;
+}
+
+.ipathCover h1 {
+    font-weight: 800;
+    font-size: 5vw;
+    margin-top: 15vh;
+    margin-left: 13vw;
+    margin-bottom: 1vh;
+}
+
+.ipathCover h2 {
+    font-weight: 600;
+    font-size: 2vw;
+    width: 33vw;
+    line-height: 6vh;
+    margin-left: 13vw;
+    margin-top: 7vh;
+}
+
+.ipathCover h3 {
+    font-weight: 600;
+    font-size: 1.5vw;
+    display: inline;
+    padding: 1vh 1.5vw;
+    line-height: 6vh;
+    margin-left: 13vw;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+.ipathCover img {
+    position: absolute;
+    margin-left: 50vw;
+    margin-top: -63vh;
+}
+
+#ipath1 {
+    margin-left: 13vw;
+    margin-top: 8vh;
+}
+
+#ipath2 {
+    margin-left: 16vw;
+    margin-top: 7vh;
+}
+
+#ipath3 {
+    margin-left: 16.7vw;
+    margin-top: 7vh;
+}
+
+#ipath4 {
+    margin-left: 7vw;
+    margin-top: 7vh;
+}
+
+#ipath5 {
+    margin-left: 14vw;
+    margin-top: 7vh;
+}
+
+#ipath6 {
+    margin-left: 14vw;
+    margin-top: 7vh;
+}
+
+#ipath7 {
+    margin-left: 13.3vw;
+    margin-top: 7vh;
+}
+
+#ipath8 {
+    margin-left: 11.2vw;
+    margin-top: 7vh;
+}
+
+#ipath9 {
+    margin-left: 6.5vw;
+    margin-top: 7vh;
+}
+
+#ipath10 {
+    margin-left: 14vw;
+    margin-top: 7vh;
+}
+
+#ipath11 {
+    margin-left: 14vw;
+    margin-top: 3vh;
+}
+
+#ipath12 {
+    margin-left: 14vw;
+    margin-top: 7vh;
+}
+
+#ipath13 {
+    margin-left: 14vw;
+    margin-top: 7vh;
+}
+
+#ipath14 {
+    margin-left: 14vw;
+    margin-top: 7vh;
+}
+
+#ipath15 {
+    margin-left: 14vw;
+    margin-top: 2vh;
+}
+
+#ipath16 {
+    margin-left: 13.5vw;
+    margin-top: 9vh;
+}
+
+#ipath17 {
+    margin-left: 13.5vw;
+    margin-top: 7vh;
+}
+
+#ipath18 {
+    margin-left: 13.5vw;
+    margin-top: 7vh;
+}
+
+#ipath19 {
+    margin-left: 10vw;
+    margin-top: 7vh;
+}
+
+#ipath20 {
+    margin-left: 6vw;
+    margin-top: 2vh;
+}
+
+#ipath21 {
+    margin-left: 4vw;
+    margin-top: 2vh;
+}
+
+#ipath22 {
+    margin-left: 20vw;
+    margin-top: 9vh;
+}
+
+#ipath23 {
+    margin-left: 15vw;
+    margin-top: 7vh;
+}
+
+#ipath24 {
+    margin-left: 10vw;
+    margin-top: 7vh;
+}
+
+#ipath25 {
+    margin-left: 15vw;
+    margin-top: 7vh;
+}
+
+#ipath26 {
+    margin-left: 15vw;
+    margin-top: 7vh;
+}
+
+#ipath27 {
+    margin-left: 15vw;
+    margin-top: 7vh;
+}
+
+#ipath28 {
+    margin-left: 15vw;
+    margin-top: 7vh;
+}
+
+#ipath29 {
+    margin-left: 8.5vw;
+    margin-top: 7vh;
+    margin-bottom: 20vh;
+}

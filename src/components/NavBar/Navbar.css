@@ -1,0 +1,112 @@
+.Navbar {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 2vw;
+    font-weight: 800;
+    text-decoration: none;
+    margin-left: 5vw;
+    color: white;
+}
+
+/* Group of Nav Buttons */
+.navButtons {
+    display: flex;
+    align-items: center;
+    margin: 5vh 1vw;
+    list-style: none;
+}
+
+/* Nav Button */
+.navButtons > li {
+    margin: 0vh 1vw;
+}
+
+.navButtons a, #email-me-button, #resume-download-button {
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1vw;
+    font-weight: 800;
+    background-color: white;
+    color: black;
+    border: 1.5px solid black;
+    border-radius: 7px;
+    padding: 1.3vh 2vw;
+    width: 10vw;
+}
+
+#about-me-button {
+    box-shadow: 3px 3px #DB5A27;
+}
+
+#email-me-button {
+    box-shadow: 3px 3px #DB62B8;
+}
+
+#resume-download-button {
+    box-shadow: 3px 3px #7932C7;
+}
+
+#about-me-button:hover {
+    box-shadow: 3px 3px white;
+    background-color: #DB5A27;
+    color: white;
+}
+
+#email-me-button:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px white;
+    background-color: #DB62B8;
+    color: white;
+}
+
+#resume-download-button:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px white;
+    background-color: #7932C7;
+    color: white;
+}
+
+#dropdownItemSWE {
+    background-color: #160C59;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    border-radius: 7px 7px 0px 0px;
+    border-bottom: 1px solid #160C59;
+}
+
+#dropdownItemDesign {
+    background-color: #160C59;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    border-radius: 0px;
+    border-top: 1px solid #160C59;
+    border-bottom: 1px solid #160C59;
+}
+
+#dropdownItemPM {
+    background-color: #160C59;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    border-radius: 0px 0px 7px 7px;
+    border-top: 1px solid #160C59;
+}
+
+#dropdownItemSWE:hover {
+    background-color: gray;
+}
+
+#dropdownItemDesign:hover {
+    background-color: gray;
+}
+
+#dropdownItemPM:hover {
+    background-color: gray;
+}

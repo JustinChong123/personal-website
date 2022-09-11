@@ -1,0 +1,55 @@
+.Footer {
+    color: black;
+    background-color: white;
+    height: 25vh;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.Footer a {
+    text-decoration: none;
+    color: black;
+}
+
+.Footer a:hover {
+    color: blue;
+}
+
+#footer-resume:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.Footer h4 {
+    font-weight: 600;
+    font-size: 1.3vw;
+    margin-top: 0px;
+}
+
+.Footer h3 {
+    font-weight: 800;
+    font-size: 2vw;
+    display: inline;
+    background-image: linear-gradient(to right, #9083E9, #BA73CA, #E367AB, #E05978, #DB4D4C);
+    background-clip: text;
+    color: transparent;
+}
+
+.subitems-1, .subitems-2 {
+    display: flex;
+    column-gap: 3vw;
+    width: 30vw;
+}
+
+.items-1, .items-2 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0vh;
+    width: 20vw;
+}
+
+#footer-email-me:hover {
+    cursor: pointer;
+    color: blue;
+}

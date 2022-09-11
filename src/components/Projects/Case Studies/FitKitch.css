@@ -1,0 +1,140 @@
+.fitkitchCover {
+    height: 100vh;
+    background-color: #F5F2EE;
+    font-family: 'Raleway', sans-serif;
+}
+
+.fitkitchCover h1 {
+    font-weight: 800;
+    font-size: 5vw;
+    margin-top: 15vh;
+    margin-left: 13vw;
+    margin-bottom: 1vh;
+}
+
+.fitkitchCover h2 {
+    font-weight: 600;
+    font-size: 2vw;
+    width: 30vw;
+    line-height: 6vh;
+    margin-left: 13vw;
+    margin-top: 7vh;
+}
+
+.fitkitchCover h3 {
+    color: black;
+    font-weight: 600;
+    font-size: 1.5vw;
+    display: inline;
+    padding: 1vh 1.5vw;
+    line-height: 6vh;
+    margin-left: 13vw;
+    border: 2px solid black;
+    border-radius: 50px;
+}
+
+.fitkitchCover img {
+    position: absolute;
+    margin-left: 60vw;
+    margin-top: -50vh;
+}
+
+#fitkitch2 {
+    margin-left: 10vw;
+    margin-top: 4vh;
+}
+
+#fitkitch3 {
+    margin-left: 10vw;
+    margin-top: 2vh;
+}
+
+#fitkitch4 {
+    margin-left: 9vw;
+    margin-top: 0vh;
+}
+
+#fitkitch5 {
+    margin-left: 9vw;
+}
+
+#fitkitch6 {
+    margin-left: 9vw;
+    margin-top: 5vh;
+}
+
+#fitkitch7 {
+    margin-left: 9vw;
+    margin-top: 5vh;
+}
+
+#fitkitch8 {
+    margin-left: 9.5vw;
+    margin-top: 5vh;
+}
+
+#fitkitch9 {
+    margin-left: 9.5vw;
+    margin-top: 5vh;
+}
+
+#fitkitch10 {
+    margin-left: 8vw;
+    margin-top: 0vh;
+}
+
+#fitkitch11 {
+    margin-left: 8vw;
+    margin-top: 0vh;
+}
+
+#fitkitch12 {
+    margin-left: 8vw;
+    margin-top: 0vh;
+}
+
+#fitkitch13 {
+    margin-left: 8vw;
+    margin-top: 0vh;
+}
+
+#fitkitch14 {
+    margin-left: 8vw;
+    margin-top: 5vh;
+}
+
+#fitkitch15 {
+    margin-left: 8vw;
+    margin-top: 5vh;
+}
+
+#fitkitch16 {
+    margin-left: 8vw;
+    margin-top: 5vh;
+}
+
+#fitkitch17 {
+    margin-left: 6vw;
+    margin-top: 5vh;
+}
+
+#fitkitch18 {
+    margin-left: 6vw;
+    margin-top: 2vh;
+}
+
+#fitkitch19 {
+    margin-left: 7vw;
+    margin-top: 5vh;
+}
+
+#fitkitch20 {
+    margin-left: 7vw;
+    margin-top: 5vh;
+}
+
+#fitkitch21 {
+    margin-left: 6vw;
+    margin-top: 5vh;
+    margin-bottom: 20vh;
+}

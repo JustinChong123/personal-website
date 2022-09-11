@@ -1,0 +1,75 @@
+.aboutMe {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+}
+
+#profilePic {
+    margin-left: 10vw;
+    margin-top: 5vh;
+}
+
+#aboutMeText {
+    width: 50vw;
+    font-size: 2vw;
+    font-weight: 600;
+    margin-left: 40vw;
+    margin-top: -57vh;
+}
+
+#aboutMeText1 {
+    width: 50vw;
+    font-size: 2vw;
+    font-weight: 600;
+    margin-left: 40vw;
+    margin-top: 5vh;
+    
+}
+
+.boldPinkText {
+    color: #DB62B8;
+    font-weight: 800;
+}
+
+.boldBlueText {
+    color: #99E9FC;
+    font-weight: 800;
+}
+
+.boldYellowText {
+    color: #FBF44C;
+    font-weight: 800;
+}
+
+#skiing {
+    height: 60%;
+    width: 68vw;
+    margin-left: 15vw;
+    margin-top: 5vh;
+}
+
+.aboutMe h4 {
+    font-size: 1.8vw;
+    font-weight: 600;
+    line-height: 143.4%;
+    margin-left: 16vw;
+    margin-bottom: 10vh;
+    width: 70vw;
+}
+
+#dancing {
+    height: 60%;
+    width: 68vw;
+    margin-left: 15vw;
+    margin-top: 5vh;
+}
+
+#foodie {
+    height: 60%;
+    width: 68vw;
+    margin-left: 15vw;
+    margin-top: 5vh;
+}
+
+#foodieText {
+    margin-bottom: 20vh;
+}

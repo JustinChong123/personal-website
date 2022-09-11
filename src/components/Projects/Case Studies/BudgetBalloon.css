@@ -1,0 +1,136 @@
+.budgetBalloonCover {
+    height: 100vh;
+    background-color: #F491D8;
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+
+.budgetBalloonCover h1 {
+    font-weight: 800;
+    font-size: 5vw;
+    margin-top: 16vh;
+    margin-left: 13vw;
+    margin-bottom: 3vh;
+}
+
+.budgetBalloonCover h2 {
+    font-weight: 600;
+    font-size: 2vw;
+    width: 35vw;
+    line-height: 6vh;
+    margin-left: 13vw;
+    margin-top: 7vh;
+}
+
+.budgetBalloonCover h3 {
+    font-weight: 600;
+    font-size: 1.5vw;
+    display: inline;
+    padding: 1vh 1.5vw;
+    line-height: 6vh;
+    margin-left: 13vw;
+    border: 2px solid white;
+    border-radius: 50px;
+}
+
+.budgetBalloonCover img {
+    position: absolute;
+    margin-left: 60vw;
+    margin-top: -53vh;
+}
+
+#budgetBalloon1 {
+    margin-left: 10vw;
+    margin-top: 5vh;
+}
+
+#budgetBalloon2 {
+    margin-left: 15vw;
+    margin-top: 5vh;
+}
+
+#budgetBalloon3 {
+    margin-left: 15vw;
+    margin-top: 5vh;
+}
+
+#budgetBalloon4 {
+    margin-left: 8vw;
+    margin-top: 5vh;
+}
+
+#budgetBalloon5 {
+    margin-left: 15vw;
+    margin-top: 5vh;
+}
+
+#budgetBalloon6 {
+    margin-left: 15vw;
+    margin-top: 5vh;
+}
+
+#budgetBalloon7 {
+    margin-left: 15vw;
+    margin-top: 10vh;
+}
+
+#budgetBalloon8 {
+    margin-left: 15vw;
+    margin-top: 10vh;
+}
+
+#budgetBalloon9 {
+    margin-left: 15vw;
+    margin-top: 10vh;
+}
+
+#budgetBalloon10 {
+    margin-left: 15vw;
+    margin-top: 5vh;
+}
+
+#budgetBalloon11 {
+    margin-left: 12vw;
+    margin-top: 5vh;
+}
+
+#budgetBalloon12 {
+    margin-left: 12vw;
+    margin-top: 10vh;
+}
+
+#budgetBalloon13 {
+    margin-left: 7vw;
+    margin-top: 10vh;
+}
+
+#budgetBalloon14 {
+    margin-left: 15vw;
+    margin-top: 5vh;
+}
+
+#budgetBalloon15 {
+    margin-left: 15vw;
+    margin-top: 10vh;
+}
+
+#budgetBalloon16 {
+    margin-left: 11vw;
+    margin-top: 5vh;
+}
+
+#budgetBalloon17 {
+    margin-left: 11vw;
+    margin-top: 5vh;
+}
+
+#budgetBalloon18 {
+    margin-left: 11vw;
+    margin-top: 5vh;
+}
+
+#budgetBalloon19 {
+    margin-left: 11vw;
+    margin-top: 10vh;
+    margin-bottom: 20vh;
+}
