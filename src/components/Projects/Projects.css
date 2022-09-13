@@ -1,5 +1,5 @@
 .projects {
-    margin: 20vh 10vw;
+    margin: 27vh 10vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -15,7 +15,7 @@
     width: 33vw;
     min-width: 400px;
     height: 45vh;
-    box-shadow: 8px 8px black, 10px 10px white;
+    box-shadow: 14px 14px 0px -5px black, 14px 14px 0px -3px white;
 }
 
 .projects a {
@@ -24,7 +24,7 @@
 
 .projects div:hover {
     cursor: pointer;
-    box-shadow: 10px 10px white;
+    box-shadow: 14px 14px 0px -3px white;
 }
 
 /* Name of Project */
