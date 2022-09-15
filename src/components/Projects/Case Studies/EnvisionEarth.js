@@ -30,12 +30,14 @@ import envisionEarth24 from './envision-earth-24.png'
 import envisionEarth25 from './envision-earth-25.png'
 import envisionEarth26 from './envision-earth-26.png'
 import envisionEarth27 from './envision-earth-27.png'
+import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
 
 function EnvisionEarth() {
     return (
         <div className="envisionEarthCaseStudy">
             <div className="envisionEarthCover">
+                <ScrollIndicator />
                 <Navbar />
                 <h1>Envision Earth</h1>
                 <h3>Product Manager</h3>

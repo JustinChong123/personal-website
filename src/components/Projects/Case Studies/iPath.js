@@ -32,11 +32,13 @@ import ipath26 from './ipath-26.png'
 import ipath27 from './ipath-27.png'
 import ipath28 from './ipath-28.png'
 import ipath29 from './ipath-29.png'
+import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
 function IPath() {
     return (
         <div className="ipathCaseStudy">
             <div className="ipathCover">
+                <ScrollIndicator />
                 <Navbar />
                 <h1>iPath</h1>
                 <h3>Product Manager</h3>

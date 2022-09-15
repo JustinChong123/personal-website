@@ -24,11 +24,13 @@ import fitkitch18 from './fitkitch-18.png'
 import fitkitch19 from './fitkitch-19.png'
 import fitkitch20 from './fitkitch-20.png'
 import fitkitch21 from './fitkitch-21.png'
+import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
 function FitKitch() {
     return (
         <div className="fitkitchCaseStudy">
             <div className="fitkitchCover">
+                <ScrollIndicator />
                 <Navbar />
                 <h1>FitKitch</h1>
                 <h3>UI/UX Designer</h3>

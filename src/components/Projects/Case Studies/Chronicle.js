@@ -40,12 +40,13 @@ import chronicle34 from './chronicle-34.png'
 import chronicle35 from './chronicle-35.png'
 import chronicle36 from './chronicle-36.png'
 import chronicle37 from './chronicle-37.png'
-
+import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
 function Chronicle() {
     return (
         <div className="chronicleCaseStudy">
             <div className="chronicleCover">
+                <ScrollIndicator />
                 <Navbar />
                 <h1>Chronicle</h1>
                 <h3>UI/UX Designer</h3>

@@ -22,11 +22,13 @@ import budgetBalloon16 from './budget-balloon-16.png'
 import budgetBalloon17 from './budget-balloon-17.png'
 import budgetBalloon18 from './budget-balloon-18.png'
 import budgetBalloon19 from './budget-balloon-19.png'
+import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
 function BudgetBalloon() {
     return (
         <div className="budgetBalloonCaseStudy">
             <div className="budgetBalloonCover">
+                <ScrollIndicator />
                 <Navbar />
                 <h1>Budget Balloon</h1>
                 <h3>UX Designer</h3>

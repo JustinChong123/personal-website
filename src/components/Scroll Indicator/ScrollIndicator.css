@@ -1,0 +1,13 @@
+.progressMainWrapper {
+    height: 1vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+.progressMainStyle {
+    height: 1vh;
+    background-color: #52BCFB;
+}
