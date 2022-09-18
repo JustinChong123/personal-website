@@ -1,6 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import {Link} from 'react-router-dom'
+import upScrollArrow from './up-scroll-arrow.png'
 
 function Footer () {
     return (
@@ -22,6 +23,7 @@ function Footer () {
                     <h4 id="footer-email-me" onClick={() => window.location = 'mailto:justin.r.chong.24@dartmouth.edu'}>Email Me</h4>
                 </div>
             </div>
+            <img id="upScrollArrow" onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}} src={upScrollArrow} width="51" height="51" />
         </div>
     )
 }

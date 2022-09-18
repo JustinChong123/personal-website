@@ -5,6 +5,7 @@
     font-family: 'Raleway', sans-serif;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
 
 .Footer a {
@@ -52,4 +53,8 @@
 #footer-email-me:hover {
     cursor: pointer;
     color: blue;
+}
+
+#upScrollArrow:hover {
+    cursor: pointer;
 }

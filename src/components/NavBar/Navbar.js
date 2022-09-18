@@ -5,11 +5,13 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import {Link} from 'react-router-dom'
 import sweResume from './Justin_Chong_SWE_Resume.docx.pdf'
 import pmResume from './Justin_Chong_PM_Resume.docx.pdf'
+import logoPic from './logo.png'
 
 function Navbar() {
     return (
         <nav className="Navbar">
             <div className='logo'>
+                <Link to="/"><img className="logoPic" src={logoPic} alt="Logo Picture" width="40" height="40" /></Link>
                 <Link to="/">Justin Chong</Link>
             </div>
             <ul className='navButtons'>

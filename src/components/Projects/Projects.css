@@ -16,6 +16,7 @@
     min-width: 400px;
     height: 45vh;
     box-shadow: 14px 14px 0px -5px black, 14px 14px 0px -3px white;
+    transition: transform 250ms;
 }
 
 .projects a {
@@ -24,6 +25,7 @@
 
 .projects div:hover {
     cursor: pointer;
+    transform: translateY(-5px) translateX(-5px);
     box-shadow: 14px 14px 0px -3px white;
 }
 
