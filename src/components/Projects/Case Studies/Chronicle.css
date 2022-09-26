@@ -69,6 +69,12 @@
     font-weight: 500;
 }
 
+#chronicleStats {
+    position: relative;
+    top: -16.3em;
+    left: 70em;
+}
+
 /* -------- Chronicle Content ---------------------------- */
 
 .caseSection {

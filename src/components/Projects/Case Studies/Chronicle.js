@@ -24,6 +24,7 @@ import chronicleUsability from './Chronicle Images/chronicle-usability.png'
 import chronicleVisuals from './Chronicle Images/chronicle-visuals.png'
 import chronicleAccessibility from './Chronicle Images/chronicle-accessibility.png'
 import chronicleTakeaways from './Chronicle Images/chronicle-takeaways.png'
+import chronicleStats from './Chronicle Images/chronicle-stats.png'
 
 function Chronicle() {
     return (
@@ -41,6 +42,7 @@ function Chronicle() {
                     <h1 className="caseSectionHeader" id="chronicleIntroQuestion">How does Chronicle foster understanding between generations?</h1>
                     <p className="caseText" id="chronicleIntroText">Chronicle is a tablet app that allows grandparents and grandchildren, especially those that live far distances from each other, to connect by <span className="chronicleBoldText">collaboratively narrating and drawing stories</span> from their own lives.</p>
                     <p className="caseText" id="chronicleIntroText">Our app <span className="chronicleBoldText">revolves around the family</span> because connecting different generations doesn't start with strangers. It starts with people you know and care about.</p>
+                    <img id="chronicleStats" src={chronicleStats} width="250" height="600" />
                 </div>
 
                 <div id="chronicleBlueBackground"className="caseSection">
