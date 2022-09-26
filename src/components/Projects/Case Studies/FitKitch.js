@@ -3,28 +3,20 @@ import Navbar from '../../NavBar/Navbar.js'
 import Footer from '../../Footer/Footer.js'
 import './FitKitch.css'
 import fitwitMockup from '../fitwit-mockup.png'
-import fitkitch1 from './fitkitch-1.png'
-import fitkitch2 from './fitkitch-2.png'
-import fitkitch3 from './fitkitch-3.png'
-import fitkitch4 from './fitkitch-4.png'
-import fitkitch5 from './fitkitch-5.png'
-import fitkitch6 from './fitkitch-6.png'
-import fitkitch7 from './fitkitch-7.png'
-import fitkitch8 from './fitkitch-8.png'
-import fitkitch9 from './fitkitch-9.png'
-import fitkitch10 from './fitkitch-10.png'
-import fitkitch11 from './fitkitch-11.png'
-import fitkitch12 from './fitkitch-12.png'
-import fitkitch13 from './fitkitch-13.png'
-import fitkitch14 from './fitkitch-14.png'
-import fitkitch15 from './fitkitch-15.png'
-import fitkitch16 from './fitkitch-16.png'
-import fitkitch17 from './fitkitch-17.png'
-import fitkitch18 from './fitkitch-18.png'
-import fitkitch19 from './fitkitch-19.png'
-import fitkitch20 from './fitkitch-20.png'
-import fitkitch21 from './fitkitch-21.png'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
+import fitkitchDesignThinking from './Fitkitch Images/fitkitch-design-thinking.png'
+import fitkitchUserResearchHeading from './Fitkitch Images/fitkitch-user-research-heading.png'
+import fitkitchOld from './Fitkitch Images/fitkitch-old.png'
+import fitkitchHMW1 from './Fitkitch Images/fitkitch-hmw1.png'
+import fitkitchCompetitive from './Fitkitch Images/fitkitch-competitive.png'
+import fitkitchInterviews from './Fitkitch Images/fitkitch-interviews.png'
+import fitkitchNewSolutions from './Fitkitch Images/fitkitch-new-solutions.png'
+import fitkitchFlowSketches from './Fitkitch Images/fitkitch-flow-sketches.png'
+import fitkitchPainPoints from './Fitkitch Images/fitkitch-pain-points.png'
+import fitkitchUIUXDesignHeading from './Fitkitch Images/fitkitch-uiux-design-heading.png'
+import fitkitchObjectives from './Fitkitch Images/fitkitch-objectives.png'
+import fitkitchSketches from './Fitkitch Images/fitkitch-sketches.png'
+import fitkitchWireframes from './Fitkitch Images/fitkitch-wireframes.png'
 
 function FitKitch() {
     return (
@@ -38,27 +30,156 @@ function FitKitch() {
                 <img id="fitwitCaseStudyMockup" src={fitwitMockup} alt="FitWit iPhone 13 Mockup" width="350" height="437.5" />
             </div>
             <div className="fitkitchContent">
-                <img id="fitkitch1" src={fitkitch1} width="1300" height="800"/>
-                <img id="fitkitch2" src={fitkitch2} width="1100" height="800"/>
-                <img id="fitkitch3" src={fitkitch3} width="1100" height="600"/>
-                <img id="fitkitch4" src={fitkitch4} width="1200" height="450"/>
-                <img id="fitkitch5" src={fitkitch5} width="1200" height="600"/>
-                <img id="fitkitch6" src={fitkitch6} width="1200" height="400"/>
-                <img id="fitkitch7" src={fitkitch7} width="1200" height="500"/>
-                <img id="fitkitch8" src={fitkitch8} width="1100" height="700"/>
-                <img id="fitkitch9" src={fitkitch9} width="1100" height="500"/>
-                <img id="fitkitch10" src={fitkitch10} width="1300" height="450"/>
-                <img id="fitkitch11" src={fitkitch11} width="1300" height="700"/>
-                <img id="fitkitch12" src={fitkitch12} width="1300" height="280"/>
-                <img id="fitkitch13" src={fitkitch13} width="1300" height="650"/>
-                <img id="fitkitch14" src={fitkitch14} width="1200" height="650"/>
-                <img id="fitkitch15" src={fitkitch15} width="1100" height="750"/>
-                <img id="fitkitch16" src={fitkitch16} width="1100" height="1020"/>
-                <img id="fitkitch17" src={fitkitch17} width="1300" height="490"/>
-                <img id="fitkitch18" src={fitkitch18} width="1200" height="700"/>
-                <img id="fitkitch19" src={fitkitch19} width="1200" height="800"/>
-                <img id="fitkitch20" src={fitkitch20} width="1150" height="600"/>
-                <img id="fitkitch21" src={fitkitch21} width="1300" height="800"/>
+                <div className="fitkitchIntro">
+                    <h1 className="caseSectionHeader" id="fitkitchIntroQuestion">How does FitKitch marry exercise and community building?</h1>
+                    <p className="caseText" id="fitkitchIntroText">FitKitch is a <span className="fitkitchBoldText">community-oriented wellness app</span> designed to motivate young people to stay physically active. We were <span className="fitkitchBoldText">inspired by cooking,</span> an action that brings people together to work towards a shared goal – a cooked dish.</p>
+                    <p className="caseText" id="fitkitchIntroText">FitKitch <span className="fitkitchBoldText">leverages community obligation</span> and action to motivate individuals to exercise. The daily participation of each user is integral in the group's success, but we make sure to avoid developing <span className="fitkitchBoldText">unhealthy, toxic mindsets</span> towards fitness and wellness.</p>
+                </div>
+
+                <div id="fitkitchRedBackground"className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="redCaseSideHeader">BACKGROUND</h3>
+                    </div>
+                    <div className="caseMain">
+                        <p id="noSectionHeader"className="caseText">A <span className="fitkitchBoldText">Dartmouth professor</span> approached us to <span className="fitkitchBoldText">commercialize a research app</span> previously built by the DALI Lab. This app used memory games after users exercised to collect data on how exercise affects cognitive and mental health. Our objective was to build a new app to motivate people to exercise <span className="fitkitchBoldText">using the benefits of cognitive health,</span> but our user research caused us to pivot to our current app idea. I worked with my co-designer, PM, and 3 developers to design, develop, and deploy the app for a <span className="fitkitchBoldText">beta launch in 10 weeks.</span></p>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="redCaseSideHeader">PROCESS</h3>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Our <span id="fitkitchDesignThinkingGradient">design thinking</span> from start to end</h1>
+                        <img src={fitkitchDesignThinking} width="950" height="280" />
+                    </div>
+                </div>
+
+                <img alt="FitKitch User Research Heading" src={fitkitchUserResearchHeading} width="1440" height="380"/>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="redCaseSideHeader">RESEARCH</h3>
+                        <h2>Initial HMW Statement</h2>
+                    </div>
+                    <div className="caseMain">
+                        <img src={fitkitchHMW1} width="800" height="200" />
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="redCaseSideHeader">RESEARCH</h3>
+                        <h2>Reviewing Previous Materials</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Learning and critiquing the <span id="designThinkingGradient" >old research app, "FitWit"</span></h1>
+                        <p className="caseText">Our client wanted us to commercialize their research tool “FitWit” (Fitness + Wit), which enabled users to play memory games after exercising to collect data on how exercise positively affects cognitive health. We <span className="fitkitchBoldText">reviewed the previous designers' work</span> from UX research to user flows to the deployed app.</p>
+                        <img src={fitkitchOld} width="950" height="310" />
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="redCaseSideHeader">RESEARCH</h3>
+                        <h2>Competitive Analysis</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">What other apps did well and upholding <span id="chronicleInterviewGradient">ethical integrity</span></h1>
+                        <p className="caseText">Keeping in mind the focus on cognitive health, we analyzed dozens of the most popular apps in <span className="fitkitchBoldText">fitness, nutrition, and cognitive health.</span> We wanted to <span className="fitkitchBoldText">foster positive, healthy mindsets</span> about exercise and avoid dangerous features like calorie and physique tracking that reinforce eating disorders and body dysmorphia.</p>
+                        <img src={fitkitchCompetitive} width="950" height="410" />
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="redCaseSideHeader">RESEARCH</h3>
+                        <h2>User Interviews & UX Survey</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Do users actually care about <span id="ethicsGradient">cognitive health?</span>... They don't.</h1>
+                        <p className="caseText">We planned to <span className="fitkitchBoldText">overhaul the old UI,</span> but we needed to decide whether to 1) modify or scrap the memory games and 2) if cognitive health was an incentive to exercise. We <span className="fitkitchBoldText">interviewed 10+ younger and older users,</span> and launched a <span className="fitkitchBoldText">UX survey with 270+ responses</span> asking users to rank the importance of cognitive, mental, social, physical, and emotional benefits of exercise.</p>
+                        <img src={fitkitchInterviews} width="910" height="640" />
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="redCaseSideHeader">DEFINE</h3>
+                        <h2>New HMW Statement & Solution</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Talking to our clients about <span id="boomersGradient">redefining product vision</span></h1>
+                        <p className="caseText">It was clear that centering cognitive benefits to encourage exercise <span className="fitkitchBoldText">was not what our users needed.</span> We defined our <span className="fitkitchBoldText">new HMW statement:</span> how might we change perceptions of exercise as productive and necessary rather than extra? We brainstormed and presented 3 alternative solutions to our client, and they <span className="fitkitchBoldText">chose solution #1.</span></p>
+                        <img src={fitkitchNewSolutions} width="925" height="330" />
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="redCaseSideHeader">IDEATE</h3>
+                        <h2>Flow Sketches</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Back to the drawing board after <span id="designThinkingGradient">discovering design flaws</span></h1>
+                        <img src={fitkitchFlowSketches} width="930" height="230" />
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="redCaseSideHeader">DEFINE</h3>
+                        <h2>User Needs</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">The disconnect between the <span id="fitkitchUserNeedsGradient">desire and action to exercise</span></h1>
+                        <p className="caseText">After deciding to move away from mood tracking, we reviewed our user research and focused on why <span className="fitkitchBoldText">young people with busy lives</span> struggle to exercise consistently. Centering our solution around these <span className="fitkitchBoldText">3 pain points</span> revitalized our brainstorming sessions and brought us to our current app: FitKitch.</p>
+                        <img src={fitkitchPainPoints} width="925" height="390" />
+                    </div>
+                </div>
+
+                <div id="fitkitchSolution">
+                    <h3 id="fitkitchSolution1">SOLUTION</h3>
+                    <h1 id="fitkitchSolution2">FitKitch</h1>
+                    <h2 id="fitkitchSolution3">A mobile app that motivates young people to exercise through community obligation with personalized daily activity goals</h2>
+                </div>
+
+                <img alt="FitKitch UI/UX Design Heading" src={fitkitchUIUXDesignHeading} width="1440" height="380"/>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="redCaseSideHeader">IDEATE</h3>
+                        <h2>Design Objectives</h2>
+                    </div>
+                    <div className="caseMain">
+                        <img src={fitkitchObjectives} width="950" height="190" />
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="redCaseSideHeader">IDEATE</h3>
+                        <h2>Flow Sketches</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader"><span id="fitkitchSketchesGradient">Connecting exercise to cooking:</span> the core concept of the app</h1>
+                        <p className="caseText">We wanted to do something that hadn't been done before, something <span className="fitkitchBoldText">fresh and exciting.</span> The inspiration behind the app is cooking, an activity that brings people together to achieve a collective goal: a well-cooked, seasoned dish. In FitKitch, <span className="fitkitchBoldText">users create/join social groups called Kitchens,</span> which can be any group of people (coworkers, family, roommates, friend groups, etc). </p>
+                        <img src={fitkitchSketches} width="950" height="390" />
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="redCaseSideHeader">PROTOTYPE & TEST</h3>
+                        <h2>Lo-fi Wireframes</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Let's personalize and accomodate for users</h1>
+                        <p className="caseText">We received <span className="fitkitchBoldText">feedback on our flow sketches</span> at the DALI Lab's first design critique of the term. This is an opportunity for designers to show their designs to the whole lab and get fresh perspectives on their work from other designers, design mentors, product managers, and top management. Here are <span className="fitkitchBoldText">3 key decisions</span> we made as we began to wireframe.</p>
+                        <img src={fitkitchWireframes} width="950" height="1040" />
+                    </div>
+                </div>
+                
             </div>
             <Footer />
         </div>

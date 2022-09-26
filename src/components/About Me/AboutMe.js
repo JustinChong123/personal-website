@@ -6,6 +6,7 @@ import profilePic from './profile-pic.png'
 import skiing from './skiing.png'
 import dancing from './dancing.png'
 import foodie from './foodie.png'
+import aboutMeSkiing from './about-me-skiing.png'
 
 function AboutMe () {
     return (
@@ -14,7 +15,7 @@ function AboutMe () {
                 <Navbar />
                 <div className="aboutMeIntro">
                     <img id="profilePic" src={profilePic} alt="Profile Pic" width="300" height="399" />
-                    <h4 id="aboutMeText">Hi, my name is Justin Chong, and I'm a <span className="boldPinkText">software engineer</span> and <span className="boldBlueText">product designer</span> from Los Angeles, CA. I'm currently a junior at Dartmouth College studying Computer Science Modified with Biology.</h4>
+                    <h4 id="aboutMeText">Hi, my name is Justin Chong, and I'm a <span className="boldBlueText">product designer</span> and <span className="boldPinkText">software engineer</span> from Los Angeles, CA. I'm currently a junior at Dartmouth College studying Computer Science Modified with Biology.</h4>
                     <h4 id="aboutMeText1">I am interested in designing and developing technologies that don't treat <span className="boldYellowText">accessibility</span> as an add-on feature, but as a <span className="boldYellowText">core philosophy.</span></h4>
                 </div>
                 <img className="hobbies" id="skiing" src={skiing} alt="Skiing" width="1100" height="676.9"/>

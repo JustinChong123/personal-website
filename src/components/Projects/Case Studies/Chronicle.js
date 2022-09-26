@@ -3,44 +3,27 @@ import Navbar from '../../NavBar/Navbar.js'
 import Footer from '../../Footer/Footer.js'
 import chronicleMockup from './chronicle-cover-mockup.png'
 import './Chronicle.css'
-import chronicle1 from './chronicle-1.png'
-import chronicle2 from './chronicle-2.png'
-import chronicle3 from './chronicle-3.png'
-import chronicle4 from './chronicle-4.png'
-import chronicle5 from './chronicle-5.png'
-import chronicle6 from './chronicle-6.png'
-import chronicle7 from './chronicle-7.png'
-import chronicle8 from './chronicle-8.png'
-import chronicle9 from './chronicle-9.png'
-import chronicle10 from './chronicle-10.png'
-import chronicle11 from './chronicle-11.png'
-import chronicle12 from './chronicle-12.png'
-import chronicle13 from './chronicle-13.png'
-import chronicle14 from './chronicle-14.png'
-import chronicle15 from './chronicle-15.png'
-import chronicle16 from './chronicle-16.png'
-import chronicle17 from './chronicle-17.png'
-import chronicle18 from './chronicle-18.png'
-import chronicle19 from './chronicle-19.png'
-import chronicle20 from './chronicle-20.png'
-import chronicle21 from './chronicle-21.png'
-import chronicle22 from './chronicle-22.png'
-import chronicle23 from './chronicle-23.png'
-import chronicle24 from './chronicle-24.png'
-import chronicle25 from './chronicle-25.png'
-import chronicle26 from './chronicle-26.png'
-import chronicle27 from './chronicle-27.png'
-import chronicle28 from './chronicle-28.png'
-import chronicle29 from './chronicle-29.png'
-import chronicle30 from './chronicle-30.png'
-import chronicle31 from './chronicle-31.png'
-import chronicle32 from './chronicle-32.png'
-import chronicle33 from './chronicle-33.png'
-import chronicle34 from './chronicle-34.png'
-import chronicle35 from './chronicle-35.png'
-import chronicle36 from './chronicle-36.png'
-import chronicle37 from './chronicle-37.png'
+import SectionDivider from './Section Divider/SectionDivider.js'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
+import chronicleProblemStatistics from './Chronicle Images/chronicle-problem-statistics.png'
+import chronicleChallenge from './Chronicle Images/chronicle-challenge.png'
+import chronicleDesignThinking from './Chronicle Images/chronicle-design-thinking.png'
+import chronicleUserResearchHeading from './Chronicle Images/chronicle-user-research-heading.png'
+import chronicleGenerationalResearchImg from './Chronicle Images/chronicle-generational-research-img.png'
+import chronicleIceberg from './Chronicle Images/chronicle-iceberg.png'
+import chroniclePrinciples from './Chronicle Images/chronicle-principles.png'
+import chronicleInterviews from './Chronicle Images/chronicle-interviews.png'
+import chronicleHMW from './Chronicle Images/chronicle-hmw.png'
+import chroniclePainPoints from './Chronicle Images/chronicle-pain-points.png'
+import chronicleUXUIDesignHeading from './Chronicle Images/chronicle-ux-ui-design-heading.png'
+import chronicleDesignObjectives from './Chronicle Images/chronicle-design-objectives.png'
+import chronicleSketches from './Chronicle Images/chronicle-sketches.png'
+import chronicleDecision1 from './Chronicle Images/chronicle-decision-1.png'
+import chronicleDecision4 from './Chronicle Images/chronicle-decision-4.png'
+import chronicleUsability from './Chronicle Images/chronicle-usability.png'
+import chronicleVisuals from './Chronicle Images/chronicle-visuals.png'
+import chronicleAccessibility from './Chronicle Images/chronicle-accessibility.png'
+import chronicleTakeaways from './Chronicle Images/chronicle-takeaways.png'
 
 function Chronicle() {
     return (
@@ -54,43 +37,225 @@ function Chronicle() {
                 <img id="chronicleCaseStudyMockup" src={chronicleMockup} alt="Chronicle Tablet Mockup" width="750" height="625" />
             </div>
             <div className="chronicleContent">
-                <img id="chronicle1" src={chronicle1} width="1100" height="650" />
-                <img id="chronicle2" src={chronicle2} width="1000" height="500" />
-                <img id="chronicle3" src={chronicle3} width="1160" height="400" />
-                <img id="chronicle4" src={chronicle4} width="1050" height="350" />
-                <img id="chronicle5" src={chronicle5} width="1000" height="650" />
-                <img id="chronicle6" src={chronicle6} width="1050" height="500" />
-                <img id="chronicle7" src={chronicle7} width="1050" height="550" />
-                <img id="chronicle8" src={chronicle8} width="1080" height="550" />
-                <img id="chronicle9" src={chronicle9} width="1000" height="550" />
-                <img id="chronicle10" src={chronicle10} width="1000" height="600" />
-                <img id="chronicle11" src={chronicle11} width="1000" height="350" />
-                <img id="chronicle12" src={chronicle12} width="1050" height="600" />
-                <img id="chronicle13" src={chronicle13} width="1000" height="650" />
-                <img id="chronicle14" src={chronicle14} width="900" height="250" />
-                <img id="chronicle15" src={chronicle15} width="880" height="600" />
-                <img id="chronicle16" src={chronicle16} width="800" height="500" />
-                <img id="chronicle17" src={chronicle17} width="1020" height="500" />
-                <img id="chronicle18" src={chronicle18} width="970" height="450" />
-                <img id="chronicle19" src={chronicle19} width="900" height="500" />
-                <img id="chronicle20" src={chronicle20} width="1250" height="400" />
-                <img id="chronicle21" src={chronicle21} width="950" height="700" />
-                <img id="chronicle22" src={chronicle22} width="920" height="300" />
-                <img id="chronicle23" src={chronicle23} width="900" height="500" />
-                <img id="chronicle24" src={chronicle24} width="900" height="500" />
-                <img id="chronicle25" src={chronicle25} width="900" height="400" />
-                <img id="chronicle26" src={chronicle26} width="1180" height="500" />
-                <img id="chronicle27" src={chronicle27} width="1180" height="500" />
-                <img id="chronicle28" src={chronicle28} width="950" height="450" />
-                <img id="chronicle29" src={chronicle29} width="955" height="450" />
-                <img id="chronicle30" src={chronicle30} width="970" height="440" />
-                <img id="chronicle31" src={chronicle31} width="1100" height="440" />
-                <img id="chronicle32" src={chronicle32} width="980" height="440" />
-                <img id="chronicle33" src={chronicle33} width="1000" height="400" />
-                <img id="chronicle34" src={chronicle34} width="1050" height="220" />
-                <img id="chronicle35" src={chronicle35} width="950" height="450" />
-                <img id="chronicle36" src={chronicle36} width="980" height="400" />
-                <img id="chronicle37" src={chronicle37} width="1050" height="430" />
+                <div className="chronicleIntro">
+                    <h1 className="caseSectionHeader" id="chronicleIntroQuestion">How does Chronicle foster understanding between generations?</h1>
+                    <p className="caseText" id="chronicleIntroText">Chronicle is a tablet app that allows grandparents and grandchildren, especially those that live far distances from each other, to connect by <span className="chronicleBoldText">collaboratively narrating and drawing stories</span> from their own lives.</p>
+                    <p className="caseText" id="chronicleIntroText">Our app <span className="chronicleBoldText">revolves around the family</span> because connecting different generations doesn't start with strangers. It starts with people you know and care about.</p>
+                </div>
+
+                <div id="chronicleBlueBackground"className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>BACKGROUND</h3>
+                    </div>
+                    <div className="caseMain">
+                        <p id="noSectionHeader"className="caseText">For our UI/UX Design class capstone project, our challenge was to <span className="chronicleBoldText">design an experience to bridge generations together.</span> We wanted to look at how we could bring different generations <span className="chronicleBoldText">within families</span> closer together, since there is more potential for meaningful and lasting connection. Right from the start, my partner and I knew we wanted to embed <span className="chronicleBoldText">accessibility and inclusivity</span> as a core experience to users of all ages.</p>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>PROBLEM</h3>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">How severe is the generational gap?</h1>
+                        <p className="caseText">Generations within families feel more and more disconnected as disparities in technological literacy and lifestyle drive the divide between their ways of life.</p>
+                        <img src={chronicleProblemStatistics} width="600" height="180"/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>PROCESS</h3>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">What our <span id="designThinkingGradient">design thinking</span> looked like from start to end</h1>
+                        <img src={chronicleDesignThinking} width="950" height="300"/>
+                    </div>
+                </div>
+                <img alt="Chronicle User Research Heading" src={chronicleUserResearchHeading} width="1440" height="380"/>
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>RESEARCH</h3>
+                        <h2>Generational Research</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Digital tech is increasing <span id="generationalDivideGradient">generational divide</span></h1>
+                        <p className="caseText">To learn how technology can promote understanding and respect between generations, we had to learn more about how each generation uses technology and interacts with other generations. Here are 3 general takeaways we got:</p>
+                        <img src={chronicleGenerationalResearchImg} width="820" height="200"/>
+                    </div>
+                </div>
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>RESEARCH</h3>
+                        <h2>Identifying Target Users</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Focusing on <span id="boomersGradient">Baby Boomers</span> and <span id="genzGradient">Generation Z</span></h1>
+                        <p className="caseText">Looking at four generations, we focused on Boomers and Gen Z because the stark contrast between  how they grew up, lifestyle, and tech literacy provided the greatest opportunity to effect change.</p>
+                        <img src={chronicleChallenge} width="960" height="167"/>
+                    </div>
+                </div>
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>RESEARCH</h3>
+                        <h2>Initial Solution & Journey Mapping</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Our solution (the first of many)</h1>
+                        <p className="caseText">After stakeholder mapping and brainstorming HMW questions, our initial solution was an app that <span className="chronicleBoldText">connects young people seeking stories and older people willing to share personal insights.</span></p>
+                        <p className="caseText">We did journey mapping to understand our users' mindsets, and here are three key objectives we wanted our initial app to embody. Although we switched ideas later, many of these still acted as <span className="chronicleBoldText">guiding principles for our new solution.</span></p>
+                        <img src={chroniclePrinciples} width="900" height="167"/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>RESEARCH</h3>
+                        <h2>Ethical Considerations</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">What <span id="ethicsGradient">hidden ramifications</span> can our app have?</h1>
+                        <p className="caseText">To see the big picture, we used an Iceberg Canvas to ideate and map any <span className="chronicleBoldText">hidden societal and environmental consequences</span> we should constantly keep in mind while designing the app.</p>
+                        <img src={chronicleIceberg} width="900" height="210"/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>RESEARCH</h3>
+                        <h2>User Interviews & Empathy Maps</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Talking to users made it clear <span id="chronicleInterviewGradient">this solution would not work</span></h1>
+                        <p className="caseText">After interviewing both old and young people and drawing empathy maps, we realized that both younger and older generations had no interest in connecting with strangers to share stories.</p>
+                        <img src={chronicleInterviews} width="950" height="350"/>
+                    </div>
+                </div>
+
+                <div id="chronicleBlueBackground" className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>DEFINE</h3>
+                        <h2>HMW Statement</h2>
+                    </div>
+                    <div className="caseMain">
+                        <p id="noSectionHeader" className="caseText">Our user interviews showed us that <span className="chronicleBoldText">we framed the problem too broadly.</span> Bridging generations was not going to start with strangers over the Internet. It had to start somewhere more familiar and meaningful to people: <span className="chronicleBoldText">the family.</span></p>
+                        <img src={chronicleHMW} width="800" height="200"/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>DEFINE</h3>
+                        <h2>Needs</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">The <span id="chronicleDisconnectGradient">disconnect</span> between grandparents and grandchildren</h1>
+                        <p className="caseText">Going back to the drawing board, we used our user interviews to make <span className="chronicleBoldText">user personas</span> to understand the motivations, needs, and expectations of grandparents and grandchildren. We identified <span className="chronicleBoldText">3 shared pain points</span> that led us to Chronicle.</p>
+                        <img src={chroniclePainPoints} width="950" height="400"/>
+                    </div>
+                </div>
+
+                <div id="chronicleSolution">
+                    <h3 id="chronicleSolution1">SOLUTION</h3>
+                    <h1 id="chronicleSolution2">Chronicle</h1>
+                    <h2 id="chronicleSolution3">A tablet app that helps families preserve precious memories through collaborative and interactive storytelling and illustration</h2>
+                </div>
+
+                <img alt="Chronicle UX/UI Design Heading" src={chronicleUXUIDesignHeading} width="1440" height="380"/>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>IDEATE</h3>
+                        <h2>Design Objectives</h2>
+                    </div>
+                    <div className="caseMain">
+                        <img src={chronicleDesignObjectives} width="950" height="190"/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>IDEATE</h3>
+                        <h2>Flow Sketches</h2>
+                    </div>
+                    <div className="caseMain">
+                        <p id="noSectionHeader" className="caseText">We decided to design a <span className="chronicleBoldText">tablet app</span> because it's a familiar and fun device for kids, and it has <span className="chronicleBoldText">larger screen size and touch targets</span> for enhanced readability and tactility for grandparents.</p>
+                        <img src={chronicleSketches} width="950" height="350"/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>PROTOTYPE & TEST</h3>
+                        <h2>Lo-Fi Wireframes</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader"><span id="chronicleDecisionsGradient">Pivotal design decisions</span> while iterating wireframes</h1>
+                        <p className="caseText">Our <span className="chronicleBoldText" id="chronicleUnderlineText">core concept</span> is that a grandparent and grandchild connect virtually on this app. <span className="chronicleBoldText">Page by page,</span> one person (the “storyteller”) narrates a story from their personal life, and after, the other person (the “artist”) draws an illustration to go along with it. When they finish the story, it's added to their bookshelves on the landing page as a <span className="chronicleBoldText">preserved story to look back on.</span></p>
+                        <p className="caseText">As we iterated our grayscales, we made key decisions to better meet our design objectives.</p>
+                        <img src={chronicleDecision1} width="980" height="1700"/>
+                    </div>
+                </div>
+                
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>PROTOTYPE & TEST</h3>
+                        <h2>User Feedback & Hi-Fidelity Prototype</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Pushing our prototype with <span id="chronicleUserTestingGradient">continuous user testing</span></h1>
+                        <p className="caseText">As we began to hammer out the UX and focus on a creating <span className="chronicleBoldText">playful, kid-friendly UI,</span> we brought our prototype to our design mentor and other classmates to receive feedback as we iterated. Here are <span className="chronicleBoldText">3 key changes</span> we made to bring our prototype to the next level.</p>
+                        <img src={chronicleDecision4} width="980" height="1600"/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>PROTOTYPE & TEST</h3>
+                        <h2>Usability Testing</h2>
+                    </div>
+                    <div className="caseMain">
+                        <p id="noSectionHeader" className="caseText">We launched <span className="chronicleBoldText">6 usability tests</span> on UserTesting.com with grandparents. Because UserTesting.com doesn’t allow minors to test and due to time constraints, we <span className="chronicleBoldText">could not recruit grandchildren for usability insights.</span></p>
+                        <p className="caseText">All users found the app <span className="chronicleBoldText">easy to use, intuitive, and accessible.</span> Here are 3 key insights in functionality and UI that led us to our final solution.</p>
+                        <img src={chronicleUsability} width="980" height="770"/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>PROTOTYPE & TEST</h3>
+                        <h2>Visual Design System</h2>
+                    </div>
+                    <div className="caseMain">
+                        <img src={chronicleVisuals} width="980" height="620"/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>REFLECT</h3>
+                        <h2>Accessibility</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader"><span id="chronicleAccessibilityGradient">Accessibility as a perpetual goal,</span> not an endpoint</h1>
+                        <p className="caseText">We always thought about accessible design during this process, especially with very young and old users. We recognize that accessibility is <span className="chronicleBoldText">not a finite checkpoint,</span> but a goal to continually iterate and aspire to.</p>
+                        <img src={chronicleAccessibility} width="950" height="300"/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>REFLECT</h3>
+                        <h2>Takeaways & Next Steps</h2>
+                    </div>
+                    <div className="caseMain">
+                        <p id="noSectionHeader" className="caseText">This project was <span className="chronicleBoldText">extremely rewarding</span> as we carried out an <span className="chronicleBoldText">end-to-end design process in 2 weeks</span> during the final exams period. We designed Chronicle to mend the generational gap within families that's been growing as technology plants more misunderstanding and conflict between people. Here are <span className="chronicleBoldText">3 key takeaways</span> we learned from this process.</p>
+                        <img id="chronicleTakeaways" src={chronicleTakeaways} width="950" height="440"/>
+                        <p className="caseText">We were ecstatic to hear that users from usability testing were <span className="chronicleBoldText">eager to use this app with their grandchildren</span> if it was released on the market. In the future, we plan to implement the reading library, expand the graphics tool even further, and conduct comprehensive usability testing with grandchildren that we were unable to do because of time constraints and UserTesting.com's 18+ user policy.</p>
+                    </div>
+                </div>
+
+
             </div>
             <Footer />
         </div>

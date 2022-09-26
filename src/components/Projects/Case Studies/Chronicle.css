@@ -1,11 +1,15 @@
+.chronicleCaseStudy {
+    background-color: #fbfbfd;
+    font-family: 'Barlow', sans-serif;
+}
+
 .chronicleCover {
     height: 100vh;
-    background-color: #64CEF7;
-    font-family: 'Raleway', sans-serif;
+    background-color: #BDE2FF;
 }
 
 .chronicleCover h1 {
-    color: white;
+    color: #008FFC;
     font-weight: 800;
     font-size: 5vw;
     margin-top: 15vh;
@@ -14,215 +18,230 @@
 }
 
 .chronicleCover h2 {
-    color: white;
+    color: #008FFC;
     font-weight: 600;
     font-size: 2vw;
     width: 30vw;
-    line-height: 6vh;
+    line-height: 1.4em;
+    letter-spacing: -0.01em;
     margin-left: 13vw;
     margin-top: 8vh;
 }
 
 .chronicleCover h3 {
-    color: white;
+    color: #008FFC;
     font-weight: 600;
     font-size: 1.5vw;
     display: inline;
     padding: 1vh 1.5vw;
     line-height: 6vh;
     margin-left: 13vw;
-    border: 2px solid white;
+    border: 2px solid #008FFC;
     border-radius: 50px;
 }
 
 .chronicleCover img {
     position: absolute;
-    margin-left: 40vw;
-    margin-top: -70vh;
+    margin-left: 35em;
+    margin-top: -30em;
 }
 
-#chronicle1 {
+/* -------- Chronicle Intro ---------------------------- */
+
+.chronicleIntro {
+    height: 100vh;
+}
+
+#chronicleIntroQuestion {
+    color: #008FFC;
+    margin-top: 0;
+    margin-left: 10vw;
+    padding-top: 5vh;
+    width: 60vw;
+    font-weight: 800;
+}
+
+#chronicleIntroText {
+    color: #1D1D1F;
+    margin-left: 10vw;
+    line-height: 1.4em;
+    width: 60vw;
+    font-weight: 500;
+}
+
+/* -------- Chronicle Content ---------------------------- */
+
+.caseSection {
+    color: #1D1D1F; /* controls color of text for all case studies - light black */
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 13vh;
+    margin-top: 3vh;
+}
+
+.caseSideHeader {
+    margin-left: 5vw;
     margin-top: 5vh;
-    margin-left: 8vw;
+    width: 20vw;
 }
 
-#chronicle2 {
-    margin-top: 6vh;
-    margin-left: 11vw;
+.caseSideHeader > h3 {
+    color: #008FFC;
+    font-size: 1.2em;
+    font-weight: 800;
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
-#chronicle3 {
-    margin-top: 6vh;
-    margin-left: 11vw;
+.caseSideHeader > h2 {
+    font-weight: 700;
+    font-size: 1.8em;
+    width: 15vw;
+    line-height: 1.3em;
+    margin-top: 0.4em;
+    margin-bottom: 0;
 }
 
-#chronicle4 {
-    margin-top: 6vh;
-    margin-left: 13vw;
-}
-
-#chronicle5 {
-    margin-top: 6vh;
-    margin-left: 12vw;
-}
-
-#chronicle6 {
-    margin-top: 6vh;
-    margin-left: 12vw;
-}
-
-#chronicle7 {
-    margin-top: 6vh;
-    margin-left: 12vw;
-}
-
-#chronicle8 {
-    margin-top: 6vh;
-    margin-left: 12vw;
-}
-
-#chronicle9 {
-    margin-top: 6vh;
-    margin-left: 12vw;
-}
-
-#chronicle10 {
-    margin-top: 6vh;
-    margin-left: 11.5vw;
-}
-
-#chronicle11 {
-    margin-top: 4vh;
-    margin-left: 11.5vw;
-}
-
-#chronicle12 {
-    margin-top: 4vh;
-    margin-left: 8.5vw;
-}
-
-#chronicle13 {
-    margin-top: 4vh;
-    margin-left: 8.5vw;
-}
-
-#chronicle14 {
-    margin-top: 4vh;
-    margin-left: 12.5vw;
-}
-
-#chronicle15 {
-    margin-top: 4vh;
-    margin-left: 12.5vw;
-}
-
-#chronicle16 {
-    margin-top: 4vh;
-    margin-left: 12.5vw;
-}
-
-#chronicle17 {
-    margin-top: 4vh;
-    margin-left: 12.5vw;
-}
-
-#chronicle18 {
-    margin-top: 4vh;
-    margin-left: 14vw;
-}
-
-#chronicle19 {
-    margin-top: 4vh;
-    margin-left: 14vw;
-}
-
-#chronicle20 {
-    margin-top: 4vh;
-    margin-left: 6.8vw;
-}
-
-#chronicle21 {
-    margin-top: 4vh;
-    margin-left: 13vw;
-}
-
-#chronicle22 {
-    margin-top: 4vh;
-    margin-left: 13vw;
-}
-
-#chronicle23 {
-    margin-top: 4vh;
-    margin-left: 13vw;
-}
-
-#chronicle24 {
-    margin-top: 4vh;
-    margin-left: 13vw;
-}
-
-#chronicle25 {
-    margin-top: 4vh;
-    margin-left: 13vw;
-}
-
-#chronicle26 {
-    margin-top: 4vh;
-    margin-left: 9vw;
-}
-
-#chronicle27 {
-    margin-top: 4vh;
-    margin-left: 9vw;
-}
-
-#chronicle28 {
-    margin-top: 4vh;
-    margin-left: 15vw;
-}
-
-#chronicle29 {
-    margin-top: 0vh;
-    margin-left: 14.7vw;
-}
-
-#chronicle30 {
+.caseMain {
     margin-top: 5vh;
-    margin-left: 14.7vw;
 }
 
-#chronicle31 {
-    margin-top: 2vh;
-    margin-left: 15vw;
+.caseSectionHeader {
+    font-size: 1.8em;
+    font-weight: 800;
+    margin-top: 0;
 }
 
-#chronicle32 {
-    margin-top: 5vh;
-    margin-left: 15vw;
+.caseText {
+    font-weight: 500;
+    font-size: 1.4em;
+    width: 65vw;
+    line-height: 1.4em;
+    margin-bottom: 1.3em;
 }
 
-#chronicle33 {
-    margin-top: 0vh;
-    margin-left: 15vw;
+/* ------ Text Decoration and Other Modification ----------------*/
+
+.chronicleBoldText {
+    font-weight: 700;
 }
 
-#chronicle34 {
-    margin-top: 4vh;
-    margin-left: 15vw;
+#chronicleUnderlineText {
+    text-decoration: underline;
 }
 
-#chronicle35 {
-    margin-top: 5vh;
-    margin-left: 15vw;
+#noSectionHeader {
+    margin-top: 0em;
 }
 
-#chronicle36 {
-    margin-top: 5vh;
-    margin-left: 15vw;
+#chronicleBlueBackground {
+    background-color: #D7EEFF;
+    margin-bottom: 0;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
-#chronicle37 {
-    margin-top: 4vh;
+#chronicleSolution {
+    background-color: #D7EEFF;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    margin-bottom: 10vh;
+}
+
+#chronicleSolution1 {
+    color: #008ffc;
     margin-left: 15vw;
-    margin-bottom: 15vh;
+    margin-bottom: 0.3em;
+    font-size: 1.5em;
+    font-weight: 700;
+    width: 20vw;
+}
+
+#chronicleSolution2 {
+    color: #005cfc;
+    margin-left: 15vw;
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    font-size: 4em;
+    font-weight: 800;
+    width: 20vw;
+}
+
+#chronicleSolution3{
+    color: #005cfc;
+    margin-left: 15vw;
+    font-weight: 500;
+    width: 60vw;
+    line-height: 1.5em;
+}
+
+#chronicleDecisions {
+    margin-top: 7vh;
+}
+
+#chronicleTakeaways {
+    margin-bottom: 5vh;
+    margin-top: 3vh;
+}
+
+/* ------- Gradients for All Chronicle Text ----------------------*/
+
+#designThinkingGradient {
+    background-image: linear-gradient(to right, #E19446, #B78383);
+    background-clip: text;
+    color: transparent;
+}
+
+#generationalDivideGradient {
+    background-image: linear-gradient(to right, #52A0B3, #7390E9, #BF73C7, #DB4D4D);
+    background-clip: text;
+    color: transparent;
+}
+
+#boomersGradient{
+    background-image: linear-gradient(to right, #ee0979, #ff6a00);
+    background-clip: text;
+    color: transparent;
+}
+
+#genzGradient{
+    background-image: linear-gradient(to right, #2F80ED, #56CCF2);
+    background-clip: text;
+    color: transparent;
+}
+
+#ethicsGradient {
+    background-image: linear-gradient(to right, #7F00FF, #E100FF);
+    background-clip: text;
+    color: transparent;
+}
+
+#chronicleInterviewGradient {
+    background-image: linear-gradient(to right, #26bbaa, #70d49b);
+    background-clip: text;
+    color: transparent;
+}
+
+#chronicleDisconnectGradient {
+    background-image: linear-gradient(to right, #f12711, #f5af19);
+    background-clip: text;
+    color: transparent;
+}
+
+#chronicleDecisionsGradient {
+    background-image: linear-gradient(to right, #11998e, #29c785);
+    background-clip: text;
+    color: transparent;
+}
+
+#chronicleUserTestingGradient {
+    background-image: linear-gradient(to right, #5566df, #50a2be);
+    background-clip: text;
+    color: transparent;
+}
+
+#chronicleAccessibilityGradient {
+    background-image: linear-gradient(to right, #3F5EFB, #FC466B);
+    background-clip: text;
+    color: transparent;
 }

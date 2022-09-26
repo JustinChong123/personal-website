@@ -1,10 +1,15 @@
+.fitkitchCaseStudy {
+    background-color: #fbfbfd;
+    font-family: 'Barlow', sans-serif;
+}
+
 .fitkitchCover {
     height: 100vh;
-    background-color: #F5F2EE;
-    font-family: 'Raleway', sans-serif;
+    background-color: #FFCFD8;
 }
 
 .fitkitchCover h1 {
+    color: #E96060;
     font-weight: 800;
     font-size: 5vw;
     margin-top: 15vh;
@@ -13,128 +18,118 @@
 }
 
 .fitkitchCover h2 {
+    color: #E96060;
     font-weight: 600;
     font-size: 2vw;
     width: 30vw;
-    line-height: 6vh;
+    line-height: 1.4em;
+    letter-spacing: -0.01em;
     margin-left: 13vw;
     margin-top: 7vh;
 }
 
 .fitkitchCover h3 {
-    color: black;
+    color: #E96060;
     font-weight: 600;
     font-size: 1.5vw;
     display: inline;
     padding: 1vh 1.5vw;
     line-height: 6vh;
     margin-left: 13vw;
-    border: 2px solid black;
+    border: 2px solid #E96060;;
     border-radius: 50px;
 }
 
 .fitkitchCover img {
     position: absolute;
-    margin-left: 60vw;
-    margin-top: -50vh;
+    margin-left: 50em;
+    margin-top: -22.5em;
 }
 
-#fitkitch2 {
+/* -----FitKitch Intro ---------------------------*/
+.fitkitchIntro {
+    height: 100vh;
+}
+
+#fitkitchIntroQuestion {
+    color: #E96060;
+    margin-top: 0;
     margin-left: 10vw;
-    margin-top: 4vh;
+    padding-top: 5vh;
+    width: 60vw;
+    font-weight: 800;
 }
 
-#fitkitch3 {
+#fitkitchIntroText {
+    color: #1D1D1F;
     margin-left: 10vw;
-    margin-top: 2vh;
+    line-height: 1.4em;
+    width: 60vw;
+    font-weight: 500;
 }
 
-#fitkitch4 {
-    margin-left: 9vw;
-    margin-top: 0vh;
+/* ----- Text and Other Modification ---------------------------- */
+
+#redCaseSideHeader {
+    color: #E96060;
 }
 
-#fitkitch5 {
-    margin-left: 9vw;
+.fitkitchBoldText {
+    font-weight: 700;
 }
 
-#fitkitch6 {
-    margin-left: 9vw;
-    margin-top: 5vh;
+#fitkitchRedBackground {
+    background-color: #FFCFD8;
 }
 
-#fitkitch7 {
-    margin-left: 9vw;
-    margin-top: 5vh;
+#fitkitchSolution {
+    background-color: #fecfd8;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    margin-bottom: 10vh;
 }
 
-#fitkitch8 {
-    margin-left: 9.5vw;
-    margin-top: 5vh;
+#fitkitchSolution1 {
+    color: #ea6060;
+    margin-left: 15vw;
+    margin-bottom: 0.3em;
+    font-size: 1.5em;
+    font-weight: 700;
+    width: 20vw;
 }
 
-#fitkitch9 {
-    margin-left: 9.5vw;
-    margin-top: 5vh;
+#fitkitchSolution2 {
+    color: #EC1B1B;
+    margin-left: 15vw;
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    font-size: 4em;
+    font-weight: 800;
+    width: 20vw;
 }
 
-#fitkitch10 {
-    margin-left: 8vw;
-    margin-top: 0vh;
+#fitkitchSolution3{
+    color: #EC1B1B;
+    margin-left: 15vw;
+    font-weight: 500;
+    width: 60vw;
+    line-height: 1.5em;
 }
 
-#fitkitch11 {
-    margin-left: 8vw;
-    margin-top: 0vh;
+#fitkitchDesignThinkingGradient {
+    background-image: linear-gradient(to right, #7F00FF, #E100FF);
+    background-clip: text;
+    color: transparent;
 }
 
-#fitkitch12 {
-    margin-left: 8vw;
-    margin-top: 0vh;
+#fitkitchUserNeedsGradient {
+    background-image: linear-gradient(to right, #0B8FFA, #E5DB3E);
+    background-clip: text;
+    color: transparent;
 }
 
-#fitkitch13 {
-    margin-left: 8vw;
-    margin-top: 0vh;
-}
-
-#fitkitch14 {
-    margin-left: 8vw;
-    margin-top: 5vh;
-}
-
-#fitkitch15 {
-    margin-left: 8vw;
-    margin-top: 5vh;
-}
-
-#fitkitch16 {
-    margin-left: 8vw;
-    margin-top: 5vh;
-}
-
-#fitkitch17 {
-    margin-left: 6vw;
-    margin-top: 5vh;
-}
-
-#fitkitch18 {
-    margin-left: 6vw;
-    margin-top: 2vh;
-}
-
-#fitkitch19 {
-    margin-left: 7vw;
-    margin-top: 5vh;
-}
-
-#fitkitch20 {
-    margin-left: 7vw;
-    margin-top: 5vh;
-}
-
-#fitkitch21 {
-    margin-left: 6vw;
-    margin-top: 5vh;
-    margin-bottom: 20vh;
+#fitkitchSketchesGradient {
+    background-image: linear-gradient(to right, #008860, #15C55B);
+    background-clip: text;
+    color: transparent;
 }

@@ -14,10 +14,10 @@ function App() {
       <Navbar />
       <div className='Intro'>
         <Typewriter />
-        <h2> Dartmouth '24 <span class="pinkText">software engineer</span> and <span class="blueText">product designer</span> passionate about creating inclusive & accessible technologies </h2>
+        <h2> Dartmouth '24 <span class="blueText">product designer</span> and <span class="pinkText">software engineer</span> passionate about creating inclusive & accessible technologies </h2>
         <a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">
-          <img id="linkedinLogo" src={linkedinLogo} alt="Linkedin Logo" width='30' height='30'/></a>
-        <h3><a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">Linkedin</a></h3>
+          <img id="linkedinLogo" src={linkedinLogo} alt="Linkedin Logo" width='22' height='22'/></a>
+        <h3><a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">LinkedIn</a></h3>
         {/* <a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer"><img id="githubLogo" src={githubLogo} alt="Github Logo" width='30' height='30'/></a>
         <h3><a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">Github</a></h3> */}
       </div>

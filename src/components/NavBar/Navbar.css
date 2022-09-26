@@ -35,7 +35,8 @@
 
 .navButtons a, #email-me-button, #resume-download-button {
     text-decoration: none;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'IBM Plex Mono', sans-serif;
+    letter-spacing: -0.03em;
     font-size: 1vw;
     font-weight: 800;
     background-color: #F5F5F5;
@@ -47,15 +48,15 @@
 }
 
 #about-me-button {
-    box-shadow: 3px 3px #DB5A27;
+    box-shadow: 3px 3px #d5b36e;
 }
 
 #email-me-button {
-    box-shadow: 3px 3px #DB62B8;
+    box-shadow: 3px 3px #d5b36e;
 }
 
 #resume-download-button {
-    box-shadow: 3px 3px #7932C7;
+    box-shadow: 3px 3px #d5b36e;
 }
 
 #about-me-button:hover {
