@@ -3,26 +3,9 @@ import Navbar from '../../NavBar/Navbar.js'
 import Footer from '../../Footer/Footer.js'
 import './BudgetBalloon.css'
 import budgetBalloonMockup from '../budget-balloon-mockup.png'
-import budgetBalloon1 from './budget-balloon-1.png'
-import budgetBalloon2 from './budget-balloon-2.png'
-import budgetBalloon3 from './budget-balloon-3.png'
-import budgetBalloon4 from './budget-balloon-4.png'
-import budgetBalloon5 from './budget-balloon-5.png'
-import budgetBalloon6 from './budget-balloon-6.png'
-import budgetBalloon7 from './budget-balloon-7.png'
-import budgetBalloon8 from './budget-balloon-8.png'
-import budgetBalloon9 from './budget-balloon-9.png'
-import budgetBalloon10 from './budget-balloon-10.png'
-import budgetBalloon11 from './budget-balloon-11.png'
-import budgetBalloon12 from './budget-balloon-12.png'
-import budgetBalloon13 from './budget-balloon-13.png'
-import budgetBalloon14 from './budget-balloon-14.png'
-import budgetBalloon15 from './budget-balloon-15.png'
-import budgetBalloon16 from './budget-balloon-16.png'
-import budgetBalloon17 from './budget-balloon-17.png'
-import budgetBalloon18 from './budget-balloon-18.png'
-import budgetBalloon19 from './budget-balloon-19.png'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
+import budgetBalloonStats from './Budget Balloon Images/budget-balloon-stats.png'
+import budgetBalloonProblem from './Budget Balloon Images/budget-balloon-problem.png'
 
 function BudgetBalloon() {
     return (
@@ -36,25 +19,33 @@ function BudgetBalloon() {
                 <img id="budgetBalloonCaseStudyMockup" src={budgetBalloonMockup} alt="Budget Balloon Mockup" width="380" height="470" />
             </div>
             <div className="budgetBalloonContent">
-                <img id="budgetBalloon1" src={budgetBalloon1} width="1150" height="650" />
-                <img id="budgetBalloon2" src={budgetBalloon2} width="1000" height="400" />
-                <img id="budgetBalloon3" src={budgetBalloon3} width="1000" height="450" />
-                <img id="budgetBalloon4" src={budgetBalloon4} width="1200" height="400" />
-                <img id="budgetBalloon5" src={budgetBalloon5} width="960" height="600" />
-                <img id="budgetBalloon6" src={budgetBalloon6} width="810" height="500" />
-                <img id="budgetBalloon7" src={budgetBalloon7} width="860" height="550" />
-                <img id="budgetBalloon8" src={budgetBalloon8} width="870" height="460" />
-                <img id="budgetBalloon9" src={budgetBalloon9} width="910" height="550" />
-                <img id="budgetBalloon10" src={budgetBalloon10} width="1000" height="280" />
-                <img id="budgetBalloon11" src={budgetBalloon11} width="1100" height="550" />
-                <img id="budgetBalloon12" src={budgetBalloon12} width="1020" height="280" />
-                <img id="budgetBalloon13" src={budgetBalloon13} width="1250" height="400" />
-                <img id="budgetBalloon14" src={budgetBalloon14} width="1000" height="500" />
-                <img id="budgetBalloon15" src={budgetBalloon15} width="980" height="200" />
-                <img id="budgetBalloon16" src={budgetBalloon16} width="1120" height="450" />
-                <img id="budgetBalloon17" src={budgetBalloon17} width="1120" height="450" />
-                <img id="budgetBalloon18" src={budgetBalloon18} width="1150" height="450" />
-                <img id="budgetBalloon19" src={budgetBalloon19} width="1100" height="600" />
+                
+                <div className="budgetBalloonIntro">
+                    <h1 className="caseSectionHeader" id="budgetBalloonIntroQuestion">How does FitKitch marry exercise and community building?</h1>
+                    <p className="caseText" id="budgetBalloonIntroText">Budget Balloon is a mobile app that <span className="fitkitchBoldText">teaches teens how to save money</span> and curb unhealthy spending habits by promoting friendly competition to save up for bigger goals. We used <span className="fitkitchBoldText">hot air balloon racing</span> to visualize saving up for a personal goal, adding a fun, kid-friendly, and gamified experience for teens.</p>
+                    <img id="budgetBalloonStats" src={budgetBalloonStats} width="250" height="580" />
+                </div>
+
+                <div id="budgetBalloonPinkBackground"className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="pinkCaseSideHeader">BACKGROUND</h3>
+                    </div>
+                    <div className="caseMain">
+                        <p id="noSectionHeader"className="caseText">For our UI/UX Design class project, our UX design challenge to <span className="fitkitchBoldText">design a solution to help kids save money.</span> We aimed to curb teens' compulsive spending habits and transform the mundate experience of budgeting and saving into a <span className="fitkitchBoldText">fun, rewarding one with a competitive spirit.</span></p>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="pinkCaseSideHeader">PROBLEM</h3>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Why is it important to teach kids good spending habits?</h1>
+                        <p className="caseText">Kids today have more money to spend, but struggle to build healthy spending patterns and budgeting skills. These bad financial habits can snowball into adulthood and leave them straddled with debt.</p>
+                        <img src={budgetBalloonProblem} width="610" height="180" />
+                    </div>
+                </div>
+
             </div>
             <Footer />
         </div>

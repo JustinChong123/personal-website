@@ -1,8 +1,13 @@
+.budgetBalloonCaseStudy {
+    background-color: #fbfbfd;
+    font-family: 'Barlow', sans-serif;
+}
+
+
 .budgetBalloonCover {
     height: 100vh;
-    background-color: #F491D8;
-    font-family: 'Raleway', sans-serif;
-    color: white;
+    background-color: #F9CCEC;
+    color: #F200AC;
 }
 
 .budgetBalloonCover h1 {
@@ -29,7 +34,7 @@
     padding: 1vh 1.5vw;
     line-height: 6vh;
     margin-left: 13vw;
-    border: 2px solid white;
+    border: 2px solid #F200AC;
     border-radius: 50px;
 }
 
@@ -39,98 +44,44 @@
     margin-top: -53vh;
 }
 
-#budgetBalloon1 {
+/* ----- Budget Balloon Intro ---------------------------*/
+
+.budgetBalloonIntro {
+    height: 100vh;
+}
+
+#budgetBalloonIntroQuestion {
+    color: #F200AC;
+    margin-top: 0;
     margin-left: 10vw;
-    margin-top: 5vh;
+    padding-top: 5vh;
+    width: 60vw;
+    font-weight: 800;
 }
 
-#budgetBalloon2 {
-    margin-left: 15vw;
-    margin-top: 5vh;
+#budgetBalloonIntroText {
+    color: #1D1D1F;
+    margin-left: 10vw;
+    line-height: 1.4em;
+    width: 60vw;
+    font-weight: 500;
 }
 
-#budgetBalloon3 {
-    margin-left: 15vw;
-    margin-top: 5vh;
+/* ----- Text and Other Modifications ---------------------------*/
+
+#pinkCaseSideHeader {
+    color: #F200AC;
 }
 
-#budgetBalloon4 {
-    margin-left: 8vw;
-    margin-top: 5vh;
+#budgetBalloonPinkBackground {
+    background-color: #F6D7ED;
+    margin-bottom: 0;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
-#budgetBalloon5 {
-    margin-left: 15vw;
-    margin-top: 5vh;
-}
-
-#budgetBalloon6 {
-    margin-left: 15vw;
-    margin-top: 5vh;
-}
-
-#budgetBalloon7 {
-    margin-left: 15vw;
-    margin-top: 10vh;
-}
-
-#budgetBalloon8 {
-    margin-left: 15vw;
-    margin-top: 10vh;
-}
-
-#budgetBalloon9 {
-    margin-left: 15vw;
-    margin-top: 10vh;
-}
-
-#budgetBalloon10 {
-    margin-left: 15vw;
-    margin-top: 5vh;
-}
-
-#budgetBalloon11 {
-    margin-left: 12vw;
-    margin-top: 5vh;
-}
-
-#budgetBalloon12 {
-    margin-left: 12vw;
-    margin-top: 10vh;
-}
-
-#budgetBalloon13 {
-    margin-left: 7vw;
-    margin-top: 10vh;
-}
-
-#budgetBalloon14 {
-    margin-left: 15vw;
-    margin-top: 5vh;
-}
-
-#budgetBalloon15 {
-    margin-left: 15vw;
-    margin-top: 10vh;
-}
-
-#budgetBalloon16 {
-    margin-left: 11vw;
-    margin-top: 5vh;
-}
-
-#budgetBalloon17 {
-    margin-left: 11vw;
-    margin-top: 5vh;
-}
-
-#budgetBalloon18 {
-    margin-left: 11vw;
-    margin-top: 5vh;
-}
-
-#budgetBalloon19 {
-    margin-left: 11vw;
-    margin-top: 10vh;
-    margin-bottom: 20vh;
+#budgetBalloonStats {
+    position: relative;
+    top: -12.7em;
+    left: 70em;
 }
