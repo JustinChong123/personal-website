@@ -85,3 +85,50 @@
     top: -12.7em;
     left: 70em;
 }
+
+#budgetBalloonSolution {
+    background-color: #f6d7ed;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    margin-bottom: 10vh;
+}
+
+#budgetBalloonSolution1 {
+    color: #EA33B4;
+    margin-left: 15vw;
+    margin-bottom: 0.3em;
+    font-size: 1.5em;
+    font-weight: 700;
+    width: 20vw;
+}
+
+#budgetBalloonSolution2 {
+    color: #E500A3;
+    margin-left: 15vw;
+    margin-top: 0;
+    margin-bottom: 0.3em;
+    font-size: 4em;
+    font-weight: 800;
+    width: 30vw;
+}
+
+#budgetBalloonSolution3{
+    color: #E500A3;
+    margin-left: 15vw;
+    font-weight: 500;
+    width: 60vw;
+    line-height: 1.5em;
+}
+
+#budgetBalloonBalloon {
+    position: absolute;
+    margin-left: 65em;
+    margin-top: -19em;
+}
+
+
+#budgetBalloonSolutionsGradient {
+    background-image: linear-gradient(to right, #fc00ff, #00dbde);
+    background-clip: text;
+    color: transparent;
+}
