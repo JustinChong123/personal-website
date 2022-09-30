@@ -20,6 +20,7 @@ import budgetBalloonUXDesignHeading from './Budget Balloon Images/budget-balloon
 import budgetBalloonObjectives from './Budget Balloon Images/budget-balloon-objectives.png'
 import budgetBalloonSketches from './Budget Balloon Images/budget-balloon-sketches.png'
 import budgetBalloonWireframes from './Budget Balloon Images/budget-balloon-wireframes.png'
+import budgetBalloonTakeaways from './Budget Balloon Images/budget-balloon-takeaways.png'
 
 
 function BudgetBalloon() {
@@ -66,7 +67,7 @@ function BudgetBalloon() {
                         <h3 id="pinkCaseSideHeader">OVERVIEW</h3>
                     </div>
                     <div className="caseMain">
-                        <h1 className="caseSectionHeader">How does the app work?</h1>
+                        <h1 className="caseSectionHeader">How does Budget Balloon work?</h1>
                         <img src={budgetBalloonOverview} width="950" height="1040" />
                     </div>
                 </div>
@@ -194,6 +195,18 @@ function BudgetBalloon() {
                         <h1 className="caseSectionHeader">Teaching nuanced budgeting skills</h1>
                         <p className="caseText">We rapidly translated our flow sketches to wireframes, iterating to the highest detail without adding color. Here are <span className="fitkitchBoldText">3 feature enhancements</span> we iterated to <span className="fitkitchBoldText">teach teens about budgeting in reality,</span> which involves collaboration, timelines, and consequences.</p>
                         <img src={budgetBalloonWireframes} width="950" height="1040" />
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="pinkCaseSideHeader">REFLECT</h3>
+                        <h2>Takeaways & Next Steps</h2>
+                    </div>
+                    <div className="caseMain">
+                        <p id="noSectionHeader" className="caseText">Designing this app was very rewarding, especially because I was working with 3 other designers with different ideas that we merged into a <span className="fitkitchBoldText">cohesive creative direction.</span> Budget Balloon empowers teenagers in their social circles to learn better spending habits, curb compulsive spending, and save up for larger goals. Here are <span className="fitkitchBoldText">3 key takeaways</span> we learned from this process.</p>
+                        <img id="chronicleTakeaways" src={budgetBalloonTakeaways} width="950" height="450" />
+                        <p className="caseText">In the future, we plan to jump into the UI and play with colors, typography, patterns, and stylings to make the app more vibrant and engaging.</p>
                     </div>
                 </div>
 

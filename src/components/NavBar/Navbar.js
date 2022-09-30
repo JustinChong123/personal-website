@@ -4,7 +4,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import {Link} from 'react-router-dom'
 import sweResume from './Justin_Chong_SWE_Resume.docx.pdf'
-import pmResume from './Justin_Chong_PM_Resume.docx.pdf'
+import pmResume from './Justin_Chong_PM_Resume.pdf'
 import designResume from './Justin Chong Resume.pdf'
 import logoPic from './logo.png'
 
@@ -24,9 +24,9 @@ function Navbar() {
                 </li>
                 <li>
                     <DropdownButton id="resume-download-button" title="Resume">
-                        <Dropdown.Item id='dropdownItemSWE' href={sweResume} target='_blank' rel='noopener noreferrer'>SWE</Dropdown.Item>
                         <Dropdown.Item id='dropdownItemDesign' href={designResume} target='_blank' rel='noopener noreferrer'>Design</Dropdown.Item>
                         <Dropdown.Item id='dropdownItemPM' href={pmResume} target='_blank' rel='noopener noreferrer'>PM</Dropdown.Item>
+                        {/* <Dropdown.Item id='dropdownItemSWE' href={sweResume} target='_blank' rel='noopener noreferrer'>SWE</Dropdown.Item> */}
                     </DropdownButton>
                 </li>
             </ul>

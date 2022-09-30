@@ -125,6 +125,12 @@
     left: 70em;
 }
 
+#fitkitchBestMockups {
+    position: relative;
+    top: -19.2em;
+    left: -3em;
+}
+
 #fitkitchDesignThinkingGradient {
     background-image: linear-gradient(to right, #7F00FF, #E100FF);
     background-clip: text;
