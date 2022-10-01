@@ -61,22 +61,19 @@
 
 #about-me-button:hover {
     box-shadow: 3px 3px white;
-    background-color: #DB5A27;
-    color: white;
+    background-color: #d5b36e;
 }
 
 #email-me-button:hover {
     cursor: pointer;
     box-shadow: 3px 3px white;
-    background-color: #DB62B8;
-    color: white;
+    background-color: #d5b36e;
 }
 
 #resume-download-button:hover {
     cursor: pointer;
     box-shadow: 3px 3px white;
-    background-color: #7932C7;
-    color: white;
+    background-color: #d5b36e;
 }
 
 #dropdownItemSWE {

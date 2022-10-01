@@ -190,6 +190,12 @@
     margin-top: 3vh;
 }
 
+#chronicleBestMockups {
+    position: relative;
+    top: -12.6em;
+    left: -7em;
+}
+
 /* ------- Gradients for All Chronicle Text ----------------------*/
 
 #designThinkingGradient {

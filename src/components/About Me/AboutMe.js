@@ -6,7 +6,8 @@ import profilePic from './profile-pic.png'
 import skiing from './skiing.png'
 import dancing from './dancing.png'
 import foodie from './foodie.png'
-import aboutMeSkiing from './about-me-skiing.png'
+// import aboutMeSkiing from './about-me-skiing.png'
+// import snowMountain from './snow-mountain.png'
 
 function AboutMe () {
     return (

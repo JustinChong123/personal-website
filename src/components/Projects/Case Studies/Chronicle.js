@@ -5,6 +5,7 @@ import chronicleMockup from './chronicle-cover-mockup.png'
 import './Chronicle.css'
 import SectionDivider from './Section Divider/SectionDivider.js'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
+import chronicleBestMockups from './Chronicle Images/chronicle-best-mockups.png'
 import chronicleProblemStatistics from './Chronicle Images/chronicle-problem-statistics.png'
 import chronicleChallenge from './Chronicle Images/chronicle-challenge.png'
 import chronicleDesignThinking from './Chronicle Images/chronicle-design-thinking.png'
@@ -43,6 +44,7 @@ function Chronicle() {
                     <p className="caseText" id="chronicleIntroText">Chronicle is a tablet app that allows grandparents and grandchildren, especially those that live far distances from each other, to connect by <span className="chronicleBoldText">collaboratively narrating and drawing stories</span> from their own lives.</p>
                     <p className="caseText" id="chronicleIntroText">Our app <span className="chronicleBoldText">revolves around the family</span> because connecting different generations doesn't start with strangers. It starts with people you know and care about.</p>
                     <img id="chronicleStats" src={chronicleStats} width="250" height="600" />
+                    <img id="chronicleBestMockups" src={chronicleBestMockups} width="850" height="400" />
                 </div>
 
                 <div id="chronicleBlueBackground"className="caseSection">

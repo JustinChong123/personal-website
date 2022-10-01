@@ -5,6 +5,7 @@ import './BudgetBalloon.css'
 import budgetBalloonMockup from '../budget-balloon-mockup.png'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 import budgetBalloonStats from './Budget Balloon Images/budget-balloon-stats.png'
+import budgetBalloonBestMockups from './Budget Balloon Images/budget-balloon-best-mockups.png'
 import budgetBalloonProblem from './Budget Balloon Images/budget-balloon-problem.png'
 import budgetBalloonOverview from './Budget Balloon Images/budget-balloon-overview.png'
 import budgetBalloonDesignThinking from './Budget Balloon Images/budget-balloon-design-thinking.png'
@@ -40,6 +41,7 @@ function BudgetBalloon() {
                     <h1 className="caseSectionHeader" id="budgetBalloonIntroQuestion">How does FitKitch marry exercise and community building?</h1>
                     <p className="caseText" id="budgetBalloonIntroText">Budget Balloon is a mobile app that <span className="fitkitchBoldText">teaches teens how to save money</span> and curb unhealthy spending habits by promoting friendly competition to save up for bigger goals. We used <span className="fitkitchBoldText">hot air balloon racing</span> to visualize saving up for a personal goal, adding a fun, kid-friendly, and gamified experience for teens.</p>
                     <img id="budgetBalloonStats" src={budgetBalloonStats} width="250" height="580" />
+                    <img id="budgetBalloonBestMockups" src={budgetBalloonBestMockups} width="900" height="406" />
                 </div>
 
                 <div id="budgetBalloonPinkBackground"className="caseSection">
