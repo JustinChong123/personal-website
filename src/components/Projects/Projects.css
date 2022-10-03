@@ -12,9 +12,9 @@
     font-family: 'Raleway', sans-serif;
     border: 3.5px solid black;
     padding: 2vh 2vw;
-    width: 33vw;
+    width: 30em;
     min-width: 400px;
-    height: 45vh;
+    height: 20em;
     box-shadow: 14px 14px 0px -5px black, 14px 14px 0px -3px white;
     transition: transform 250ms;
 }
@@ -39,10 +39,10 @@
 /* Project Description */
 .projects div h2 {
     font-weight: 800;
-    font-size: 2vw;
+    font-size: 1.8em;
     margin-top: 1vh;
     margin-bottom: 2vh;
-    line-height: 5vh;
+    line-height: 1.23em;
 }
 
 /* Project Role */

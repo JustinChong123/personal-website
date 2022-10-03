@@ -16,6 +16,7 @@ import fitkitchNewSolutions from './Fitkitch Images/fitkitch-new-solutions.png'
 import fitkitchFlowSketches from './Fitkitch Images/fitkitch-flow-sketches.png'
 import fitkitchPainPoints from './Fitkitch Images/fitkitch-pain-points.png'
 import fitkitchUIUXDesignHeading from './Fitkitch Images/fitkitch-uiux-design-heading.png'
+import fitkitchBowl from './Fitkitch Images/fitkitch-bowl.png'
 import fitkitchObjectives from './Fitkitch Images/fitkitch-objectives.png'
 import fitkitchSketches from './Fitkitch Images/fitkitch-sketches.png'
 import fitkitchWireframes from './Fitkitch Images/fitkitch-wireframes.png'
@@ -42,7 +43,7 @@ function FitKitch() {
                 <div className="fitkitchIntro">
                     <h1 className="caseSectionHeader" id="fitkitchIntroQuestion">How does FitKitch marry exercise and community building?</h1>
                     <p className="caseText" id="fitkitchIntroText">FitKitch is a <span className="fitkitchBoldText">community-oriented wellness app</span> designed to motivate young people to stay physically active. We were <span className="fitkitchBoldText">inspired by cooking,</span> an action that brings people together to work towards a shared goal – a cooked dish.</p>
-                    <p className="caseText" id="fitkitchIntroText">FitKitch <span className="fitkitchBoldText">leverages community obligation</span> and action to motivate individuals to exercise. The daily participation of each user is integral in the group's success, but we make sure to avoid developing <span className="fitkitchBoldText">unhealthy, toxic mindsets</span> towards fitness and wellness.</p>
+                    <p className="caseText" id="fitkitchIntroText">FitKitch <span className="fitkitchBoldText">leverages community obligation</span> and action to motivate individuals to exercise. The daily participation of each user is integral to the group's success, but we designed to avoid <span className="fitkitchBoldText">unhealthy, toxic mindsets</span> towards fitness and wellness.</p>
                     <img id="fitkitchStats" src={fitkitchStats} width="240" height="630" />
                     <img id="fitkitchBestMockups" src={fitkitchBestMockups} width="730" height="330" />
                 </div>
@@ -52,7 +53,7 @@ function FitKitch() {
                         <h3 id="redCaseSideHeader">BACKGROUND</h3>
                     </div>
                     <div className="caseMain">
-                        <p id="noSectionHeader"className="caseText">A <span className="fitkitchBoldText">Dartmouth professor</span> approached us to <span className="fitkitchBoldText">commercialize a research app</span> previously built by the DALI Lab. This app used memory games after users exercised to collect data on how exercise affects cognitive and mental health. Our objective was to build a new app to motivate people to exercise <span className="fitkitchBoldText">using the benefits of cognitive health,</span> but our user research caused us to pivot to our current app idea. I worked with my co-designer, PM, and 3 developers to design, develop, and deploy the app for a <span className="fitkitchBoldText">beta launch in 10 weeks.</span></p>
+                        <p id="noSectionHeader" className="caseText">A <span className="fitkitchBoldText">Dartmouth professor</span> approached us to <span className="fitkitchBoldText">commercialize a research app</span> previously built by the DALI Lab. This app used memory games after users exercised to collect data on how exercise affects cognitive and mental health. Our objective was to build a new app to motivate people to exercise <span className="fitkitchBoldText">using the benefits of cognitive health,</span> but our user research caused us to pivot to our current app idea. I worked with my co-designer, PM, and 3 developers to design, develop, and deploy the app for a <span className="fitkitchBoldText">beta launch in 10 weeks.</span></p>
                     </div>
                 </div>
 
@@ -94,7 +95,7 @@ function FitKitch() {
                         <h2>Reviewing Previous Materials</h2>
                     </div>
                     <div className="caseMain">
-                        <h1 className="caseSectionHeader">Learning and critiquing the <span id="designThinkingGradient" >old research app, "FitWit"</span></h1>
+                        <h1 className="caseSectionHeader">Critiquing the <span id="designThinkingGradient" >old research app, "FitWit"</span></h1>
                         <p className="caseText">Our client wanted us to commercialize their research tool “FitWit” (Fitness + Wit), which enabled users to play memory games after exercising to collect data on how exercise positively affects cognitive health. We <span className="fitkitchBoldText">reviewed the previous designers' work</span> from UX research to user flows to the deployed app.</p>
                         <img src={fitkitchOld} width="950" height="310" />
                     </div>
@@ -131,7 +132,8 @@ function FitKitch() {
                     </div>
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Talking to our clients about <span id="boomersGradient">redefining product vision</span></h1>
-                        <p className="caseText">It was clear that centering cognitive benefits to encourage exercise <span className="fitkitchBoldText">was not what our users needed.</span> We defined our <span className="fitkitchBoldText">new HMW statement:</span> how might we change perceptions of exercise as productive and necessary rather than extra? We brainstormed and presented 3 alternative solutions to our client, and they <span className="fitkitchBoldText">chose solution #1.</span></p>
+                        <p className="caseText">It was clear that centering cognitive benefits to encourage exercise <span className="fitkitchBoldText">was not what our users needed.</span> We defined our <span className="fitkitchBoldText">new HMW statement:</span> how might we change perceptions of exercise as productive and necessary rather than extra?</p>
+                        <p className="caseText">We <span className="fitkitchBoldText">presented key insights</span> from UX research and interviews to our clients and urged them to deprioritize cognitive benefits as the theme of the app. Although they weren't ecstatic, they understood that the users came first. We presented 3 alternative solutions to our client, and they <span className="fitkitchBoldText">liked solution #1 the most, as did we.</span></p>
                         <img src={fitkitchNewSolutions} width="925" height="330" />
                     </div>
                 </div>
@@ -154,7 +156,7 @@ function FitKitch() {
                     </div>
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">The disconnect between the <span id="fitkitchUserNeedsGradient">desire and action to exercise</span></h1>
-                        <p className="caseText">After deciding to move away from mood tracking, we reviewed our user research and focused on why <span className="fitkitchBoldText">young people with busy lives</span> struggle to exercise consistently. Centering our solution around these <span className="fitkitchBoldText">3 pain points</span> revitalized our brainstorming sessions and brought us to our current app: FitKitch.</p>
+                        <p className="caseText">After deciding to move away from mood tracking, we reviewed our user research and focused on why <span className="fitkitchBoldText">young people with busy lives</span> struggle to exercise consistently. Centering our solution around <span className="fitkitchBoldText">3 pain points</span> revitalized our brainstorming sessions and led us to our current app: FitKitch.</p>
                         <img src={fitkitchPainPoints} width="925" height="390" />
                     </div>
                 </div>

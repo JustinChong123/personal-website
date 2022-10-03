@@ -5,23 +5,23 @@
 
 #profilePic {
     margin-left: 10vw;
-    margin-top: 5vh;
+    margin-top: 3em;
 }
 
 #aboutMeText {
     width: 50vw;
-    font-size: 2vw;
+    font-size: 1.5em;
     font-weight: 500;
-    margin-left: 40vw;
-    margin-top: -57vh;
+    margin-left: 24em;
+    margin-top: -16em;
 }
 
 #aboutMeText1 {
     width: 50vw;
-    font-size: 2vw;
+    font-size: 1.5em;
     font-weight: 500;
-    margin-left: 40vw;
-    margin-top: 5vh;
+    margin-left: 24em;
+    margin-top: -1em;
     
 }
 
@@ -44,7 +44,7 @@
     height: 60%;
     width: 68vw;
     margin-left: 15vw;
-    margin-top: 5vh;
+    margin-top: 1em;
 }
 
 .aboutMe h4 {
@@ -72,4 +72,17 @@
 
 #foodieText {
     margin-bottom: 20vh;
+}
+
+#daliLabLink {
+    color: white;
+    font-style: italic;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    box-shadow: inset 0 0 0 0 white;
+}
+
+#daliLabLink:hover {
+    box-shadow: inset 100px 0 0 0 white;
+    color: black;
+    text-decoration: none;
 }
