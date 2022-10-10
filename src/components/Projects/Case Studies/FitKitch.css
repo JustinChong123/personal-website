@@ -120,6 +120,12 @@
     position: relative;
 }
 
+#fitkitchSolutionHeading {
+    position: absolute;
+    margin-left: 65em;
+    margin-top: -13.7em;
+}
+
 #fitkitchStats {
     position: relative;
     top: -19em;
@@ -146,6 +152,12 @@
 
 #fitkitchSketchesGradient {
     background-image: linear-gradient(to right, #008860, #15C55B);
+    background-clip: text;
+    color: transparent;
+}
+
+#fitkitchAccessibilityGradient {
+    background-image: linear-gradient(to right, #FF028B, #ECC023);
     background-clip: text;
     color: transparent;
 }

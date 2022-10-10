@@ -136,6 +136,11 @@
     text-decoration: underline;
 }
 
+#backgroundText {
+    margin-top: 0em;
+    line-height: 1.6em;
+}
+
 #noSectionHeader {
     margin-top: 0em;
 }
