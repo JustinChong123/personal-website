@@ -8,6 +8,7 @@ import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 import chronicleBestMockups from './Chronicle Images/chronicle-best-mockups.png'
 import chronicleProblemStatistics from './Chronicle Images/chronicle-problem-statistics.png'
 import chronicleChallenge from './Chronicle Images/chronicle-challenge.png'
+import chronicleOverview from './Chronicle Images/chronicle-overview.png'
 import chronicleDesignThinking from './Chronicle Images/chronicle-design-thinking.png'
 import chronicleUserResearchHeading from './Chronicle Images/chronicle-user-research-heading.png'
 import chronicleGenerationalResearchImg from './Chronicle Images/chronicle-generational-research-img.png'
@@ -52,7 +53,7 @@ function Chronicle() {
                         <h3>BACKGROUND</h3>
                     </div>
                     <div className="caseMain">
-                        <p id="noSectionHeader"className="caseText">For our UI/UX Design class capstone project, our challenge was to <span className="chronicleBoldText">design an experience to bridge generations together.</span> We wanted to look at how we could bring different generations <span className="chronicleBoldText">within families</span> closer together, since there is more potential for meaningful and lasting connection. Right from the start, my partner and I knew we wanted to embed <span className="chronicleBoldText">accessibility and inclusivity</span> as a core experience to users of all ages.</p>
+                        <p id="backgroundText" className="caseText">For our UI/UX Design class capstone project, our challenge was to <span className="chronicleBoldText">design an experience to bridge generations together.</span> We wanted to look at how we could bring different generations <span className="chronicleBoldText">within families</span> closer together, since there is more potential for meaningful and lasting connection. Right from the start, my partner and I knew we wanted to embed <span className="chronicleBoldText">accessibility and inclusivity</span> as a core experience to users of all ages.</p>
                     </div>
                 </div>
 
@@ -64,6 +65,16 @@ function Chronicle() {
                         <h1 className="caseSectionHeader">How severe is the generational gap?</h1>
                         <p className="caseText">Generations within families feel more and more disconnected as disparities in technological literacy and lifestyle drive the divide between their ways of life.</p>
                         <img src={chronicleProblemStatistics} width="600" height="180"/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>OVERVIEW</h3>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">How does Chronicle work?</h1>
+                        <img src={chronicleOverview} width="950" height="990"/>
                     </div>
                 </div>
 
