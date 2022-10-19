@@ -201,6 +201,12 @@
     left: -7em;
 }
 
+#chroniclePlant {
+    position: absolute;
+    margin-left: 65em;
+    margin-top: -21em;
+}
+
 /* ------- Gradients for All Chronicle Text ----------------------*/
 
 #designThinkingGradient {

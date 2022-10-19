@@ -17,6 +17,7 @@ import chroniclePrinciples from './Chronicle Images/chronicle-principles.png'
 import chronicleInterviews from './Chronicle Images/chronicle-interviews.png'
 import chronicleHMW from './Chronicle Images/chronicle-hmw.png'
 import chroniclePainPoints from './Chronicle Images/chronicle-pain-points.png'
+import chroniclePlant from './Chronicle Images/chronicle-plant.png'
 import chronicleUXUIDesignHeading from './Chronicle Images/chronicle-ux-ui-design-heading.png'
 import chronicleDesignObjectives from './Chronicle Images/chronicle-design-objectives.png'
 import chronicleSketches from './Chronicle Images/chronicle-sketches.png'
@@ -147,14 +148,14 @@ function Chronicle() {
                     </div>
                 </div>
 
-                <div id="chronicleBlueBackground" className="caseSection">
+                <div className="caseSection">
                     <div className="caseSideHeader">
                         <h3>DEFINE</h3>
                         <h2>HMW Statement</h2>
                     </div>
                     <div className="caseMain">
                         <p id="noSectionHeader" className="caseText">Our user interviews showed us that <span className="chronicleBoldText">we framed the problem too broadly.</span> Bridging generations was not going to start with strangers over the Internet. It had to start somewhere more familiar and meaningful to people: <span className="chronicleBoldText">the family.</span></p>
-                        <img src={chronicleHMW} width="800" height="200"/>
+                        <img src={chronicleHMW} width="800" height="180"/>
                     </div>
                 </div>
 
@@ -174,6 +175,7 @@ function Chronicle() {
                     <h3 id="chronicleSolution1">SOLUTION</h3>
                     <h1 id="chronicleSolution2">Chronicle</h1>
                     <h2 id="chronicleSolution3">A tablet app that helps families preserve precious memories through collaborative and interactive storytelling and illustration</h2>
+                    <img id="chroniclePlant" src={chroniclePlant} width="380" height="380" />
                 </div>
 
                 <img alt="Chronicle UX/UI Design Heading" src={chronicleUXUIDesignHeading} width="1440" height="380"/>
@@ -265,7 +267,7 @@ function Chronicle() {
                     </div>
                     <div className="caseMain">
                         <p id="noSectionHeader" className="caseText">This project was <span className="chronicleBoldText">extremely rewarding</span> as we carried out an <span className="chronicleBoldText">end-to-end design process in 2 weeks</span> during the final exams period. We designed Chronicle to mend the generational gap within families that's been growing as technology plants more misunderstanding and conflict between people. Here are <span className="chronicleBoldText">3 key takeaways</span> we learned from this process.</p>
-                        <img id="chronicleTakeaways" src={chronicleTakeaways} width="950" height="440"/>
+                        <img id="chronicleTakeaways" src={chronicleTakeaways} width="950" height="320"/>
                         <p className="caseText">We were ecstatic to hear that users from usability testing were <span className="chronicleBoldText">eager to use this app with their grandchildren</span> if it was released on the market. In the future, we plan to implement the reading library, expand the graphics tool even further, and conduct comprehensive usability testing with grandchildren that we were unable to do because of time constraints and UserTesting.com's 18+ user policy.</p>
                     </div>
                 </div>

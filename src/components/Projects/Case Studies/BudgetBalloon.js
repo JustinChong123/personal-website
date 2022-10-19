@@ -207,7 +207,7 @@ function BudgetBalloon() {
                     </div>
                     <div className="caseMain">
                         <p id="noSectionHeader" className="caseText">Designing this app was very rewarding, especially because I was working with 3 other designers with different ideas that we merged into a <span className="fitkitchBoldText">cohesive creative direction.</span> Budget Balloon empowers teenagers in their social circles to learn better spending habits, curb compulsive spending, and save up for larger goals. Here are <span className="fitkitchBoldText">3 key takeaways</span> we learned from this process.</p>
-                        <img id="chronicleTakeaways" src={budgetBalloonTakeaways} width="950" height="450" />
+                        <img id="chronicleTakeaways" src={budgetBalloonTakeaways} width="950" height="320" />
                         <p className="caseText">In the future, we plan to jump into the UI and play with colors, typography, patterns, and stylings to make the app more vibrant and engaging.</p>
                     </div>
                 </div>
