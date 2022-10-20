@@ -85,7 +85,7 @@ function Chronicle() {
                     </div>
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">What our <span id="designThinkingGradient">design thinking</span> looked like from start to end</h1>
-                        <img src={chronicleDesignThinking} width="950" height="300"/>
+                        <img src={chronicleDesignThinking} width="950" height="290"/>
                     </div>
                 </div>
                 <img alt="Chronicle User Research Heading" src={chronicleUserResearchHeading} width="1440" height="380"/>
@@ -107,7 +107,7 @@ function Chronicle() {
                     </div>
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Focusing on <span id="boomersGradient">Baby Boomers</span> and <span id="genzGradient">Generation Z</span></h1>
-                        <p className="caseText">Looking at four generations, we focused on Boomers and Gen Z because the stark contrast between  how they grew up, lifestyle, and tech literacy provided the greatest opportunity to effect change.</p>
+                        <p className="caseText">Looking at four generations, we focused on Boomers and Gen Z because the stark contrast between  how they grew up, lifestyle, and tech literacy provided the <span className="chronicleBoldText">greatest opportunity to effect change.</span></p>
                         <img src={chronicleChallenge} width="960" height="167"/>
                     </div>
                 </div>
@@ -119,7 +119,7 @@ function Chronicle() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Our solution (the first of many)</h1>
                         <p className="caseText">After stakeholder mapping and brainstorming HMW questions, our initial solution was an app that <span className="chronicleBoldText">connects young people seeking stories and older people willing to share personal insights.</span></p>
-                        <p className="caseText">We did journey mapping to understand our users' mindsets, and here are three key objectives we wanted our initial app to embody. Although we switched ideas later, many of these still acted as <span className="chronicleBoldText">guiding principles for our new solution.</span></p>
+                        <p className="caseText">We did journey mapping to understand our users' mindsets, and here are three key objectives we wanted our initial app to embody. Although we iterated our app concept later on, many of these still acted as <span className="chronicleBoldText">guiding principles for our new solution.</span></p>
                         <img src={chroniclePrinciples} width="900" height="167"/>
                     </div>
                 </div>
@@ -142,8 +142,8 @@ function Chronicle() {
                         <h2>User Interviews & Empathy Maps</h2>
                     </div>
                     <div className="caseMain">
-                        <h1 className="caseSectionHeader">Talking to users made it clear <span id="chronicleInterviewGradient">this solution would not work</span></h1>
-                        <p className="caseText">After interviewing both old and young people and drawing empathy maps, we realized that both younger and older generations had no interest in connecting with strangers to share stories.</p>
+                        <h1 className="caseSectionHeader">Talking to users motivated us to <span id="chronicleInterviewGradient">shift our product vision</span></h1>
+                        <p className="caseText">After interviewing both old and young people and drawing empathy maps, we discovered that younger and older generations had <span className="chronicleBoldText">little interest in connecting with strangers</span> to share stories.</p>
                         <img src={chronicleInterviews} width="950" height="350"/>
                     </div>
                 </div>
@@ -154,7 +154,7 @@ function Chronicle() {
                         <h2>HMW Statement</h2>
                     </div>
                     <div className="caseMain">
-                        <p id="noSectionHeader" className="caseText">Our user interviews showed us that <span className="chronicleBoldText">we framed the problem too broadly.</span> Bridging generations was not going to start with strangers over the Internet. It had to start somewhere more familiar and meaningful to people: <span className="chronicleBoldText">the family.</span></p>
+                        <p id="noSectionHeader" className="caseText">Our user interviews motivated us to <span className="chronicleBoldText">narrow the scope of our solution.</span> Bridging generations was not going to start with strangers over the Internet. It had to start somewhere more familiar and meaningful to people: <span className="chronicleBoldText">the family.</span></p>
                         <img src={chronicleHMW} width="800" height="180"/>
                     </div>
                 </div>
@@ -162,11 +162,11 @@ function Chronicle() {
                 <div className="caseSection">
                     <div className="caseSideHeader">
                         <h3>DEFINE</h3>
-                        <h2>Needs</h2>
+                        <h2>User Needs</h2>
                     </div>
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">The <span id="chronicleDisconnectGradient">disconnect</span> between grandparents and grandchildren</h1>
-                        <p className="caseText">Going back to the drawing board, we used our user interviews to make <span className="chronicleBoldText">user personas</span> to understand the motivations, needs, and expectations of grandparents and grandchildren. We identified <span className="chronicleBoldText">3 shared pain points</span> that led us to Chronicle.</p>
+                        <p className="caseText">To understand the pain points of our users and potential opportunities to address them, we made <span className="chronicleBoldText">user personas</span> to understand the motivations, needs, and expectations of grandparents and grandchildren. We identified <span className="chronicleBoldText">3 shared pain points</span> that led us to Chronicle.</p>
                         <img src={chroniclePainPoints} width="950" height="400"/>
                     </div>
                 </div>
@@ -174,7 +174,7 @@ function Chronicle() {
                 <div id="chronicleSolution">
                     <h3 id="chronicleSolution1">SOLUTION</h3>
                     <h1 id="chronicleSolution2">Chronicle</h1>
-                    <h2 id="chronicleSolution3">A tablet app that helps families preserve precious memories through collaborative and interactive storytelling and illustration</h2>
+                    <h2 id="chronicleSolution3">A tablet app that enables families to preserve precious memories through interactive storytelling and illustration</h2>
                     <img id="chroniclePlant" src={chroniclePlant} width="380" height="380" />
                 </div>
 
@@ -197,7 +197,7 @@ function Chronicle() {
                     </div>
                     <div className="caseMain">
                         <p id="noSectionHeader" className="caseText">We decided to design a <span className="chronicleBoldText">tablet app</span> because it's a familiar and fun device for kids, and it has <span className="chronicleBoldText">larger screen size and touch targets</span> for enhanced readability and tactility for grandparents.</p>
-                        <img src={chronicleSketches} width="950" height="350"/>
+                        <img src={chronicleSketches} width="950" height="320"/>
                     </div>
                 </div>
 
@@ -232,7 +232,7 @@ function Chronicle() {
                         <h2>Usability Testing</h2>
                     </div>
                     <div className="caseMain">
-                        <p id="noSectionHeader" className="caseText">We launched <span className="chronicleBoldText">6 usability tests</span> on UserTesting.com with grandparents. Because UserTesting.com doesn’t allow minors to test and due to time constraints, we <span className="chronicleBoldText">could not recruit grandchildren for usability insights.</span></p>
+                        <p id="noSectionHeader" className="caseText">We launched <span className="chronicleBoldText">6 usability tests</span> on UserTesting.com with grandparents. Because UserTesting.com doesn’t allow minors to test and due to time constraints, we could not recruit grandchildren for usability testing.</p>
                         <p className="caseText">All users found the app <span className="chronicleBoldText">easy to use, intuitive, and accessible.</span> Here are 3 key insights in functionality and UI that led us to our final solution.</p>
                         <img src={chronicleUsability} width="980" height="770"/>
                     </div>
