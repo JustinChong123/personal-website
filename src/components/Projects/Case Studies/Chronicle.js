@@ -96,8 +96,8 @@ function Chronicle() {
                     </div>
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Digital tech is increasing <span id="generationalDivideGradient">generational divide</span></h1>
-                        <p className="caseText">To learn how technology can promote understanding and respect between generations, we had to learn more about how each generation uses technology and interacts with other generations. Here are 3 general takeaways we got:</p>
-                        <img src={chronicleGenerationalResearchImg} width="820" height="200"/>
+                        <p className="caseText">To leverage technology to promote understanding and respect between generations, we studied <span className="chronicleBoldText">how each generation uses technology differently</span> and interacts with other generations. Here are 3 takeaways:</p>
+                        <img src={chronicleGenerationalResearchImg} width="900" height="183"/>
                     </div>
                 </div>
                 <div className="caseSection">
@@ -132,7 +132,7 @@ function Chronicle() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">What <span id="ethicsGradient">hidden ramifications</span> can our app have?</h1>
                         <p className="caseText">To see the big picture, we used an Iceberg Canvas to ideate and map any <span className="chronicleBoldText">hidden societal and environmental consequences</span> we should constantly keep in mind while designing the app.</p>
-                        <img src={chronicleIceberg} width="900" height="210"/>
+                        <img src={chronicleIceberg} width="900" height="470"/>
                     </div>
                 </div>
 
