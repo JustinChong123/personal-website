@@ -4,25 +4,18 @@
 }
 
 #profilePic {
-    margin-left: 10vw;
-    margin-top: 3em;
+    position: relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
 }
 
-#aboutMeText {
-    width: 50vw;
-    font-size: 1.5em;
-    font-weight: 500;
-    margin-left: 24em;
-    margin-top: -16em;
-}
-
-#aboutMeText1 {
-    width: 50vw;
-    font-size: 1.5em;
-    font-weight: 500;
-    margin-left: 24em;
-    margin-top: -1em;
-    
+#aboutMeGraphics {
+    position: absolute;
+    z-index: -1;
+    top: -3em;
+    left: -11em;
 }
 
 .boldPinkText {
@@ -44,7 +37,7 @@
     height: 60%;
     width: 68vw;
     margin-left: 15vw;
-    margin-top: 1em;
+    margin-top: 5em;
 }
 
 .aboutMe h4 {
@@ -54,6 +47,10 @@
     margin-left: 16vw;
     margin-bottom: 10vh;
     width: 70vw;
+}
+
+#skiingText {
+    margin-top: -2em;
 }
 
 #dancing {
