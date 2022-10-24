@@ -167,7 +167,7 @@ function Chronicle() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">The <span id="chronicleDisconnectGradient">disconnect</span> between grandparents and grandchildren</h1>
                         <p className="caseText">To understand the pain points of our users and potential opportunities to address them, we made <span className="chronicleBoldText">user personas</span> to understand the motivations, needs, and expectations of grandparents and grandchildren. We identified <span className="chronicleBoldText">3 shared pain points</span> that led us to Chronicle.</p>
-                        <img src={chroniclePainPoints} width="950" height="400"/>
+                        <img src={chroniclePainPoints} width="930" height="330"/>
                     </div>
                 </div>
 
