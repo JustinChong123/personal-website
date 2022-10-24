@@ -84,7 +84,7 @@ function BudgetBalloon() {
                     </div>
                 </div>
 
-                <img src={budgetBalloonUserResearch} width="1440" height="380"/>
+                <img className="caseStudyHeading" src={budgetBalloonUserResearch} width="1440" height="380"/>
 
                 <div className="caseSection">
                     <div className="caseSideHeader">
@@ -164,7 +164,7 @@ function BudgetBalloon() {
                     <img id="budgetBalloonBalloon" src={budgetBalloonBalloon} width="300" height="350" />
                 </div>
 
-                <img src={budgetBalloonUXDesignHeading} width="1440" height="380"/>
+                <img className="caseStudyHeading" src={budgetBalloonUXDesignHeading} width="1440" height="380"/>
 
                 <div className="caseSection">
                     <div className="caseSideHeader">

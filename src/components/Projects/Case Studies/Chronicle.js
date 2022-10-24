@@ -88,7 +88,9 @@ function Chronicle() {
                         <img src={chronicleDesignThinking} width="950" height="290"/>
                     </div>
                 </div>
-                <img alt="Chronicle User Research Heading" src={chronicleUserResearchHeading} width="1440" height="380"/>
+
+                <img className="caseStudyHeading" alt="Chronicle User Research Heading" src={chronicleUserResearchHeading} width="1440" height="380"/>
+                
                 <div className="caseSection">
                     <div className="caseSideHeader">
                         <h3>RESEARCH</h3>
@@ -167,7 +169,7 @@ function Chronicle() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">The <span id="chronicleDisconnectGradient">disconnect</span> between grandparents and grandchildren</h1>
                         <p className="caseText">To understand the pain points of our users and potential opportunities to address them, we made <span className="chronicleBoldText">user personas</span> to understand the motivations, needs, and expectations of grandparents and grandchildren. We identified <span className="chronicleBoldText">3 shared pain points</span> that led us to Chronicle.</p>
-                        <img src={chroniclePainPoints} width="930" height="330"/>
+                        <img src={chroniclePainPoints} width="940" height="330"/>
                     </div>
                 </div>
 
@@ -178,7 +180,7 @@ function Chronicle() {
                     <img id="chroniclePlant" src={chroniclePlant} width="380" height="380" />
                 </div>
 
-                <img alt="Chronicle UX/UI Design Heading" src={chronicleUXUIDesignHeading} width="1440" height="380"/>
+                <img className="caseStudyHeading" alt="Chronicle UX/UI Design Heading" src={chronicleUXUIDesignHeading} width="1440" height="380"/>
 
                 <div className="caseSection">
                     <div className="caseSideHeader">

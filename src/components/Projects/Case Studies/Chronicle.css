@@ -207,6 +207,12 @@
     margin-top: -21em;
 }
 
+/* Resizes all headings in case studies according to screen size */
+.caseStudyHeading {
+    max-width: 100%;
+    height: auto;
+}
+
 /* ------- Gradients for All Chronicle Text ----------------------*/
 
 #designThinkingGradient {
