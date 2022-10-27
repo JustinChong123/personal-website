@@ -123,7 +123,7 @@ function FitKitch() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Talking to our clients about <span id="boomersGradient">redefining product vision</span></h1>
                         <p className="caseText">After discovering that our users did not view cognitive benefits as an incentive for exercise, we brainstormed our HMW statement: <span className="fitkitchBoldText">how might we change perceptions of exercise</span> as productive and necessary rather than extra?</p>
-                        <p className="caseText">We <span className="fitkitchBoldText">presented key insights</span> from UX research and interviews to our clients and urged them to deprioritize cognitive benefits as the theme of the app. Although they weren't ecstatic, they understood that the users came first. We presented 3 more polished, user-centric solutions to our client, and they <span className="fitkitchBoldText">liked solution #1 the most, as did we.</span></p>
+                        <p className="caseText">Talking to our clients, we wanted to <span className="fitkitchBoldText">shift our product vision away from cognitive benefits.</span> We addressed our clients' initial hesitation by presenting data on a saturated wellness market from competitive analysis and lukewarm feedback about the app concept from user interviews and UX survey. We presented 3 more polished, user-centric solutions to our client, and they <span className="fitkitchBoldText">liked solution #1 the most, as did we.</span></p>
                         <img src={fitkitchNewSolutions} width="925" height="330" />
                     </div>
                 </div>
