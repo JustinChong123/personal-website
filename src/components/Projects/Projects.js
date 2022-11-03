@@ -36,22 +36,22 @@ function Projects() {
                     <img id="budgetBalloonMockup" src={budgetBalloonMockup} alt="Budget Balloon iPhone Mockup" width="150" height="187" />
                 </div>
             </Link>
-            <Link to='/ipath-case-study'>
+            {/* <Link to='/ipath-case-study'> */}
                 <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="ipath">
                     <h3>iPath</h3>
                     <h2>Connecting rural cancer patients to depression treatments</h2>
                     <h4>Product Manager</h4>
                     <img id="ipathMockup" src={ipathMockup} alt="iPath iPhone Mockup" width="120" height="187" />
                 </div>
-            </Link>
-            <Link to='/envision-earth-case-study'>
+            {/* </Link> */}
+            {/* <Link to='/envision-earth-case-study'> */}
                 <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="envisionEarth">
                     <h3>Envision Earth</h3>
                     <h2>Promoting holistic land management for ranchers</h2>
                     <h4>Product Manager</h4>
                     <img id="envisionEarthMockup" src={envisionEarthMockup} alt="Envision Earth iPhone and Desktop Mockup" width="220" height="187" />
                 </div>
-            </Link>
+            {/* </Link> */}
             <div class="dartmouthPathfinder">
                 <h3>Dartmouth Pathfinder</h3>
                 <h2>Finding fastest path between locations at Dartmouth</h2>
