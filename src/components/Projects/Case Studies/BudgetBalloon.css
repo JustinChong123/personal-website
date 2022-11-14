@@ -6,42 +6,46 @@
 
 .budgetBalloonCover {
     height: 100vh;
-    background-color: #F9CCEC;
-    color: #F200AC;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .budgetBalloonCover h1 {
-    font-weight: 800;
-    font-size: 5vw;
+    font-weight: 700;
+    font-size: 4.7vw;
     margin-top: 16vh;
     margin-left: 13vw;
     margin-bottom: 3vh;
+    width: 33.5%;
+    background-image: linear-gradient(to right, #D85CAC, #E86C8F);
+    background-clip: text;
+    color: transparent;
 }
 
 .budgetBalloonCover h2 {
-    font-weight: 600;
-    font-size: 2vw;
-    width: 35vw;
-    line-height: 6vh;
+    font-weight: 500;
+    font-size: 1.8vw;
+    width: 25%;
+    line-height: 1.5em;
     margin-left: 13vw;
     margin-top: 7vh;
 }
 
 .budgetBalloonCover h3 {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 1.5vw;
     display: inline;
     padding: 1vh 1.5vw;
     line-height: 6vh;
     margin-left: 13vw;
-    border: 2px solid #F200AC;
+    border: 1px solid #ffffff;
     border-radius: 50px;
 }
 
 .budgetBalloonCover img {
     position: absolute;
-    margin-left: 60vw;
-    margin-top: -53vh;
+    margin-left: 49em;
+    margin-top: -22em;
 }
 
 /* ----- Budget Balloon Intro ---------------------------*/

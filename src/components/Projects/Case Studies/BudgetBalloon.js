@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../NavBar/Navbar.js'
 import Footer from '../../Footer/Footer.js'
 import './BudgetBalloon.css'
-import budgetBalloonMockup from '../budget-balloon-mockup.png'
+import budgetBalloonMockup from './Budget Balloon Images/budget-balloon-mockup.png'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 import budgetBalloonStats from './Budget Balloon Images/budget-balloon-stats.png'
 import budgetBalloonBestMockups from './Budget Balloon Images/budget-balloon-best-mockups.png'
@@ -33,12 +33,12 @@ function BudgetBalloon() {
                 <h1>Budget Balloon</h1>
                 <h3>UX Designer</h3>
                 <h2>Motivating teens to build healthy spending habits</h2>
-                <img id="budgetBalloonCaseStudyMockup" src={budgetBalloonMockup} alt="Budget Balloon Mockup" width="380" height="470" />
+                <img id="budgetBalloonCaseStudyMockup" src={budgetBalloonMockup} alt="Budget Balloon Mockup" width="560" height="auto" />
             </div>
             <div className="budgetBalloonContent">
                 
                 <div className="budgetBalloonIntro">
-                    <h1 className="caseSectionHeader" id="budgetBalloonIntroQuestion">How does FitKitch marry exercise and community building?</h1>
+                    <h1 className="caseSectionHeader" id="budgetBalloonIntroQuestion">Making financial education and literacy fun for teens</h1>
                     <p className="caseText" id="budgetBalloonIntroText">Budget Balloon is a mobile app that <span className="fitkitchBoldText">teaches teens how to save money</span> and curb unhealthy spending habits by promoting friendly competition to save up for bigger goals. We used <span className="fitkitchBoldText">hot air balloon racing</span> to visualize saving up for a personal goal, adding a fun, kid-friendly, and gamified experience for teens.</p>
                     <img id="budgetBalloonStats" src={budgetBalloonStats} width="250" height="580" />
                     <img id="budgetBalloonBestMockups" src={budgetBalloonBestMockups} width="900" height="406" />
@@ -49,7 +49,7 @@ function BudgetBalloon() {
                         <h3 id="pinkCaseSideHeader">BACKGROUND</h3>
                     </div>
                     <div className="caseMain">
-                        <p id="noSectionHeader"className="caseText">For our UI/UX Design class project, our UX design challenge to <span className="fitkitchBoldText">design a solution to help kids save money.</span> We aimed to curb teens' compulsive spending habits and transform the mundate experience of budgeting and saving into a <span className="fitkitchBoldText">fun, rewarding one with a competitive spirit.</span></p>
+                        <p id="noSectionHeader"className="caseText">For our UI/UX Design class project, our UX design challenge was to <span className="fitkitchBoldText">design a solution to help kids save money.</span> We aimed to curb teens' compulsive spending habits and transform the mundane experience of budgeting and saving into a <span className="fitkitchBoldText">fun, rewarding one with a competitive spirit.</span></p>
                     </div>
                 </div>
 
@@ -93,7 +93,7 @@ function BudgetBalloon() {
                     </div>
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Learning more about teens' spending habits</h1>
-                        <p className="caseText">We interviewed 10+ teens and their parents to get a holistic view of <span className="fitkitchBoldText">teens' spending habits and major stakeholders</span> for a financial app for teens, whose independence and ability to use the app is influenced by their parents. Here are some <span className="fitkitchBoldText">empathy maps and pain points</span> we solidified from teens and parents.</p>
+                        <p className="caseText">We interviewed 10+ teens and their parents to get a holistic view of <span className="fitkitchBoldText">teens' spending habits and major stakeholders</span> for a financial app for teens, whose independence and ability to use the app is influenced by their parents. We used <span className="fitkitchBoldText">empathy maps to identify pain points</span> for teens and parents when budgeting.</p>
                         <img src={budgetBalloonInterview1} width="950" height="960" />
                     </div>
                 </div>
@@ -141,7 +141,7 @@ function BudgetBalloon() {
                     </div>
                     <div className="caseMain">
                         <p className="caseText" id="noSectionHeader">After researching and empathizing with teens, we formulated our HMW statement to guide brainstorming solutions.</p>
-                        <img src={budgetBalloonHMW} width="850" height="190" />
+                        <img src={budgetBalloonHMW} width="850" height="auto" />
                     </div>
                 </div>
 

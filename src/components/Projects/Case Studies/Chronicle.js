@@ -38,7 +38,7 @@ function Chronicle() {
                 <h1>Chronicle</h1>
                 <h3>UI/UX Designer</h3>
                 <h2>Bridging the intergenerational gap in families through collaborative storytelling</h2>
-                <img id="chronicleCaseStudyMockup" src={chronicleMockup} alt="Chronicle Tablet Mockup" width="750" height="625" />
+                <img id="chronicleCaseStudyMockup" src={chronicleMockup} alt="Chronicle Tablet Mockup" width="750" height="auto" />
             </div>
             <div className="chronicleContent">
                 <div className="chronicleIntro">

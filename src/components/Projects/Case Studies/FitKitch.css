@@ -5,22 +5,27 @@
 
 .fitkitchCover {
     height: 100vh;
-    background-color: #FFCFD8;
+    background-color: #000000;
 }
 
 .fitkitchCover h1 {
-    color: #E96060;
-    font-weight: 800;
+    font-family: 'Barlow';
+    color: #ffffff;
+    font-weight: 700;
     font-size: 5vw;
     margin-top: 15vh;
     margin-left: 13vw;
     margin-bottom: 1vh;
+    width: 18%;
+    background-image: linear-gradient(to right, #D7816A, #BD4F6C);
+    background-clip: text;
+    color: transparent;
 }
 
 .fitkitchCover h2 {
-    color: #E96060;
-    font-weight: 600;
-    font-size: 2vw;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.8vw;
     width: 30vw;
     line-height: 1.4em;
     letter-spacing: -0.01em;
@@ -29,21 +34,21 @@
 }
 
 .fitkitchCover h3 {
-    color: #E96060;
-    font-weight: 600;
+    color: #ffffff;
+    font-weight: 400;
     font-size: 1.5vw;
     display: inline;
     padding: 1vh 1.5vw;
     line-height: 6vh;
     margin-left: 13vw;
-    border: 2px solid #E96060;;
+    border: 1px solid #ffffff;
     border-radius: 50px;
 }
 
 .fitkitchCover img {
     position: absolute;
-    margin-left: 50em;
-    margin-top: -22.5em;
+    margin-left: 45em;
+    margin-top: -21em;
 }
 
 /* -----FitKitch Intro ---------------------------*/

@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../../NavBar/Navbar.js'
 import Footer from '../../Footer/Footer.js'
 import './FitKitch.css'
-import fitwitMockup from '../fitwit-mockup.png'
+import fitkitchMockup from './Fitkitch Images/fitkitch-mockup.png'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 import fitkitchBestMockups from './Fitkitch Images/fitkitch-best-mockups.png'
 import fitkitchOverview from './Fitkitch Images/fitkitch-overview.png'
@@ -37,7 +37,7 @@ function FitKitch() {
                 <h1>FitKitch</h1>
                 <h3>UI/UX Designer</h3>
                 <h2>Promoting daily fitness through community action</h2>
-                <img id="fitwitCaseStudyMockup" src={fitwitMockup} alt="FitWit iPhone 13 Mockup" width="350" height="437.5" />
+                <img id="fitwitCaseStudyMockup" src={fitkitchMockup} alt="FitWit iPhone 13 Mockup" width="600" height="auto" />
             </div>
             <div className="fitkitchContent">
                 <div className="fitkitchIntro">
