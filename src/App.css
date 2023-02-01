@@ -5,7 +5,7 @@ html, body {
 
 .Intro {
   color: #F5F5F5;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Alliance No. 2 Bold', sans-serif;
   margin: 4vh 10.7vw;
 }
 
@@ -70,4 +70,88 @@ h3 > a {
 
 body {
   background-color: black;
+}
+
+@font-face {
+  font-family: "Alliance No. 2 Black";   /*Can be any text*/
+  src: local("AllianceNo2-Black"),
+    url("./fonts/AllianceNo2-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alliance No. 2 Black Italic";   /*Can be any text*/
+  src: local("AllianceNo2-BlackItalic"),
+    url("./fonts/AllianceNo2-BlackItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alliance No. 2 Bold";   /*Can be any text*/
+  src: local("AllianceNo2-Bold"),
+    url("./fonts/AllianceNo2-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alliance No. 2 Bold Italic";   /*Can be any text*/
+  src: local("AllianceNo2-BoldItalic"),
+    url("./fonts/AllianceNo2-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alliance No. 2 Extra Bold";   /*Can be any text*/
+  src: local("AllianceNo2-ExtraBold"),
+    url("./fonts/AllianceNo2-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alliance No. 2 Extra Bold Italic";   /*Can be any text*/
+  src: local("AllianceNo2-ExtraBoldItalic"),
+    url("./fonts/AllianceNo2-ExtraBoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alliance No. 2 Light";   /*Can be any text*/
+  src: local("AllianceNo2-Light"),
+    url("./fonts/AllianceNo2-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alliance No. 2 Light Italic";   /*Can be any text*/
+  src: local("AllianceNo2-LightItalic"),
+    url("./fonts/AllianceNo2-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alliance No. 2 Medium";   /*Can be any text*/
+  src: local("AllianceNo2-Medium"),
+    url("./fonts/AllianceNo2-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alliance No. 2 Medium Italic";   /*Can be any text*/
+  src: local("AllianceNo2-MediumItalic"),
+    url("./fonts/AllianceNo2-MediumItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alliance No. 2 Regular";   /*Can be any text*/
+  src: local("AllianceNo2-Regular"),
+    url("./fonts/AllianceNo2-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alliance No. 2 Regular Italic";   /*Can be any text*/
+  src: local("AllianceNo2-RegularItalic"),
+    url("./fonts/AllianceNo2-RegularItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alliance No. 2 Semi Bold";   /*Can be any text*/
+  src: local("AllianceNo2-SemiBold"),
+    url("./fonts/AllianceNo2-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Alliance No. 2 Semi Bold Italic";   /*Can be any text*/
+  src: local("AllianceNo2-SemiBoldItalic"),
+    url("./fonts/AllianceNo2-SemiBoldItalic.ttf") format("truetype");
 }

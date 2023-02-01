@@ -22,7 +22,7 @@ const Typewriter = () => {
         speed={60}
         wrapper="span"
         repeat={Infinity}
-        style={{fontSize: '5vw', fontFamily: 'IBM Plex Mono', fontWeight: '600', wordSpacing: '-0.3em', letterSpacing: '-0.007em', color: '#F5F5F5'}}
+        style={{fontSize: '5vw', fontFamily: 'Alliance No. 2 Extra Bold', wordSpacing: '0em', letterSpacing: '-0.007em', color: '#F5F5F5'}}
     />
   );
 };

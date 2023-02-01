@@ -1,5 +1,141 @@
+.main-projects {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    margin: 25vh 0vw 15vh 0vw;
+    width: 100vw;
+    height: 38vw;
+}
+
+.container1 {
+    border: 2px solid #31363C;
+}
+
+.container1:hover {
+    border: 2px solid transparent;
+    background: 
+        linear-gradient(to right, #171B21, #171B21), 
+        linear-gradient(to right, #EC6D71 , #E55E9F); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
+
+.container2 {
+    border: 2px solid #31363C;
+}
+
+.container2:hover {
+    border: 2px solid transparent;
+    background: 
+        linear-gradient(to right, #171B21, #171B21), 
+        linear-gradient(to right, #7B80F0 , #B9C7DD); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
+
+.container3 {
+    border: 2px solid #31363C;
+}
+
+.container3:hover {
+    border: 2px solid transparent;
+    background: 
+        linear-gradient(to right, #171B21, #171B21), 
+        linear-gradient(to right, #CBF07B , #C5DDB9); 
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+}
+
+#projectContainer {
+    color: white;
+    background-color: #171B21;
+    border-radius: 12px;
+    width: 30vw;
+    height: 38vw;
+    flex-basis: auto;
+    overflow: hidden;
+}
+
+.main-projects a {
+    text-decoration: none;
+}
+
+.projectIdentifiers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3% 7% 1% 7%;
+}
+
+/* Project Title */
+.main-projects div h2 {
+    font-family: 'IBM Plex Sans';
+    font-weight: 400;
+    font-size: 1.5vw;
+}
+
+/* Device Type */
+.main-projects div h4 {
+    font-family: 'Barlow';
+    font-weight: 600;
+    font-size: 1.1vw;
+    color: #88979B;
+}
+
+/* Project Description */
+.main-projects div h1 {
+    margin: 1% 7%;
+    font-family: 'Alliance No. 2 Bold';
+    font-size: 2.4vw;
+    line-height: 1.25;
+}
+
+/* Project Tags */
+.projectTags {
+    display: flex;
+    column-gap: 2.5%;
+    margin: 1% 7%;
+}
+
+/* Project Tag */
+.projectTag {
+    border: 1px solid white;
+    font-family: 'IBM Plex Sans';
+    font-weight: 400;
+    font-size: 1.1vw;
+    padding: 0.6% 3%;
+    border-radius: 100px;
+}
+/* Project Name */
+/* .main-projects div h2 {
+    margin: 7% 7%;
+    font-family: 'IBM Plex Sans';
+    font-weight: 400;
+    font-size: 1.5vw;
+    width: 40%;
+} */
+
+/* Device Type */
+/* .main-projects div h4 {
+    border: 1px solid red;
+    margin: 7% 7%;
+    font-family: 'Barlow';
+    font-weight: 600;
+    font-size: 1.1vw;
+    color: #88979B;
+} */
+
+#moreProjects {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .projects {
-    margin: 27vh 10vw;
+    margin-top: 15vh;
+    margin-bottom: 10vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -9,14 +145,14 @@
 
 .projects div {
     color: black;
-    font-family: 'Raleway', sans-serif;
     border: 3.5px solid black;
     padding: 2vh 2vw;
-    width: 30em;
+    width: 32vw;
     min-width: 400px;
-    height: 20em;
+    height: 23.5vw;
     box-shadow: 14px 14px 0px -5px black, 14px 14px 0px -3px white;
     transition: transform 250ms;
+    overflow: hidden;
 }
 
 .projects a {
@@ -31,15 +167,15 @@
 
 /* Name of Project */
 .projects div h3 {
-    font-weight: 600;
     font-size: 1.2vw;
     margin-bottom: 0vh;
+    font-family: 'Alliance No. 2 Regular';
 }
 
 /* Project Description */
 .projects div h2 {
-    font-weight: 800;
-    font-size: 1.8em;
+    font-family: 'Alliance No. 2 Extra Bold';
+    font-size: 1.99vw;
     margin-top: 1vh;
     margin-bottom: 2vh;
     line-height: 1.23em;
@@ -49,12 +185,47 @@
 .projects div h4 {
     color: white;
     background-color: black;
-    font-weight: 800;
+    font-weight: 600;
+    font-family: 'IBM Plex Sans';
     font-size: 1vw;
     border: 2px solid black;
     display: inline;
     padding: 0.6vh 1vw;
     border-radius: 40px;
+}
+
+/* Coming Soon */
+.projects div h6 {
+    font-family: 'Alliance No. 2 Bold';
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+#container1Mockup {
+    width: 60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -5%;
+}
+
+#container2Mockup {
+    width: 85%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+#container3Mockup {
+    width: 45%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
 }
 
 #fitwitMockup {
@@ -74,25 +245,39 @@
 }
 
 #ipathMockup {
-    position: absolute;
-    margin-left: 2.5vw;
+    width: 60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
 }
 
 #envisionEarthMockup {
-    position: absolute;
-    margin-left: -1.5vw;
+    width: 85%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
 }
 
 #dartmouthPathfinderMockup {
-    position: absolute;
-    margin-left: -3vw;
-    margin-top: 4.5vh;
+    width: 60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
 }
 
 #personalWebsiteMockup {
-    position: absolute;
-    margin-left: -3.5vw;
-    margin-top: 4.5vh;
+    width: 60%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
 }
 
 /* Tile Gradients */
@@ -122,4 +307,24 @@
 
 .projects .personalWebsite {
     background-image: linear-gradient(to bottom left, #c894c2, #a394e8)
+}
+
+/* Text Gradients */
+
+#chronicleDescriptionGradient {
+    background-image: linear-gradient(to right, #EC6D71, #E55E9F);
+    background-clip: text;
+    color: transparent;
+}
+
+#fitkitchDescriptionGradient {
+    background-image: linear-gradient(to right, #7B80F0, #B9C7DD);
+    background-clip: text;
+    color: transparent;
+}
+
+#budgetBalloonDescriptionGradient {
+    background-image: linear-gradient(to right, #CBF07B, #C5DDB9);
+    background-clip: text;
+    color: transparent;
 }

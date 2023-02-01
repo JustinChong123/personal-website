@@ -1,0 +1,43 @@
+.ohBuoyCaseStudy {
+    background-color: #fbfbfd;
+    font-family: 'Barlow', sans-serif;
+}
+
+
+.ohBuoyCover {
+    height: 100vh;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.ohBuoyCover h1 {
+    font-weight: 700;
+    font-size: 4.7vw;
+    margin-top: 16vh;
+    margin-left: 13vw;
+    margin-bottom: 3vh;
+    width: 33.5%;
+    background-image: linear-gradient(to right, #CBF07B , #C5DDB9); 
+    background-clip: text;
+    color: transparent;
+}
+
+.ohBuoyCover h2 {
+    font-weight: 500;
+    font-size: 1.8vw;
+    width: 25%;
+    line-height: 1.5em;
+    margin-left: 13vw;
+    margin-top: 7vh;
+}
+
+.ohBuoyCover h3 {
+    font-weight: 400;
+    font-size: 1.5vw;
+    display: inline;
+    padding: 1vh 1.5vw;
+    line-height: 6vh;
+    margin-left: 13vw;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+}

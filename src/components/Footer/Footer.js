@@ -18,7 +18,7 @@ function Footer () {
                 <div className="subitems-2">
                     <h4 id="footer-resume" onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>Resume</h4>
                     <h4>
-                        <a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">Linkedin</a>
+                        <a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                     </h4>
                     <h4 id="footer-email-me" onClick={() => window.location = 'mailto:justin.r.chong.24@dartmouth.edu'}>Email Me</h4>
                 </div>

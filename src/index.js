@@ -12,6 +12,8 @@ import EnvisionEarth from './components/Projects/Case Studies/EnvisionEarth.js'
 import DartmouthPathfinder from './components/Projects/Case Studies/DartmouthPathfinder.js';
 import PersonalWebsite from './components/Projects/Case Studies/PersonalWebsite.js';
 import IPath from './components/Projects/Case Studies/iPath.js';
+import ConferenceCupUSA from './components/Projects/Case Studies/ConferenceCupUSA.js';
+import OhBuoy from './components/Projects/Case Studies/OhBuoy.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +24,8 @@ root.render(
         <Route path='/fitkitch-case-study' element={<FitKitch />} />
         <Route path='/chronicle-case-study' element={<Chronicle />} />
         <Route path='/budget-balloon-case-study' element={<BudgetBalloon />} />
+        <Route path='/conferencecup-usa-case-study' element={<ConferenceCupUSA />} />
+        <Route path='/oh-buoy-case-study' element={<OhBuoy />} />
         <Route path='/envision-earth-case-study' element={<EnvisionEarth />} />
         <Route path='ipath-case-study' element={<IPath />} />
       </Routes>

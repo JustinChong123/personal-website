@@ -7,11 +7,14 @@
 
 /* "Justin Chong" */
 .logo a:last-child {
+    font-family: 'Alliance No. 2 Bold';
     font-size: 2vw;
     font-weight: 800;
     text-decoration: none;
     margin-left: 7vw;
-    color: #F5F5F5;
+    background-image: linear-gradient(to right, #7FAADB, #B0E4BC, #F7DE6D, #F08339);
+    background-clip: text;
+    color: transparent;
 }
 
 /* Logo */

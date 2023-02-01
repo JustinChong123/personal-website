@@ -1,0 +1,43 @@
+.conferenceCupUSACaseStudy {
+    background-color: #fbfbfd;
+    font-family: 'Barlow', sans-serif;
+}
+
+
+.conferenceCupUSACover {
+    height: 100vh;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.conferenceCupUSACover h1 {
+    font-weight: 700;
+    font-size: 4.2vw;
+    margin-top: 16vh;
+    margin-left: 13vw;
+    margin-bottom: 3vh;
+    width: 42.2%;
+    background-image: linear-gradient(to right, #CBF07B , #C5DDB9); 
+    background-clip: text;
+    color: transparent;
+}
+
+.conferenceCupUSACover h2 {
+    font-weight: 500;
+    font-size: 1.8vw;
+    width: 25%;
+    line-height: 1.5em;
+    margin-left: 13vw;
+    margin-top: 7vh;
+}
+
+.conferenceCupUSACover h3 {
+    font-weight: 400;
+    font-size: 1.5vw;
+    display: inline;
+    padding: 1vh 1.5vw;
+    line-height: 6vh;
+    margin-left: 13vw;
+    border: 1px solid #ffffff;
+    border-radius: 50px;
+}

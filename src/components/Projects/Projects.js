@@ -2,67 +2,119 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import './Projects.css'
 import fitwitMockup from './fitwit-mockup.png'
+import fitkitchBetterMockup from './fitkitch-better-mockup.png'
 import chronicleMockup from './chronicle-mockup.png'
 import budgetBalloonMockup from './budget-balloon-mockup.png'
 import ipathMockup from './ipath-mockup.png'
 import envisionEarthMockup from './envision-earth-mockup.png'
 import personalWebsiteMockup from './personal-website-mockup.png'
 import dartmouthPathfinderMockup from './dartmouth-pathfinder-mockup.png'
+import moreProjects from './more-projects.png'
 
 function Projects() {
     return (
-        <div class="projects">
-            <Link to="/fitkitch-case-study">
-                <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="fitkitch">
-                    <h3>FitKitch</h3>
-                    <h2>Promoting daily fitness through community action</h2>
-                    <h4>UI/UX Designer</h4>
-                    <img id="fitwitMockup" src={fitwitMockup} alt="FitWit iPhone 13 Mockup" width="150" height="187.5" />
-                </div>
-            </Link>
-            <Link to="/chronicle-case-study">
-                <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="chronicle">
-                    <h3>Chronicle</h3>
-                    <h2>Bridging generations through collaborative storytelling</h2>
-                    <h4>UI/UX Designer</h4>
-                    <img id="chronicleMockup" src={chronicleMockup} alt="Chronicle Tablet Mockup" width="230" height="250" />
-                </div>
-            </Link>
-            <Link to='/budget-balloon-case-study'>
-                <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="budgetBalloon">
-                    <h3>Budget Balloon</h3>
-                    <h2>Motivating teens to build healthy spending habits</h2>
-                    <h4>UX Designer</h4>
-                    <img id="budgetBalloonMockup" src={budgetBalloonMockup} alt="Budget Balloon iPhone Mockup" width="150" height="187" />
-                </div>
-            </Link>
-            {/* <Link to='/ipath-case-study'> */}
-                <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="ipath">
+        <div class="all-projects">
+            <div class="main-projects">
+                <Link to="/chronicle-case-study">
+                    <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container1" id="projectContainer">
+                        <div class="projectIdentifiers">
+                            <h2>Chronicle</h2>
+                            <h4>TABLET</h4>
+                        </div>
+                        <h1 id="chronicleDescriptionGradient">Bridging generations through collaborative storytelling</h1>
+                        <div class="projectTags">
+                            <h3 class="projectTag">Research</h3>
+                            <h3 class="projectTag">UX</h3>
+                            <h3 class="projectTag">Visuals</h3>
+                        </div>
+                        <img id="container1Mockup" src={chronicleMockup} alt="Chronicle Tablet Mockup" />
+                    </div>
+                </Link>
+                <Link to="/fitkitch-case-study">
+                    <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container2" id="projectContainer">
+                        <div class="projectIdentifiers">
+                            <h2>FitKitch</h2>
+                            <h4>MOBILE</h4>
+                        </div>
+                        <h1 id="fitkitchDescriptionGradient">Promoting daily fitness through community action</h1>
+                        <div class="projectTags">
+                            <h3 class="projectTag">Research</h3>
+                            <h3 class="projectTag">UX</h3>
+                            <h3 class="projectTag">Visuals</h3>
+                        </div>
+                        <img id="container2Mockup" src={fitkitchBetterMockup} alt="FitKitch Mobile Mockup" />
+                    </div>
+                </Link>
+                <Link to="/budget-balloon-case-study">
+                    <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container3" id="projectContainer">
+                        <div class="projectIdentifiers">
+                            <h2>Budget Balloon</h2>
+                            <h4>MOBILE</h4>
+                        </div>
+                        <h1 id="budgetBalloonDescriptionGradient">Motivating teens to build healthy spending habits</h1>
+                        <div class="projectTags">
+                            <h3 class="projectTag">Research</h3>
+                            <h3 class="projectTag">UX</h3>
+                        </div>
+                        <img id="container3Mockup" src={budgetBalloonMockup} alt="Budget Balloon Mobile Mockup" />
+                    </div>
+                </Link>
+            </div>
+            
+            <img id="moreProjects" src={moreProjects} alt="More Projects Tagline" />
+
+        
+            <div class="projects">
+                <Link to="/conferencecup-usa-case-study">
+                    <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="fitkitch">
+                        <h3>ConferenceCup USA</h3>
+                        <h2>Promoting transparency and equity in college athletics</h2>
+                        <h4>UI/UX Design</h4>
+                        <h6>coming soon...</h6>
+                    </div>
+                </Link>
+
+                <Link to="/oh-buoy-case-study">
+                    <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="chronicle">
+                        <h3>Oh Buoy!</h3>
+                        <h2>Preventing child drowning with a wearable harness</h2>
+                        <h4>Physical Product Design</h4>
+                        <h6>coming soon...</h6>
+                    </div>
+                </Link>
+
+                <div class="budgetBalloon">
                     <h3>iPath</h3>
                     <h2>Connecting rural cancer patients to depression treatments</h2>
                     <h4>Product Manager</h4>
-                    <img id="ipathMockup" src={ipathMockup} alt="iPath iPhone Mockup" width="120" height="187" />
+                    <img id="ipathMockup" src={ipathMockup} alt="iPath iPhone Mockup" />
                 </div>
-            {/* </Link> */}
-            {/* <Link to='/envision-earth-case-study'> */}
-                <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="envisionEarth">
+
+                <div class="ipath">
                     <h3>Envision Earth</h3>
                     <h2>Promoting holistic land management for ranchers</h2>
                     <h4>Product Manager</h4>
-                    <img id="envisionEarthMockup" src={envisionEarthMockup} alt="Envision Earth iPhone and Desktop Mockup" width="220" height="187" />
+                    <img id="envisionEarthMockup" src={envisionEarthMockup} alt="Envision Earth iPhone and Desktop Mockup" />
                 </div>
-            {/* </Link> */}
-            <div class="dartmouthPathfinder">
-                <h3>Dartmouth Pathfinder</h3>
-                <h2>Finding fastest path between locations at Dartmouth</h2>
-                <h4>Software Engineer</h4>
-                <img id="dartmouthPathfinderMockup" src={dartmouthPathfinderMockup} alt="Dartmouth Pathfinder Laptop Mockup" width="260" height="155" />
-            </div>
-            <div class="personalWebsite">
-                <h3>Personal Website</h3>
-                <h2>Developed personal website using React.js</h2>
-                <h4>Software Engineer</h4>
-                <img id="personalWebsiteMockup" src={personalWebsiteMockup} alt="Personal Website Laptop Mockup" width="260" height="155" />
+
+                <div class="envisionEarth">
+                    <h3>Dartmouth Pathfinder</h3>
+                    <h2>Finding fastest path between locations at Dartmouth</h2>
+                    <h4>Software Engineer</h4>
+                    <img id="dartmouthPathfinderMockup" src={dartmouthPathfinderMockup} alt="Dartmouth Pathfinder Laptop Mockup" />
+                </div>
+                <div class="dartmouthPathfinder">
+                    <h3>Personal Website</h3>
+                    <h2>Developed personal website using React.js</h2>
+                    <h4>Software Engineer</h4>
+                    <img id="personalWebsiteMockup" src={personalWebsiteMockup} alt="Personal Website Laptop Mockup" />
+                </div>
+                {/* <div class="personalWebsite">
+                    <h3>Personal Website</h3>
+                    <h2>Developed personal website using React.js</h2>
+                    <h4>Software Engineer</h4>
+                    <img id="personalWebsiteMockup" src={personalWebsiteMockup} alt="Personal Website Laptop Mockup" width="260" height="155" />
+                </div> */}
             </div>
         </div>
     )
