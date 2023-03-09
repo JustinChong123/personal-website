@@ -5,6 +5,7 @@ import fitwitMockup from './fitwit-mockup.png'
 import fitkitchBetterMockup from './fitkitch-better-mockup.png'
 import chronicleMockup from './chronicle-mockup.png'
 import budgetBalloonMockup from './budget-balloon-mockup.png'
+import conferenceCupUSAMockup from './conference-cup-usa-mockup.png'
 import ipathMockup from './ipath-mockup.png'
 import envisionEarthMockup from './envision-earth-mockup.png'
 import personalWebsiteMockup from './personal-website-mockup.png'
@@ -70,7 +71,7 @@ function Projects() {
                         <h3>ConferenceCup USA</h3>
                         <h2>Promoting transparency and equity in college athletics</h2>
                         <h4>UI/UX Design</h4>
-                        <h6>coming soon...</h6>
+                        <img id="conferenceCupUSAMockup" src={conferenceCupUSAMockup} />
                     </div>
                 </Link>
 

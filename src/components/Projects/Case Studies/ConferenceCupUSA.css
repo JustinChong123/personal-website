@@ -41,3 +41,55 @@
     border: 1px solid #ffffff;
     border-radius: 50px;
 }
+
+.conferenceCupUSACover img {
+    position: absolute;
+    margin-left: 52em;
+    margin-top: -21em;
+}
+
+/* ----- ConferenceCup USA Intro ---------------------------*/
+
+.conferenceCupUSAIntro {
+    height: 100vh;
+}
+
+#conferenceCupUSAIntroQuestion {
+    color: #88C15B;
+    margin-top: 0;
+    margin-left: 10vw;
+    padding-top: 5vh;
+    width: 60vw;
+    font-weight: 800;
+}
+
+#conferenceCupUSAIntroText {
+    color: #1D1D1F;
+    margin-left: 10vw;
+    line-height: 1.4em;
+    width: 60vw;
+    font-weight: 500;
+}
+
+#conferenceCupUSAStats {
+    position: relative;
+    top: -19em;
+    left: 70em;
+}
+
+#conferenceCupUSABestMockups {
+    position: relative;
+    top: -20em;
+    left: -6.6em;
+}
+
+#greenCaseSideHeader {
+    color: #88C15B;
+}
+
+#conferenceCupUSAGreenBackground {
+    background-color: #E6F1DD;
+    margin-bottom: 0;
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
