@@ -4,6 +4,7 @@ import './Projects.css'
 import fitwitMockup from './fitwit-mockup.png'
 import fitkitchBetterMockup from './fitkitch-better-mockup.png'
 import chronicleMockup from './chronicle-mockup.png'
+import mongodbMockup from './mongodb-mockup.png'
 import budgetBalloonMockup from './budget-balloon-mockup.png'
 import conferenceCupUSAMockup from './conference-cup-usa-mockup.png'
 import ipathMockup from './ipath-mockup.png'
@@ -31,6 +32,7 @@ function Projects() {
                         <img id="container1Mockup" src={chronicleMockup} alt="Chronicle Tablet Mockup" />
                     </div>
                 </Link>
+
                 <Link to="/fitkitch-case-study">
                     <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container2" id="projectContainer">
                         <div class="projectIdentifiers">
@@ -46,18 +48,20 @@ function Projects() {
                         <img id="container2Mockup" src={fitkitchBetterMockup} alt="FitKitch Mobile Mockup" />
                     </div>
                 </Link>
-                <Link to="/budget-balloon-case-study">
+
+                <Link to="/mongodb-case-study">
                     <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container3" id="projectContainer">
                         <div class="projectIdentifiers">
-                            <h2>Budget Balloon</h2>
-                            <h4>MOBILE</h4>
+                            <h2>MongoDB</h2>
+                            <h4>WEB</h4>
                         </div>
-                        <h1 id="budgetBalloonDescriptionGradient">Motivating teens to build healthy spending habits</h1>
+                        <h1 id="budgetBalloonDescriptionGradient">Diagnosing performance issues holisitically</h1>
                         <div class="projectTags">
                             <h3 class="projectTag">Research</h3>
                             <h3 class="projectTag">UX</h3>
+                            <h3 class="projectTag">Visuals</h3>
                         </div>
-                        <img id="container3Mockup" src={budgetBalloonMockup} alt="Budget Balloon Mobile Mockup" />
+                        <img id="container3Mockup" src={mongodbMockup} alt="Budget Balloon Mobile Mockup" />
                     </div>
                 </Link>
             </div>
@@ -75,8 +79,17 @@ function Projects() {
                     </div>
                 </Link>
 
-                <Link to="/oh-buoy-case-study">
+                <Link to='/budget-balloon-case-study'>
                     <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="chronicle">
+                        <h3>Budget Balloon</h3>
+                        <h2>Motivating teens to build healthy spending habits</h2>
+                        <h4>UX Design</h4>
+                        <img id="dartmouthPathfinderMockup" src={budgetBalloonMockup} alt="Dartmouth Pathfinder Laptop Mockup" />
+                    </div>
+                </Link>
+
+                <Link to="/oh-buoy-case-study">
+                    <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="budgetBalloon">
                         <h3>Oh Buoy!</h3>
                         <h2>Preventing child drowning with a wearable harness</h2>
                         <h4>Physical Product Design</h4>
@@ -84,26 +97,20 @@ function Projects() {
                     </div>
                 </Link>
 
-                <div class="budgetBalloon">
+                <div class="ipath">
                     <h3>iPath</h3>
                     <h2>Connecting rural cancer patients to depression treatments</h2>
                     <h4>Product Manager</h4>
                     <img id="ipathMockup" src={ipathMockup} alt="iPath iPhone Mockup" />
                 </div>
 
-                <div class="ipath">
+                <div class="envisionEarth">
                     <h3>Envision Earth</h3>
                     <h2>Promoting holistic land management for ranchers</h2>
                     <h4>Product Manager</h4>
                     <img id="envisionEarthMockup" src={envisionEarthMockup} alt="Envision Earth iPhone and Desktop Mockup" />
                 </div>
 
-                <div class="envisionEarth">
-                    <h3>Dartmouth Pathfinder</h3>
-                    <h2>Finding fastest path between locations at Dartmouth</h2>
-                    <h4>Software Engineer</h4>
-                    <img id="dartmouthPathfinderMockup" src={dartmouthPathfinderMockup} alt="Dartmouth Pathfinder Laptop Mockup" />
-                </div>
                 <div class="dartmouthPathfinder">
                     <h3>Personal Website</h3>
                     <h2>Developed personal website using React.js</h2>

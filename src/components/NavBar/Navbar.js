@@ -23,10 +23,7 @@ function Navbar() {
                     <button id="email-me-button" onClick={() => window.location = 'mailto:justin.r.chong.24@dartmouth.edu'}>Email Me</button>
                 </li>
                 <li>
-                    <DropdownButton id="resume-download-button" title="Resume">
-                        <Dropdown.Item id='dropdownItemDesign' href={designResume} target='_blank' rel='noopener noreferrer'>Design</Dropdown.Item>
-                        <Dropdown.Item id='dropdownItemPM' href={pmResume} target='_blank' rel='noopener noreferrer'>PM</Dropdown.Item>
-                        {/* <Dropdown.Item id='dropdownItemSWE' href={sweResume} target='_blank' rel='noopener noreferrer'>SWE</Dropdown.Item> */}
+                    <DropdownButton id="resume-download-button" title="Resume" href={designResume} target='_blank' rel='noopener noreferrer'>
                     </DropdownButton>
                 </li>
             </ul>

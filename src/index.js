@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import AboutMe from './components/About Me/AboutMe';
 import FitKitch from './components/Projects/Case Studies/FitKitch.js'
 import Chronicle from './components/Projects/Case Studies/Chronicle.js'
+import PerformanceAdvisor from './components/Projects/Case Studies/PerformanceAdvisor.js'
 import BudgetBalloon from './components/Projects/Case Studies/BudgetBalloon.js'
 import EnvisionEarth from './components/Projects/Case Studies/EnvisionEarth.js'
 import DartmouthPathfinder from './components/Projects/Case Studies/DartmouthPathfinder.js';
@@ -23,6 +24,7 @@ root.render(
         <Route path='/aboutMe' element={<AboutMe />} />
         <Route path='/fitkitch-case-study' element={<FitKitch />} />
         <Route path='/chronicle-case-study' element={<Chronicle />} />
+        <Route path='/mongodb-case-study' element={<PerformanceAdvisor />} />
         <Route path='/budget-balloon-case-study' element={<BudgetBalloon />} />
         <Route path='/conferencecup-usa-case-study' element={<ConferenceCupUSA />} />
         <Route path='/oh-buoy-case-study' element={<OhBuoy />} />

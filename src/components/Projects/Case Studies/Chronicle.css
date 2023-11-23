@@ -75,7 +75,7 @@
 
 #chronicleStats {
     position: relative;
-    top: -16.3em;
+    top: -13em;
     left: 70em;
 }
 
@@ -85,13 +85,12 @@
     color: #1D1D1F; /* controls color of text for all case studies - light black */
     display: flex;
     align-items: flex-start;
-    margin-bottom: 13vh;
-    margin-top: 3vh;
+    margin-top: 10vh;
 }
 
 .caseSideHeader {
     margin-left: 5vw;
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
     width: 20vw;
 }
 
@@ -113,21 +112,20 @@
 }
 
 .caseMain {
-    margin-top: 5vh;
+    /* margin-top: 5vh; */
 }
 
 .caseSectionHeader {
-    font-size: 1.8em;
+    font-size: 1.6em;
     font-weight: 800;
     margin-top: 0;
 }
 
 .caseText {
     font-weight: 500;
-    font-size: 1.4em;
+    font-size: 1.2em;
     width: 65vw;
     line-height: 1.4em;
-    margin-bottom: 1.3em;
 }
 
 /* ------ Text Decoration and Other Modification ----------------*/
