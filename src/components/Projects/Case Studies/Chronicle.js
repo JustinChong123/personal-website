@@ -6,6 +6,7 @@ import './Chronicle.css'
 import SectionDivider from './Section Divider/SectionDivider.js'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
+import chronicleStats from './Chronicle Images/chronicle-stats.svg'
 import chronicleCoverBottom from './Chronicle Images/chronicle-cover-bottom.svg'
 import chronicleBestMockups from './Chronicle Images/chronicle-best-mockups.png'
 import chronicleProblemStatistics from './Chronicle Images/chronicle-problem-statistics.png'
@@ -29,7 +30,6 @@ import chronicleUsability from './Chronicle Images/chronicle-usability.png'
 import chronicleVisuals from './Chronicle Images/chronicle-visuals.png'
 import chronicleAccessibility from './Chronicle Images/chronicle-accessibility.png'
 import chronicleTakeaways from './Chronicle Images/chronicle-takeaways.png'
-import chronicleStats from './Chronicle Images/chronicle-stats.png'
 
 function Chronicle() {
     return (
@@ -39,14 +39,29 @@ function Chronicle() {
                 <Navbar onCase={true} />
                 <img id='paCoverBottom' src={chronicleCoverBottom} alt='' width="100%"/>
             </div>
+
             <div className="chronicleContent">
-                <div className="chronicleIntro">
+                <img id="chronicleStats" src={chronicleStats} width="100%" alt='' />
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="caseSideHeader">SOLUTION</h3>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">How does Chronicle foster understanding between generations?</h1>
+                        <p className="caseText">Chronicle is a tablet app that allows grandparents and grandchildren, especially those that live far distances from each other, to connect by <span className="chronicleBoldText">collaboratively narrating and drawing stories</span> from their own lives.</p>
+                        <p className="caseText">Our app <span className="chronicleBoldText">revolves around the family</span> because connecting different generations doesn't start with strangers. It starts with people you know and care about.</p>
+                        <img id="chronicleBestMockups" src={chronicleBestMockups} width="850" height="400" alt=''/>
+                    </div>
+                </div>
+
+                {/* <div className="chronicleIntro">
                     <h1 className="caseSectionHeader" id="chronicleIntroQuestion">How does Chronicle foster understanding between generations?</h1>
                     <p className="caseText" id="chronicleIntroText">Chronicle is a tablet app that allows grandparents and grandchildren, especially those that live far distances from each other, to connect by <span className="chronicleBoldText">collaboratively narrating and drawing stories</span> from their own lives.</p>
                     <p className="caseText" id="chronicleIntroText">Our app <span className="chronicleBoldText">revolves around the family</span> because connecting different generations doesn't start with strangers. It starts with people you know and care about.</p>
                     <img id="chronicleStats" src={chronicleStats} width="250" height="600" alt=''/>
                     <img id="chronicleBestMockups" src={chronicleBestMockups} width="850" height="400" alt=''/>
-                </div>
+                </div> */}
 
                 <div id="chronicleBlueBackground"className="caseSection">
                     <div className="caseSideHeader">

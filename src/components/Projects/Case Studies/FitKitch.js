@@ -5,6 +5,7 @@ import './FitKitch.css'
 import fitkitchMockup from './Fitkitch Images/fitkitch-mockup.png'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
+import fitkitchStats from './Fitkitch Images/fitkitch-stats.svg'
 import fitkitchCoverBottom from './Fitkitch Images/fitkitch-cover-bottom.svg'
 import fitkitchBestMockups from './Fitkitch Images/fitkitch-best-mockups.png'
 import fitkitchOverview from './Fitkitch Images/fitkitch-overview.png'
@@ -28,7 +29,6 @@ import fitkitchDesignSystem from './Fitkitch Images/fitkitch-design-system.png'
 import fitkitchLogo from './Fitkitch Images/fitkitch-logo.png'
 import fitkitchAccessibility from './Fitkitch Images/fitkitch-accessibility.png'
 import fitkitchTakeaways from './Fitkitch Images/fitkitch-takeaways.png'
-import fitkitchStats from './Fitkitch Images/fitkitch-stats.png'
 
 function FitKitch() {
     return (
@@ -38,13 +38,21 @@ function FitKitch() {
                 <Navbar onCase={true} />
                 <img id='fitkitchCoverBottom' src={fitkitchCoverBottom} alt='' width="100%"/>
             </div>
+
             <div className="fitkitchContent">
-                <div className="fitkitchIntro">
-                    <h1 className="caseSectionHeader" id="fitkitchIntroQuestion">Investigating exercise and community building</h1>
-                    <p className="caseText" id="fitkitchIntroText">FitKitch is a <span className="fitkitchBoldText">community-oriented wellness app</span> designed to motivate young people to stay physically active. We were <span className="fitkitchBoldText">inspired by cooking,</span> an action that brings people together to work towards a shared goal – a cooked dish.</p>
-                    <p className="caseText" id="fitkitchIntroText">FitKitch <span className="fitkitchBoldText">leverages community obligation</span> and action to motivate individuals to exercise. The daily participation of each user is integral to the group's success, but we designed to avoid <span className="fitkitchBoldText">unhealthy, toxic mindsets</span> towards fitness and wellness.</p>
-                    <img id="fitkitchStats" src={fitkitchStats} width="240" height="630" />
-                    <img id="fitkitchBestMockups" src={fitkitchBestMockups} width="730" height="330" />
+
+                <img id="fitkitchStats" src={fitkitchStats} width="100%" alt='' />
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="redCaseSideHeader">SOLUTION</h3>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Investigating exercise and community building</h1>
+                        <p className="caseText">FitKitch is a <span className="fitkitchBoldText">community-oriented wellness app</span> designed to motivate young people to stay physically active. We were <span className="fitkitchBoldText">inspired by cooking,</span> an action that brings people together to work towards a shared goal – a cooked dish.</p>
+                        <p className="caseText">FitKitch <span className="fitkitchBoldText">leverages community obligation</span> and action to motivate individuals to exercise. The daily participation of each user is integral to the group's success, but we designed to avoid <span className="fitkitchBoldText">unhealthy, toxic mindsets</span> towards fitness and wellness.</p>
+                        <img id="fitkitchBestMockups" src={fitkitchBestMockups} width="730" alt='' />
+                    </div>
                 </div>
 
                 <div id="fitkitchRedBackground"className="caseSection">

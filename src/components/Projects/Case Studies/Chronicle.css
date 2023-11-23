@@ -72,12 +72,6 @@
     font-weight: 500;
 }
 
-#chronicleStats {
-    position: relative;
-    top: -13em;
-    left: 70em;
-}
-
 /* -------- Chronicle Content ---------------------------- */
 
 .caseSection {
@@ -125,6 +119,10 @@
     font-size: 1.2em;
     width: 65vw;
     line-height: 1.4em;
+}
+
+#chronicleBestMockups {
+    margin-top: 5vh;
 }
 
 /* ------ Text Decoration and Other Modification ----------------*/
@@ -194,12 +192,6 @@
 #chronicleTakeaways {
     margin-bottom: 5vh;
     margin-top: 3vh;
-}
-
-#chronicleBestMockups {
-    position: relative;
-    top: -12.6em;
-    left: -7em;
 }
 
 #chroniclePlant {

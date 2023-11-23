@@ -12,7 +12,7 @@
 
 #paCoverBottom {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     z-index: 0;
 }
 
@@ -66,8 +66,8 @@
 }
 
 .background h5 {
+    font-family: 'Alliance No. 2 Bold';
     color: #7BB151;
-    font-weight: 700;
     font-size: 1.6em;
     text-align: center;
     line-height: 1.4em;
@@ -78,7 +78,7 @@
 
 .background h6 {
     color: #88C15B;
-    font-weight: 500;
+    font-family: 'Alliance No. 2 Regular';
     font-size: 1.2em;
     text-align: center;
     line-height: 1.4em;

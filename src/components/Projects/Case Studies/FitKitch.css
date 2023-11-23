@@ -51,9 +51,6 @@
 }
 
 /* -----FitKitch Intro ---------------------------*/
-.fitkitchIntro {
-    height: 100vh;
-}
 
 #fitkitchIntroQuestion {
     color: #E96060;
@@ -130,16 +127,11 @@
     margin-top: -13.7em;
 }
 
-#fitkitchStats {
-    position: relative;
-    top: -15em;
-    left: 70em;
-}
 
 #fitkitchBestMockups {
-    position: relative;
+    /* position: relative;
     top: -19.2em;
-    left: -3em;
+    left: -3em; */
 }
 
 #fitkitchDesignThinkingGradient {
