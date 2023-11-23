@@ -5,6 +5,8 @@ import chronicleMockup from './chronicle-cover-mockup.png'
 import './Chronicle.css'
 import SectionDivider from './Section Divider/SectionDivider.js'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
+
+import chronicleCoverBottom from './Chronicle Images/chronicle-cover-bottom.svg'
 import chronicleBestMockups from './Chronicle Images/chronicle-best-mockups.png'
 import chronicleProblemStatistics from './Chronicle Images/chronicle-problem-statistics.png'
 import chronicleChallenge from './Chronicle Images/chronicle-challenge.png'
@@ -32,13 +34,10 @@ import chronicleStats from './Chronicle Images/chronicle-stats.png'
 function Chronicle() {
     return (
         <div className="chronicleCaseStudy">
-            <div className="chronicleCover">
+            <div className="cover" id='chronicleCover'>
                 <ScrollIndicator />
-                <Navbar />
-                <h1>Chronicle</h1>
-                <h3>UI/UX Designer</h3>
-                <h2>Bridging the intergenerational gap in families through collaborative storytelling</h2>
-                <img id="chronicleCaseStudyMockup" src={chronicleMockup} alt="Chronicle Tablet Mockup" width="750" height="auto" />
+                <Navbar onCase={true} />
+                <img id='paCoverBottom' src={chronicleCoverBottom} alt='' width="100%"/>
             </div>
             <div className="chronicleContent">
                 <div className="chronicleIntro">

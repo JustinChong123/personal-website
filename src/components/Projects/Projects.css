@@ -15,7 +15,7 @@
     border: 2px solid transparent;
     background: 
         linear-gradient(to right, #171B21, #171B21), 
-        linear-gradient(to right, #EC6D71 , #E55E9F); 
+        linear-gradient(to right, #7B80F0 , #B9C7DD); 
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
 }
@@ -28,7 +28,8 @@
     border: 2px solid transparent;
     background: 
         linear-gradient(to right, #171B21, #171B21), 
-        linear-gradient(to right, #7B80F0 , #B9C7DD); 
+        linear-gradient(to right, #EC6D71 , #E55E9F); 
+        
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
 }

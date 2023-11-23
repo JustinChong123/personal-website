@@ -23,7 +23,7 @@ function Projects() {
                             <h2>Chronicle</h2>
                             <h4>TABLET</h4>
                         </div>
-                        <h1 id="chronicleDescriptionGradient">Bridging generations through collaborative storytelling</h1>
+                        <h1 id="fitkitchDescriptionGradient">Bridging generations through collaborative storytelling</h1>
                         <div class="projectTags">
                             <h3 class="projectTag">Research</h3>
                             <h3 class="projectTag">UX</h3>
@@ -39,7 +39,7 @@ function Projects() {
                             <h2>FitKitch</h2>
                             <h4>MOBILE</h4>
                         </div>
-                        <h1 id="fitkitchDescriptionGradient">Promoting daily fitness through community action</h1>
+                        <h1 id="chronicleDescriptionGradient">Promoting daily fitness through community action</h1>
                         <div class="projectTags">
                             <h3 class="projectTag">Research</h3>
                             <h3 class="projectTag">UX</h3>

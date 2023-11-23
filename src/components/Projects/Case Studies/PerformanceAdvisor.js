@@ -4,7 +4,8 @@ import Footer from '../../Footer/Footer.js'
 import './PerformanceAdvisor.css'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
-import mongodbMockup from './Performance Advisor Images/mongodb-mockup.png'
+import paMockup from './Performance Advisor Images/pa-mockup.png'
+import paCoverBottom from './Performance Advisor Images/pa-cover-bottom.svg'
 import paProcess from './Performance Advisor Images/pa-process.png'
 import paTakeaways from './Performance Advisor Images/pa-takeaways.png'
 
@@ -13,15 +14,8 @@ function PerformanceAdvisor() {
         <div className="container">
             <div className="cover">
                 <ScrollIndicator />
-                <Navbar />
-                <div className='coverContent'>
-                    <div className='coverInfo'>
-                        <h1>Performance Advisor</h1>
-                        <h3>Product Design Intern @ MongoDB</h3>
-                        <h2>Enabling developers to holistically diagnose performance issues</h2>
-                    </div>
-                    <img id='coverMockup' src={mongodbMockup} alt="Mockup" width='620' height="400" />
-                </div>
+                <Navbar onCase={true} />
+                <img id='paCoverBottom' src={paCoverBottom} alt='' width="100%"/>
             </div>
             
             <div className="budgetBalloonContent">

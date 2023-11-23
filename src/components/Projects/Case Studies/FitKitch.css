@@ -3,9 +3,8 @@
     font-family: 'Barlow', sans-serif;
 }
 
-.fitkitchCover {
-    height: 100vh;
-    background-color: #000000;
+#fitkitchCover {
+    background-image: linear-gradient(to bottom right, #FFB1B1 , #FF89C0); 
 }
 
 .fitkitchCover h1 {

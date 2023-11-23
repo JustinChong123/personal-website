@@ -3,9 +3,8 @@
     font-family: 'Barlow', sans-serif;
 }
 
-.chronicleCover {
-    height: 100vh;
-    background-color: #000000;
+#chronicleCover {
+    background-image: linear-gradient(to bottom right, #CFD6F8 , #C1F7CD);
 }
 
 .chronicleCover h1 {

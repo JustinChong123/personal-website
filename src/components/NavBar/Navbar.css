@@ -3,40 +3,62 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    padding-top: 1.5vh;
+    z-index: 1000;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2vw;
+}
+
+/* Logo */
+.logoPic {
+    /* position: absolute;
+    left: 3vw; */
 }
 
 /* "Justin Chong" */
-.logo a:last-child {
+#homeStyle {
     font-family: 'Alliance No. 2 Bold';
     font-size: 2vw;
     font-weight: 800;
     text-decoration: none;
-    margin-left: 7vw;
     background-image: linear-gradient(to right, #7FAADB, #B0E4BC, #F7DE6D, #F08339);
     background-clip: text;
     color: transparent;
 }
 
-/* Logo */
-.logoPic {
-    position: absolute;
-    left: 3vw;
+#caseStyle {
+    font-family: 'Alliance No. 2 Bold';
+    font-size: 2vw;
+    font-weight: 800;
+    text-decoration: none;
+    background-color: #000;
+    background-clip: text;
+    color: transparent;
 }
+
 
 /* Group of Nav Buttons */
 .navButtons {
     display: flex;
     align-items: center;
-    margin: 5vh 1vw;
     list-style: none;
+    column-gap: 2vw;
 }
 
 /* Nav Button */
 .navButtons > li {
-    margin: 0vh 1vw;
+    /* margin: 0vh 1vw; */
 }
 
-.navButtons a, #email-me-button, #resume-download-button {
+.navButtons a, #email-me-button, #email-me-button-case, #resume-download-button, #resume-download-button-case {
     text-decoration: none;
     font-family: 'IBM Plex Mono', sans-serif;
     letter-spacing: -0.03em;
@@ -51,35 +73,63 @@
 }
 
 #about-me-button {
-    box-shadow: 3px 3px #d5b36e;
+    box-shadow: 3px 3px #99e9fc;
 }
 
-#email-me-button {
-    box-shadow: 3px 3px #d5b36e;
-}
-
-#resume-download-button {
-    box-shadow: 3px 3px #d5b36e;
+#about-me-button-case {
+    box-shadow: 3px 3px #000;
 }
 
 #about-me-button:hover {
     box-shadow: 3px 3px white;
-    background-color: #d5b36e;
+    background-color: #99e9fc;
+}
+
+#about-me-button-case:hover {
+    background-color: #99e9fc;
+}
+
+
+#email-me-button {
+    box-shadow: 3px 3px #99e9fc;
+}
+
+#email-me-button-case {
+    box-shadow: 3px 3px #000;
 }
 
 #email-me-button:hover {
     cursor: pointer;
     box-shadow: 3px 3px white;
-    background-color: #d5b36e;
+    background-color: #99e9fc;
+}
+
+#email-me-button-case:hover {
+    cursor: pointer;
+    background-color: #99e9fc;
+}
+
+
+#resume-download-button {
+    box-shadow: 3px 3px #99e9fc;
+}
+
+#resume-download-button-case {
+    box-shadow: 3px 3px #000;
 }
 
 #resume-download-button:hover {
     cursor: pointer;
     box-shadow: 3px 3px white;
-    background-color: #d5b36e;
+    background-color: #99e9fc;
 }
 
-#dropdownItemSWE {
+#resume-download-button-case:hover {
+    background-color: #99e9fc;
+}
+
+
+/* #dropdownItemSWE {
     background-color: #160C59;
     color: white;
     font-weight: 600;
@@ -117,4 +167,4 @@
 
 #dropdownItemPM:hover {
     background-color: gray;
-}
+} */

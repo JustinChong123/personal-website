@@ -5,9 +5,15 @@
 
 .cover {
     height: 100vh;
-    background-color: #000000;
+    background-image: linear-gradient(to bottom right, #A0E5DC , #D2E5A6); 
     color: #ffffff;
     position: relative;
+}
+
+#paCoverBottom {
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
 }
 
 .coverContent {

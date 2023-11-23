@@ -4,6 +4,8 @@ import Footer from '../../Footer/Footer.js'
 import './FitKitch.css'
 import fitkitchMockup from './Fitkitch Images/fitkitch-mockup.png'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
+
+import fitkitchCoverBottom from './Fitkitch Images/fitkitch-cover-bottom.svg'
 import fitkitchBestMockups from './Fitkitch Images/fitkitch-best-mockups.png'
 import fitkitchOverview from './Fitkitch Images/fitkitch-overview.png'
 import fitkitchDesignThinking from './Fitkitch Images/fitkitch-design-thinking.png'
@@ -31,13 +33,10 @@ import fitkitchStats from './Fitkitch Images/fitkitch-stats.png'
 function FitKitch() {
     return (
         <div className="fitkitchCaseStudy">
-            <div className="fitkitchCover">
+            <div className="cover" id='fitkitchCover'>
                 <ScrollIndicator />
-                <Navbar />
-                <h1>FitKitch</h1>
-                <h3>UI/UX Designer</h3>
-                <h2>Promoting daily fitness through community action</h2>
-                <img id="fitwitCaseStudyMockup" src={fitkitchMockup} alt="FitWit iPhone 13 Mockup" width="600" height="auto" />
+                <Navbar onCase={true} />
+                <img id='fitkitchCoverBottom' src={fitkitchCoverBottom} alt='' width="100%"/>
             </div>
             <div className="fitkitchContent">
                 <div className="fitkitchIntro">
