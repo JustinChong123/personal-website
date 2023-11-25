@@ -6,6 +6,7 @@ import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
 import paCoverBottom from './Performance Advisor Images/pa-cover-bottom.svg'
 import paStats from './Performance Advisor Images/pa-stats.svg'
+import paClusterInfoBanner from './Performance Advisor Images/pa-cluster-info-banner.svg'
 import paProcess from './Performance Advisor Images/pa-process.png'
 import paTakeaways from './Performance Advisor Images/pa-takeaways.png'
 
@@ -48,6 +49,7 @@ function PerformanceAdvisor() {
                     </div>
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Lack of high-level integration</h1>
+                        <img id="paClusterInfoBanner" src={paClusterInfoBanner} width="700" alt=''/>
                         <p className="caseText">Performance Advisor does not aggregate recommendations on the cluster-level, making it <span className="fitkitchBoldText">difficult for users to assess the overall health of their cluster,</span> especially for large, multi-shard deployments. Novice users struggle to prioritize critical recommendations, and enterprise customers need a way to isolate performance issues between operational vs. transactional workloads. </p>
                     </div>
                 </div>
