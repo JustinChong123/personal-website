@@ -6,6 +6,7 @@ import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
 import paCoverBottom from './Performance Advisor Images/pa-cover-bottom.svg'
 import paStats from './Performance Advisor Images/pa-stats.svg'
+import paQueryModel from './Performance Advisor Images/pa-query-model.svg'
 import paClusterInfoBanner from './Performance Advisor Images/pa-cluster-info-banner.svg'
 import paProcess from './Performance Advisor Images/pa-process.png'
 import paTakeaways from './Performance Advisor Images/pa-takeaways.png'
@@ -40,6 +41,7 @@ function PerformanceAdvisor() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">An integrated performance insights tool</h1>
                         <p className="caseText">One of many data services that MongoDB offers, Performance Advisor is a <span className="fitkitchBoldText">critical point in the query diagnostics workflow</span> that analyzes slow queries and curates multiple types of performance recommendations. Developers and database administrators alike use it to <span className="fitkitchBoldText">optimize slow queries that hurt database performance and rack up unwanted costs.</span></p>
+                        <img id="paQueryModel" src={paQueryModel} width="700" alt=''/>
                     </div>
                 </div>
 
