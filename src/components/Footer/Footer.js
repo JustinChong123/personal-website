@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Footer.css'
 import {Link} from 'react-router-dom'
-import upScrollArrow from './up-scroll-arrow.png'
+import upScrollArrow from './up-scroll-arrow.svg'
+import upScrollArrowHover from './up-scroll-arrow-hover.svg'
 
 function Footer () {
+
+    const [arrowHover, setArrowHover] = useState(false);
+
     return (
         <div className="Footer">
             <div className="items-1">
@@ -13,6 +17,7 @@ function Footer () {
                     <Link to='/aboutMe'><h4 onClick={() => {window.scrollTo({top: 0, left: 0});}}>About Me</h4></Link>
                 </div>
             </div>
+
             <div className="items-2">
                 <h3>Let's stay in touch!</h3>
                 <div className="subitems-2">
@@ -23,7 +28,16 @@ function Footer () {
                     <h4 id="footer-email-me" onClick={() => window.location = 'mailto:justin.r.chong.24@dartmouth.edu'}>Email Me</h4>
                 </div>
             </div>
-            <img id="upScrollArrow" onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}} src={upScrollArrow} width="51" height="51" />
+
+            <img
+                id="upScrollArrow"
+                onMouseEnter={() => setArrowHover(true)}
+                onMouseLeave={() => setArrowHover(false)}
+                onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}
+                src={arrowHover ? upScrollArrowHover : upScrollArrow} 
+                width="51"
+                height="51"
+                alt=''/>
         </div>
     )
 }
