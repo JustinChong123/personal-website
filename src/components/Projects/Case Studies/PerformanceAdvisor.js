@@ -6,6 +6,7 @@ import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
 import paCoverBottom from './Performance Advisor Images/pa-cover-bottom.svg'
 import paStats from './Performance Advisor Images/pa-stats.svg'
+import paOverview from './Performance Advisor Images/pa-overview.svg'
 import paQueryModel from './Performance Advisor Images/pa-query-model.svg'
 import paClusterInfoBanner from './Performance Advisor Images/pa-cluster-info-banner.svg'
 import paProcess from './Performance Advisor Images/pa-process.png'
@@ -22,9 +23,10 @@ function PerformanceAdvisor() {
             
             <div className="budgetBalloonContent">
 
+                <img id='paOverview' src={paOverview} alt='' width="100%"/>
                 <img id='paStats' src={paStats} alt='' width="100%"/>
 
-                <div className="caseSection">
+                {/* <div className="caseSection">
                     <div className="caseSideHeader">
                         <h3 id="greenCaseSideHeader">SOLUTION</h3>
                     </div>
@@ -32,7 +34,7 @@ function PerformanceAdvisor() {
                         <h1 className="caseSectionHeader">Enabling developers to holistically diagnose performance issues</h1>
                         <p className="caseText">Performance Advisor is a <span className="fitkitchBoldText">cloud analytics tool</span> that enables developers to diagnose slow queries and improve performance on their MongoDB database clusters. I <span className="fitkitchBoldText">re-designed Performance Advisor to be “cluster-centric,”</span> enabling novice users and enterprise customers <span className="fitkitchBoldText">to gain high-level, aggregated insights about their performance</span> across different deployment models.</p>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="caseSection">
                     <div className="caseSideHeader">

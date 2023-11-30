@@ -25,9 +25,7 @@ function Projects() {
                         </div>
                         <h1 id="fitkitchDescriptionGradient">Bridging generations through collaborative storytelling</h1>
                         <div class="projectTags">
-                            <h3 class="projectTag">Research</h3>
-                            <h3 class="projectTag">UX</h3>
-                            <h3 class="projectTag">Visuals</h3>
+                            <h3 class="projectTag">Education</h3>
                         </div>
                         <img id="container1Mockup" src={chronicleMockup} alt="Chronicle Tablet Mockup" />
                     </div>
@@ -41,9 +39,8 @@ function Projects() {
                         </div>
                         <h1 id="chronicleDescriptionGradient">Promoting daily fitness through community action</h1>
                         <div class="projectTags">
-                            <h3 class="projectTag">Research</h3>
-                            <h3 class="projectTag">UX</h3>
-                            <h3 class="projectTag">Visuals</h3>
+                            <h3 class="projectTag">B2C</h3>
+                            <h3 class="projectTag">Health</h3>
                         </div>
                         <img id="container2Mockup" src={fitkitchBetterMockup} alt="FitKitch Mobile Mockup" />
                     </div>
@@ -57,9 +54,9 @@ function Projects() {
                         </div>
                         <h1 id="budgetBalloonDescriptionGradient">Diagnosing performance issues holisitically</h1>
                         <div class="projectTags">
-                            <h3 class="projectTag">Research</h3>
-                            <h3 class="projectTag">UX</h3>
-                            <h3 class="projectTag">Visuals</h3>
+                            <h3 class="projectTag">B2B</h3>
+                            <h3 class="projectTag">Cloud</h3>
+                            <h3 class="projectTag">SaaS</h3>
                         </div>
                         <img id="container3Mockup" src={mongodbMockup} alt="Budget Balloon Mobile Mockup" />
                     </div>

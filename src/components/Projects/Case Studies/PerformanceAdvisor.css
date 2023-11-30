@@ -92,6 +92,10 @@
     justify-content: center;
 }
 
+#paStats {
+    margin-top: -1vh;
+}
+
 #paProcessMockup {
     display: flex;
     align-self: center;
