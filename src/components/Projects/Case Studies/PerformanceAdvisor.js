@@ -10,6 +10,7 @@ import paOverview from './Performance Advisor Images/pa-overview.svg'
 import paQueryModel from './Performance Advisor Images/pa-query-model.svg'
 import paClusterInfoBanner from './Performance Advisor Images/pa-cluster-info-banner.svg'
 import paProcess from './Performance Advisor Images/pa-process.png'
+import paResults from './Performance Advisor Images/pa-results.svg'
 import paTakeaways from './Performance Advisor Images/pa-takeaways.png'
 
 function PerformanceAdvisor() {
@@ -74,6 +75,17 @@ function PerformanceAdvisor() {
 
                 <div id='process-container'>
                     <img id='paProcessMockup' src={paProcess} alt='hello' width="1000" height="400"/>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">RESULTS</h3>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Improved functionality in 5+ domains</h1>
+                        <p className="caseText">I integrated feedback from internal users by conducting usability studies. Overall, 5 core improvements in the product were identified as a whole:</p>
+                        <img id="paResults" src={paResults} width="750" alt=''/>
+                    </div>
                 </div>
 
                 <div className="caseSection">
