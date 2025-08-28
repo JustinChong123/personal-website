@@ -4,9 +4,11 @@ import Footer from '../../Footer/Footer.js'
 import './PerformanceAdvisor.css'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
+import testCoverBottom from './AI Sales Intelligence Images/test-cover-bottom.svg'
+import AISalesCoverBottom from './AI Sales Intelligence Images/ai-sales-cover-bottom.svg'
 import paCoverBottom from './Performance Advisor Images/pa-cover-bottom.svg'
-import paStats from './Performance Advisor Images/pa-stats.svg'
-import paOverview from './Performance Advisor Images/pa-overview.svg'
+import AISalesStats from './AI Sales Intelligence Images/ai-sales-stats.svg'
+import AISalesOverview from './AI Sales Intelligence Images/ai-sales-overview.svg'
 import paQueryModel from './Performance Advisor Images/pa-query-model.svg'
 import paClusterInfoBanner from './Performance Advisor Images/pa-cluster-info-banner.svg'
 import paProcess from './Performance Advisor Images/pa-process.png'
@@ -19,13 +21,13 @@ function AISalesIntelligence() {
             <div className="cover">
                 <ScrollIndicator />
                 <Navbar onCase={true} />
-                <img id='paCoverBottom' src={paCoverBottom} alt='' width="100%"/>
+                <img id='paCoverBottom' src={AISalesCoverBottom} alt='' width="100%"/>
             </div>
             
             <div className="budgetBalloonContent">
 
-                <img id='paOverview' src={paOverview} alt='' width="100%"/>
-                <img id='paStats' src={paStats} alt='' width="100%"/>
+                <img id='paOverview' src={AISalesOverview} alt='' width="100%"/>
+                <img id='paStats' src={AISalesStats} alt='' width="100%"/>
 
                 {/* <div className="caseSection">
                     <div className="caseSideHeader">
