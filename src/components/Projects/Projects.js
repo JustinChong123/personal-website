@@ -12,12 +12,66 @@ import envisionEarthMockup from './envision-earth-mockup.png'
 import personalWebsiteMockup from './personal-website-mockup.png'
 import dartmouthPathfinderMockup from './dartmouth-pathfinder-mockup.png'
 import moreProjects from './more-projects.png'
+import AISparkleIcon from './ai-sparkle-icon.png'
 
 function Projects() {
     return (
         <div class="all-projects">
             <div class="main-projects">
-                <Link to="/chronicle-case-study">
+
+                {/* <Link to="/mongodb-case-study">
+                    <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container3" id="projectContainer">
+                        <div class="projectIdentifiers">
+                            <h2>MongoDB</h2>
+                            <h4>WEB</h4>
+                        </div>
+                        <h1 id="budgetBalloonDescriptionGradient">Diagnosing performance issues holisitically</h1>
+                        <div class="projectTags">
+                            <h3 class="projectTag">B2B</h3>
+                            <h3 class="projectTag">Cloud</h3>
+                            <h3 class="projectTag">SaaS</h3>
+                        </div>
+                        <img id="container3Mockup" src={mongodbMockup} alt="Budget Balloon Mobile Mockup" />
+                    </div>
+                </Link> */}
+
+                <Link to="/ai-sales-intelligence-case-study">
+                    <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container3" id="projectContainer">
+                        <div class="projectIdentifiers">
+                            <h2>MongoDB</h2>
+                            <h4>WEB</h4>
+                        </div>
+                        <h1 id="budgetBalloonDescriptionGradient">Powering decision making with AI customer insights</h1>
+                        <div class="projectTags">
+                            <h3 class="projectTag">
+                                {/* <img id="aiSparkleIcon" src={AISparkleIcon} alt="AI Sparkle Icon" /> */}
+                                AI
+                            </h3>
+                            <h3 class="projectTag">B2B</h3>
+                            <h3 class="projectTag">Cloud</h3>
+                        </div>
+                        <img id="container3Mockup" src={mongodbMockup} alt="Budget Balloon Mobile Mockup" />
+                    </div>
+                </Link>
+
+                <Link to="/account-portfolio-case-study">
+                    <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container1" id="projectContainer">
+                        <div class="projectIdentifiers">
+                            <h2>MongoDB</h2>
+                            <h4>WEB</h4>
+                        </div>
+                        <h1 id="fitkitchDescriptionGradient">Driving customer engagements for growth and retention</h1>
+                        <div class="projectTags">
+                            <h3 class="projectTag">Data Viz</h3>
+                            <h3 class="projectTag">B2B</h3>
+                            <h3 class="projectTag">Cloud</h3>
+                            <h3 class="projectTag">SaaS</h3>
+                        </div>
+                        <img id="container1Mockup" src={chronicleMockup} alt="Chronicle Tablet Mockup" />
+                    </div>
+                </Link>
+
+                {/* <Link to="/chronicle-case-study">
                     <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container1" id="projectContainer">
                         <div class="projectIdentifiers">
                             <h2>Chronicle</h2>
@@ -29,7 +83,7 @@ function Projects() {
                         </div>
                         <img id="container1Mockup" src={chronicleMockup} alt="Chronicle Tablet Mockup" />
                     </div>
-                </Link>
+                </Link> */}
 
                 <Link to="/fitkitch-case-study">
                     <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container2" id="projectContainer">
@@ -46,21 +100,6 @@ function Projects() {
                     </div>
                 </Link>
 
-                <Link to="/mongodb-case-study">
-                    <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container3" id="projectContainer">
-                        <div class="projectIdentifiers">
-                            <h2>MongoDB</h2>
-                            <h4>WEB</h4>
-                        </div>
-                        <h1 id="budgetBalloonDescriptionGradient">Diagnosing performance issues holisitically</h1>
-                        <div class="projectTags">
-                            <h3 class="projectTag">B2B</h3>
-                            <h3 class="projectTag">Cloud</h3>
-                            <h3 class="projectTag">SaaS</h3>
-                        </div>
-                        <img id="container3Mockup" src={mongodbMockup} alt="Budget Balloon Mobile Mockup" />
-                    </div>
-                </Link>
             </div>
             
             <img id="moreProjects" src={moreProjects} alt="More Projects Tagline" />

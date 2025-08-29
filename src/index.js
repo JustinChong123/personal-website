@@ -15,6 +15,8 @@ import PersonalWebsite from './components/Projects/Case Studies/PersonalWebsite.
 import IPath from './components/Projects/Case Studies/iPath.js';
 import ConferenceCupUSA from './components/Projects/Case Studies/ConferenceCupUSA.js';
 import OhBuoy from './components/Projects/Case Studies/OhBuoy.js';
+import AISalesIntelligence from './components/Projects/Case Studies/AISalesIntelligence.js';
+import AccountPortfolio from './components/Projects/Case Studies/AccountPortfolio.js'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -30,6 +32,8 @@ root.render(
         <Route path='/oh-buoy-case-study' element={<OhBuoy />} />
         <Route path='/envision-earth-case-study' element={<EnvisionEarth />} />
         <Route path='ipath-case-study' element={<IPath />} />
+        <Route path='/ai-sales-intelligence-case-study' element={<AISalesIntelligence />} />
+        <Route path='/account-portfolio-case-study' element={<AccountPortfolio />} />
       </Routes>
     </Router>
 );
