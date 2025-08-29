@@ -4,9 +4,9 @@ import Footer from '../../Footer/Footer.js'
 import './PerformanceAdvisor.css'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
-import paCoverBottom from './Performance Advisor Images/pa-cover-bottom.svg'
-import paStats from './Performance Advisor Images/pa-stats.svg'
-import paOverview from './Performance Advisor Images/pa-overview.svg'
+import portfolioCoverBottom from './Account Portfolio Images/portfolio-cover-bottom.svg'
+import portfolioStats from './Account Portfolio Images/portfolio-stats.svg'
+import portfolioOverview from './Account Portfolio Images/portfolio-overview.svg'
 import paQueryModel from './Performance Advisor Images/pa-query-model.svg'
 import paClusterInfoBanner from './Performance Advisor Images/pa-cluster-info-banner.svg'
 import paProcess from './Performance Advisor Images/pa-process.png'
@@ -19,13 +19,13 @@ function AccountPortfolio() {
             <div className="cover">
                 <ScrollIndicator />
                 <Navbar onCase={true} />
-                <img id='paCoverBottom' src={paCoverBottom} alt='' width="100%"/>
+                <img id='paCoverBottom' src={portfolioCoverBottom} alt='' width="100%"/>
             </div>
             
             <div className="budgetBalloonContent">
 
-                <img id='paOverview' src={paOverview} alt='' width="100%"/>
-                <img id='paStats' src={paStats} alt='' width="100%"/>
+                <img id='paOverview' src={portfolioOverview} alt='' width="100%"/>
+                <img id='paStats' src={portfolioStats} alt='' width="100%"/>
 
                 {/* <div className="caseSection">
                     <div className="caseSideHeader">

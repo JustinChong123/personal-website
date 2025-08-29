@@ -9,8 +9,21 @@ import AISalesCoverBottom from './AI Sales Intelligence Images/ai-sales-cover-bo
 import paCoverBottom from './Performance Advisor Images/pa-cover-bottom.svg'
 import AISalesStats from './AI Sales Intelligence Images/ai-sales-stats.svg'
 import AISalesOverview from './AI Sales Intelligence Images/ai-sales-overview.svg'
-import paQueryModel from './Performance Advisor Images/pa-query-model.svg'
-import paClusterInfoBanner from './Performance Advisor Images/pa-cluster-info-banner.svg'
+import AISalesContext from './AI Sales Intelligence Images/ai-sales-context.png'
+import aiSalesSolution from './AI Sales Intelligence Images/ai-sales-solution.png'
+import AISalesFeatures from './AI Sales Intelligence Images/ai-sales-features.png'
+import AISalesResearchHeading from './AI Sales Intelligence Images/ai-sales-research-heading.png'
+import AISalesCurrentProduct from './AI Sales Intelligence Images/ai-sales-current-product.png'
+import AISalesCompetitiveAnalysis from './AI Sales Intelligence Images/ai-sales-competitive-analysis.png'
+import AISalesNeeds from './AI Sales Intelligence Images/ai-sales-needs.png'
+import AISalesPersonas from './AI Sales Intelligence Images/ai-sales-personas.png'
+import AISalesPOV from './AI Sales Intelligence Images/ai-sales-pov.png'
+import AISalesHMW from './AI Sales Intelligence Images/ai-sales-hmw.png'
+import AISalesDesignHeading from './AI Sales Intelligence Images/ai-sales-design-heading.png'
+import AISalesObjectives from './AI Sales Intelligence Images/ai-sales-objectives.png'
+import AISalesSketches from './AI Sales Intelligence Images/ai-sales-sketches.png'
+import AISalesWireframes from './AI Sales Intelligence Images/ai-sales-wireframes.png'
+import AISalesConceptTesting from './AI Sales Intelligence Images/ai-sales-concept-testing.png'
 import paProcess from './Performance Advisor Images/pa-process.png'
 import paResults from './Performance Advisor Images/pa-results.svg'
 import paTakeaways from './Performance Advisor Images/pa-takeaways.png'
@@ -41,69 +54,153 @@ function AISalesIntelligence() {
 
                 <div className="caseSection">
                     <div className="caseSideHeader">
-                        <h3 id="greenCaseSideHeader">BACKGROUND</h3>
+                        <h3 id="greenCaseSideHeader">CONTEXT</h3>
                     </div>
                     <div className="caseMain">
-                        <h1 className="caseSectionHeader">An integrated performance insights tool</h1>
-                        <p className="caseText">One of many data services that MongoDB offers, Performance Advisor is a <span className="fitkitchBoldText">critical point in the query diagnostics workflow</span> that analyzes slow queries and curates multiple types of performance recommendations. Developers and database administrators alike use it to <span className="fitkitchBoldText">optimize slow queries that hurt database performance and rack up unwanted costs.</span></p>
-                        <img id="paQueryModel" src={paQueryModel} width="700" alt=''/>
+                        <h1 className="caseSectionHeader">You might be wondering... what is MongoDB?</h1>
+                        <p className="caseText">MongoDB is the world’s <span className="fitkitchBoldText">most popular non-relational cloud database</span> where developers can flexibly manage their data to build applications faster. It’s used by everyone from junior developers to mid-sized startups to  <span className="fitkitchBoldText">massive enterprises like Adobe and JP Morgan Chase.</span></p>
+                        <img src={AISalesContext} width="700" alt=''/>
                     </div>
                 </div>
 
                 <div className="caseSection">
                     <div className="caseSideHeader">
-                        <h3 id="greenCaseSideHeader">PROBLEM</h3>
+                        <h3 id="greenCaseSideHeader">SOLUTION</h3>
                     </div>
                     <div className="caseMain">
-                        <h1 className="caseSectionHeader">Lack of high-level integration</h1>
-                        <img id="paClusterInfoBanner" src={paClusterInfoBanner} width="700" alt=''/>
-                        <p className="caseText">Performance Advisor does not aggregate recommendations on the cluster-level, making it <span className="fitkitchBoldText">difficult for users to assess the overall health of their cluster,</span> especially for large, multi-shard deployments. Novice users struggle to prioritize critical recommendations, and enterprise customers need a way to isolate performance issues between operational vs. transactional workloads. </p>
-                    </div>
-                </div>
-
-                <div className='background'>
-                    <h5>How might we enable developers operating in different deployment environments<br />to holistically diagnose performance issues?</h5>
-                </div>
-
-                <div className="caseSection">
-                    <div className="caseSideHeader">
-                        <h3 id="greenCaseSideHeader">PROCESS</h3>
-                    </div>
-                    <div className="caseMain">
-                        <h1 className="caseSectionHeader">Iterative and cross-functional at its core</h1>
-                        <p className="caseText">I <span className="fitkitchBoldText">conducted user interviews with internal users and enterprise customers</span> such as technical services engineers, consulting engineers, and solutions architects to understand Performance Advisor's user personas. I collaborated with  internal stakeholders including product managers, engineering leads, PMMs, and other designers to <span className="fitkitchBoldText">align on product vision and ensure a smooth engineering handoff.</span></p>
-                    </div>
-                </div>
-
-                <div id='process-container'>
-                    <img id='paProcessMockup' src={paProcess} alt='hello' width="1000" height="400"/>
-                </div>
-
-                <div className="caseSection">
-                    <div className="caseSideHeader">
-                        <h3 id="greenCaseSideHeader">RESULTS</h3>
-                    </div>
-                    <div className="caseMain">
-                        <h1 className="caseSectionHeader">Improved functionality in 5+ domains</h1>
-                        <p className="caseText">I integrated feedback from internal users by conducting usability studies. Overall, 5 core improvements in the product were identified as a whole:</p>
-                        <img id="paResults" src={paResults} width="750" alt=''/>
+                        <h1 className="caseSectionHeader">AI-powered customer intelligence for business leaders at MongoDB</h1>
+                        <p className="caseText">Born out of a need to accelerate data-driven decision-making for key business leaders at MongoDB, we launched a conversational AI chatbot that <span className="fitkitchBoldText">aggregates customer insights and trends from a previously untapped body</span> of historical sales call transcripts. Leaders spanning multiple business units like Sales, Marketing, and Product can ask any question they want to quickly understand customer sentiment, product feedback, and success of sales messaging and marketing campaigns. </p>
+                        <p className="caseText">By getting these high-level insights about MongoDB’s customers into the hands of our business leadership, they can quickly make <span className="fitkitchBoldText">data-backed decisions</span> to optimize product and Go-to-Market (GTM) strategy, ultimately <span className="fitkitchBoldText">acquiring more customers and driving revenue.</span></p>
+                        <img src={aiSalesSolution} width="900" alt=''/>
                     </div>
                 </div>
 
                 <div className="caseSection">
                     <div className="caseSideHeader">
-                        <h3 id="greenCaseSideHeader">REFLECT</h3>
-                        <h2>Takeaways</h2>
+                        <h3 id="greenCaseSideHeader">SOLUTION OVERVIEW</h3>
                     </div>
                     <div className="caseMain">
-                        <p id="noSectionHeader" className="caseText">This project was <span className="fitkitchBoldText">challenging and fast-paced,</span> but I collaborated tightly with my stakeholders and users to deliver designs that addressed the core issues with Performance Advisor. My designs are <span className="fitkitchBoldText">currently being implemented by the Cloud Core engineering team,</span> and we're planning on tracking conversion rates and other KPIs to assess customer adoption and feature discoverability. Here are 3 key takeaways I learned from this project. </p>
-                        <img id="paTakeaways" src={paTakeaways} width="950" alt=''/>
+                        <h1 className="caseSectionHeader">Main features of this AI sales intelligence chatbot</h1>
+                        <img src={AISalesFeatures} width="1000" alt=''/>
                     </div>
                 </div>
 
-                <div className='background'>
-                    <h5>Curious about the solution? Contact me!</h5>
-                    <h6>Due to my confidentiality agreement, I am unable to share the details of my project here,<br />but if you're interested in learning more about my work, please contact me!</h6>
+                <img src={AISalesResearchHeading} className="caseStudyHeading" width='100%' alt=''/>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">RESEARCH</h3>
+                        <h2>Current Product State</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Our goal: take a no-frills proof of concept to the next level</h1>
+                        <p className="caseText">The currently existing tool consists of pre-made analyses with their own pre-built prompts that our LLM uses to <span className="fitkitchBoldText">generate a dataset of results to answer the core question of the analysis.</span> For example, if the analysis is “Identify top 10 complaints from existing customers in the last 30 days”, the tool outputs a table with complaints and a list of customers who mentioned that complaint in sales calls.</p>
+                        <img src={AISalesCurrentProduct} width="950" alt=''/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">RESEARCH</h3>
+                        <h2>Competitive Analysis</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Understanding how B2B data analytics tools integrate AI</h1>
+                        <p className="caseText">I conducted industry research on AI-powered data analytics tools meant for enterprises and <span className="fitkitchBoldText">categorized the vendors into 3 core functionalities</span> we want to blend into our tool. <span className="fitkitchBoldText">Business intelligence (BI) tools</span> transform raw data into meaningful insights for corporations, <span className="fitkitchBoldText">self-service data analytics</span> use AI to lower the technical barrier for data exploration, and <span className="fitkitchBoldText">CRM platforms</span> specialize in aggregating customer data and interactions.</p>
+                        <img src={AISalesCompetitiveAnalysis} width="950" alt=''/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">RESEARCH</h3>
+                        <h2>User Interviews & Needs</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Users want to abstract away the technical grunt work</h1>
+                        <p className="caseText">I conducted user interviews with 9 business leaders at MongoDB <span className="fitkitchBoldText">ranging from Directors to Senior Vice Presidents.</span> While the type of questions they want to answer differ, I discovered key common needs among all of them that we needed to address to <span className="fitkitchBoldText">make this tool scalable and powerful.</span></p>
+                        <img src={AISalesNeeds} width="950" alt=''/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">RESEARCH</h3>
+                        <h2>User Personas</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Leaders care about customer sentiment, personas, and outcomes</h1>
+                        <p className="caseText">We interviewed 9 leaders across 4 business units who would benefit the most from getting their finger closer to the pulse of what’s happening with customers. By investigating the types of questions leaders want to drill into, we better understood our <span className="fitkitchBoldText">users’ mental model and what their objectives are coming into this tool.</span></p>
+                        <img src={AISalesPersonas} width="950" alt=''/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">DEFINE</h3>
+                        <h2>Point-of-View Statement</h2>
+                    </div>
+                    <div className="caseMain">
+                    <img src={AISalesPOV} width="800" alt=''/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">DEFINE</h3>
+                        <h2>How Might We Statements</h2>
+                    </div>
+                    <div className="caseMain">
+                    <img src={AISalesHMW} width="800" alt=''/>
+                    </div>
+                </div>
+
+                <img src={AISalesDesignHeading} className="caseStudyHeading" width='100%' alt=''/>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">DEFINE</h3>
+                        <h2>Design Objectives</h2>
+                    </div>
+                    <div className="caseMain">
+                    <img src={AISalesObjectives} width="900" alt=''/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">IDEATE</h3>
+                        <h2>Flow Sketches</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">A tool to test & perfect a prompt that outputs a dataset of results</h1>
+                        <p className="caseText">Using rough paper sketches, I thought about how users could create their own analyses to remove their reliance on our team painstakingly building them. I <span className="fitkitchBoldText">envisioned a sandbox (testing environment)</span> where users could write a prompt, preview a dataset generated on a small subset of call transcripts, iterate on the prompt, and finally create the analysis.</p>
+                        <img src={AISalesSketches} width="950" alt=''/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">PROTOTYPE</h3>
+                        <h2>Low-Fidelity Sketches</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Making prompt building as easy, fast, and non-technical as possible</h1>
+                        <p className="caseText">Through multiple iterations with constant feedback from my stakeholders, I expanded different ideas to make prompt building more accessible to leaders with <span className="fitkitchBoldText">limited time and varying technical backgrounds.</span> Here are a couple features we explored:</p>
+                        <img src={AISalesWireframes} width="1000" alt=''/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">IDEATE</h3>
+                        <h2>Concept Testing</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Major concept shift to prioritize result usability over prompt building</h1>
+                        <p className="caseText">We tested these concepts with a couple business leaders. They liked writing their own prompts, but they thought that effort was anti-climactic since the result was essentially a massive Excel sheet they had to dig through for insights. After discussing with my PM and engineers, we decided to <span className="fitkitchBoldText">de-prioritize prompt building capabilities</span> for a future version and <span className="fitkitchBoldText">focus on immediately surfacing more meaningful answers.</span></p>
+                        <img src={AISalesConceptTesting} width="1000" alt=''/>
+                    </div>
                 </div>
             </div>
             <Footer />

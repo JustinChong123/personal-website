@@ -92,6 +92,10 @@
     justify-content: center;
 }
 
+.caseStudyHeading {
+    margin-top: 10vh;
+}
+
 #paStats {
     margin-top: -1vh;
 }

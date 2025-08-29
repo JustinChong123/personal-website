@@ -60,7 +60,7 @@ function Projects() {
                             <h2>MongoDB</h2>
                             <h4>WEB</h4>
                         </div>
-                        <h1 id="fitkitchDescriptionGradient">Improving business outcomes with volatile customers</h1>
+                        <h1 id="fitkitchDescriptionGradient">Driving customer engagements for growth and retention</h1>
                         <div class="projectTags">
                             <h3 class="projectTag">Data Viz</h3>
                             <h3 class="projectTag">B2B</h3>
