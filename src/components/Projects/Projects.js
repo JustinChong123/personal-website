@@ -19,7 +19,7 @@ function Projects() {
         <div class="all-projects">
             <div class="main-projects">
 
-                <Link to="/mongodb-case-study">
+                {/* <Link to="/mongodb-case-study">
                     <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container3" id="projectContainer">
                         <div class="projectIdentifiers">
                             <h2>MongoDB</h2>
@@ -33,7 +33,7 @@ function Projects() {
                         </div>
                         <img id="container3Mockup" src={mongodbMockup} alt="Budget Balloon Mobile Mockup" />
                     </div>
-                </Link>
+                </Link> */}
 
                 <Link to="/ai-sales-intelligence-case-study">
                     <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container3" id="projectContainer">
@@ -71,7 +71,7 @@ function Projects() {
                     </div>
                 </Link>
 
-                <Link to="/chronicle-case-study">
+                {/* <Link to="/chronicle-case-study">
                     <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container1" id="projectContainer">
                         <div class="projectIdentifiers">
                             <h2>Chronicle</h2>
@@ -83,7 +83,7 @@ function Projects() {
                         </div>
                         <img id="container1Mockup" src={chronicleMockup} alt="Chronicle Tablet Mockup" />
                     </div>
-                </Link>
+                </Link> */}
 
                 <Link to="/fitkitch-case-study">
                     <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container2" id="projectContainer">

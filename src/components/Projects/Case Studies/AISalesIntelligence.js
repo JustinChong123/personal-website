@@ -24,9 +24,11 @@ import AISalesObjectives from './AI Sales Intelligence Images/ai-sales-objective
 import AISalesSketches from './AI Sales Intelligence Images/ai-sales-sketches.png'
 import AISalesWireframes from './AI Sales Intelligence Images/ai-sales-wireframes.png'
 import AISalesConceptTesting from './AI Sales Intelligence Images/ai-sales-concept-testing.png'
-import paProcess from './Performance Advisor Images/pa-process.png'
-import paResults from './Performance Advisor Images/pa-results.svg'
-import paTakeaways from './Performance Advisor Images/pa-takeaways.png'
+import AISalesNewWireframes from './AI Sales Intelligence Images/ai-sales-new-wireframes.png'
+import AISalesMockups from './AI Sales Intelligence Images/ai-sales-mockups.png'
+import AISalesUserTesting from './AI Sales Intelligence Images/ai-sales-user-testing.png'
+import AISalesNextSteps from './AI Sales Intelligence Images/ai-sales-next-steps.png'
+import AISalesTakeaways from './AI Sales Intelligence Images/ai-sales-takeaways.png'
 
 function AISalesIntelligence() {
     return (
@@ -107,7 +109,7 @@ function AISalesIntelligence() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Understanding how B2B data analytics tools integrate AI</h1>
                         <p className="caseText">I conducted industry research on AI-powered data analytics tools meant for enterprises and <span className="fitkitchBoldText">categorized the vendors into 3 core functionalities</span> we want to blend into our tool. <span className="fitkitchBoldText">Business intelligence (BI) tools</span> transform raw data into meaningful insights for corporations, <span className="fitkitchBoldText">self-service data analytics</span> use AI to lower the technical barrier for data exploration, and <span className="fitkitchBoldText">CRM platforms</span> specialize in aggregating customer data and interactions.</p>
-                        <img src={AISalesCompetitiveAnalysis} width="950" alt=''/>
+                        <img src={AISalesCompetitiveAnalysis} width="900" alt=''/>
                     </div>
                 </div>
 
@@ -202,6 +204,67 @@ function AISalesIntelligence() {
                         <img src={AISalesConceptTesting} width="1000" alt=''/>
                     </div>
                 </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">PROTOTYPE</h3>
+                        <h2>Sketches & Low-Fidelity Wireframes</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Chat with your data in natural language for insights in mere seconds</h1>
+                        <p className="caseText">Going back to the drawing board, I brainstormed how to <span className="fitkitchBoldText">package insights from complex data</span> in an understandable, actionable way. We iterated on an tool that <span className="fitkitchBoldText">analyzes the AI-generated dataset, uncovers patterns,</span> and surfaces valuable insights in natural language. Users can ask questions in a conversational environment to progressively dig deeper, find examples from the data, and discover related insights.</p>
+                        <img src={AISalesNewWireframes} width="1000" alt=''/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">PROTOTYPE</h3>
+                        <h2>High-Fidelity Mockups</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Polishing features to flatten technical barriers to data exploration</h1>
+                        <p className="caseText">Moving to high-fidelity designs with this core workflow of “chatting with your data”, we iterated on additional features that would <span className="fitkitchBoldText">accelerate the process of capturing meaningful insights.</span> Here are some key decisions we made:</p>
+                        <img src={AISalesMockups} width="1000" alt=''/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">TEST</h3>
+                        <h2>User Testing</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Testing a live, coded prototype revealed gaps in LLM transparency</h1>
+                        <p className="caseText">A Figma prototype of a chatbot poorly simulates the real experience of receiving tailored answers to your inputs. Knowing this in advance, I <span className="fitkitchBoldText">worked Agile with our engineers to begin coding a scrappy prototype</span> after we converged on the core idea during low-fidelity designs. We tested our coded prototype with our original group of 9 business leaders, and we collected insightful feedback. Our engineering team had limited bandwidth so we couldn’t implement large-scale changes, but we are <span className="fitkitchBoldText">prioritizing these features in our future roadmap.</span></p>
+                        <img src={AISalesUserTesting} width="1000" alt=''/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">REFLECT</h3>
+                        <h2>Next Steps</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Strategically expanding to other leaders for buy-in</h1>
+                        <p className="caseText">Once we enable users to ad-hoc build their analysis from scratch, this will <span className="fitkitchBoldText">unlock scalability and accessibility.</span> After we gather enough <span className="fitkitchBoldText">buy-in across senior leadership,</span> we will launch this product to all MongoDB leaders (Directors and above).</p>
+                        <img src={AISalesNextSteps} width="900" alt=''/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">REFLECT</h3>
+                        <h2>Takeaways</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Designing AI experiences is challenging, but rewarding</h1>
+                        <p className="caseText">I faced <span className="fitkitchBoldText">two main challenges</span> in this project that helped me immensely grow as a product designer. First, designing  conversational AI taught me how to <span className="fitkitchBoldText">anticipate the needs of users with an unpredictable LLM.</span> Second, I learned how to <span className="fitkitchBoldText">navigate a complex political web of users</span> since they were all highly opinionated business leaders with different agendas.</p>
+                        <img style={{ marginBottom: "10vh" }}  src={AISalesTakeaways} width="1000" alt=''/>
+                    </div>
+                </div>
+                
             </div>
             <Footer />
         </div>
