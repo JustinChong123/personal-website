@@ -5,7 +5,7 @@ import './AboutMe.css'
 import profilePic from './profile-pic.png'
 import aboutMeGraphics from './about-me-graphics.png'
 import skiing from './skiing.png'
-import dancing from './dancing.png'
+import hiking from './hiking.png'
 import foodie from './foodie.png'
 
 function AboutMe () {
@@ -18,11 +18,11 @@ function AboutMe () {
                     <img id="aboutMeGraphics" src={aboutMeGraphics} width="1800" height="1000" />
                 </div>
                 <img className="hobbies" id="skiing" src={skiing} alt="Skiing" width="1100" height="676.9"/>
-                <h4 id="skiingText">Feeling alive and free. Slarving and carving in the snow, doing a switch 180 off a jump, sliding on a rail (and usually eating it). I feel on top of the world, like nothing can stop me. It’s the essence of pure thrill. I take risks, try new things, and get up everytime I fall, on the slopes and in my design thinking.</h4>
-                <img className="hobbies" id="dancing" src={dancing} alt="Dancing" width="1100" height="676.9"/>
-                <h4 id="dancingText">The effortless smile after finishing a set. Throwing my hands and arms into the air. This South Asian style of dance brings my energy to new heights, perfect for those 3 seasons when it’s not snowing.  Effortless and delightful motion and movement is an energy I bring to the dance floor and to the user experience.</h4>
+                <h4 id="skiingText">To me, skiing is not just a sport, it’s art. The snow feels like a blank canvas that I’m painting into as my skis carve through the slopes. It’s the same kind of <span class='highlight'>creativity and innovation I bring to my craft</span> as a product designer. As a skier who leans more freestyle, I’m no stranger to taking risks and getting up after I fall. It’s exactly what drives me to <span class='highlight'>experiment, test bold ideas, and encourage divergent thinking</span> in my design process.</h4>
+                <img className="hobbies" id="dancing" src={hiking} alt="Dancing" width="1100" height="676.9"/>
+                <h4 id="dancingText">Hiking is a refuge and retreat for me. Even when I’m completely out of breath, I always feel at peace in the woods. It’s a place where I <span class='highlight'>stop questioning every step and thought</span> and follow my intuition. That’s exactly the kind of principles I embody in my work to design <span class='highlight'>intuitive, seamless experiences grounded in research and testing.</span></h4>
                 <img className="hobbies" id="foodie" src={foodie} alt="Foodie" width="1100" height="740"/>
-                <h4 id="foodieText">LA is a food mecca. From Mexican to Nigerian to Korean, we have it all, and I eat it all, sharing phenomenal food on my food blog. Food is more than sustenance. It is humble histories, childhood, and national pride. Every bite of food is joyful and fresh, a refreshing and savory experience that I embody in my designs.</h4>
+                <h4 id="foodieText">As someone from Los Angeles that now lives in NYC, I eat everything to share phenomenal food on my food blog. There’s an ultimate joy I feel discovering new places that introduce me to flavors I’ve never thought to combine. That <span class='highlight'>delight is something I think deeply about</span> as a product designer. It’s not just about exciting users, but truly empathizing and <span class='highlight'>meeting users where they are in their emotional journey.</span></h4>
             </div>
             <Footer />
         </div>
