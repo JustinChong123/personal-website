@@ -12,6 +12,8 @@ import envisionEarthMockup from './envision-earth-mockup.png'
 import personalWebsiteMockup from './personal-website-mockup.png'
 import dartmouthPathfinderMockup from './dartmouth-pathfinder-mockup.png'
 import moreProjects from './more-projects.png'
+import AISalesMockup from './ai-sales-mockup.png'
+import AccountPortfolioMockup from './account-portfolio-mockup.png'
 import AISparkleIcon from './ai-sparkle-icon.png'
 
 function Projects() {
@@ -50,7 +52,7 @@ function Projects() {
                             <h3 class="projectTag">B2B</h3>
                             <h3 class="projectTag">Cloud</h3>
                         </div>
-                        <img id="container3Mockup" src={mongodbMockup} alt="Budget Balloon Mobile Mockup" />
+                        <img id="container3Mockup" src={AccountPortfolioMockup} alt='' />
                     </div>
                 </Link>
 
@@ -63,11 +65,10 @@ function Projects() {
                         <h1 id="fitkitchDescriptionGradient">Driving customer engagements for growth and retention</h1>
                         <div class="projectTags">
                             <h3 class="projectTag">Data Viz</h3>
-                            <h3 class="projectTag">B2B</h3>
-                            <h3 class="projectTag">Cloud</h3>
+                            <h3 class="projectTag">Enterprise</h3>
                             <h3 class="projectTag">SaaS</h3>
                         </div>
-                        <img id="container1Mockup" src={chronicleMockup} alt="Chronicle Tablet Mockup" />
+                        <img id="container3Mockup" src={AISalesMockup} alt='' />
                     </div>
                 </Link>
 
@@ -96,7 +97,7 @@ function Projects() {
                             <h3 class="projectTag">B2C</h3>
                             <h3 class="projectTag">Health</h3>
                         </div>
-                        <img id="container2Mockup" src={fitkitchBetterMockup} alt="FitKitch Mobile Mockup" />
+                        <img id="container2Mockup" src={fitkitchBetterMockup} alt='' />
                     </div>
                 </Link>
 

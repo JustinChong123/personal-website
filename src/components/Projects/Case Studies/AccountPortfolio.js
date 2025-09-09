@@ -6,6 +6,7 @@ import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
 import portfolioCoverBottom from './Account Portfolio Images/portfolio-cover-bottom.svg'
 import portfolioStats from './Account Portfolio Images/portfolio-stats.svg'
+import portfolioContext from './Account Portfolio Images/portfolio-context.png'
 import portfolioOverview from './Account Portfolio Images/portfolio-overview.svg'
 import portfolioBackground from './Account Portfolio Images/portfolio-background.png'
 import portfolioFeatures from './Account Portfolio Images/portfolio-features.png'
@@ -45,6 +46,17 @@ function AccountPortfolio() {
 
                 <img id='paOverview' src={portfolioOverview} alt='' width="100%"/>
                 <img id='paStats' src={portfolioStats} alt='' width="100%"/>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3>CONTEXT</h3>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">You might be wondering... what is MongoDB?</h1>
+                        <p className="caseText">MongoDB is the world’s <span className="fitkitchBoldText">most popular non-relational cloud database</span> where developers can flexibly manage their data to build applications faster. It’s used by everyone from junior developers to mid-sized startups to  <span className="fitkitchBoldText">massive enterprises like Adobe and JP Morgan Chase.</span></p>
+                        <img src={portfolioContext} width="800" alt=''/>
+                    </div>
+                </div>
 
                 <div className="caseSection">
                     <div className="caseSideHeader">

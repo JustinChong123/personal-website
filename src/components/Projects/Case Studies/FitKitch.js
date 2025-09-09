@@ -36,7 +36,7 @@ function FitKitch() {
             <div className="cover" id='fitkitchCover'>
                 <ScrollIndicator />
                 <Navbar onCase={true} />
-                <img id='fitkitchCoverBottom' src={fitkitchCoverBottom} alt='' width="100%"/>
+                <img id='paCoverBottom' src={fitkitchCoverBottom} alt='' width="100%"/>
             </div>
 
             <div className="fitkitchContent">
