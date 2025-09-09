@@ -61,7 +61,7 @@ function AISalesIntelligence() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">You might be wondering... what is MongoDB?</h1>
                         <p className="caseText">MongoDB is the world’s <span className="fitkitchBoldText">most popular non-relational cloud database</span> where developers can flexibly manage their data to build applications faster. It’s used by everyone from junior developers to mid-sized startups to  <span className="fitkitchBoldText">massive enterprises like Adobe and JP Morgan Chase.</span></p>
-                        <img src={AISalesContext} width="700" alt=''/>
+                        <img src={AISalesContext} width="800" alt=''/>
                     </div>
                 </div>
 
