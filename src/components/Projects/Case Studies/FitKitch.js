@@ -11,7 +11,7 @@ import fitkitchSummary from './Fitkitch Images/fitkitch-summary.png'
 import fitkitchBestMockups from './Fitkitch Images/fitkitch-best-mockups.png'
 import fitkitchOverview from './Fitkitch Images/fitkitch-overview.png'
 import fitkitchDesignThinking from './Fitkitch Images/fitkitch-design-thinking.png'
-import fitkitchUserResearchHeading from './Fitkitch Images/fitkitch-user-research-heading.png'
+import fitkitchResearchHeading from './Fitkitch Images/fitkitch-research-heading.svg'
 import fitkitchOld from './Fitkitch Images/fitkitch-old.png'
 import fitkitchHMW1 from './Fitkitch Images/fitkitch-hmw1.png'
 import fitkitchCompetitive from './Fitkitch Images/fitkitch-competitive.png'
@@ -20,6 +20,7 @@ import fitkitchNewSolutions from './Fitkitch Images/fitkitch-new-solutions.png'
 import fitkitchFlowSketches from './Fitkitch Images/fitkitch-flow-sketches.png'
 import fitkitchPainPoints from './Fitkitch Images/fitkitch-pain-points.png'
 import fitkitchUIUXDesignHeading from './Fitkitch Images/fitkitch-uiux-design-heading.png'
+import fitkitchDesignHeading from './Fitkitch Images/fitkitch-design-heading.svg'
 import fitkitchSolutionHeading from './Fitkitch Images/fitkitch-solution-heading.png'
 import fitkitchObjectives from './Fitkitch Images/fitkitch-objectives.png'
 import fitkitchSketches from './Fitkitch Images/fitkitch-sketches.png'
@@ -57,14 +58,24 @@ function FitKitch() {
                     </div>
                 </div>
 
-                <div id="fitkitchRedBackground"className="caseSection">
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="redCaseSideHeader">BACKGROUND</h3>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Collaborating with a health services researcher</h1>
+                        <p id="backgroundText" className="caseText">A <span className="fitkitchBoldText">Dartmouth professor</span> approached us to <span className="fitkitchBoldText">commercialize a research app</span> previously built by the DALI Lab. Our objective was to build a new app to motivate young people to exercise <span className="fitkitchBoldText">using the benefits of cognitive health,</span> but our user research inspired us to pivot to our current app idea. I worked with my co-designer, PM, and 3 developers to design, develop, and deploy the app for a <span className="fitkitchBoldText">beta launch in 10 weeks.</span></p>
+                    </div>
+                </div>
+
+                {/* <div id="fitkitchRedBackground"className="caseSection">
                     <div className="caseSideHeader">
                         <h3 id="redCaseSideHeader">BACKGROUND</h3>
                     </div>
                     <div className="caseMain">
                         <p id="backgroundText" className="caseText">A <span className="fitkitchBoldText">Dartmouth professor</span> approached us to <span className="fitkitchBoldText">commercialize a research app</span> previously built by the DALI Lab. Our objective was to build a new app to motivate young people to exercise <span className="fitkitchBoldText">using the benefits of cognitive health,</span> but our user research inspired us to pivot to our current app idea. I worked with my co-designer, PM, and 3 developers to design, develop, and deploy the app for a <span className="fitkitchBoldText">beta launch in 10 weeks.</span></p>
                     </div>
-                </div>
+                </div> */}
 
                 <div className="caseSection">
                     <div className="caseSideHeader">
@@ -86,7 +97,7 @@ function FitKitch() {
                     </div>
                 </div>
 
-                <img alt="FitKitch User Research Heading" src={fitkitchUserResearchHeading} width="1440" height="380"/>
+                <img src={fitkitchResearchHeading} className="caseStudyHeading" width='100%' alt=''/>
 
                 <div className="caseSection">
                     <div className="caseSideHeader">
@@ -161,14 +172,14 @@ function FitKitch() {
                     </div>
                 </div>
 
-                <div id="fitkitchSolution">
+                {/* <div id="fitkitchSolution">
                     <h3 id="fitkitchSolution1">SOLUTION</h3>
                     <h1 id="fitkitchSolution2">FitKitch</h1>
                     <h2 id="fitkitchSolution3">A mobile app that motivates young people to exercise through community obligation with personalized daily activity goals</h2>
                     <img id="fitkitchSolutionHeading" src={fitkitchSolutionHeading} width="300" height="200" />
-                </div>
+                </div> */}
 
-                <img alt="FitKitch UI/UX Design Heading" src={fitkitchUIUXDesignHeading} width="1440" height="380"/>
+                <img src={fitkitchDesignHeading} className="caseStudyHeading" width='100%' alt=''/>
 
                 <div className="caseSection">
                     <div className="caseSideHeader">
@@ -252,7 +263,7 @@ function FitKitch() {
                     </div>
                 </div>
 
-                <div className="caseSection">
+                <div className="caseSection" style={{ marginBottom: "100px" }}>
                     <div className="caseSideHeader">
                         <h3 id="redCaseSideHeader">REFLECT</h3>
                         <h2>Next Steps & Takeaways</h2>
