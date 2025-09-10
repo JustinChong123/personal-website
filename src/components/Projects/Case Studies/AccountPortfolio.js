@@ -44,7 +44,7 @@ function AccountPortfolio() {
             
             <div className="budgetBalloonContent">
 
-                <img id='paOverview' src={portfolioOverview} alt='' width="100%"/>
+                <img src={portfolioOverview} alt='' width="100%"/>
                 <img id='paStats' src={portfolioStats} alt='' width="100%"/>
 
                 <div className="caseSection">
