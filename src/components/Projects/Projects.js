@@ -46,7 +46,7 @@ function Projects() {
                         <h1 id="budgetBalloonDescriptionGradient">Powering decision making with AI customer insights</h1>
                         <div class="projectTags">
                             <h3 class="projectTag">
-                                {/* <img id="aiSparkleIcon" src={AISparkleIcon} alt="AI Sparkle Icon" /> */}
+                                <img id="aiSparkleIcon" src={AISparkleIcon} alt="AI Sparkle Icon" />
                                 AI
                             </h3>
                             <h3 class="projectTag">B2B</h3>

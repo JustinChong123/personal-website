@@ -14,7 +14,7 @@ const Typewriter = () => {
             1000,
             "Hi, I'm a freestyle skier",
             1000,
-            "Hi, I'm a dancer",
+            "Hi, I'm a hiker",
             1000,
             "Hi, I'm a food blogger",
             1000,
