@@ -7,6 +7,7 @@ import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
 import fitkitchStats from './Fitkitch Images/fitkitch-stats.svg'
 import fitkitchCoverBottom from './Fitkitch Images/fitkitch-cover-bottom.svg'
+import fitkitchSummary from './Fitkitch Images/fitkitch-summary.png'
 import fitkitchBestMockups from './Fitkitch Images/fitkitch-best-mockups.png'
 import fitkitchOverview from './Fitkitch Images/fitkitch-overview.png'
 import fitkitchDesignThinking from './Fitkitch Images/fitkitch-design-thinking.png'
@@ -41,7 +42,8 @@ function FitKitch() {
 
             <div className="fitkitchContent">
 
-                <img id="fitkitchStats" src={fitkitchStats} width="100%" alt='' />
+                <img src={fitkitchSummary} width="100%" alt='' />
+                <img id='paStats' src={fitkitchStats} width="100%" alt='' />
 
                 <div className="caseSection">
                     <div className="caseSideHeader">
