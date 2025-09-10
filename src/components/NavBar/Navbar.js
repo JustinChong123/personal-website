@@ -42,9 +42,9 @@ function Navbar({ onCase = false }) {
                 </li>
                 <li>
                     {onCase ? (
-                        <button className='navButton' id="email-me-button-case" onClick={() => window.location = 'mailto:justin.r.chong.24@dartmouth.edu'}>Email Me</button>
+                        <button className='navButton' id="email-me-button-case" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email Me</button>
                     ) : (
-                        <button className='navButton' id="email-me-button" onClick={() => window.location = 'mailto:justin.r.chong.24@dartmouth.edu'}>Email Me</button>
+                        <button className='navButton' id="email-me-button" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email Me</button>
                     )}
                     
                 </li>

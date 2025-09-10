@@ -14,7 +14,7 @@ function AboutMe () {
             <div className="aboutMe">
                 <Navbar />
                 <div className="aboutMeIntro">
-                    <img id="profilePic" src={profilePic} alt="Profile Pic" width="1000" height="459" />
+                    <img id="profilePic" src={profilePic} alt="Profile Pic" width="1100" />
                     <img id="aboutMeGraphics" src={aboutMeGraphics} width="1800" height="1000" />
                 </div>
                 <img className="hobbies" id="skiing" src={skiing} alt="Skiing" width="1100" height="676.9"/>

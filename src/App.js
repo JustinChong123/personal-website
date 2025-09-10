@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <div className='Intro'>
         <Typewriter />
-        <h2> Dartmouth '24 <span class="blueText">product designer</span> and <span class="pinkText">software engineer</span> passionate about creating inclusive & accessible technologies </h2>
+        <h2><span class="blueText">Product designer </span>@ MongoDB passionate about creating inclusive & accessible technologies </h2>
         <a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">
           <img id="linkedinLogo" src={linkedinLogo} alt="Linkedin Logo" width='22' height='22'/></a>
         <h3><a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">LinkedIn</a></h3>
