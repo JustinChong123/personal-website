@@ -1,13 +1,20 @@
-.conferenceCupUSACaseStudy {
+.container {
     background-color: #fbfbfd;
     font-family: 'Barlow', sans-serif;
 }
 
+#paCoverBottom {
+    position: absolute;
+    bottom: -1px;
+    z-index: 0;
+}
 
-.conferenceCupUSACover {
+
+.cover {
     height: 100vh;
-    background-color: #000000;
+    background-image: linear-gradient(to bottom right, #A0E5DC , #D2E5A6); 
     color: #ffffff;
+    position: relative;
 }
 
 .conferenceCupUSACover h1 {
@@ -84,7 +91,7 @@
 }
 
 #greenCaseSideHeader {
-    color: #88C15B;
+    color: #FF38AF;
 }
 
 #conferenceCupUSAGreenBackground {

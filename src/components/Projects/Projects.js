@@ -116,8 +116,8 @@ function Projects() {
                     </div>
                 </Link>
 
-                <Link to='/budget-balloon-case-study'>
-                    <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="chronicle">
+                <Link class="dartmouthPathfinder">
+                    <div class="chronicle">
                         <h3>Budget Balloon</h3>
                         <h2>Motivating teens to build healthy spending habits</h2>
                         <h4>UX Design</h4>
@@ -125,8 +125,8 @@ function Projects() {
                     </div>
                 </Link>
 
-                <Link to="/oh-buoy-case-study">
-                    <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="budgetBalloon">
+                <Link class="dartmouthPathfinder">
+                    <div class="budgetBalloon">
                         <h3>Oh Buoy!</h3>
                         <h2>Preventing child drowning with a wearable harness</h2>
                         <h4>Physical Product Design</h4>
