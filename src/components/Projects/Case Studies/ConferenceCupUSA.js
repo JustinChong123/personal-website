@@ -4,11 +4,14 @@ import Footer from '../../Footer/Footer.js'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 import './ConferenceCupUSA.css'
 import conferenceCupUSAMockup from './ConferenceCup USA Images/conference-cup-usa-mockup.png'
+import conferenceCupCoverBottom from './ConferenceCup USA Images/conference-cup-cover-bottom.svg'
+import conferenceCupOverview from './ConferenceCup USA Images/conference-cup-overview.svg'
+import conferenceCupStats from './ConferenceCup USA Images/conference-cup-stats.svg'
 import conferenceCupUSAStats from './ConferenceCup USA Images/conference-cup-usa-stats.png'
 import conferenceCupUSABestMockups from './ConferenceCup USA Images/conference-cup-usa-best-mockups.png'
 import conferenceCupUSAOverview from './ConferenceCup USA Images/conference-cup-usa-overview.png'
 import conferenceCupUSADesignThinking from './ConferenceCup USA Images/conference-cup-usa-design-thinking.png'
-import conferenceCupUSAUserResearch from './ConferenceCup USA Images/conference-cup-usa-user-research.png'
+import conferenceCupUSAUserResearch from './ConferenceCup USA Images/conference-cup-usa-user-research.svg'
 import conferenceCupUSACompetitiveAnalysis from './ConferenceCup USA Images/conference-cup-usa-competitive-analysis.png'
 import conferenceCupUSAUserInterviews from './ConferenceCup USA Images/conference-cup-usa-user-interviews.png'
 import conferenceCupUSAUserGroups from './ConferenceCup USA Images/conference-cup-usa-user-groups.png'
@@ -16,7 +19,7 @@ import conferenceCupUSAUserPersona from './ConferenceCup USA Images/conference-c
 import conferenceCupUSAUserJourney from './ConferenceCup USA Images/conference-cup-usa-user-journey.png'
 import conferenceCupUSAPovStatement from './ConferenceCup USA Images/conference-cup-usa-pov-statement.png'
 import conferenceCupUSAHMW from './ConferenceCup USA Images/conference-cup-usa-hmw.png'
-import conferenceCupUSAUXUIDesignHeading from './ConferenceCup USA Images/conference-cup-usa-ux-ui-design-heading.png'
+import conferenceCupUSAUXUIDesignHeading from './ConferenceCup USA Images/conference-cup-usa-design-heading.svg'
 import conferenceCupUSADesignObjectives from './ConferenceCup USA Images/conference-cup-usa-design-objectives.png'
 import conferenceCupUSAIdeation from './ConferenceCup USA Images/conference-cup-usa-ideation.png'
 import conferenceCupUSAPrioritization from './ConferenceCup USA Images/conference-cup-usa-prioritization.png'
@@ -33,34 +36,50 @@ import conferenceCupUSATakeaways from './ConferenceCup USA Images/conference-cup
 
 function ConferenceCupUSA() {
     return (
-        <div className="conferenceCupUSACaseStudy">
-            <div className="conferenceCupUSACover">
+        <div className="container">
+            <div className="cover">
                 <ScrollIndicator />
-                <Navbar />
-                <h1>ConferenceCup USA</h1>
+                <Navbar onCase={true} />
+                <img id='paCoverBottom' src={conferenceCupCoverBottom} alt='' width="100%"/>
+                {/* <h1>ConferenceCup USA</h1>
                 <h3>UI/UX Designer</h3>
                 <h2>Holistically ranking college athletics programs to promote transparency and equity</h2>
-                <img id="conferenceCupUSACaseStudyMockup" src={conferenceCupUSAMockup} width="630" height="auto" />
+                <img id="conferenceCupUSACaseStudyMockup" src={conferenceCupUSAMockup} width="630" height="auto" /> */}
             </div>
 
-            <div className="conferenceCupUSAContent">
-                <div className="conferenceCupUSAIntro">
-                    <h1 className="caseSectionHeader" id="conferenceCupUSAIntroQuestion">Promoting transparency and equity in college athletics</h1>
-                    <p className="caseText" id="conferenceCupUSAIntroText">ConferenceCup USA is a website that ranks college athletics programs <span className="fitkitchBoldText">holistically,</span> which means that <span className="fitkitchBoldText">each varsity sport is equally considere</span> in creating a school's overall score.</p>
-                    <p className="caseText" id="conferenceCupUSAIntroText">Currently, the college sports landscape is dominated by a few sports (e.g. football and basketball). We built ConferenceCup USA to highlight successful, yet <span className="fitkitchBoldText">underfunded and neglected sports</span> to eventually increase media attention and institutional funding to these sports.</p>
-                    <img id="conferenceCupUSAStats" src={conferenceCupUSAStats} width="250" height="auto" />
-                    <img id="conferenceCupUSABestMockups" src={conferenceCupUSABestMockups} width="850" height="auto" />
+            <img id='paOverview' src={conferenceCupOverview} alt='' width="100%"/>
+            <img id='paStats' src={conferenceCupStats} alt='' width="100%"/>
+
+            <div className="caseSection">
+                <div className="caseSideHeader">
+                    <h3 id="greenCaseSideHeader">SOLUTION</h3>
+                </div>
+                <div className="caseMain">
+                    <h1 className="caseSectionHeader">Promoting transparency and equity in college athletics</h1>
+                    <p className="caseText">ConferenceCup USA is a website that ranks college athletics programs <span className="fitkitchBoldText">holistically,</span> which means that <span className="fitkitchBoldText">each varsity sport is equally considere</span> in creating a school's overall score.</p>
+                    <p className="caseText">Currently, the college sports landscape is dominated by a few sports (e.g. football and basketball). We built ConferenceCup USA to highlight successful, yet <span className="fitkitchBoldText">underfunded and neglected sports</span> to eventually increase media attention and institutional funding to these sports.</p>
+                    <img src={conferenceCupUSABestMockups} width="1000" height="auto" />
                 </div>
             </div>
 
-            <div id="conferenceCupUSAGreenBackground"className="caseSection">
+            <div className="caseSection">
+                <div className="caseSideHeader">
+                    <h3 id="greenCaseSideHeader">BACKGROUND</h3>
+                </div>
+                <div className="caseMain">
+                    <h1 className="caseSectionHeader">Collaborating with retired athletes passionate about sports equality</h1>
+                    <p className="caseText">DALI (Digital Applied Learning and Innovation) Lab is a <span className="fitkitchBoldText">startup incubator</span> that designs and develops innovative digital products for clients. Our clients were <span className="fitkitchBoldText">two retired Dartmouth alumni</span> who wanted us to build a website that ranks colleges by how all varsity sports are performing, not just high-profile sports.  I worked with 2 other product designers, 4 developers, and 1 PM to design, develop, and deploy the website for a <span className="fitkitchBoldText">beta launch in 10 weeks.</span></p>
+                </div>
+            </div>
+
+            {/* <div id="conferenceCupUSAGreenBackground"className="caseSection">
                 <div className="caseSideHeader">
                     <h3 id="greenCaseSideHeader">BACKGROUND</h3>
                 </div>
                 <div className="caseMain">
                     <p id="noSectionHeader"className="caseText">DALI (Digital Applied Learning and Innovation) Lab is a <span className="fitkitchBoldText">startup incubator</span> that designs and develops innovative digital products for clients. Our clients were <span className="fitkitchBoldText">two retired Dartmouth alumni</span> who wanted us to build a website that ranks colleges by how all varsity sports are performing, not just high-profile sports.  I worked with 2 other product designers, 4 developers, and 1 PM to design, develop, and deploy the website for a <span className="fitkitchBoldText">beta launch in 10 weeks.</span></p>
                 </div>
-            </div>
+            </div> */}
 
             <div className="caseSection">
                 <div className="caseSideHeader">
@@ -82,7 +101,7 @@ function ConferenceCupUSA() {
                 </div>
             </div>
 
-            <img className="caseStudyHeading" src={conferenceCupUSAUserResearch} width="1440" height="auto"/>
+            <img className="caseStudyHeading" src={conferenceCupUSAUserResearch} width="100%" height="auto"/>
 
             <div className="caseSection">
                 <div className="caseSideHeader">
@@ -157,7 +176,7 @@ function ConferenceCupUSA() {
                 </div>
             </div>
 
-            <img className="caseStudyHeading" src={conferenceCupUSAUXUIDesignHeading} width="1440" height="auto"/>
+            <img className="caseStudyHeading" src={conferenceCupUSAUXUIDesignHeading} width="100%" height="auto"/>
 
             <div className="caseSection">
                 <div className="caseSideHeader">
@@ -273,7 +292,7 @@ function ConferenceCupUSA() {
                 </div>
                 <div className="caseMain">
                     <p id="noSectionHeader" className="caseText">This project was challenging, but rewarding as we designed this website end-to-end and worked with developers and our PM to develop and <span className="fitkitchBoldText">deploy it in 10 weeks.</span> We designed ConferenceCup USA to <span className="fitkitchBoldText">put all varsity sports on the same level</span> and bring more attention to high-performing, but neglected and underfunded sports. Here are 3 key takeaways we learned from this process.</p>
-                    <img src={conferenceCupUSATakeaways} width="950" height="auto" />
+                    <img src={conferenceCupUSATakeaways} style={{ marginBottom: "10vh" }} width="950" height="auto" />
                 </div>
             </div>
 
