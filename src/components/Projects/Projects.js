@@ -107,8 +107,8 @@ function Projects() {
 
         
             <div class="projects">
-                <Link to="/conferencecup-usa-case-study">
-                    <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="fitkitch">
+                <Link class="dartmouthPathfinder">
+                    <div>
                         <h3>ConferenceCup USA</h3>
                         <h2>Promoting transparency and equity in college athletics</h2>
                         <h4>UI/UX Design</h4>

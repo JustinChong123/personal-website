@@ -36,7 +36,7 @@ import portfolioTakeaways from './Account Portfolio Images/portfolio-takeaways.p
 function AccountPortfolio() {
     return (
         <div className="container">
-            <div className="cover">
+            <div className="cover" style={{backgroundImage: "linear-gradient(to bottom right, #ABD2FF, #4DFFC9)"}}>
                 <ScrollIndicator />
                 <Navbar onCase={true} />
                 <img id='paCoverBottom' src={portfolioCoverBottom} alt='' width="100%"/>
