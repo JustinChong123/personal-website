@@ -246,9 +246,9 @@ function AccountPortfolio() {
                         <h2>Outcomes</h2>
                     </div>
                     <div className="caseMain">
-                        <h1 className="caseSectionHeader">Post-launch shows strong adoption, but discoverability needs work</h1>
+                        <h1 className="caseSectionHeader">Strong post-launch adoption with opportunity to improve discoverability</h1>
                         <p className="caseText">After building and launching this tool to CSMs, we analyzed product analytics in Amplitude, and we learned that Account Portfolio <span className="fitkitchBoldText">retained a consistent, loyal user base</span> This product even <span className="fitkitchBoldText">drove net-new users</span> to Customer Hub, our centralized platform for all customer data. We came a few percentage points shy of our target adoption metric, which we attributed to <span className="fitkitchBoldText">frictions in discoverability</span> and plan to address.</p>
-                        <img src={portfolioOutcomes} width="900" alt=''/>
+                        <img src={portfolioOutcomes} width="1000" alt=''/>
                     </div>
                 </div>
 
