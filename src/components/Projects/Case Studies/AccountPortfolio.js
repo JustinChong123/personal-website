@@ -9,6 +9,7 @@ import portfolioStats from './Account Portfolio Images/portfolio-stats.svg'
 import portfolioContext from './Account Portfolio Images/portfolio-context.png'
 import portfolioOverview from './Account Portfolio Images/portfolio-overview.svg'
 import portfolioBackground from './Account Portfolio Images/portfolio-background.png'
+import portfolioSolution from './Account Portfolio Images/portfolio-solution.png'
 import portfolioFeatures from './Account Portfolio Images/portfolio-features.png'
 import portfolioResearchHeading from './Account Portfolio Images/portfolio-research-heading.png'
 import portfolioCompetitiveAnalysis from './Account Portfolio Images/portfolio-competitive-analysis.png'
@@ -66,6 +67,7 @@ function AccountPortfolio() {
                         <h1 className="caseSectionHeader">A single pane of glass for customer activites and trends</h1>
                         <p className="caseText">Account Portfolio enables <span className="fitkitchBoldText">Customer Success Managers (CSMs)</span> at MongoDB to view their entire account portfolio in a quick glance. This 10,000-ft view highlights customer usage patterns, database health, and spend anomalies to empower CSMs to quickly triage and tackle problems before they materialize.</p>
                         <p className="caseText">We envision this single pane of glass to be the <span className="fitkitchBoldText">new starting point</span> for a CSM’s daily workflow. By aggregating dynamic changes in key customer signals over time, CSMs spend less time collecting and analyzing data as we accelerate them to quickly engage customers to <span className="fitkitchBoldText">mitigate risk and chase revenue expansion opportunities.</span></p>
+                        <img src={portfolioSolution} width="1000" alt='' style={{ marginTop: "30px" }}/>
                     </div>
                 </div>
 
@@ -74,7 +76,7 @@ function AccountPortfolio() {
                         <h3>BACKGROUND</h3>
                     </div>
                     <div className="caseMain">
-                        <img src={portfolioBackground} width="900" alt=''/>
+                        <img src={portfolioBackground} width="1000" alt=''/>
                     </div>
                 </div>
 
@@ -94,7 +96,7 @@ function AccountPortfolio() {
                     </div>
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Main features of Account Portfolio</h1>
-                        <img src={portfolioFeatures} width="1000" alt=''/>
+                        <img src={portfolioFeatures} width="1100" alt=''/>
                     </div>
                 </div>
 
@@ -108,7 +110,7 @@ function AccountPortfolio() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Market leaders show account trends over time, not static snapshots</h1>
                         <p className="caseText">I conducted industry research on <span className="fitkitchBoldText">CRM software, which centralize customer information</span> and manage how GTM teams like Customer Success interact with customers. Specifically, I researched <span className="fitkitchBoldText">how these platforms organize multi-account views</span> and identify opportunities to strengthen customer relationships.</p>
-                        <img src={portfolioCompetitiveAnalysis} width="900" alt=''/>
+                        <img src={portfolioCompetitiveAnalysis} width="1000" alt=''/>
                     </div>
                 </div>
 
@@ -120,7 +122,7 @@ function AccountPortfolio() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">In a couple seconds, CSMs need to know what actions to take first</h1>
                         <p className="caseText">I conducted user interviews with <span className="fitkitchBoldText">11 CSMs in 4 different departments in a diverse seniority range.</span> Despite their different workflows and portfolio types, I discovered key common needs that would benefit all CSMs.</p>
-                        <img src={portfolioInterviews} width="900" alt=''/>
+                        <img src={portfolioInterviews} width="1000" alt=''/>
                     </div>
                 </div>
 
@@ -132,7 +134,7 @@ function AccountPortfolio() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Mapping out the data CSMs use to make account decisions</h1>
                         <p className="caseText">Through a stack ranking exercise with users, we <span className="fitkitchBoldText">identified the most important data points</span> that CSMs rely on to put together an accurate picture of the status of an account. Since this data lives in multiple tools, I collaborated with the engineering team and data owners to deprioritize data sources that are difficult to query and integrate.</p>
-                        <img src={portfolioMapping} width="900" alt=''/>
+                        <img src={portfolioMapping} width="1000" alt=''/>
                     </div>
                 </div>
 
@@ -144,7 +146,7 @@ function AccountPortfolio() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Prioritizing users that operate at the account level</h1>
                         <p className="caseText">There are <span className="fitkitchBoldText">4 different types of CSMs</span> that differ in how many accounts they handle, how big those customers are, and how they engage with them. We <span className="fitkitchBoldText">prioritized Dedicated CSMs</span> as they represent the majority of CSMs, struggle to juggle multiple accounts, and their KPIs are directly tied to account performance.</p>
-                        <img src={portfolioPersonas} width="900" alt=''/>
+                        <img src={portfolioPersonas} width="1000" alt=''/>
                     </div>
                 </div>
 
