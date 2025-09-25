@@ -6,7 +6,7 @@ html, body {
 .Intro {
   color: #F5F5F5;
   font-family: 'Alliance No. 2 Bold', sans-serif;
-  margin: 4vh 10.7vw;
+  margin: 4vh 6.2vw;
 }
 
 .Intro > h1 {
@@ -18,10 +18,22 @@ html, body {
 
 /* Description */
 .Intro > h2 {
+  font-family: 'Alliance No. 2 Bold';
   font-size: 2.5vw;
   font-weight: 700;
-  width: 60%;
-  letter-spacing: 0.2px;
+  width: 90%;
+  letter-spacing: 0.4px;
+  line-height: 3.3vw;
+  color: #e4e4e4;
+}
+
+#miniDescription {
+  font-family: 'Alliance No. 2 Light';
+  font-size: 1.5vw;
+  line-height: 2.2vw;
+  margin-bottom: 40px;
+  color: #c7c6c6;
+  width: 80%;
 }
 
 #linkedinLogo {
