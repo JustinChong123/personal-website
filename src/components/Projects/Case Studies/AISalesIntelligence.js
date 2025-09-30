@@ -28,6 +28,7 @@ import AISalesNewWireframes from './AI Sales Intelligence Images/ai-sales-new-wi
 import AISalesMockups from './AI Sales Intelligence Images/ai-sales-mockups.png'
 import AISalesUserTesting from './AI Sales Intelligence Images/ai-sales-user-testing.png'
 import AISalesNextSteps from './AI Sales Intelligence Images/ai-sales-next-steps.png'
+import AISalesOutcomes from './AI Sales Intelligence Images/ai-sales-outcomes.png'
 import AISalesTakeaways from './AI Sales Intelligence Images/ai-sales-takeaways.png'
 
 function AISalesIntelligence() {
@@ -238,6 +239,18 @@ function AISalesIntelligence() {
                         <h1 className="caseSectionHeader">Testing a live, coded prototype revealed gaps in LLM transparency</h1>
                         <p className="caseText">A Figma prototype of a chatbot poorly simulates the real experience of receiving tailored answers to your inputs. Knowing this in advance, I <span className="fitkitchBoldText">worked Agile with our engineers to begin coding a scrappy prototype</span> after we converged on the core idea during low-fidelity designs. We tested our coded prototype with our original group of 9 business leaders, and we collected insightful feedback. Our engineering team had limited bandwidth so we couldn’t implement large-scale changes, but we are <span className="fitkitchBoldText">prioritizing these features in our future roadmap.</span></p>
                         <img src={AISalesUserTesting} width="1000" alt=''/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">TEST</h3>
+                        <h2>Outcomes</h2>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Equipping diverse business leaders with customer foresight</h1>
+                        <p className="caseText">Qualitative and quantitative data about customers is powerful for many different business leaders at MongoDB, from <span className="fitkitchBoldText">driving the north-star vision</span> of our product portfolio or <span className="fitkitchBoldText">quickly adapting to the evolving needs</span> of our largest customers as AI radically disrupts the database industry.</p>
+                        <img src={AISalesOutcomes} width="1000" alt=''/>
                     </div>
                 </div>
 
