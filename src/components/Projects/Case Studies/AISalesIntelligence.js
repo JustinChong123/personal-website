@@ -28,7 +28,7 @@ import AISalesNewWireframes from './AI Sales Intelligence Images/ai-sales-new-wi
 import AISalesMockups from './AI Sales Intelligence Images/ai-sales-mockups.png'
 import AISalesUserTesting from './AI Sales Intelligence Images/ai-sales-user-testing.png'
 import AISalesNextSteps from './AI Sales Intelligence Images/ai-sales-next-steps.png'
-import AISalesOutcomes from './AI Sales Intelligence Images/ai-sales-outcomes.png'
+import AISalesOutcomes from './AI Sales Intelligence Images/ai-sales-outcomes.svg'
 import AISalesTakeaways from './AI Sales Intelligence Images/ai-sales-takeaways.png'
 
 function AISalesIntelligence() {
@@ -75,6 +75,17 @@ function AISalesIntelligence() {
                         <p className="caseText">Born out of a need to accelerate data-driven decision-making for key business leaders at MongoDB, we launched a conversational AI chatbot that <span className="fitkitchBoldText">aggregates customer insights and trends from a previously untapped body</span> of historical sales call transcripts. Leaders spanning multiple business units like Sales, Marketing, and Product can ask any question they want to quickly understand customer sentiment, product feedback, and success of sales messaging and marketing campaigns. </p>
                         <p className="caseText">By getting these high-level insights about MongoDB’s customers into the hands of our business leadership, they can quickly make <span className="fitkitchBoldText">data-backed decisions</span> to optimize product and Go-to-Market (GTM) strategy, ultimately <span className="fitkitchBoldText">acquiring more customers and driving revenue.</span></p>
                         <img src={aiSalesSolution} width="900" alt=''/>
+                    </div>
+                </div>
+
+                <div className="caseSection">
+                    <div className="caseSideHeader">
+                        <h3 id="greenCaseSideHeader">PROBLEM</h3>
+                    </div>
+                    <div className="caseMain">
+                        <h1 className="caseSectionHeader">Business leaders are too removed from our customers in their day-to-day</h1>
+                        <p className="caseText">For years, senior business leaders at MongoDB have attempted to understand our customers by talking with the sales team, who consistently and actively talk with customers. However, this process of <span className="fitkitchBoldText">collecting anecdotal feedback from sales reps is time-consuming,</span> labor-intensive, and more subjective than objective.</p>
+                        <p className="caseText">Meanwhile, almost every conversation a sales rep has with a prospective or existing customer is recorded as a transcript. We decided to leverage this <span className="fitkitchBoldText">unused, ever-growing database of 100,000+ sales call transcripts</span> to make actionable customer insights more accessible to all leaders.</p>
                     </div>
                 </div>
 
