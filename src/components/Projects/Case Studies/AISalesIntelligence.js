@@ -5,7 +5,7 @@ import './PerformanceAdvisor.css'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
 import testCoverBottom from './AI Sales Intelligence Images/test-cover-bottom.svg'
-import AISalesCoverBottom from './AI Sales Intelligence Images/ai-sales-cover-bottom.svg'
+import AISalesCoverBottom from './AI Sales Intelligence Images/ai-sales-cover-bottom1.svg'
 import paCoverBottom from './Performance Advisor Images/pa-cover-bottom.svg'
 import AISalesStats from './AI Sales Intelligence Images/ai-sales-stats.svg'
 import AISalesOverview from './AI Sales Intelligence Images/ai-sales-overview.svg'
