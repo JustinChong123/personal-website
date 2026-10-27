@@ -5,7 +5,7 @@
 }
 
 .aiSalesCoverBottom {
-    margin-top: max(2vw, 16px);
+    margin-top: -1vw;
     container-type: inline-size;
 }
 
