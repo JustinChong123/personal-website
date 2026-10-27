@@ -110,6 +110,24 @@
 }
 
 
+#linkedin-button {
+    box-shadow: 3px 3px #99e9fc;
+}
+
+#linkedin-button-case {
+    box-shadow: 3px 3px #000;
+}
+
+#linkedin-button:hover {
+    box-shadow: 3px 3px white;
+    background-color: #99e9fc;
+}
+
+#linkedin-button-case:hover {
+    background-color: #99e9fc;
+}
+
+
 /* #dropdownItemSWE {
     background-color: #160C59;
     color: white;

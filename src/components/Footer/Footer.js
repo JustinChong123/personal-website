@@ -12,16 +12,23 @@ function Footer ({ flicker = false }) {
     const [inView, setInView] = useState(false);
     const footerRef = useRef(null);
 
+    // Only start once the user scrolls the footer into view. Scroll jumps in the first moment after
+    // the page opens (e.g. the browser restoring the old position) are ignored.
     useEffect(() => {
-        if (!flicker || !footerRef.current) return;
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
+        if (!flicker) return;
+        const mountedAt = performance.now();
+
+        const onScroll = () => {
+            const footer = footerRef.current;
+            if (!footer || performance.now() - mountedAt < 600) return;
+            if (footer.getBoundingClientRect().top < window.innerHeight * 0.8) {
                 setInView(true);
-                observer.disconnect();
+                window.removeEventListener('scroll', onScroll);
             }
-        }, { threshold: 0.4 });
-        observer.observe(footerRef.current);
-        return () => observer.disconnect();
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
+        return () => window.removeEventListener('scroll', onScroll);
     }, [flicker]);
 
     const text = (value) => flicker ? <FlickerText text={value} play={inView} /> : value;
@@ -39,7 +46,6 @@ function Footer ({ flicker = false }) {
             <div className="items-2">
                 <h3>{text("Let's stay in touch!")}</h3>
                 <div className="subitems-2">
-                    <h4 id="footer-resume" onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>{text('Resume')}</h4>
                     <h4>
                         <a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">{text('LinkedIn')}</a>
                     </h4>

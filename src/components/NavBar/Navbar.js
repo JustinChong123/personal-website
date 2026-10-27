@@ -39,11 +39,14 @@ function Navbar({ onCase = false }) {
                 </li>
                 <li>
                     {onCase ? (
-                        <button className='navButton' id="email-me-button-case" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email Me</button>
+                        <button className='navButton' id="email-me-button-case" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email</button>
                     ) : (
-                        <button className='navButton' id="email-me-button" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email Me</button>
+                        <button className='navButton' id="email-me-button" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email</button>
                     )}
                     
+                </li>
+                <li>
+                    <a className='navButton' id={onCase ? 'linkedin-button-case' : 'linkedin-button'} href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </li>
             </ul>
         </nav>
