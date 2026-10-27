@@ -4,10 +4,8 @@ const Typewriter = () => {
     return (
     <TypeAnimation
         sequence={[
-            "Hi, I'm Justin Chong",
-            2500,
             "Hi, I'm a product designer",
-            1000,
+            2500,
             "Hi, I'm a software engineer",
             1000,
             "Hi, I'm a product manager",

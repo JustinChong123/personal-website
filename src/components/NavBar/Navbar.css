@@ -32,6 +32,8 @@
     background-image: linear-gradient(to right, #7FAADB, #B0E4BC, #F7DE6D, #F08339);
     background-clip: text;
     color: transparent;
+    /* used by the flickering letters, which each draw their own slice of the gradient */
+    --flickerGradient: linear-gradient(to right, #7FAADB, #B0E4BC, #F7DE6D, #F08339);
 }
 
 #caseStyle {
