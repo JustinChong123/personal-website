@@ -7,7 +7,7 @@
     display: inline-block;
     white-space: pre;
     opacity: 0;
-    animation-duration: 0.4s;
+    animation-duration: 0.2s;
     animation-timing-function: step-end;
     animation-fill-mode: both;
 }
