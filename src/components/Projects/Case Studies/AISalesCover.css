@@ -2,13 +2,10 @@
 
 .aiSalesCover {
     height: auto;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 .aiSalesCoverBottom {
-    margin-top: auto;
+    margin-top: max(2vw, 16px);
     container-type: inline-size;
 }
 
@@ -107,14 +104,6 @@
 }
 
 @media (max-width: 768px) {
-    .aiSalesCover {
-        min-height: auto;
-    }
-
-    .aiSalesCoverBottom {
-        margin-top: 48px;
-    }
-
     .aiSalesCoverBand {
         grid-template-columns: 1fr;
         row-gap: 20px;
