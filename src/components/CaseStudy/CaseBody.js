@@ -6,8 +6,9 @@ import './CaseBody.css'
  *
  * sections: [{ id: 'research', label: 'Research' }] — each id must match the id of the
  * element where that section starts inside children.
+ * accent: color of the active section bar (defaults to the CSS value).
  */
-function CaseBody({ sections, children }) {
+function CaseBody({ sections, accent, children }) {
     const [activeId, setActiveId] = useState(sections[0]?.id)
     const [indicator, setIndicator] = useState({ top: 0, height: 0 })
     const itemRefs = useRef({})
@@ -71,7 +72,7 @@ function CaseBody({ sections, children }) {
     }
 
     return (
-        <div className="caseBody">
+        <div className="caseBody" style={accent ? { '--caseAccent': accent } : undefined}>
             <div className="caseBodyMain">{children}</div>
 
             <nav className="caseSpy" aria-label="On this page">

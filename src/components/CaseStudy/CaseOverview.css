@@ -43,22 +43,24 @@
 }
 
 .caseOverviewText {
-    width: calc(1078 * var(--px));
+    width: calc(var(--caseTextWidth, 1078) * var(--px));
     margin-top: calc(3 * var(--px));
 }
 
 .caseOverviewHeadline {
     font-family: 'Alliance No. 2 Regular', sans-serif;
-    font-size: calc(32.8 * var(--px));
-    line-height: calc(50 * var(--px));
+    font-size: calc(var(--caseHeadlineSize, 32.8) * var(--px));
+    line-height: calc(var(--caseHeadlineLineHeight, 50) * var(--px));
 }
 
 .caseOverviewHighlight {
     color: var(--caseHighlight);
 }
 
+/* pre-wrap keeps intentional double spaces from the designs */
 .caseOverviewDescription {
-    margin-top: calc(56 * var(--px)) !important;
+    white-space: pre-wrap;
+    margin-top: calc(var(--caseDescriptionGap, 56) * var(--px)) !important;
     font-size: calc(23 * var(--px));
     line-height: calc(35 * var(--px));
     color: #C5C5C5;

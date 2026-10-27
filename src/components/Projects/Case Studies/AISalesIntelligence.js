@@ -1,10 +1,7 @@
 import React from 'react'
-import Navbar from '../../NavBar/Navbar.js'
 import Footer from '../../Footer/Footer.js'
 import './PerformanceAdvisor.css'
-import './AISalesCover.css'
-import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
-import FlickerText from '../../FlickerText/FlickerText.js'
+import CaseCover from '../../CaseStudy/CaseCover.js'
 import CaseOverview from '../../CaseStudy/CaseOverview.js'
 import CaseBody from '../../CaseStudy/CaseBody.js'
 import useScrollToTopOnLoad from '../../CaseStudy/useScrollToTopOnLoad.js'
@@ -40,30 +37,22 @@ function AISalesIntelligence() {
 
     return (
         <div className="container">
-            <div className="cover aiSalesCover">
-                <ScrollIndicator color="#88C15B" />
-                <Navbar onCase={true} />
-                <div className="aiSalesCoverBottom">
-                    <div className="aiSalesCoverMockups">
-                        <img className="aiSalesCoverChartTable" src={AISalesCoverChartTable} alt='Customer use case chart and results preview table' />
-                        <img className="aiSalesCoverChatbot" src={AISalesCoverChatbot} alt='MongoGPT Customer Insights chatbot' />
-                    </div>
-                    <div className="aiSalesCoverBand">
-                        <h1 className="aiSalesCoverTitle">
-                            <FlickerText text="AI Sales Intelligence Chatbot" />
-                            <svg className="aiSalesCoverArrow flickerChar flickerPattern2" style={{ animationDelay: '0.25s' }} viewBox="0 0 30 30" aria-hidden="true">
-                                <path d="M2 2 L28 28 M28 4 V28 H4" />
-                            </svg>
-                        </h1>
-                        <p className="aiSalesCoverTagline"><FlickerText text="Transforming executive decision making with AI customer insights" /></p>
-                        <div className="aiSalesCoverRole">
-                            <p><FlickerText text="MongoDB" /></p>
-                            <p className="aiSalesCoverRoleTitle"><FlickerText text="[ Product Designer ]" /></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+            <CaseCover
+                title="AI Sales Intelligence Chatbot"
+                tagline="Transforming executive decision making with AI customer insights"
+                company="MongoDB"
+                role="Product Designer"
+                background="linear-gradient(to bottom right, #A0E5DC, #D2E5A6)"
+                accent="#CCF5C6"
+                dividerColor="#C8E5B0"
+                progressColor="#88C15B"
+                mockupsHeight={399}
+                mockups={[
+                    { src: AISalesCoverChartTable, alt: 'Customer use case chart and results preview table', x: 22, y: 52, width: 588 },
+                    { src: AISalesCoverChatbot, alt: 'MongoGPT Customer Insights chatbot', x: 318, y: 0, width: 1115 },
+                ]}
+            />
+
             <div className="budgetBalloonContent">
 
                 <CaseOverview

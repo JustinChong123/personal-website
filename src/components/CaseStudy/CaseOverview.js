@@ -7,11 +7,21 @@ import './CaseOverview.css'
  *
  * details: [{ title: 'Team', items: ['1 Product Manager', ...], note: 'Optional sub-line' }]
  * Wrap part of the headline in <span className="caseOverviewHighlight"> to color it.
- * Colors can be changed per case study by setting --caseHighlight and --caseDetailTitle.
+ * highlightColor / detailTitleColor: per case study colors for the highlighted headline text and detail titles.
+ * headlineSize, headlineLineHeight, textWidth, descriptionGap: optional design-px overrides for when a
+ * mockup's typography differs from the default.
  */
-function CaseOverview({ label = 'Overview', category, headline, description, details = [] }) {
+function CaseOverview({ label = 'Overview', category, headline, description, details = [], highlightColor, detailTitleColor, headlineSize, headlineLineHeight, textWidth, descriptionGap }) {
+    const colors = {}
+    if (highlightColor) colors['--caseHighlight'] = highlightColor
+    if (detailTitleColor) colors['--caseDetailTitle'] = detailTitleColor
+    if (headlineSize) colors['--caseHeadlineSize'] = headlineSize
+    if (headlineLineHeight) colors['--caseHeadlineLineHeight'] = headlineLineHeight
+    if (textWidth) colors['--caseTextWidth'] = textWidth
+    if (descriptionGap) colors['--caseDescriptionGap'] = descriptionGap
+
     return (
-        <section className="caseOverview">
+        <section className="caseOverview" style={colors}>
             <div className="caseOverviewIntro">
                 <div className="caseOverviewLabel">
                     <p className="caseOverviewLabelTitle">{label}</p>
