@@ -49,9 +49,25 @@ function CaseBody({ sections, children }) {
         if (item) setIndicator({ top: item.offsetTop, height: item.offsetHeight })
     }, [activeId])
 
+    // A very quick custom scroll: the browser's built-in smooth scroll is too slow over long pages
     const scrollToSection = (event, id) => {
         event.preventDefault()
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        const el = document.getElementById(id)
+        if (!el) return
+        const margin = parseFloat(getComputedStyle(el).scrollMarginTop) || 0
+        const start = window.scrollY
+        const distance = el.getBoundingClientRect().top - margin
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+        const duration = reduceMotion ? 0 : 120
+        const startTime = performance.now()
+
+        const step = (now) => {
+            const progress = duration ? Math.min((now - startTime) / duration, 1) : 1
+            const eased = 1 - Math.pow(1 - progress, 3)
+            window.scrollTo(0, start + distance * eased)
+            if (progress < 1) requestAnimationFrame(step)
+        }
+        requestAnimationFrame(step)
     }
 
     return (

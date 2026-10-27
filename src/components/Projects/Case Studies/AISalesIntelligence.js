@@ -80,6 +80,7 @@ function AISalesIntelligence() {
                     sections={[
                         { id: 'project-summary', label: 'Project Summary' },
                         { id: 'research', label: 'Research' },
+                        { id: 'define', label: 'Define' },
                         { id: 'ideate', label: 'Ideate' },
                         { id: 'prototype', label: 'Prototype' },
                         { id: 'test', label: 'Test' },
@@ -190,7 +191,7 @@ function AISalesIntelligence() {
                         </div>
                     </div>
 
-                    <div className="caseSection">
+                    <div className="caseSection" id="define">
                         <div className="caseSideHeader">
                             <h3 id="greenCaseSideHeader">DEFINE</h3>
                             <h2>Point-of-View Statement</h2>
