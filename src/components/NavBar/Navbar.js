@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
 import './Navbar.css'
-// import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import {Link} from 'react-router-dom'
-import designResume from './Justin Chong Resume.pdf'
 import logoWhite from './logo.png'
 import logoWhiteHover from './logo-hover.png'
 import logoBlack from './logo-black.png'
@@ -45,16 +42,6 @@ function Navbar({ onCase = false }) {
                         <button className='navButton' id="email-me-button-case" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email Me</button>
                     ) : (
                         <button className='navButton' id="email-me-button" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email Me</button>
-                    )}
-                    
-                </li>
-                <li>
-                    {onCase ? (
-                        <DropdownButton className='navButton'id="resume-download-button-case" title="Resume" href={designResume} target='_blank' rel='noopener noreferrer'>
-                        </DropdownButton>
-                    ) : (
-                        <DropdownButton className='navButton'id="resume-download-button" title="Resume" href={designResume} target='_blank' rel='noopener noreferrer'>
-                        </DropdownButton>
                     )}
                     
                 </li>

@@ -58,7 +58,7 @@
     /* margin: 0vh 1vw; */
 }
 
-.navButtons a, #email-me-button, #email-me-button-case, #resume-download-button, #resume-download-button-case {
+.navButtons a, #email-me-button, #email-me-button-case {
     text-decoration: none;
     font-family: 'IBM Plex Mono', sans-serif;
     letter-spacing: -0.03em;
@@ -106,25 +106,6 @@
 
 #email-me-button-case:hover {
     cursor: pointer;
-    background-color: #99e9fc;
-}
-
-
-#resume-download-button {
-    box-shadow: 3px 3px #99e9fc;
-}
-
-#resume-download-button-case {
-    box-shadow: 3px 3px #000;
-}
-
-#resume-download-button:hover {
-    cursor: pointer;
-    box-shadow: 3px 3px white;
-    background-color: #99e9fc;
-}
-
-#resume-download-button-case:hover {
     background-color: #99e9fc;
 }
 
