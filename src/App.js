@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/NavBar/Navbar.js'
 import Projects from './components/Projects/Projects.js'
 import githubLogo from './icons8-github-480.png'
-import abstractShapes from './abstract-shapes.png'
+import FloatingShapes from './components/FloatingShapes/FloatingShapes.js'
 import Footer from './components/Footer/Footer.js'
 import Typewriter from './components/Typewriter.js'
 import FlickerText from './components/FlickerText/FlickerText.js'
@@ -19,7 +19,7 @@ function App() {
         {/* <a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer"><img id="githubLogo" src={githubLogo} alt="Github Logo" width='30' height='30'/></a>
         <h3><a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">Github</a></h3> */}
       </div>
-      <img id="abstractShapes" src={abstractShapes} alt="Abstract Shapes" width="1700" height="950" />
+      <FloatingShapes />
       <Projects />
       <Footer />
     </div>
