@@ -61,15 +61,15 @@
 .caseOverviewDescription {
     white-space: pre-wrap;
     margin-top: calc(var(--caseDescriptionGap, 56) * var(--px)) !important;
-    font-size: calc(23 * var(--px));
-    line-height: calc(35 * var(--px));
+    font-size: max(calc(23 * var(--px)), 14px);
+    line-height: max(calc(35 * var(--px)), 21px);
     color: #C5C5C5;
 }
 
 /* Details row */
 .caseOverviewDetails {
     display: grid;
-    grid-template-columns: repeat(5, calc(370 * var(--px)));
+    grid-template-columns: repeat(4, calc(370 * var(--px))) 1fr;
     margin-top: calc(54 * var(--px));
     padding: 0 0 calc(35 * var(--px)) calc(130 * var(--px));
     border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -102,8 +102,8 @@
 .caseOverviewDetailItems {
     margin-top: calc(17 * var(--px)) !important;
     list-style: none;
-    font-size: calc(20 * var(--px));
-    line-height: calc(28 * var(--px));
+    font-size: max(calc(20 * var(--px)), 13px);
+    line-height: max(calc(28 * var(--px)), 18px);
 }
 
 .caseOverviewDetailNote {
@@ -111,8 +111,8 @@
     align-items: center;
     gap: calc(10 * var(--px));
     margin-top: calc(6 * var(--px)) !important;
-    font-size: calc(16 * var(--px));
-    line-height: calc(24 * var(--px));
+    font-size: max(calc(16 * var(--px)), 12px);
+    line-height: max(calc(24 * var(--px)), 16px);
 }
 
 .caseOverviewNoteArrow {

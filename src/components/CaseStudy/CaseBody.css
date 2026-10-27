@@ -15,6 +15,7 @@
 .caseBodyMain .caseMain {
     flex: 1;
     min-width: 0;
+    padding-right: 0;
 }
 
 .caseBodyMain .caseText {

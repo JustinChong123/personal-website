@@ -42,9 +42,9 @@
     border-radius: 50px;
 }
 
-.budgetBalloonCover img {
+.budgetBalloonCover > img {
     position: absolute;
-    margin-left: 49em;
+    margin-left: 54.4vw;
     margin-top: -22em;
 }
 
@@ -87,7 +87,7 @@
 #budgetBalloonStats {
     position: relative;
     top: -12.7em;
-    left: 70em;
+    left: 77.8vw;
 }
 
 #budgetBalloonSolution {
@@ -126,7 +126,7 @@
 
 #budgetBalloonBalloon {
     position: absolute;
-    margin-left: 65em;
+    margin-left: 72.2vw;
     margin-top: -19em;
 }
 

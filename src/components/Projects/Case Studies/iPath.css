@@ -37,10 +37,10 @@
     border-radius: 50px;
 }
 
-.ipathCover img {
+.ipathCover > img {
     position: absolute;
     margin-left: 50vw;
-    margin-top: -63vh;
+    margin-top: -59vh;
 }
 
 /* -------------- iPath Intro ----------------------------- */
@@ -69,7 +69,7 @@
 #ipathStats {
     position: relative;
     top: -20.5em;
-    left: 70em;
+    left: 77.8vw;
 }
 
 #ipathGreenBackground {

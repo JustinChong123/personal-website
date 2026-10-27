@@ -33,7 +33,7 @@
     border-radius: 50px;
 }
 
-.envisionEarthCover img {
+.envisionEarthCover > img {
     position: absolute;
     margin-left: 52vw;
     margin-top: -48vh;

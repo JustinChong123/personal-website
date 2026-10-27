@@ -1,0 +1,283 @@
+/*
+ * Responsive overrides for tablets and phones.
+ * Loaded after every other stylesheet so these rules win; desktop styles live with each component.
+ */
+
+/* ===== About Me ===== */
+#profilePic {
+    max-width: calc(100% - 40px);
+    height: auto;
+}
+
+/* ===== Case study content (all case studies) ===== */
+
+/* Let the main column shrink so images never run past the right edge on smaller laptops */
+.caseMain {
+    flex: 1;
+    min-width: 0;
+    padding-right: 5vw;
+}
+
+.caseMain img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Envision Earth: each section is one wide image with its own left margin; center them once the screen gets narrow */
+@media (max-width: 1280px) {
+    .envisionEarthContent img {
+        display: block;
+        max-width: calc(100% - 40px);
+        height: auto;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+}
+
+/* ===== Tablets and phones ===== */
+@media (max-width: 1024px) {
+    .caseText {
+        width: auto;
+    }
+
+    /* Older text + mockup covers */
+    .budgetBalloonCover, .ohBuoyCover, .envisionEarthCover, .ipathCover {
+        height: auto;
+        padding-bottom: 40px;
+    }
+
+    .budgetBalloonCover h1, .ohBuoyCover h1, .envisionEarthCover h1, .ipathCover h1 {
+        width: auto;
+        margin: 40px 20px 16px;
+        font-size: 40px;
+    }
+
+    .budgetBalloonCover h2, .ohBuoyCover h2, .envisionEarthCover h2, .ipathCover h2 {
+        width: auto;
+        margin: 24px 20px 0;
+        font-size: 18px;
+    }
+
+    .budgetBalloonCover h3, .ohBuoyCover h3, .envisionEarthCover h3, .ipathCover h3 {
+        margin-left: 20px;
+        font-size: 14px;
+        padding: 6px 14px;
+    }
+
+    .budgetBalloonCover > img, .ohBuoyCover > img, .envisionEarthCover > img, .ipathCover > img {
+        position: static;
+        display: block;
+        width: min(calc(100% - 40px), 560px);
+        height: auto;
+        margin: 32px auto 0;
+    }
+
+    /* Intro blocks that were a full screen tall */
+    .budgetBalloonIntro, .ohBuoyIntro, .chronicleIntro, .conferenceCupUSAIntro {
+        height: auto !important;
+        padding-bottom: 32px;
+    }
+
+    /* Stats sidebars next to intros on older case studies drop below the intro text */
+    #budgetBalloonStats, #ohBuoyStats, #ipathStats, #conferenceCupUSAStats {
+        position: static;
+        display: block;
+        margin: 24px 0 0 10vw;
+    }
+
+    /* Decorative extras that only fit on wide screens */
+    #budgetBalloonBalloon, #chroniclePlant {
+        display: none;
+    }
+}
+
+/* ===== Phones ===== */
+@media (max-width: 768px) {
+    /* Header */
+    .logoPic {
+        width: 32px;
+        height: 32px;
+    }
+
+    .navButtons a, #email-me-button, #email-me-button-case {
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+
+    /* Home: intro */
+    .typewriter {
+        display: block;
+        min-height: 2.4em;
+    }
+
+    .Intro > h2,
+    #miniDescription {
+        width: 100%;
+    }
+
+    /* Home: featured projects stack into one column */
+    .main-projects {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 24px;
+        width: auto;
+        height: auto;
+        margin: 48px 20px 64px;
+    }
+
+    .main-projects > a {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    #projectContainer {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 30 / 38;
+    }
+
+    .main-projects div h2 { font-size: 16px; }
+    .main-projects div h4 { font-size: 12px; }
+    .main-projects div h1 { font-size: 26px; }
+    .projectTag { font-size: 12px; }
+
+    /* Home: more projects */
+    .projects {
+        margin-top: 48px;
+        row-gap: 40px;
+        padding: 0 20px;
+    }
+
+    .projects div {
+        width: calc(100vw - 56px);
+        min-width: 0;
+        height: auto;
+        aspect-ratio: 32 / 23.5;
+        padding: 14px 18px;
+        box-sizing: border-box;
+    }
+
+    .projects div h3 { font-size: 14px; }
+    .projects div h2 { font-size: 20px; }
+    .projects div h4 { font-size: 12px; padding: 4px 10px; }
+    .projects div h6 { font-size: 16px; }
+
+    /* Footer stacks */
+    .Footer {
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 28px;
+        padding: 40px 24px;
+    }
+
+    .items-1, .items-2,
+    .subitems-1, .subitems-2 {
+        width: auto;
+    }
+
+    .subitems-1, .subitems-2 {
+        column-gap: 24px;
+        flex-wrap: wrap;
+    }
+
+    #upScrollArrow {
+        align-self: flex-end;
+        margin-top: -64px;
+    }
+
+    /* About Me */
+    #profilePic {
+        width: calc(100% - 40px);
+        height: auto;
+    }
+
+    #aboutMeGraphics {
+        width: 200vw;
+        height: auto;
+        left: -40vw;
+    }
+
+    .hobbies {
+        width: calc(100% - 40px) !important;
+        height: auto !important;
+        margin-left: 20px !important;
+    }
+
+    #skiing {
+        margin-top: 64px;
+    }
+
+    .aboutMe h4 {
+        width: auto;
+        margin: 20px 20px 64px;
+    }
+
+    #foodieText {
+        margin-bottom: 64px;
+    }
+
+    /* Case study covers that are a single image: drop the full-screen height so there's no big empty gap */
+    .cover {
+        height: auto;
+    }
+
+    .cover #paCoverBottom {
+        position: relative;
+        display: block;
+        bottom: auto;
+        margin-top: 32px;
+    }
+
+    /* Case study sections: side label stacks above the content */
+    .caseSection {
+        flex-direction: column;
+        margin-top: 56px;
+        padding: 0 20px;
+    }
+
+    .caseSideHeader {
+        width: auto;
+        margin: 0 0 12px;
+    }
+
+    .caseSideHeader > h2 {
+        width: auto;
+        font-size: 22px;
+    }
+
+    .caseMain {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .caseSectionHeader {
+        font-size: 22px;
+    }
+
+    .caseText {
+        font-size: 16px;
+    }
+
+    /* Mockups that were nudged into place with offsets */
+    #budgetBalloonBestMockups {
+        top: auto;
+        left: auto;
+    }
+
+    /* Images in case studies never wider than the screen */
+    .container img,
+    [class$="CaseStudy"] img,
+    [class$="Content"] img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* ===== Small phones ===== */
+@media (max-width: 480px) {
+    /* The logo links home, so the name can go to make room for the buttons */
+    #homeStyle {
+        display: none;
+    }
+}

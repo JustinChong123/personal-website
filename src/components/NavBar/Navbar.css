@@ -3,8 +3,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 2vw;
-    padding-right: 2vw;
+    padding-left: max(2vw, 16px);
+    padding-right: max(2vw, 16px);
     padding-top: 1.5vh;
     z-index: 1000;
     position: relative;
@@ -14,7 +14,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 2vw;
+    column-gap: max(2vw, 10px);
 }
 
 /* Logo */
@@ -26,7 +26,7 @@
 /* "Justin Chong" */
 #homeStyle {
     font-family: 'Alliance No. 2 Bold';
-    font-size: 2vw;
+    font-size: clamp(18px, 2vw, 40px);
     font-weight: 800;
     text-decoration: none;
     background-image: linear-gradient(to right, #7FAADB, #B0E4BC, #F7DE6D, #F08339);
@@ -52,7 +52,9 @@
     display: flex;
     align-items: center;
     list-style: none;
-    column-gap: 2vw;
+    column-gap: clamp(8px, 2vw, 40px);
+    margin: 0;
+    padding: 0;
 }
 
 /* Nav Button */
@@ -61,17 +63,20 @@
 }
 
 .navButtons a, #email-me-button, #email-me-button-case {
+    display: inline-block;
+    box-sizing: border-box;
     text-decoration: none;
     font-family: 'IBM Plex Mono', sans-serif;
     letter-spacing: -0.03em;
-    font-size: 1vw;
+    font-size: clamp(12px, 1vw, 18px);
+    line-height: 1.4;
     font-weight: 800;
     background-color: #F5F5F5;
     color: black;
     border: 1.5px solid black;
     border-radius: 7px;
-    padding: 1.3vh 2vw;
-    width: 10vw;
+    /* same horizontal padding on every button, so each one is as wide as its label needs */
+    padding: clamp(6px, 1.3vh, 14px) clamp(12px, 2vw, 36px);
 }
 
 #about-me-button {

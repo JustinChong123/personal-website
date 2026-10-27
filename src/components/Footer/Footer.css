@@ -21,7 +21,7 @@
 .Footer h4 {
     font-family: 'Alliance No. 2 Regular';
     font-weight: 500;
-    font-size: 1.3vw;
+    font-size: clamp(14px, 1.3vw, 24px);
     margin-top: 0px;
     color: #7E848E;
 }
@@ -33,7 +33,7 @@
 
 .Footer h3 {
     font-family: 'Alliance No. 2 Extra Bold';
-    font-size: 2vw;
+    font-size: clamp(20px, 2vw, 36px);
     display: inline;
     color: #fff;
 }
