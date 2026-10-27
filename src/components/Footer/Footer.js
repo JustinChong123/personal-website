@@ -22,7 +22,8 @@ function Footer ({ flicker = true }) {
         const check = () => {
             const footer = footerRef.current;
             if (!mounted || !footer) return;
-            if (footer.getBoundingClientRect().top < window.innerHeight * 0.8) {
+            // at least 40% of the footer is on screen
+            if (footer.getBoundingClientRect().top < window.innerHeight - footer.offsetHeight * 0.4) {
                 setInView(true);
                 window.removeEventListener('scroll', check);
             }
