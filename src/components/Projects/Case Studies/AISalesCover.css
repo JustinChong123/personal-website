@@ -24,28 +24,19 @@
     position: absolute;
     display: block;
     height: auto;
-    box-shadow: 0 0.6cqw 3cqw rgba(0, 0, 0, 0.12);
 }
 
-.aiSalesCoverChart {
-    left: 2.72%;
-    top: 21.8%;
-    width: 33.45%;
-    border-radius: 0.89cqw;
-}
-
-.aiSalesCoverTable {
-    left: 2.72%;
-    top: 80.4%;
-    width: 35.28%;
-    border-radius: 0.7cqw;
+/* The SVGs include their own shadows, so they sit slightly outside the card positions */
+.aiSalesCoverChartTable {
+    left: 1.53%;
+    top: 13.03%;
+    width: 41%;
 }
 
 .aiSalesCoverChatbot {
-    left: 24.86%;
-    top: 12.28%;
-    width: 72.38%;
-    border-radius: 1.3cqw;
+    left: 22.18%;
+    top: 0;
+    width: 77.75%;
 }
 
 /* Black band */
