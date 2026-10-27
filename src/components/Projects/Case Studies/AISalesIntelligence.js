@@ -5,13 +5,12 @@ import './PerformanceAdvisor.css'
 import './AISalesCover.css'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 import FlickerText from '../../FlickerText/FlickerText.js'
+import CaseOverview from '../../CaseStudy/CaseOverview.js'
 
 import testCoverBottom from './AI Sales Intelligence Images/test-cover-bottom.svg'
 import AISalesCoverChartTable from './AI Sales Intelligence Images/ai-sales-cover-chart-table.svg'
 import AISalesCoverChatbot from './AI Sales Intelligence Images/ai-sales-cover-chatbot.svg'
 import paCoverBottom from './Performance Advisor Images/pa-cover-bottom.svg'
-import AISalesStats from './AI Sales Intelligence Images/ai-sales-stats.svg'
-import AISalesOverview from './AI Sales Intelligence Images/ai-sales-overview.svg'
 import AISalesContext from './AI Sales Intelligence Images/ai-sales-context.png'
 import aiSalesSolution from './AI Sales Intelligence Images/ai-sales-solution.png'
 import AISalesFeatures from './AI Sales Intelligence Images/ai-sales-features.png'
@@ -63,8 +62,18 @@ function AISalesIntelligence() {
             
             <div className="budgetBalloonContent">
 
-                <img id='paOverview' src={AISalesOverview} alt='' width="100%"/>
-                <img id='paStats' src={AISalesStats} alt='' width="100%"/>
+                <CaseOverview
+                    category="GenAI + GTM Solutions"
+                    headline={<>I designed an AI chatbot that <span className="caseOverviewHighlight">analyzes customer trends from 100,000+ sales convos.</span> Business leaders at MongoDB leverage these insights to make data-driven GTM and Product decisions at scale.</>}
+                    description="As a designer in the GenAI domain of MongoDB’s Internal Tools team, we move at lightning speed to pilot conversational and agentic AI tools for internal teams at MongoDB like Sales, Customer Success, and many more.  We streamline and derisk decision making for GTM teams to deliver impactful customer outcomes and drive the business forward."
+                    details={[
+                        { title: 'Context', items: ['Product Designer @ MongoDB'], note: 'GenAI in Internal Tools' },
+                        { title: 'Team', items: ['1 Product Manager', '1 Engineering Lead', '2 Full-Stack Engineers', '1 Data Engineer'] },
+                        { title: 'Deliverables', items: ['Figma Prototype', 'Design Annotations'] },
+                        { title: 'Skills', items: ['AI Product Design', 'UX Research', 'Sketching', 'Wireframes', 'Prototyping', 'User Testing', 'Design Systems'] },
+                        { title: 'Timeline', items: ['12 weeks'] },
+                    ]}
+                />
 
                 {/* <div className="caseSection">
                     <div className="caseSideHeader">
