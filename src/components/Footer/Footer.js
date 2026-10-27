@@ -1,31 +1,49 @@
-import React, {useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import './Footer.css'
 import {Link} from 'react-router-dom'
 import upScrollArrow from './up-scroll-arrow.svg'
 import upScrollArrowHover from './up-scroll-arrow-hover.svg'
+import FlickerText from '../FlickerText/FlickerText.js'
 
-function Footer () {
+// flicker: letters flicker in (like the case study cover) the first time the footer scrolls into view
+function Footer ({ flicker = false }) {
 
     const [arrowHover, setArrowHover] = useState(false);
+    const [inView, setInView] = useState(false);
+    const footerRef = useRef(null);
+
+    useEffect(() => {
+        if (!flicker || !footerRef.current) return;
+        const observer = new IntersectionObserver(([entry]) => {
+            if (entry.isIntersecting) {
+                setInView(true);
+                observer.disconnect();
+            }
+        }, { threshold: 0.4 });
+        observer.observe(footerRef.current);
+        return () => observer.disconnect();
+    }, [flicker]);
+
+    const text = (value) => flicker ? <FlickerText text={value} play={inView} /> : value;
 
     return (
-        <div className="Footer">
+        <div className="Footer" ref={footerRef}>
             <div className="items-1">
-                <h3>Justin Chong</h3>
+                <h3>{text('Justin Chong')}</h3>
                 <div className="subitems-1">
-                    <Link to='/'><h4 onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>Home</h4></Link>
-                    <Link to='/aboutMe'><h4 onClick={() => {window.scrollTo({top: 0, left: 0});}}>About Me</h4></Link>
+                    <Link to='/'><h4 onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>{text('Home')}</h4></Link>
+                    <Link to='/aboutMe'><h4 onClick={() => {window.scrollTo({top: 0, left: 0});}}>{text('About Me')}</h4></Link>
                 </div>
             </div>
 
             <div className="items-2">
-                <h3>Let's stay in touch!</h3>
+                <h3>{text("Let's stay in touch!")}</h3>
                 <div className="subitems-2">
-                    <h4 id="footer-resume" onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>Resume</h4>
+                    <h4 id="footer-resume" onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>{text('Resume')}</h4>
                     <h4>
-                        <a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">{text('LinkedIn')}</a>
                     </h4>
-                    <h4 id="footer-email-me" onClick={() => window.location = 'mailto:justin.r.chong.24@dartmouth.edu'}>Email Me</h4>
+                    <h4 id="footer-email-me" onClick={() => window.location = 'mailto:justin.r.chong.24@dartmouth.edu'}>{text('Email Me')}</h4>
                 </div>
             </div>
 

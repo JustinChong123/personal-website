@@ -3,8 +3,9 @@ import './FlickerText.css'
 
 const FLICKER_PATTERNS = 3
 
-// Each letter flickers on after a random delay, so the text "boots up" one character at a time
-function FlickerText({ text, maxDelay = 0.3 }) {
+// Each letter flickers on after a random delay, so the text "boots up" one character at a time.
+// The text stays hidden until play is true (e.g. once it scrolls into view).
+function FlickerText({ text, maxDelay = 0.3, play = true }) {
     const words = useMemo(() => text.split(' ').map((word) =>
         word.split('').map((char) => ({
             char,
@@ -14,7 +15,7 @@ function FlickerText({ text, maxDelay = 0.3 }) {
     ), [text, maxDelay])
 
     return (
-        <span className="flickerText" aria-label={text}>
+        <span className={play ? 'flickerText' : 'flickerText flickerTextWaiting'} aria-label={text}>
             {words.map((letters, w) => (
                 <React.Fragment key={w}>
                     {w > 0 && ' '}

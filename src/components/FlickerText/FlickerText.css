@@ -16,6 +16,11 @@
 .flickerPattern2 { animation-name: flickerIn2; }
 .flickerPattern3 { animation-name: flickerIn3; }
 
+.flickerTextWaiting .flickerChar {
+    animation-name: none;
+    opacity: 0;
+}
+
 @keyframes flickerIn1 {
     0% { opacity: 0; }
     15% { opacity: 0.35; }
@@ -46,7 +51,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .flickerChar {
+    .flickerChar,
+    .flickerTextWaiting .flickerChar {
         opacity: 1;
         animation: none;
     }
