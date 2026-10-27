@@ -7,6 +7,7 @@ import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 import FlickerText from '../../FlickerText/FlickerText.js'
 import CaseOverview from '../../CaseStudy/CaseOverview.js'
 import CaseBody from '../../CaseStudy/CaseBody.js'
+import useScrollToTopOnLoad from '../../CaseStudy/useScrollToTopOnLoad.js'
 
 import testCoverBottom from './AI Sales Intelligence Images/test-cover-bottom.svg'
 import AISalesCoverChartTable from './AI Sales Intelligence Images/ai-sales-cover-chart-table.svg'
@@ -35,10 +36,12 @@ import AISalesOutcomes from './AI Sales Intelligence Images/ai-sales-outcomes.sv
 import AISalesTakeaways from './AI Sales Intelligence Images/ai-sales-takeaways.png'
 
 function AISalesIntelligence() {
+    useScrollToTopOnLoad()
+
     return (
         <div className="container">
             <div className="cover aiSalesCover">
-                <ScrollIndicator />
+                <ScrollIndicator color="#88C15B" />
                 <Navbar onCase={true} />
                 <div className="aiSalesCoverBottom">
                     <div className="aiSalesCoverMockups">

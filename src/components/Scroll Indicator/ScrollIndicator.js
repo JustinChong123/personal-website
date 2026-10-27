@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import './ScrollIndicator.css';
 
-function ScrollIndicator() {
+function ScrollIndicator({ color }) {
     const [scrollTop, setScrollTop] = useState(0);
 
     const onScroll = () => {
@@ -21,7 +21,7 @@ function ScrollIndicator() {
     return (
         <div className="ScrollIndicator">
             <div className="progressMainWrapper">
-                <div className="progressMainStyle" style={{width: `${scrollTop}%`}}>
+                <div className="progressMainStyle" style={{width: `${scrollTop}%`, backgroundColor: color}}>
 
                 </div>
             </div>
