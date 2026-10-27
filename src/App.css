@@ -1,7 +1,10 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
-  /* clip (unlike hidden) still lets position: sticky work, e.g. the case study scroll spy */
+}
+
+/* clip (unlike hidden) doesn't turn body into a scroll container, so position: sticky still works (e.g. the case study scroll spy) */
+body {
   overflow-x: clip;
 }
 
