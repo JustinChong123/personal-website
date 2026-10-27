@@ -4,7 +4,7 @@ import './FlickerText.css'
 const FLICKER_PATTERNS = 3
 
 // Each letter flickers on after a random delay, so the text "boots up" one character at a time
-function FlickerText({ text, maxDelay = 0.9 }) {
+function FlickerText({ text, maxDelay = 0.6 }) {
     const words = useMemo(() => text.split(' ').map((word) =>
         word.split('').map((char) => ({
             char,

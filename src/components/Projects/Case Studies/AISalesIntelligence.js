@@ -48,7 +48,7 @@ function AISalesIntelligence() {
                     <div className="aiSalesCoverBand">
                         <h1 className="aiSalesCoverTitle">
                             <FlickerText text="AI Sales Intelligence Chatbot" />
-                            <svg className="aiSalesCoverArrow flickerChar flickerPattern2" style={{ animationDelay: '0.7s' }} viewBox="0 0 30 30" aria-hidden="true">
+                            <svg className="aiSalesCoverArrow flickerChar flickerPattern2" style={{ animationDelay: '0.5s' }} viewBox="0 0 30 30" aria-hidden="true">
                                 <path d="M2 2 L28 28 M28 4 V28 H4" />
                             </svg>
                         </h1>
