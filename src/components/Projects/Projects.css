@@ -135,11 +135,39 @@
 } */
 
 #moreProjects {
+    display: flex;
     width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.moreProjectsTrack {
+    display: flex;
+    flex-shrink: 0;
+    animation: moreProjectsScroll 30s linear infinite;
+}
+
+.moreProjectsItem {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: max(1.2vw, 12px);
+    font-weight: 400;
+    color: #F5F5F5;
+    padding-right: 1.2em;
+}
+
+.moreProjectsArrow {
+    padding-left: 1.2em;
+}
+
+@keyframes moreProjectsScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .moreProjectsTrack {
+        animation: none;
+    }
 }
 
 .projects {

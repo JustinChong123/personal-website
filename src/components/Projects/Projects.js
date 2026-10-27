@@ -11,7 +11,6 @@ import ipathMockup from './ipath-mockup.png'
 import envisionEarthMockup from './envision-earth-mockup.png'
 import personalWebsiteMockup from './personal-website-mockup.png'
 import dartmouthPathfinderMockup from './dartmouth-pathfinder-mockup.png'
-import moreProjects from './more-projects.png'
 import AISalesMockup from './ai-sales-mockup.png'
 import AccountPortfolioMockup from './account-portfolio-mockup.png'
 import AISparkleIcon from './ai-sparkle-icon.png'
@@ -103,7 +102,15 @@ function Projects() {
 
             </div>
             
-            <img id="moreProjects" src={moreProjects} alt="More Projects Tagline" />
+            <div id="moreProjects" aria-label="More Projects">
+                {[0, 1].map((track) => (
+                    <div className="moreProjectsTrack" key={track} aria-hidden="true">
+                        {Array.from({ length: 8 }, (_, i) => (
+                            <span className="moreProjectsItem" key={i}>MORE PROJECTS<span className="moreProjectsArrow">↓</span></span>
+                        ))}
+                    </div>
+                ))}
+            </div>
 
         
             <div class="projects">
