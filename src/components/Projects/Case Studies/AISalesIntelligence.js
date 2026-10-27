@@ -335,7 +335,7 @@ function AISalesIntelligence() {
                     </div>
                 </CaseBody>
             </div>
-            <Footer flicker />
+            <Footer />
         </div>
     )
 }

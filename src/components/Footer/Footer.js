@@ -5,30 +5,35 @@ import upScrollArrow from './up-scroll-arrow.svg'
 import upScrollArrowHover from './up-scroll-arrow-hover.svg'
 import FlickerText from '../FlickerText/FlickerText.js'
 
-// flicker: letters flicker in (like the case study cover) the first time the footer scrolls into view
-function Footer ({ flicker = false }) {
+// flicker: letters flicker in (like the case study cover) the first time the footer comes into view
+function Footer ({ flicker = true }) {
 
     const [arrowHover, setArrowHover] = useState(false);
     const [inView, setInView] = useState(false);
     const footerRef = useRef(null);
 
-    // Only start once the user scrolls the footer into view. Scroll jumps in the first moment after
-    // the page opens (e.g. the browser restoring the old position) are ignored.
+    // Start when the user scrolls the footer into view. Scroll jumps in the first moment after the
+    // page opens (e.g. the browser restoring the old position) are ignored; after that moment we
+    // check once, so the text still appears on pages short enough to show the footer without scrolling.
     useEffect(() => {
         if (!flicker) return;
-        const mountedAt = performance.now();
+        let mounted = false;
 
-        const onScroll = () => {
+        const check = () => {
             const footer = footerRef.current;
-            if (!footer || performance.now() - mountedAt < 600) return;
+            if (!mounted || !footer) return;
             if (footer.getBoundingClientRect().top < window.innerHeight * 0.8) {
                 setInView(true);
-                window.removeEventListener('scroll', onScroll);
+                window.removeEventListener('scroll', check);
             }
         };
+        const timer = setTimeout(() => { mounted = true; check(); }, 600);
 
-        window.addEventListener('scroll', onScroll, { passive: true });
-        return () => window.removeEventListener('scroll', onScroll);
+        window.addEventListener('scroll', check, { passive: true });
+        return () => {
+            clearTimeout(timer);
+            window.removeEventListener('scroll', check);
+        };
     }, [flicker]);
 
     const text = (value) => flicker ? <FlickerText text={value} play={inView} /> : value;
