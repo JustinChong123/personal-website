@@ -2,10 +2,13 @@ import React from 'react'
 import Navbar from '../../NavBar/Navbar.js'
 import Footer from '../../Footer/Footer.js'
 import './PerformanceAdvisor.css'
+import './AISalesCover.css'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
 
 import testCoverBottom from './AI Sales Intelligence Images/test-cover-bottom.svg'
-import AISalesCoverBottom from './AI Sales Intelligence Images/ai-sales-cover-bottom1.svg'
+import AISalesCoverChart from './AI Sales Intelligence Images/ai-sales-cover-chart.jpg'
+import AISalesCoverTable from './AI Sales Intelligence Images/ai-sales-cover-table.jpg'
+import AISalesCoverChatbot from './AI Sales Intelligence Images/ai-sales-cover-chatbot.jpg'
 import paCoverBottom from './Performance Advisor Images/pa-cover-bottom.svg'
 import AISalesStats from './AI Sales Intelligence Images/ai-sales-stats.svg'
 import AISalesOverview from './AI Sales Intelligence Images/ai-sales-overview.svg'
@@ -34,10 +37,29 @@ import AISalesTakeaways from './AI Sales Intelligence Images/ai-sales-takeaways.
 function AISalesIntelligence() {
     return (
         <div className="container">
-            <div className="cover">
+            <div className="cover aiSalesCover">
                 <ScrollIndicator />
                 <Navbar onCase={true} />
-                <img id='paCoverBottom' src={AISalesCoverBottom} alt='' width="100%"/>
+                <div className="aiSalesCoverBottom">
+                    <div className="aiSalesCoverMockups">
+                        <img className="aiSalesCoverChart" src={AISalesCoverChart} alt='Breakdown of customer use cases chart' />
+                        <img className="aiSalesCoverTable" src={AISalesCoverTable} alt='Results preview table' />
+                        <img className="aiSalesCoverChatbot" src={AISalesCoverChatbot} alt='MongoGPT Customer Insights chatbot' />
+                    </div>
+                    <div className="aiSalesCoverBand">
+                        <h1 className="aiSalesCoverTitle">
+                            AI Sales Intelligence Chatbot
+                            <svg className="aiSalesCoverArrow" viewBox="0 0 30 30" aria-hidden="true">
+                                <path d="M2 2 L28 28 M28 4 V28 H4" />
+                            </svg>
+                        </h1>
+                        <p className="aiSalesCoverTagline">Transforming executive decision making with AI customer insights</p>
+                        <div className="aiSalesCoverRole">
+                            <p>MongoDB</p>
+                            <p className="aiSalesCoverRoleTitle">[ Product Designer ]</p>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div className="budgetBalloonContent">
