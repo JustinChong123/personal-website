@@ -1,0 +1,53 @@
+.flickerWord {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.flickerChar {
+    display: inline-block;
+    white-space: pre;
+    opacity: 0;
+    animation-duration: 0.5s;
+    animation-timing-function: step-end;
+    animation-fill-mode: both;
+}
+
+.flickerPattern1 { animation-name: flickerIn1; }
+.flickerPattern2 { animation-name: flickerIn2; }
+.flickerPattern3 { animation-name: flickerIn3; }
+
+@keyframes flickerIn1 {
+    0% { opacity: 0; }
+    15% { opacity: 0.35; }
+    30% { opacity: 0; }
+    45% { opacity: 0.6; }
+    60% { opacity: 0.3; }
+    80% { opacity: 0.85; }
+    100% { opacity: 1; }
+}
+
+@keyframes flickerIn2 {
+    0% { opacity: 0; }
+    20% { opacity: 0.25; }
+    35% { opacity: 0.7; }
+    50% { opacity: 0.15; }
+    70% { opacity: 0.6; }
+    100% { opacity: 1; }
+}
+
+@keyframes flickerIn3 {
+    0% { opacity: 0; }
+    25% { opacity: 0.5; }
+    40% { opacity: 0.1; }
+    55% { opacity: 0.4; }
+    75% { opacity: 0.9; }
+    85% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .flickerChar {
+        opacity: 1;
+        animation: none;
+    }
+}

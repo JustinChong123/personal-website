@@ -4,6 +4,7 @@ import Footer from '../../Footer/Footer.js'
 import './PerformanceAdvisor.css'
 import './AISalesCover.css'
 import ScrollIndicator from '../../Scroll Indicator/ScrollIndicator.js'
+import FlickerText from '../../FlickerText/FlickerText.js'
 
 import testCoverBottom from './AI Sales Intelligence Images/test-cover-bottom.svg'
 import AISalesCoverChartTable from './AI Sales Intelligence Images/ai-sales-cover-chart-table.svg'
@@ -46,15 +47,15 @@ function AISalesIntelligence() {
                     </div>
                     <div className="aiSalesCoverBand">
                         <h1 className="aiSalesCoverTitle">
-                            AI Sales Intelligence Chatbot
-                            <svg className="aiSalesCoverArrow" viewBox="0 0 30 30" aria-hidden="true">
+                            <FlickerText text="AI Sales Intelligence Chatbot" />
+                            <svg className="aiSalesCoverArrow flickerChar flickerPattern2" style={{ animationDelay: '0.7s' }} viewBox="0 0 30 30" aria-hidden="true">
                                 <path d="M2 2 L28 28 M28 4 V28 H4" />
                             </svg>
                         </h1>
-                        <p className="aiSalesCoverTagline">Transforming executive decision making with AI customer insights</p>
+                        <p className="aiSalesCoverTagline"><FlickerText text="Transforming executive decision making with AI customer insights" /></p>
                         <div className="aiSalesCoverRole">
-                            <p>MongoDB</p>
-                            <p className="aiSalesCoverRoleTitle">[ Product Designer ]</p>
+                            <p><FlickerText text="MongoDB" /></p>
+                            <p className="aiSalesCoverRoleTitle"><FlickerText text="[ Product Designer ]" /></p>
                         </div>
                     </div>
                 </div>
