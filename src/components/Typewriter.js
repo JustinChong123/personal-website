@@ -1,11 +1,10 @@
 import { TypeAnimation } from 'react-type-animation';
-import FlickerText from './FlickerText/FlickerText.js';
 
 // Small all-caps role line: "PRODUCT DESIGNER &" stays put, the second role types out and cycles
 const Typewriter = () => {
     return (
     <p className="typewriter">
-        <FlickerText text="PRODUCT DESIGNER &" />{' '}
+        PRODUCT DESIGNER &{' '}
         <TypeAnimation
             sequence={[
                 'SOFTWARE ENGINEER',
