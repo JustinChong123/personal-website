@@ -26,16 +26,16 @@
 }
 
 .homeLinkText {
-    font-family: 'Alliance No. 2 Bold', sans-serif;
+    /* same typeface as the case study cover titles */
+    font-family: 'Alliance No. 2 Regular', sans-serif;
     font-size: clamp(15px, 1.25vw, 22px);
     line-height: 1;
-    text-decoration: underline transparent;
-    text-underline-offset: 4px;
-    transition: text-decoration-color 0.15s ease;
+    color: #4A4A4F;
+    transition: color 0.15s ease;
 }
 
 .homeLink:hover .homeLinkText {
-    text-decoration-color: currentColor;
+    color: #000;
 }
 
 /* Logo */
