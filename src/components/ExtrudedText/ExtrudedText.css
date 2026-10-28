@@ -1,51 +1,36 @@
 .extrudedText {
-    display: table;
-    margin: 0.2em 0 0.6em;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
+    display: block;
+    margin: 0.2em 0 0.4em;
     font-size: min(8.6vw, 170px);
-    line-height: 1;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-    white-space: nowrap;
+    overflow: visible;
     /* Tip the block back so the faces look squashed, as if the letters are lying back in 3D */
-    transform: perspective(40em) rotateX(38deg);
+    transform: perspective(40em) rotateX(26deg);
     transform-origin: 50% 100%;
 }
 
-.extrudedLetter {
-    position: relative;
-    display: inline-block;
+.extrudedSideFace {
+    fill: #000;
+    /* a hairline of black closes the tiny gaps between neighbouring faces */
+    stroke: #000;
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
 }
 
-.extrudedSpace {
-    display: inline-block;
-    width: 0.32em;
-}
-
-/* Black extruded side; the drop-shadows trace a thin white outline around it */
-.extrudedSide {
-    display: block;
-    color: #000;
-    filter:
-        drop-shadow(1px 0 0 #fff)
-        drop-shadow(-1px 0 0 #fff)
-        drop-shadow(0 1px 0 #fff)
-        drop-shadow(0 -1px 0 #fff);
-}
-
-/* Red front face with a white outline */
+.extrudedEdge,
 .extrudedFace {
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #CB163F;
-    -webkit-text-stroke: max(1px, 0.012em) #fff;
-    paint-order: stroke fill;
+    stroke: #fff;
+    stroke-width: 1.4;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+}
+
+.extrudedFace {
+    fill: #CB163F;
 }
 
 @media (max-width: 768px) {
     .extrudedText {
-        font-size: 11vw;
+        font-size: 10.5vw;
     }
 }
