@@ -48,6 +48,7 @@
 }
 
 #projectContainer {
+    position: relative;
     color: white;
     background-color: #171B21;
     border-radius: 12px;
@@ -263,6 +264,18 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 5%;
+}
+
+/* Product screenshot inset from the card's sides, anchored so the card's bottom edge cuts it off */
+.cardScreenshot {
+    position: absolute;
+    left: 8%;
+    bottom: -9%;
+    display: block;
+    width: 84%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 #fitwitMockup {
