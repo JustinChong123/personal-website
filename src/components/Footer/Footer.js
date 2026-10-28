@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom'
 import upScrollArrow from './up-scroll-arrow.svg'
 import upScrollArrowHover from './up-scroll-arrow-hover.svg'
 import FlickerText from '../FlickerText/FlickerText.js'
+import ExternalIcon from '../ExternalIcon/ExternalIcon.js'
 
 // flicker: letters flicker in (like the case study cover) the first time the footer comes into view
 function Footer ({ flicker = true }) {
@@ -44,8 +45,8 @@ function Footer ({ flicker = true }) {
             <div className="items-1">
                 <h3>{text('Justin Chong')}</h3>
                 <div className="subitems-1">
-                    <Link to='/'><h4 onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>{text('Home')}</h4></Link>
-                    <Link to='/aboutMe'><h4 onClick={() => {window.scrollTo({top: 0, left: 0});}}>{text('About Me')}</h4></Link>
+                    <Link to='/' onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}><h4>{text('Home')}</h4></Link>
+                    <Link to='/aboutMe' onClick={() => {window.scrollTo({top: 0, left: 0});}}><h4>{text('About Me')}</h4></Link>
                 </div>
             </div>
 
@@ -53,9 +54,9 @@ function Footer ({ flicker = true }) {
                 <h3>{text("Let's stay in touch!")}</h3>
                 <div className="subitems-2">
                     <h4>
-                        <a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">{text('LinkedIn')}</a>
+                        <a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">{text('LinkedIn')}<ExternalIcon /></a>
                     </h4>
-                    <h4 id="footer-email-me" onClick={() => window.location = 'mailto:justin.r.chong.24@dartmouth.edu'}>{text('Email Me')}</h4>
+                    <h4 id="footer-email-me" onClick={() => window.location = 'mailto:justin.r.chong.24@dartmouth.edu'}>{text('Email Me')}<ExternalIcon /></h4>
                 </div>
             </div>
 

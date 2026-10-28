@@ -5,10 +5,13 @@ import githubLogo from './icons8-github-480.png'
 import FloatingShapes from './components/FloatingShapes/FloatingShapes.js'
 import Footer from './components/Footer/Footer.js'
 import Typewriter from './components/Typewriter.js'
+import useScrollToTopOnLoad from './components/CaseStudy/useScrollToTopOnLoad.js'
 import ExtrudedText from './components/ExtrudedText/ExtrudedText.js'
 import ScrambleText from './components/ScrambleText/ScrambleText.js'
 
 function App() {
+  // always open at the top, e.g. when coming here from another page's footer
+  useScrollToTopOnLoad()
 
   return (
     <div className="App">
