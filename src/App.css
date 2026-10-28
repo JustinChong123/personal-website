@@ -27,7 +27,7 @@ body {
 /* 3D name heading the intro */
 .Intro .extrudedText {
   font-size: min(6vw, 120px);
-  margin: 2vh 0 3vh;
+  margin: clamp(20px, 4vh, 44px) 0 clamp(28px, 6vh, 64px);
 }
 
 @media (max-width: 768px) {
