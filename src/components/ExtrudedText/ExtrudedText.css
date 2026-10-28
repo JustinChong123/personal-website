@@ -1,0 +1,47 @@
+.extrudedText {
+    margin: 0.2em 0 0.6em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 900;
+    font-size: min(8.6vw, 170px);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.extrudedLetter {
+    position: relative;
+    display: inline-block;
+}
+
+.extrudedSpace {
+    display: inline-block;
+    width: 0.32em;
+}
+
+/* Black extruded side; the drop-shadows trace a thin white outline around it */
+.extrudedSide {
+    display: block;
+    color: #000;
+    filter:
+        drop-shadow(1px 0 0 #fff)
+        drop-shadow(-1px 0 0 #fff)
+        drop-shadow(0 1px 0 #fff)
+        drop-shadow(0 -1px 0 #fff);
+}
+
+/* Red front face with a white outline */
+.extrudedFace {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #CB163F;
+    -webkit-text-stroke: max(1px, 0.012em) #fff;
+    paint-order: stroke fill;
+}
+
+@media (max-width: 768px) {
+    .extrudedText {
+        font-size: 11vw;
+    }
+}
