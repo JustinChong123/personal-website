@@ -109,9 +109,9 @@
         min-height: 3em;
     }
 
-    .Intro > h2,
-    #miniDescription {
+    .Intro > h2 {
         width: 100%;
+        max-width: none;
     }
 
     /* Home: featured projects stack into one column */

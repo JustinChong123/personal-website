@@ -52,9 +52,11 @@ body {
 /* Description */
 .Intro > h2 {
   font-family: 'Alliance No. 2 Bold';
-  font-size: clamp(20px, 2.5vw, 48px);
+  font-size: clamp(18px, 2vw, 38px);
   font-weight: 700;
-  width: 90%;
+  /* wrap at the middle of the screen */
+  width: auto;
+  max-width: calc(50vw - max(6.2vw, 20px));
   letter-spacing: 0.4px;
   line-height: 1.32;
   color: #e4e4e4;
@@ -96,6 +98,10 @@ h3 > a {
 .Intro a:hover {
   box-shadow: inset 100px 0 0 0 white;
   color: black;
+}
+
+.introHighlight {
+  color: #CB163F;
 }
 
 .pinkText {

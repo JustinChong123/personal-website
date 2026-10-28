@@ -5,8 +5,8 @@ import githubLogo from './icons8-github-480.png'
 import FloatingShapes from './components/FloatingShapes/FloatingShapes.js'
 import Footer from './components/Footer/Footer.js'
 import Typewriter from './components/Typewriter.js'
-import FlickerText from './components/FlickerText/FlickerText.js'
 import ExtrudedText from './components/ExtrudedText/ExtrudedText.js'
+import TypeReveal, { typingDuration } from './components/TypeReveal/TypeReveal.js'
 
 function App() {
 
@@ -16,7 +16,7 @@ function App() {
       <div className='Intro'>
         <Typewriter />
         <ExtrudedText text="Justin Chong" />
-        <h2><span class="blueText"><FlickerText text="Product designer" /></span> <FlickerText text="leveraging metrics-driven experimentation to lift user and business outcomes across B2B and B2C" /></h2>
+        <h2 className="introStatement">Passionate about leveraging <TypeReveal text="data-driven experimentation" delay={0.6} className="introHighlight" /> to design experiences that delight users and <TypeReveal text="lift business metrics" delay={0.6 + typingDuration('data-driven experimentation') + 0.3} className="introHighlight" /></h2>
         {/* <a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer"><img id="githubLogo" src={githubLogo} alt="Github Logo" width='30' height='30'/></a>
         <h3><a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">Github</a></h3> */}
       </div>
