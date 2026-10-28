@@ -1,0 +1,48 @@
+/* Each word clips its own box so the text can slide up into it from below */
+.scrambleWord {
+    display: inline-block;
+    white-space: nowrap;
+    clip-path: inset(0 -0.2em);
+}
+
+.scrambleSlide {
+    display: inline-block;
+    animation: scrambleSlideUp 0.35s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@keyframes scrambleSlideUp {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+/* The final letter reserves the width; the letter being shown is drawn on top of it */
+.scrambleChar {
+    position: relative;
+    display: inline-block;
+}
+
+.scrambleFinal {
+    visibility: hidden;
+}
+
+.scrambleShown {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: pre;
+}
+
+/* Once decoded, show the real letters in place so kerning and selection behave normally */
+.scrambleDone .scrambleFinal {
+    visibility: visible;
+}
+
+.scrambleDone .scrambleShown {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scrambleSlide {
+        animation: none;
+    }
+}
