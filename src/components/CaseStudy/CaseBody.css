@@ -1,0 +1,103 @@
+.caseBody {
+    /* Matches the green section labels; change per case study */
+    --caseAccent: #88C15B;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    column-gap: 4vw;
+    padding-right: 1vw;
+}
+
+.caseBodyMain {
+    min-width: 0;
+}
+
+/* Let the existing case study content shrink to fit next to the scroll spy */
+.caseBodyMain .caseMain {
+    flex: 1;
+    min-width: 0;
+    padding-right: 0;
+}
+
+.caseBodyMain .caseText {
+    width: auto;
+}
+
+.caseBodyMain img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Leave room above a section when jumping to it */
+.caseBodyMain [id] {
+    scroll-margin-top: 6vh;
+}
+
+/* Scroll spy */
+.caseSpy {
+    position: sticky;
+    top: 15vh;
+    align-self: start;
+    margin-top: 10vh;
+    font-family: 'Alliance No. 2 Regular', sans-serif;
+}
+
+.caseSpyTitle {
+    margin: 0 0 20px;
+    font-family: 'Alliance No. 2 Bold', sans-serif;
+    font-size: 18px;
+    color: #1C2D38;
+}
+
+.caseSpyList {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    border-left: 1px solid #E8EDEB;
+}
+
+.caseSpyIndicator {
+    position: absolute;
+    top: 0;
+    left: -1px;
+    width: 3px;
+    background-color: var(--caseAccent);
+    transition: transform 0.3s ease, height 0.3s ease;
+}
+
+.caseSpyLink {
+    display: block;
+    padding: 8px 0 8px 20px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #5C6C75;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.caseSpyLink:hover {
+    color: #1C2D38;
+}
+
+.caseSpyLinkActive {
+    font-family: 'Alliance No. 2 Bold', sans-serif;
+    color: #1C2D38;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .caseSpyIndicator {
+        transition: none;
+    }
+}
+
+/* Not enough room beside the content on smaller screens */
+@media (max-width: 1024px) {
+    .caseBody {
+        display: block;
+        padding-right: 0;
+    }
+
+    .caseSpy {
+        display: none;
+    }
+}

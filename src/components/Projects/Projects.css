@@ -72,14 +72,14 @@
 .main-projects div h2 {
     font-family: 'IBM Plex Sans';
     font-weight: 400;
-    font-size: 1.5vw;
+    font-size: max(1.5vw, 13px);
 }
 
 /* Device Type */
 .main-projects div h4 {
     font-family: 'Barlow';
     font-weight: 600;
-    font-size: 1.1vw;
+    font-size: max(1.1vw, 11px);
     color: #88979B;
 }
 
@@ -109,7 +109,7 @@
     border: 1px solid white;
     font-family: 'IBM Plex Sans';
     font-weight: 400;
-    font-size: 1.1vw;
+    font-size: max(1.1vw, 11px);
     padding: 0.6% 3%;
     border-radius: 100px;
     display: flex;
@@ -135,11 +135,39 @@
 } */
 
 #moreProjects {
+    display: flex;
     width: 100%;
-    height: auto;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.moreProjectsTrack {
+    display: flex;
+    flex-shrink: 0;
+    animation: moreProjectsScroll 30s linear infinite;
+}
+
+.moreProjectsItem {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: max(1.2vw, 12px);
+    font-weight: 400;
+    color: #F5F5F5;
+    padding-right: 1.2em;
+}
+
+.moreProjectsArrow {
+    padding-left: 1.2em;
+}
+
+@keyframes moreProjectsScroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .moreProjectsTrack {
+        animation: none;
+    }
 }
 
 .projects {
@@ -196,7 +224,7 @@
     background-color: black;
     font-weight: 600;
     font-family: 'IBM Plex Sans';
-    font-size: 1vw;
+    font-size: max(1vw, 12px);
     border: 2px solid black;
     display: inline;
     padding: 0.6vh 1vw;

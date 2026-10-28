@@ -4,10 +4,8 @@ const Typewriter = () => {
     return (
     <TypeAnimation
         sequence={[
-            "Hi, I'm Justin Chong",
-            2500,
             "Hi, I'm a product designer",
-            1000,
+            2500,
             "Hi, I'm a software engineer",
             1000,
             "Hi, I'm a product manager",
@@ -22,7 +20,8 @@ const Typewriter = () => {
         speed={60}
         wrapper="span"
         repeat={Infinity}
-        style={{fontSize: '5vw', fontFamily: 'Alliance No. 2 Extra Bold', wordSpacing: '0em', letterSpacing: '-0.007em', color: '#F5F5F5'}}
+        className="typewriter"
+        style={{fontSize: 'clamp(36px, 5vw, 110px)', fontFamily: 'Alliance No. 2 Extra Bold', wordSpacing: '0em', letterSpacing: '-0.007em', color: '#F5F5F5'}}
     />
   );
 };

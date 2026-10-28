@@ -1,0 +1,137 @@
+/* Sizes are taken from the original 1434px-wide cover designs and scale with the page width (cqw) */
+
+.caseCover {
+    position: relative;
+    color: white;
+}
+
+.caseCoverBottom {
+    margin-top: -1vw;
+    container-type: inline-size;
+}
+
+/* Mockups */
+.caseCoverMockups {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.caseCoverMockups img {
+    position: absolute;
+    display: block;
+    height: auto;
+}
+
+/* Black band */
+.caseCoverBand {
+    position: relative;
+    display: grid;
+    grid-template-columns: 40.84cqw 35.28cqw 1fr;
+    min-height: 16.1cqw;
+    padding: 1.9cqw 0 2cqw 2.72cqw;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+    font-family: 'Alliance No. 2 Regular', sans-serif;
+}
+
+.caseCoverBand p {
+    margin: 0;
+}
+
+.caseCover .caseCoverTitle {
+    margin: 0;
+    font-family: 'Alliance No. 2 Regular', sans-serif;
+    font-weight: 400;
+    font-size: 3.2cqw;
+    line-height: 1.2;
+    background-image: none;
+    color: white;
+}
+
+.caseCoverArrow {
+    display: inline-block;
+    width: 0.62em;
+    height: 0.62em;
+    margin-left: 0.35em;
+    fill: none;
+    stroke: var(--caseCoverAccent);
+    stroke-width: 2.4;
+}
+
+.caseCoverTagline,
+.caseCoverRole {
+    position: relative;
+    padding-left: 1.63cqw;
+    font-size: 2.15cqw;
+    line-height: 1.2;
+}
+
+/* Fading vertical dividers that draw in from top to bottom */
+.caseCoverTagline::before,
+.caseCoverRole::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 11.9cqw;
+    background-image: linear-gradient(to bottom, var(--caseCoverDivider) 50%, transparent);
+    opacity: 0.9;
+    animation: caseCoverDividerReveal 0.5s ease-out both;
+}
+
+@keyframes caseCoverDividerReveal {
+    from { clip-path: inset(0 0 100% 0); }
+    to { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes caseCoverDividerRevealHorizontal {
+    from { clip-path: inset(0 100% 0 0); }
+    to { clip-path: inset(0 0 0 0); }
+}
+
+.caseCoverRoleTitle {
+    margin-top: 0.4em !important;
+    font-size: 0.7em;
+    color: var(--caseCoverAccent);
+}
+
+@media (max-width: 768px) {
+    .caseCoverBand {
+        grid-template-columns: 1fr;
+        row-gap: 20px;
+        padding: 28px 20px 36px;
+    }
+
+    .caseCover .caseCoverTitle {
+        font-size: 32px;
+    }
+
+    .caseCoverTagline,
+    .caseCoverRole {
+        padding-left: 0;
+        padding-top: 20px;
+        font-size: 20px;
+    }
+
+    .caseCoverTagline {
+        max-width: none !important;
+    }
+
+    .caseCoverTagline::before,
+    .caseCoverRole::before {
+        width: 100%;
+        height: 1px;
+        background-image: linear-gradient(to right, var(--caseCoverDivider), transparent);
+        animation-name: caseCoverDividerRevealHorizontal;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .caseCoverTagline::before,
+    .caseCoverRole::before {
+        animation: none;
+    }
+}

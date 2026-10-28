@@ -45,7 +45,7 @@
 }
 
 .aboutMe h4 {
-    font-size: 1.5vw;
+    font-size: clamp(15px, 1.5vw, 28px);
     font-weight: 500;
     line-height: 143.4%;
     margin-left: 16vw;

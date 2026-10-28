@@ -1,0 +1,47 @@
+/* Same spot and size as the old abstract-shapes.png background image */
+.floatingShapes {
+    position: absolute;
+    top: -40px;
+    right: -150px;
+    width: 1700px;
+    height: 950px;
+    overflow: hidden;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.floatingShape {
+    position: absolute;
+    animation-name: floatingShapeDrift;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.floatingShape img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation-name: floatingShapeBob;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes floatingShapeDrift {
+    0% { transform: translate(var(--fromX), var(--fromY)); opacity: 0; }
+    6% { opacity: 1; }
+    94% { opacity: 1; }
+    100% { transform: translate(var(--toX), var(--toY)); opacity: 0; }
+}
+
+@keyframes floatingShapeBob {
+    from { transform: translateY(-4px) rotate(-2deg); }
+    to { transform: translateY(4px) rotate(2deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .floatingShape,
+    .floatingShape img {
+        animation: none;
+    }
+}

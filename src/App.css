@@ -3,10 +3,15 @@ html, body {
   overflow-x: hidden;
 }
 
+/* clip (unlike hidden) doesn't turn body into a scroll container, so position: sticky still works (e.g. the case study scroll spy) */
+body {
+  overflow-x: clip;
+}
+
 .Intro {
   color: #F5F5F5;
   font-family: 'Alliance No. 2 Bold', sans-serif;
-  margin: 4vh 6.2vw;
+  margin: 4vh max(6.2vw, 20px);
 }
 
 .Intro > h1 {
@@ -19,18 +24,18 @@ html, body {
 /* Description */
 .Intro > h2 {
   font-family: 'Alliance No. 2 Bold';
-  font-size: 2.5vw;
+  font-size: clamp(20px, 2.5vw, 48px);
   font-weight: 700;
   width: 90%;
   letter-spacing: 0.4px;
-  line-height: 3.3vw;
+  line-height: 1.32;
   color: #e4e4e4;
 }
 
 #miniDescription {
   font-family: 'Alliance No. 2 Light';
-  font-size: 1.5vw;
-  line-height: 2.2vw;
+  font-size: clamp(15px, 1.5vw, 28px);
+  line-height: 1.47;
   margin-bottom: 40px;
   color: #c7c6c6;
   width: 80%;

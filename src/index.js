@@ -17,6 +17,7 @@ import ConferenceCupUSA from './components/Projects/Case Studies/ConferenceCupUS
 import OhBuoy from './components/Projects/Case Studies/OhBuoy.js';
 import AISalesIntelligence from './components/Projects/Case Studies/AISalesIntelligence.js';
 import AccountPortfolio from './components/Projects/Case Studies/AccountPortfolio.js'
+import './responsive.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

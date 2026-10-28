@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
 import './Navbar.css'
-// import Dropdown from 'react-bootstrap/Dropdown';
-import DropdownButton from 'react-bootstrap/DropdownButton';
 import {Link} from 'react-router-dom'
-import designResume from './Justin Chong Resume.pdf'
+import FlickerText from '../FlickerText/FlickerText.js'
 import logoWhite from './logo.png'
 import logoWhiteHover from './logo-hover.png'
 import logoBlack from './logo-black.png'
@@ -27,7 +25,7 @@ function Navbar({ onCase = false }) {
                 {onCase ? (
                     null
                 ) : (
-                    <Link to="/" id='homeStyle'>Justin Chong</Link>
+                    <Link to="/" id='homeStyle'><FlickerText text="Justin Chong" gradient /></Link>
                 )}
                 
             </div>
@@ -42,21 +40,14 @@ function Navbar({ onCase = false }) {
                 </li>
                 <li>
                     {onCase ? (
-                        <button className='navButton' id="email-me-button-case" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email Me</button>
+                        <button className='navButton' id="email-me-button-case" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email</button>
                     ) : (
-                        <button className='navButton' id="email-me-button" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email Me</button>
+                        <button className='navButton' id="email-me-button" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email</button>
                     )}
                     
                 </li>
                 <li>
-                    {onCase ? (
-                        <DropdownButton className='navButton'id="resume-download-button-case" title="Resume" href={designResume} target='_blank' rel='noopener noreferrer'>
-                        </DropdownButton>
-                    ) : (
-                        <DropdownButton className='navButton'id="resume-download-button" title="Resume" href={designResume} target='_blank' rel='noopener noreferrer'>
-                        </DropdownButton>
-                    )}
-                    
+                    <a className='navButton' id={onCase ? 'linkedin-button-case' : 'linkedin-button'} href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
                 </li>
             </ul>
         </nav>
