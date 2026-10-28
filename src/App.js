@@ -15,7 +15,7 @@ function App() {
       <Navbar />
       <div className='Intro'>
         <Typewriter />
-        <ExtrudedText text="Justin Chong" maxDelay={0.6} duration={0.4} />
+        <ExtrudedText text={'Justin\nChong'} indents={[0, 0.47]} maxDelay={0.6} duration={0.4} />
         <h2 className="introStatement">Passionate about leveraging <span className="introHighlight"><FlickerText text="data-driven experimentation" maxDelay={0.6} duration={0.4} /></span> to design experiences that delight users and <span className="introHighlight"><FlickerText text="lift business metrics" maxDelay={0.6} duration={0.4} /></span></h2>
         {/* <a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer"><img id="githubLogo" src={githubLogo} alt="Github Logo" width='30' height='30'/></a>
         <h3><a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">Github</a></h3> */}

@@ -9,6 +9,7 @@ const LEAN = 0.13 // how far the tops of the red faces lean right, per unit of h
 const SQUASH = 0.9 // vertical squash of the red faces, so they look tipped back
 const TRACKING = 0.01 // extra em between letters
 const SPACE = 0.3 // em width of a space
+const LINE_GAP = 0.05 // em between one line's extrusion and the next line's faces
 const CORNER_ANGLE = 25 // degrees; outline turns sharper than this get an edge line
 const SEAM_OVERLAP = 0.004 // em each side face overlaps its neighbours, so no hairline gaps show between them
 const SLIVER = 0.004 // em; side faces thinner than this (seen edge-on, near a curve's silhouette) don't hide lines
@@ -37,9 +38,9 @@ function insideGlyph(contours, x, y) {
  * back-to-front order, each with the edge lines it owns. Every edge line belongs to exactly one face
  * (the nearest one that touches it), so no line is drawn twice and they all look the same weight.
  */
-function buildLetter(rawContours, offsetX) {
+function buildLetter(rawContours, offsetX, offsetY = 0) {
     const [ex, ey] = EXTRUDE
-    const contours = rawContours.map((c) => c.map(tilt).map(([x, y]) => [x + offsetX, y]))
+    const contours = rawContours.map((c) => c.map(tilt).map(([x, y]) => [x + offsetX, y + offsetY]))
     const faces = []
     const corners = [] // { point, faces: [indices of the visible faces it's drawn on top of] }
 
@@ -125,27 +126,32 @@ function facePoints(a, b) {
 const line = (a, b, key) => <line key={key} className="extrudedEdge" x1={a[0] * S} y1={a[1] * S} x2={b[0] * S} y2={b[1] * S} />
 
 // Big 3D block letters with a red face, black sides and a white line on every edge. Each letter flickers in.
-function ExtrudedText({ text, maxDelay = 0.3, duration }) {
+// Put "\n" in text for more lines; indents shifts each line right by that many em.
+function ExtrudedText({ text, indents = [], maxDelay = 0.3, duration }) {
     const { letters, box } = useMemo(() => {
-        let x = 0
         const letters = []
-        for (const char of text.toUpperCase()) {
-            const glyph = glyphs[char]
-            if (!glyph) { x += SPACE; continue }
-            letters.push({
-                ...buildLetter(glyph.contours, x),
-                delay: Math.random() * maxDelay,
-                pattern: Math.floor(Math.random() * FLICKER_PATTERNS) + 1,
-            })
-            x += glyph.advance + TRACKING
-        }
+        const lineHeight = CAP_HEIGHT * SQUASH + DEPTH + LINE_GAP
+        // earlier lines are drawn first, so each line's faces sit in front of the extrusion above it
+        text.toUpperCase().split('\n').forEach((lineText, row) => {
+            let x = indents[row] || 0
+            for (const char of lineText) {
+                const glyph = glyphs[char]
+                if (!glyph) { x += SPACE; continue }
+                letters.push({
+                    ...buildLetter(glyph.contours, x, row * lineHeight),
+                    delay: Math.random() * maxDelay,
+                    pattern: Math.floor(Math.random() * FLICKER_PATTERNS) + 1,
+                })
+                x += glyph.advance + TRACKING
+            }
+        })
         const pad = 0.02
         const minX = Math.min(...letters.map((l) => l.bounds[0])) - pad
         const minY = Math.min(...letters.map((l) => l.bounds[1])) - pad
         const maxX = Math.max(...letters.map((l) => l.bounds[2])) + pad
         const maxY = Math.max(...letters.map((l) => l.bounds[3])) + pad
         return { letters, box: [minX, minY, maxX - minX, maxY - minY] }
-    }, [text, maxDelay])
+    }, [text, indents.join(','), maxDelay]) // eslint-disable-line react-hooks/exhaustive-deps
 
     return (
         <svg
@@ -153,7 +159,7 @@ function ExtrudedText({ text, maxDelay = 0.3, duration }) {
             viewBox={box.map((v) => (v * S).toFixed(1)).join(' ')}
             style={{ width: `${box[2]}em`, height: `${box[3]}em` }}
             role="img"
-            aria-label={text}
+            aria-label={text.replace(/\n/g, ' ')}
         >
             {letters.map(({ faces, front, delay, pattern }, i) => (
                 <g key={i} className={`flickerChar flickerPattern${pattern}`} style={{ animationDelay: `${delay.toFixed(2)}s`, animationDuration: duration && `${duration}s` }}>
