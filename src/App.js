@@ -6,7 +6,7 @@ import FloatingShapes from './components/FloatingShapes/FloatingShapes.js'
 import Footer from './components/Footer/Footer.js'
 import Typewriter from './components/Typewriter.js'
 import ExtrudedText from './components/ExtrudedText/ExtrudedText.js'
-import TypeReveal, { typingDuration } from './components/TypeReveal/TypeReveal.js'
+import FlickerText from './components/FlickerText/FlickerText.js'
 
 function App() {
 
@@ -15,8 +15,8 @@ function App() {
       <Navbar />
       <div className='Intro'>
         <Typewriter />
-        <ExtrudedText text="Justin Chong" />
-        <h2 className="introStatement">Passionate about leveraging <TypeReveal text="data-driven experimentation" delay={0.6} className="introHighlight" /> to design experiences that delight users and <TypeReveal text="lift business metrics" delay={0.6 + typingDuration('data-driven experimentation') + 0.3} className="introHighlight" /></h2>
+        <ExtrudedText text="Justin Chong" maxDelay={0.6} duration={0.4} />
+        <h2 className="introStatement">Passionate about leveraging <span className="introHighlight"><FlickerText text="data-driven experimentation" maxDelay={0.6} duration={0.4} /></span> to design experiences that delight users and <span className="introHighlight"><FlickerText text="lift business metrics" maxDelay={0.6} duration={0.4} /></span></h2>
         {/* <a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer"><img id="githubLogo" src={githubLogo} alt="Github Logo" width='30' height='30'/></a>
         <h3><a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">Github</a></h3> */}
       </div>

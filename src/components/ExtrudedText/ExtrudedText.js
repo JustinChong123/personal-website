@@ -125,7 +125,7 @@ function facePoints(a, b) {
 const line = (a, b, key) => <line key={key} className="extrudedEdge" x1={a[0] * S} y1={a[1] * S} x2={b[0] * S} y2={b[1] * S} />
 
 // Big 3D block letters with a red face, black sides and a white line on every edge. Each letter flickers in.
-function ExtrudedText({ text, maxDelay = 0.3 }) {
+function ExtrudedText({ text, maxDelay = 0.3, duration }) {
     const { letters, box } = useMemo(() => {
         let x = 0
         const letters = []
@@ -156,7 +156,7 @@ function ExtrudedText({ text, maxDelay = 0.3 }) {
             aria-label={text}
         >
             {letters.map(({ faces, front, delay, pattern }, i) => (
-                <g key={i} className={`flickerChar flickerPattern${pattern}`} style={{ animationDelay: `${delay.toFixed(2)}s` }}>
+                <g key={i} className={`flickerChar flickerPattern${pattern}`} style={{ animationDelay: `${delay.toFixed(2)}s`, animationDuration: duration && `${duration}s` }}>
                     {faces.map(({ a, b, lines }, j) => (
                         <g key={j}>
                             <polygon className="extrudedSideFace" points={facePoints(a, b)} />
