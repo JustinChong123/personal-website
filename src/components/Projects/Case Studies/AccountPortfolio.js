@@ -88,7 +88,8 @@ function AccountPortfolio() {
                 >
                     <div className="caseSection" id="project-summary">
                         <div className="caseSideHeader">
-                            <h3>CONTEXT</h3>
+                            <h3>PROJECT SUMMARY</h3>
+                            <h2>Context</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">You might be wondering... what is MongoDB?</h1>
@@ -99,7 +100,8 @@ function AccountPortfolio() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3>SOLUTION</h3>
+                            <h3>PROJECT SUMMARY</h3>
+                            <h2>Solution</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">A single pane of glass for customer activites and trends</h1>
@@ -111,7 +113,8 @@ function AccountPortfolio() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3>BACKGROUND</h3>
+                            <h3>PROJECT SUMMARY</h3>
+                            <h2>Background</h2>
                         </div>
                         <div className="caseMain">
                             <img src={portfolioBackground} width="1000" alt=''/>
@@ -120,7 +123,8 @@ function AccountPortfolio() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3>PROBLEM</h3>
+                            <h3>PROJECT SUMMARY</h3>
+                            <h2>Problem</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">CSMs lack an overview of their account portfolio</h1>
@@ -130,7 +134,8 @@ function AccountPortfolio() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3>SOLUTION OVERVIEW</h3>
+                            <h3>PROJECT SUMMARY</h3>
+                            <h2>Solution Overview</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">Main features of Account Portfolio</h1>
