@@ -8,6 +8,19 @@ body {
   overflow-x: clip;
 }
 
+/* First screen: header and intro at the top, the 3D name centered along the bottom */
+.homeHero {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100svh;
+}
+
+.homeHero .extrudedText {
+  font-size: min(11.6vw, 240px);
+  margin: auto auto 5vh;
+}
+
 .Intro {
   color: #F5F5F5;
   font-family: 'Alliance No. 2 Bold', sans-serif;

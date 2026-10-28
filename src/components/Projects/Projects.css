@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    margin: 25vh 0vw 15vh 0vw;
+    margin: 10vh 0vw 15vh 0vw;
     width: 100vw;
     height: 38vw;
 }
