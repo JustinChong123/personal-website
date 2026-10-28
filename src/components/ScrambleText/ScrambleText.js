@@ -17,8 +17,8 @@ const prefersReducedMotion = () =>
     typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 /*
- * "Decode" text: it slides up into view as random letters that keep changing, then the real letters
- * lock in from left to right. Each letter keeps the width of its final letter, so the surrounding
+ * "Decode" text: it starts as random letters that keep changing, then the real letters lock in
+ * from left to right, starting after delay. Each letter keeps the width of its final letter, so the surrounding
  * text never shifts. Times are in seconds.
  */
 function ScrambleText({ text, delay = 0, duration = 1, className = '' }) {
@@ -51,14 +51,12 @@ function ScrambleText({ text, delay = 0, duration = 1, className = '' }) {
                 <React.Fragment key={w}>
                     {w > 0 && ' '}
                     <span className="scrambleWord" aria-hidden="true">
-                        <span className="scrambleSlide" style={{ animationDelay: `${delay}s` }}>
-                            {word.split('').map((char, c) => (
-                                <span key={c} className="scrambleChar">
-                                    <span className="scrambleFinal">{char}</span>
-                                    <span className="scrambleShown">{shown[starts[w] + c]}</span>
-                                </span>
-                            ))}
-                        </span>
+                        {word.split('').map((char, c) => (
+                            <span key={c} className="scrambleChar">
+                                <span className="scrambleFinal">{char}</span>
+                                <span className="scrambleShown">{shown[starts[w] + c]}</span>
+                            </span>
+                        ))}
                     </span>
                 </React.Fragment>
             ))}

@@ -1,18 +1,7 @@
-/* Each word clips its own box so the text can slide up into it from below */
+/* Keep each word on one line */
 .scrambleWord {
     display: inline-block;
     white-space: nowrap;
-    clip-path: inset(0 -0.2em);
-}
-
-.scrambleSlide {
-    display: inline-block;
-    animation: scrambleSlideUp 0.35s cubic-bezier(0.2, 0.7, 0.2, 1) both;
-}
-
-@keyframes scrambleSlideUp {
-    from { transform: translateY(100%); }
-    to { transform: translateY(0); }
 }
 
 /* The final letter reserves the width; the letter being shown is drawn on top of it */
@@ -39,10 +28,4 @@
 
 .scrambleDone .scrambleShown {
     display: none;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .scrambleSlide {
-        animation: none;
-    }
 }
