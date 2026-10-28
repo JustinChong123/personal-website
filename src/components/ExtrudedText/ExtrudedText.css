@@ -1,0 +1,29 @@
+.extrudedText {
+    display: block;
+    margin: 0.2em 0 0.4em;
+    font-size: min(8.6vw, 170px);
+    overflow: visible;
+}
+
+.extrudedSideFace {
+    fill: #000;
+}
+
+.extrudedEdge,
+.extrudedFace {
+    stroke: #fff;
+    stroke-width: 1.1;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+}
+
+.extrudedFace {
+    fill: #CB163F;
+}
+
+@media (max-width: 768px) {
+    .extrudedText {
+        font-size: 10.5vw;
+    }
+}

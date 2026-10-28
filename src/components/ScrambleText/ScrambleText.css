@@ -1,0 +1,31 @@
+/* Keep each word on one line */
+.scrambleWord {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* The final letter reserves the width; the letter being shown is drawn on top of it */
+.scrambleChar {
+    position: relative;
+    display: inline-block;
+}
+
+.scrambleFinal {
+    visibility: hidden;
+}
+
+.scrambleShown {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: pre;
+}
+
+/* Once decoded, show the real letters in place so kerning and selection behave normally */
+.scrambleDone .scrambleFinal {
+    visibility: visible;
+}
+
+.scrambleDone .scrambleShown {
+    display: none;
+}

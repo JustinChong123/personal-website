@@ -21,7 +21,7 @@ function CaseCover({ title, tagline, company, role, mockups, mockupsHeight, back
     return (
         <div className="caseCover" style={{ background, '--caseCoverAccent': accent, '--caseCoverDivider': dividerColor }}>
             <ScrollIndicator color={progressColor} />
-            <Navbar onCase={true} />
+            <Navbar onCase={true} hoverColor={progressColor} />
             <div className="caseCoverBottom">
                 <div className="caseCoverMockups" style={{ aspectRatio: `${DESIGN_WIDTH} / ${mockupsHeight}` }}>
                     {mockups.map(({ src, alt = '', x, y, width }) => (

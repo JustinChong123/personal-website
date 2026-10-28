@@ -1,28 +1,31 @@
 import { TypeAnimation } from 'react-type-animation';
 
+// Small all-caps role line: "PRODUCT DESIGNER &" stays put, the second role types out and cycles
 const Typewriter = () => {
     return (
-    <TypeAnimation
-        sequence={[
-            "Hi, I'm a product designer",
-            2500,
-            "Hi, I'm a software engineer",
-            1000,
-            "Hi, I'm a product manager",
-            1000,
-            "Hi, I'm a freestyle skier",
-            1000,
-            "Hi, I'm a hiker",
-            1000,
-            "Hi, I'm a food blogger",
-            1000,
-        ]}
-        speed={60}
-        wrapper="span"
-        repeat={Infinity}
-        className="typewriter"
-        style={{fontSize: 'clamp(36px, 5vw, 110px)', fontFamily: 'Alliance No. 2 Extra Bold', wordSpacing: '0em', letterSpacing: '-0.007em', color: '#F5F5F5'}}
-    />
+    <p className="typewriter">
+        PRODUCT DESIGNER &{' '}
+        <TypeAnimation
+            sequence={[
+                'SOFTWARE ENGINEER',
+                2000,
+                'PRODUCT MANAGER',
+                2000,
+                'INTERIOR DESIGN ENTHUSIAST',
+                2000,
+                'FREESTYLE SKIER',
+                2000,
+                'HIKER',
+                2000,
+                'FOOD BLOGGER',
+                2000,
+            ]}
+            speed={60}
+            wrapper="span"
+            repeat={Infinity}
+            className="typewriterRole"
+        />
+    </p>
   );
 };
 

@@ -82,7 +82,8 @@ function FitKitch() {
                 >
                     <div className="caseSection" id="project-summary">
                         <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">SOLUTION</h3>
+                            <h3 id="redCaseSideHeader">PROJECT SUMMARY</h3>
+                            <h2>Solution</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">Investigating exercise and community building</h1>
@@ -94,7 +95,8 @@ function FitKitch() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">BACKGROUND</h3>
+                            <h3 id="redCaseSideHeader">PROJECT SUMMARY</h3>
+                            <h2>Background</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">Collaborating with a health services researcher</h1>
@@ -104,7 +106,8 @@ function FitKitch() {
 
                     {/* <div id="fitkitchRedBackground"className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">BACKGROUND</h3>
+                            <h3 id="redCaseSideHeader">PROJECT SUMMARY</h3>
+                            <h2>Background</h2>
                         </div>
                         <div className="caseMain">
                             <p id="backgroundText" className="caseText">A <span className="fitkitchBoldText">Dartmouth professor</span> approached us to <span className="fitkitchBoldText">commercialize a research app</span> previously built by the DALI Lab. Our objective was to build a new app to motivate young people to exercise <span className="fitkitchBoldText">using the benefits of cognitive health,</span> but our user research inspired us to pivot to our current app idea. I worked with my co-designer, PM, and 3 developers to design, develop, and deploy the app for a <span className="fitkitchBoldText">beta launch in 10 weeks.</span></p>
@@ -113,7 +116,8 @@ function FitKitch() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">OVERVIEW</h3>
+                            <h3 id="redCaseSideHeader">PROJECT SUMMARY</h3>
+                            <h2>Overview</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">How does FitKitch work?</h1>
@@ -123,7 +127,8 @@ function FitKitch() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">PROCESS</h3>
+                            <h3 id="redCaseSideHeader">PROJECT SUMMARY</h3>
+                            <h2>Process</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">Our <span id="fitkitchDesignThinkingGradient">design thinking</span> from start to end</h1>

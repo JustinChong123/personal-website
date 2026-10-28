@@ -84,9 +84,30 @@
     color: #1C2D38;
 }
 
+/* Clicked item: the selected letter (bold, which sets the width) fades in through the flicker
+   while the unselected letter on top of it fades out in step */
+.spyFlickerChar {
+    position: relative;
+    display: inline-block;
+    white-space: pre;
+}
+
+.spyFlickerOff {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-family: 'Alliance No. 2 Regular', sans-serif;
+    color: #5C6C75;
+    animation-direction: reverse;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .caseSpyIndicator {
         transition: none;
+    }
+
+    .spyFlickerOff {
+        display: none;
     }
 }
 

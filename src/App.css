@@ -8,6 +8,51 @@ body {
   overflow-x: clip;
 }
 
+/* First screen: header on top, the intro centered vertically in the rest of the window. It stops
+   short of the window's bottom so the tops of the featured case studies peek above the fold. */
+.homeHero {
+  --caseStudyPeek: calc(6vh + 72px + 3.5vw); /* gap above the cards + their first row of text (which scales with width) */
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - var(--caseStudyPeek));
+  min-height: calc(100svh - var(--caseStudyPeek));
+}
+
+.homeHero .Intro {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Small role line above the 3D name */
+.typewriter {
+  margin: 3vh 0 0;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  font-size: clamp(13px, 1.25vw, 22px);
+  letter-spacing: 0.08em;
+  color: #F5F5F5;
+  /* reserve the line so the layout doesn't jump while the role is retyped */
+  min-height: 1.5em;
+}
+
+.typewriterRole {
+  color: #FF5577;
+}
+
+/* 3D name heading the intro */
+.Intro .extrudedText {
+  font-size: min(6vw, 120px);
+  margin: clamp(20px, 4vh, 44px) 0 clamp(28px, 6vh, 64px);
+}
+
+@media (max-width: 768px) {
+  .Intro .extrudedText {
+    font-size: 9vw;
+  }
+}
+
 .Intro {
   color: #F5F5F5;
   font-family: 'Alliance No. 2 Bold', sans-serif;
@@ -24,9 +69,11 @@ body {
 /* Description */
 .Intro > h2 {
   font-family: 'Alliance No. 2 Bold';
-  font-size: clamp(20px, 2.5vw, 48px);
+  font-size: clamp(18px, 2vw, 38px);
   font-weight: 700;
-  width: 90%;
+  /* wrap at the middle of the screen */
+  width: auto;
+  max-width: calc(50vw - max(6.2vw, 20px));
   letter-spacing: 0.4px;
   line-height: 1.32;
   color: #e4e4e4;
@@ -68,6 +115,10 @@ h3 > a {
 .Intro a:hover {
   box-shadow: inset 100px 0 0 0 white;
   color: black;
+}
+
+.introHighlight {
+  color: #FF5577;
 }
 
 .pinkText {

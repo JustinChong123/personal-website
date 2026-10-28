@@ -8,7 +8,8 @@ const FLICKER_PATTERNS = 3
 // gradient: for gradient-filled text (set --flickerGradient on a parent). Each letter gets its own
 // slice of the gradient, because a single background-clip: text gradient can't show through
 // letters that are fading in.
-function FlickerText({ text, maxDelay = 0.3, play = true, gradient = false }) {
+// maxDelay: latest a letter starts flickering; duration: how long each letter flickers (seconds)
+function FlickerText({ text, maxDelay = 0.3, duration, play = true, gradient = false }) {
     const wrapperRef = useRef(null)
 
     const words = useMemo(() => text.split(' ').map((word) =>
@@ -47,7 +48,7 @@ function FlickerText({ text, maxDelay = 0.3, play = true, gradient = false }) {
                             <span
                                 key={i}
                                 className={`flickerChar flickerPattern${pattern}${gradient ? ' flickerCharGradient' : ''}`}
-                                style={{ animationDelay: `${delay.toFixed(2)}s` }}
+                                style={{ animationDelay: `${delay.toFixed(2)}s`, animationDuration: duration && `${duration}s` }}
                             >
                                 {char}
                             </span>

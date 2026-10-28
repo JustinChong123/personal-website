@@ -17,23 +17,31 @@
     column-gap: max(2vw, 10px);
 }
 
+.homeLink {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #000;
+    text-decoration: none;
+}
+
+.homeLinkText {
+    /* same typeface as the case study cover titles */
+    font-family: 'Alliance No. 2 Regular', sans-serif;
+    font-size: clamp(15px, 1.25vw, 22px);
+    line-height: 1;
+    color: #4A4A4F;
+    transition: color 0.15s ease;
+}
+
+.homeLink:hover .homeLinkText {
+    color: #000;
+}
+
 /* Logo */
 .logoPic {
     /* position: absolute;
     left: 3vw; */
-}
-
-/* "Justin Chong" */
-#homeStyle {
-    font-family: 'Alliance No. 2 Bold';
-    font-size: clamp(18px, 2vw, 40px);
-    font-weight: 800;
-    text-decoration: none;
-    background-image: linear-gradient(to right, #7FAADB, #B0E4BC, #F7DE6D, #F08339);
-    background-clip: text;
-    color: transparent;
-    /* used by the flickering letters, which each draw their own slice of the gradient */
-    --flickerGradient: linear-gradient(to right, #7FAADB, #B0E4BC, #F7DE6D, #F08339);
 }
 
 #caseStyle {
@@ -80,7 +88,7 @@
 }
 
 #about-me-button {
-    box-shadow: 3px 3px #99e9fc;
+    box-shadow: 3px 3px #FF5577;
 }
 
 #about-me-button-case {
@@ -89,16 +97,18 @@
 
 #about-me-button:hover {
     box-shadow: 3px 3px white;
-    background-color: #99e9fc;
+    background-color: var(--navHover, #FF5577);
+    color: #000;
 }
 
 #about-me-button-case:hover {
-    background-color: #99e9fc;
+    background-color: var(--navHover, #FF5577);
+    color: #000;
 }
 
 
 #email-me-button {
-    box-shadow: 3px 3px #99e9fc;
+    box-shadow: 3px 3px #FF5577;
 }
 
 #email-me-button-case {
@@ -108,17 +118,19 @@
 #email-me-button:hover {
     cursor: pointer;
     box-shadow: 3px 3px white;
-    background-color: #99e9fc;
+    background-color: var(--navHover, #FF5577);
+    color: #000;
 }
 
 #email-me-button-case:hover {
     cursor: pointer;
-    background-color: #99e9fc;
+    background-color: var(--navHover, #FF5577);
+    color: #000;
 }
 
 
 #linkedin-button {
-    box-shadow: 3px 3px #99e9fc;
+    box-shadow: 3px 3px #FF5577;
 }
 
 #linkedin-button-case {
@@ -127,11 +139,13 @@
 
 #linkedin-button:hover {
     box-shadow: 3px 3px white;
-    background-color: #99e9fc;
+    background-color: var(--navHover, #FF5577);
+    color: #000;
 }
 
 #linkedin-button-case:hover {
-    background-color: #99e9fc;
+    background-color: var(--navHover, #FF5577);
+    color: #000;
 }
 
 

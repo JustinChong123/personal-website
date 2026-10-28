@@ -11,8 +11,8 @@ import ipathMockup from './ipath-mockup.png'
 import envisionEarthMockup from './envision-earth-mockup.png'
 import personalWebsiteMockup from './personal-website-mockup.png'
 import dartmouthPathfinderMockup from './dartmouth-pathfinder-mockup.png'
-import AISalesMockup from './ai-sales-mockup.png'
-import AccountPortfolioMockup from './account-portfolio-mockup.png'
+import AISalesCardMockup from './ai-sales-card-mockup.svg'
+import AccountPortfolioCardMockup from './account-portfolio-card-mockup.svg'
 import AISparkleIcon from './ai-sparkle-icon.png'
 
 function Projects() {
@@ -51,7 +51,7 @@ function Projects() {
                             <h3 class="projectTag">B2B</h3>
                             <h3 class="projectTag">Cloud</h3>
                         </div>
-                        <img id="container3Mockup" src={AccountPortfolioMockup} alt='' />
+                        <img className="cardScreenshot" src={AISalesCardMockup} alt='MongoGPT Customer Insights chatbot' />
                     </div>
                 </Link>
 
@@ -67,7 +67,7 @@ function Projects() {
                             <h3 class="projectTag">Enterprise</h3>
                             <h3 class="projectTag">SaaS</h3>
                         </div>
-                        <img id="container3Mockup" src={AISalesMockup} alt='' />
+                        <img className="cardScreenshot" src={AccountPortfolioCardMockup} alt='Customer Hub account portfolio dashboard' />
                     </div>
                 </Link>
 

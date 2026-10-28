@@ -81,7 +81,8 @@ function AISalesIntelligence() {
                 >
                     {/* <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="greenCaseSideHeader">SOLUTION</h3>
+                            <h3 id="greenCaseSideHeader">PROJECT SUMMARY</h3>
+                            <h2>Solution</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">Enabling developers to holistically diagnose performance issues</h1>
@@ -91,7 +92,8 @@ function AISalesIntelligence() {
 
                     <div className="caseSection" id="project-summary">
                         <div className="caseSideHeader">
-                            <h3 id="greenCaseSideHeader">CONTEXT</h3>
+                            <h3 id="greenCaseSideHeader">PROJECT SUMMARY</h3>
+                            <h2>Context</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">You might be wondering... what is MongoDB?</h1>
@@ -102,7 +104,8 @@ function AISalesIntelligence() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="greenCaseSideHeader">SOLUTION</h3>
+                            <h3 id="greenCaseSideHeader">PROJECT SUMMARY</h3>
+                            <h2>Solution</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">AI-powered customer intelligence for business leaders at MongoDB</h1>
@@ -114,7 +117,8 @@ function AISalesIntelligence() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="greenCaseSideHeader">PROBLEM</h3>
+                            <h3 id="greenCaseSideHeader">PROJECT SUMMARY</h3>
+                            <h2>Problem</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">Business leaders are too removed from our customers in their day-to-day</h1>
@@ -125,7 +129,8 @@ function AISalesIntelligence() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="greenCaseSideHeader">SOLUTION OVERVIEW</h3>
+                            <h3 id="greenCaseSideHeader">PROJECT SUMMARY</h3>
+                            <h2>Solution Overview</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">Main features of this AI sales intelligence chatbot</h1>
