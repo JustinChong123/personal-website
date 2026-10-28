@@ -8,12 +8,14 @@ body {
   overflow-x: clip;
 }
 
-/* First screen: header on top, the intro centered vertically in the rest of the window */
+/* First screen: header on top, the intro centered vertically in the rest of the window. It stops
+   short of the window's bottom so the tops of the featured case studies peek above the fold. */
 .homeHero {
+  --caseStudyPeek: calc(6vh + 72px + 3.5vw); /* gap above the cards + their first row of text (which scales with width) */
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: calc(100vh - var(--caseStudyPeek));
+  min-height: calc(100svh - var(--caseStudyPeek));
 }
 
 .homeHero .Intro {
