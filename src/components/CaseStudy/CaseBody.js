@@ -1,4 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import FlickerText from '../FlickerText/FlickerText.js'
 import './CaseBody.css'
 
 /*
@@ -11,6 +12,7 @@ import './CaseBody.css'
 function CaseBody({ sections, accent, children }) {
     const [activeId, setActiveId] = useState(sections[0]?.id)
     const [indicator, setIndicator] = useState({ top: 0, height: 0 })
+    const [flicker, setFlicker] = useState({ id: null, count: 0 }) // the clicked item's label replays the flicker
     const itemRefs = useRef({})
     const sectionIds = sections.map(({ id }) => id).join(',')
 
@@ -53,6 +55,7 @@ function CaseBody({ sections, accent, children }) {
     // A very quick custom scroll: the browser's built-in smooth scroll is too slow over long pages
     const scrollToSection = (event, id) => {
         event.preventDefault()
+        setFlicker(({ count }) => ({ id, count: count + 1 }))
         const el = document.getElementById(id)
         if (!el) return
         const margin = parseFloat(getComputedStyle(el).scrollMarginTop) || 0
@@ -87,7 +90,7 @@ function CaseBody({ sections, accent, children }) {
                                 aria-current={id === activeId ? 'location' : undefined}
                                 onClick={(event) => scrollToSection(event, id)}
                             >
-                                {label}
+                                {flicker.id === id ? <FlickerText key={flicker.count} text={label} /> : label}
                             </a>
                         </li>
                     ))}
