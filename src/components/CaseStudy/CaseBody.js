@@ -46,6 +46,25 @@ function CaseBody({ sections, accent, children }) {
         }
     }, [sectionIds])
 
+    // Decode every image in the background once the page has loaded, so jumping between sections
+    // lands on images that are ready to paint instead of decoding (and flashing) mid-jump
+    useEffect(() => {
+        let cancelled = false
+        const warm = async () => {
+            for (const img of document.querySelectorAll('.caseBodyMain img')) {
+                if (cancelled) return
+                await img.decode().catch(() => {})
+            }
+        }
+        const start = () => (window.requestIdleCallback || setTimeout)(warm)
+        if (document.readyState === 'complete') start()
+        else window.addEventListener('load', start, { once: true })
+        return () => {
+            cancelled = true
+            window.removeEventListener('load', start)
+        }
+    }, [])
+
     // Slide the indicator bar to the active item
     useLayoutEffect(() => {
         const item = itemRefs.current[activeId]
