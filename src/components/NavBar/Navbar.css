@@ -5,7 +5,7 @@
     align-items: center;
     padding-left: max(2vw, 16px);
     padding-right: max(2vw, 16px);
-    padding-top: 1.5vh;
+    padding-top: clamp(20px, 3.5vh, 44px);
     z-index: 1000;
     position: relative;
 }
