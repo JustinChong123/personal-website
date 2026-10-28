@@ -67,7 +67,7 @@
 }
 
 #about-me-button {
-    box-shadow: 3px 3px #99e9fc;
+    box-shadow: 3px 3px #CB163F;
 }
 
 #about-me-button-case {
@@ -76,16 +76,18 @@
 
 #about-me-button:hover {
     box-shadow: 3px 3px white;
-    background-color: #99e9fc;
+    background-color: #CB163F;
+    color: #fff;
 }
 
 #about-me-button-case:hover {
-    background-color: #99e9fc;
+    background-color: #CB163F;
+    color: #fff;
 }
 
 
 #email-me-button {
-    box-shadow: 3px 3px #99e9fc;
+    box-shadow: 3px 3px #CB163F;
 }
 
 #email-me-button-case {
@@ -95,17 +97,19 @@
 #email-me-button:hover {
     cursor: pointer;
     box-shadow: 3px 3px white;
-    background-color: #99e9fc;
+    background-color: #CB163F;
+    color: #fff;
 }
 
 #email-me-button-case:hover {
     cursor: pointer;
-    background-color: #99e9fc;
+    background-color: #CB163F;
+    color: #fff;
 }
 
 
 #linkedin-button {
-    box-shadow: 3px 3px #99e9fc;
+    box-shadow: 3px 3px #CB163F;
 }
 
 #linkedin-button-case {
@@ -114,11 +118,13 @@
 
 #linkedin-button:hover {
     box-shadow: 3px 3px white;
-    background-color: #99e9fc;
+    background-color: #CB163F;
+    color: #fff;
 }
 
 #linkedin-button-case:hover {
-    background-color: #99e9fc;
+    background-color: #CB163F;
+    color: #fff;
 }
 
 
