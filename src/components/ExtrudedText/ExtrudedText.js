@@ -5,7 +5,7 @@ import './ExtrudedText.css'
 
 const DEPTH = 0.36 // em the letters extrude downwards
 const SLANT = 0.25 // sideways drift of the extrusion per unit of depth (positive = to the right)
-const LEAN = 0.2 // how far the tops of the red faces lean right, per unit of height (tilts them back)
+const LEAN = 0.13 // how far the tops of the red faces lean right, per unit of height (tilts them back)
 const SQUASH = 0.9 // vertical squash of the red faces, so they look tipped back
 const TRACKING = 0.01 // extra em between letters
 const SPACE = 0.3 // em width of a space
