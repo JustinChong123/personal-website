@@ -269,10 +269,11 @@
 /* Product screenshot inset from the card's sides, anchored so the card's bottom edge cuts it off */
 .cardScreenshot {
     position: absolute;
-    left: 8%;
-    bottom: -9%;
+    left: 4%;
+    /* always keep a little cut off by the card's bottom edge so it doesn't look like it's floating */
+    bottom: -4%;
     display: block;
-    width: 84%;
+    width: 92%;
     height: auto;
     border-radius: 10px 10px 0 0;
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
