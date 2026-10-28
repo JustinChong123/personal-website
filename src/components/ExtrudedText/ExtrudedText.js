@@ -2,9 +2,9 @@ import React, { useMemo } from 'react'
 import '../FlickerText/FlickerText.css'
 import './ExtrudedText.css'
 
-const DEPTH = 0.42 // em the letters extrude downwards
+const DEPTH = 0.5 // em the letters extrude downwards
 const STEP = 0.01 // em between the stacked copies that form the extrusion
-const SLANT = 0.06 // sideways drift of the extrusion per unit of depth (positive = to the right)
+const SLANT = 0.25 // sideways drift of the extrusion per unit of depth (positive = to the right)
 const FLICKER_PATTERNS = 3
 
 // Stacked text-shadows that draw the solid extruded side of a letter. Every letter extrudes in

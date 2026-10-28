@@ -1,4 +1,5 @@
 .extrudedText {
+    display: table;
     margin: 0.2em 0 0.6em;
     font-family: 'Raleway', sans-serif;
     font-weight: 900;
@@ -7,6 +8,9 @@
     letter-spacing: -0.02em;
     text-transform: uppercase;
     white-space: nowrap;
+    /* Tip the block back so the faces look squashed, as if the letters are lying back in 3D */
+    transform: perspective(40em) rotateX(38deg);
+    transform-origin: 50% 100%;
 }
 
 .extrudedLetter {
