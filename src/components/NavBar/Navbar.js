@@ -16,8 +16,10 @@ function Navbar({ onCase = false, hoverColor }) {
         <nav className="Navbar" style={hoverColor ? { '--navHover': hoverColor } : undefined}>
             <div className='logo'>
                 {onCase ? (
-                    <Link to="/">
-                        <img className="logoPic" onMouseEnter={() => setLogoHover(true)} onMouseLeave={() => setLogoHover(false)} src={logoHover ? logoBlackHover : logoBlack} alt='' width="40" height="40" />
+                    // Logo and "Home" are one link, so hovering either one fills in the logo
+                    <Link to="/" className="homeLink" onMouseEnter={() => setLogoHover(true)} onMouseLeave={() => setLogoHover(false)}>
+                        <img className="logoPic" src={logoHover ? logoBlackHover : logoBlack} alt='' width="40" height="40" />
+                        <span className="homeLinkText">Home</span>
                     </Link>
                 ) : (
                     <Link to="/"><img className="logoPic" onMouseEnter={() => setLogoHover(true)} onMouseLeave={() => setLogoHover(false)} src={logoHover ? logoWhiteHover : logoWhite} alt='' width="40" height="40" /></Link>

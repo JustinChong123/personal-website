@@ -273,3 +273,34 @@
     }
 }
 
+/* ===== Small phones: keep the logo, "Home" and all three buttons on one row ===== */
+@media (max-width: 420px) {
+    .Navbar {
+        column-gap: 8px;
+    }
+
+    .homeLink {
+        gap: 6px;
+    }
+
+    .homeLinkText {
+        font-size: 14px;
+    }
+
+    .navButtons {
+        column-gap: 6px;
+    }
+
+    .navButtons a, #email-me-button, #email-me-button-case {
+        padding: 7px 7px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+}
+
+/* Very narrow phones (e.g. 320px): no room for the word, the logo still links home */
+@media (max-width: 340px) {
+    .homeLinkText {
+        display: none;
+    }
+}
