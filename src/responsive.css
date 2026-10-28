@@ -274,10 +274,3 @@
     }
 }
 
-/* ===== Small phones ===== */
-@media (max-width: 480px) {
-    /* The logo links home, so the name can go to make room for the buttons */
-    #homeStyle {
-        display: none;
-    }
-}

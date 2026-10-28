@@ -8,17 +8,16 @@ body {
   overflow-x: clip;
 }
 
-/* First screen: header and intro at the top, the 3D name centered along the bottom */
-.homeHero {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  min-height: 100svh;
+/* 3D name heading the intro */
+.Intro .extrudedText {
+  font-size: min(6vw, 120px);
+  margin: 2vh 0 3vh;
 }
 
-.homeHero .extrudedText {
-  font-size: min(11.6vw, 240px);
-  margin: auto auto 5vh;
+@media (max-width: 768px) {
+  .Intro .extrudedText {
+    font-size: 9vw;
+  }
 }
 
 .Intro {

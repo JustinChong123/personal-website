@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import {Link} from 'react-router-dom'
-import FlickerText from '../FlickerText/FlickerText.js'
 import logoWhite from './logo.png'
 import logoWhiteHover from './logo-hover.png'
 import logoBlack from './logo-black.png'
@@ -20,12 +19,6 @@ function Navbar({ onCase = false }) {
                     </Link>
                 ) : (
                     <Link to="/"><img className="logoPic" onMouseEnter={() => setLogoHover(true)} onMouseLeave={() => setLogoHover(false)} src={logoHover ? logoWhiteHover : logoWhite} alt='' width="40" height="40" /></Link>
-                )}
-                
-                {onCase ? (
-                    null
-                ) : (
-                    <Link to="/" id='homeStyle'><FlickerText text="Justin Chong" gradient /></Link>
                 )}
                 
             </div>

@@ -23,19 +23,6 @@
     left: 3vw; */
 }
 
-/* "Justin Chong" */
-#homeStyle {
-    font-family: 'Alliance No. 2 Bold';
-    font-size: clamp(18px, 2vw, 40px);
-    font-weight: 800;
-    text-decoration: none;
-    background-image: linear-gradient(to right, #7FAADB, #B0E4BC, #F7DE6D, #F08339);
-    background-clip: text;
-    color: transparent;
-    /* used by the flickering letters, which each draw their own slice of the gradient */
-    --flickerGradient: linear-gradient(to right, #7FAADB, #B0E4BC, #F7DE6D, #F08339);
-}
-
 #caseStyle {
     font-family: 'Alliance No. 2 Bold';
     font-size: 2vw;
