@@ -6,6 +6,13 @@ import logoWhiteHover from './logo-hover.png'
 import logoBlack from './logo-black.png'
 import logoBlackHover from './logo-black-hover.png'
 
+// Arrow-out-of-box icon for buttons that leave the site
+const externalIcon = (
+    <svg className="navExternalIcon" viewBox="0 0 12 12" aria-hidden="true">
+        <path d="M5 2H2v8h8V7M7 2h3v3M10 2 5.5 6.5" />
+    </svg>
+)
+
 function Navbar({ onCase = false }) {
 
     const [logoHover, setLogoHover] = useState(false);
@@ -33,14 +40,14 @@ function Navbar({ onCase = false }) {
                 </li>
                 <li>
                     {onCase ? (
-                        <button className='navButton' id="email-me-button-case" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email</button>
+                        <button className='navButton' id="email-me-button-case" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email{externalIcon}</button>
                     ) : (
-                        <button className='navButton' id="email-me-button" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email</button>
+                        <button className='navButton' id="email-me-button" onClick={() => window.location = 'mailto:justinchong753@gmail.com'}>Email{externalIcon}</button>
                     )}
                     
                 </li>
                 <li>
-                    <a className='navButton' id={onCase ? 'linkedin-button-case' : 'linkedin-button'} href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a className='navButton' id={onCase ? 'linkedin-button-case' : 'linkedin-button'} href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">LinkedIn{externalIcon}</a>
                 </li>
             </ul>
         </nav>
