@@ -13,12 +13,13 @@ const externalIcon = (
     </svg>
 )
 
-function Navbar({ onCase = false }) {
+// hoverColor: background of the buttons on hover (case studies pass their own color)
+function Navbar({ onCase = false, hoverColor }) {
 
     const [logoHover, setLogoHover] = useState(false);
 
     return (
-        <nav className="Navbar">
+        <nav className="Navbar" style={hoverColor ? { '--navHover': hoverColor } : undefined}>
             <div className='logo'>
                 {onCase ? (
                     <Link to="/">

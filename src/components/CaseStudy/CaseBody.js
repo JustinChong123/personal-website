@@ -1,5 +1,5 @@
 import React, { useEffect, useLayoutEffect, useRef, useState } from 'react'
-import FlickerText from '../FlickerText/FlickerText.js'
+import '../FlickerText/FlickerText.css'
 import './CaseBody.css'
 
 /*
@@ -9,6 +9,27 @@ import './CaseBody.css'
  * element where that section starts inside children.
  * accent: color of the active section bar (defaults to the CSS value).
  */
+const FLICKER_PATTERNS = 3
+
+// Each letter flickers between its unselected look and its selected look before settling on selected
+function SelectFlicker({ text }) {
+    const [letters] = useState(() => text.split('').map((char) => ({
+        char,
+        delay: (Math.random() * 0.3).toFixed(2),
+        pattern: Math.floor(Math.random() * FLICKER_PATTERNS) + 1,
+    })))
+    return (
+        <span aria-label={text}>
+            {letters.map(({ char, delay, pattern }, i) => (
+                <span key={i} className="spyFlickerChar" aria-hidden="true">
+                    <span className={`spyFlickerOn flickerChar flickerPattern${pattern}`} style={{ animationDelay: `${delay}s` }}>{char}</span>
+                    <span className={`spyFlickerOff flickerChar flickerPattern${pattern}`} style={{ animationDelay: `${delay}s` }}>{char}</span>
+                </span>
+            ))}
+        </span>
+    )
+}
+
 function CaseBody({ sections, accent, children }) {
     const [activeId, setActiveId] = useState(sections[0]?.id)
     const [indicator, setIndicator] = useState({ top: 0, height: 0 })
@@ -109,7 +130,7 @@ function CaseBody({ sections, accent, children }) {
                                 aria-current={id === activeId ? 'location' : undefined}
                                 onClick={(event) => scrollToSection(event, id)}
                             >
-                                {flicker.id === id ? <FlickerText key={flicker.count} text={label} /> : label}
+                                {flicker.id === id ? <SelectFlicker key={flicker.count} text={label} /> : label}
                             </a>
                         </li>
                     ))}

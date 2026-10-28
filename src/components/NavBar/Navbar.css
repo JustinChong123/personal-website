@@ -88,12 +88,12 @@
 
 #about-me-button:hover {
     box-shadow: 3px 3px white;
-    background-color: #FF5577;
+    background-color: var(--navHover, #FF5577);
     color: #000;
 }
 
 #about-me-button-case:hover {
-    background-color: #FF5577;
+    background-color: var(--navHover, #FF5577);
     color: #000;
 }
 
@@ -109,13 +109,13 @@
 #email-me-button:hover {
     cursor: pointer;
     box-shadow: 3px 3px white;
-    background-color: #FF5577;
+    background-color: var(--navHover, #FF5577);
     color: #000;
 }
 
 #email-me-button-case:hover {
     cursor: pointer;
-    background-color: #FF5577;
+    background-color: var(--navHover, #FF5577);
     color: #000;
 }
 
@@ -130,12 +130,12 @@
 
 #linkedin-button:hover {
     box-shadow: 3px 3px white;
-    background-color: #FF5577;
+    background-color: var(--navHover, #FF5577);
     color: #000;
 }
 
 #linkedin-button-case:hover {
-    background-color: #FF5577;
+    background-color: var(--navHover, #FF5577);
     color: #000;
 }
 
