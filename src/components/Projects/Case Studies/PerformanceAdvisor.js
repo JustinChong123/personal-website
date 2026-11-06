@@ -24,8 +24,8 @@ function PerformanceAdvisor() {
             
             <div className="budgetBalloonContent">
 
-                <img id='paOverview' src={paOverview} alt='' width="100%"/>
-                <img id='paStats' src={paStats} alt='' width="100%"/>
+                <img loading="lazy" id='paOverview' src={paOverview} alt='' width="100%"/>
+                <img loading="lazy" id='paStats' src={paStats} alt='' width="100%"/>
 
                 {/* <div className="caseSection">
                     <div className="caseSideHeader">
@@ -44,7 +44,7 @@ function PerformanceAdvisor() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">An integrated performance insights tool</h1>
                         <p className="caseText">One of many data services that MongoDB offers, Performance Advisor is a <span className="fitkitchBoldText">critical point in the query diagnostics workflow</span> that analyzes slow queries and curates multiple types of performance recommendations. Developers and database administrators alike use it to <span className="fitkitchBoldText">optimize slow queries that hurt database performance and rack up unwanted costs.</span></p>
-                        <img id="paQueryModel" src={paQueryModel} width="700" alt=''/>
+                        <img loading="lazy" id="paQueryModel" src={paQueryModel} width="700" alt=''/>
                     </div>
                 </div>
 
@@ -54,7 +54,7 @@ function PerformanceAdvisor() {
                     </div>
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Lack of high-level integration</h1>
-                        <img id="paClusterInfoBanner" src={paClusterInfoBanner} width="700" alt=''/>
+                        <img loading="lazy" id="paClusterInfoBanner" src={paClusterInfoBanner} width="700" alt=''/>
                         <p className="caseText">Performance Advisor does not aggregate recommendations on the cluster-level, making it <span className="fitkitchBoldText">difficult for users to assess the overall health of their cluster,</span> especially for large, multi-shard deployments. Novice users struggle to prioritize critical recommendations, and enterprise customers need a way to isolate performance issues between operational vs. transactional workloads. </p>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ function PerformanceAdvisor() {
                 </div>
 
                 <div id='process-container'>
-                    <img id='paProcessMockup' src={paProcess} alt='hello' width="1000" height="400"/>
+                    <img loading="lazy" id='paProcessMockup' src={paProcess} alt='hello' width="1000" height="400"/>
                 </div>
 
                 <div className="caseSection">
@@ -84,7 +84,7 @@ function PerformanceAdvisor() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Improved functionality in 5+ domains</h1>
                         <p className="caseText">I integrated feedback from internal users by conducting usability studies. Overall, 5 core improvements in the product were identified as a whole:</p>
-                        <img id="paResults" src={paResults} width="750" alt=''/>
+                        <img loading="lazy" id="paResults" src={paResults} width="750" alt=''/>
                     </div>
                 </div>
 
@@ -95,7 +95,7 @@ function PerformanceAdvisor() {
                     </div>
                     <div className="caseMain">
                         <p id="noSectionHeader" className="caseText">This project was <span className="fitkitchBoldText">challenging and fast-paced,</span> but I collaborated tightly with my stakeholders and users to deliver designs that addressed the core issues with Performance Advisor. My designs are <span className="fitkitchBoldText">currently being implemented by the Cloud Core engineering team,</span> and we're planning on tracking conversion rates and other KPIs to assess customer adoption and feature discoverability. Here are 3 key takeaways I learned from this project. </p>
-                        <img id="paTakeaways" src={paTakeaways} width="950" alt=''/>
+                        <img loading="lazy" id="paTakeaways" src={paTakeaways} width="950" alt=''/>
                     </div>
                 </div>
 

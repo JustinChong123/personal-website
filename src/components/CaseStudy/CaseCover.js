@@ -29,6 +29,8 @@ function CaseCover({ title, tagline, company, role, mockups, mockupsHeight, back
                             key={src}
                             src={src}
                             alt={alt}
+                            // the first thing on the page: fetch it ahead of everything else
+                            fetchpriority="high"
                             style={{
                                 left: `${(x / DESIGN_WIDTH) * 100}%`,
                                 top: `${(y / mockupsHeight) * 100}%`,
