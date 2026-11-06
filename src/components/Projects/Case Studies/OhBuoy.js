@@ -36,8 +36,8 @@ function OhBuoy() {
                     <h1 className="caseSectionHeader" id="ohBuoyIntroQuestion">Preventing accidental child drowning</h1>
                     <p className="caseText" id="ohBuoyIntroText">Oh Buoy! is a <span className="fitkitchBoldText">self-inflating harness</span> that inflates upon submersion in water to prevent children aged 2-4 from <span className="fitkitchBoldText">accidentally drowning in pools.</span></p>
                     <p className="caseText" id="ohBuoyIntroText"><span className="fitkitchBoldText">Drowning is the #1 leading cause</span> of accidental death for 2-4 year old children and can cause permanent physical and psychological damage. We wanted to create an <span className="fitkitchBoldText">everyday wearable product</span> to ensure children's safety if they fall into a pool.</p>
-                    <img id="ohBuoyStats" src={ohBuoyStats} width="250" height="580" />
-                    {/* <img id="budgetBalloonBestMockups" src={budgetBalloonBestMockups} width="900" height="406" /> */}
+                    <img loading="lazy" id="ohBuoyStats" src={ohBuoyStats} width="250" height="580" />
+                    {/* <img loading="lazy" id="budgetBalloonBestMockups" src={budgetBalloonBestMockups} width="900" height="406" /> */}
                 </div>
 
                 <div id="ohBuoyOrangeBackground"className="caseSection">
@@ -56,7 +56,7 @@ function OhBuoy() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Why is aquatic safety for young children important?</h1>
                         <p className="caseText">A <span className="fitkitchBoldText">staggering 900 children die every year</span> from accidental drowning, mostly in household pools. Children who survive drowning suffer from potentially lifelong physical, neurological, and psychological damage.</p>
-                        <img src={ohBuoyProblem} width="800" />
+                        <img loading="lazy" src={ohBuoyProblem} width="800" />
                     </div>
                 </div>
 
@@ -66,7 +66,7 @@ function OhBuoy() {
                     </div>
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">How does Oh Buoy! work?</h1>
-                        <img id="ohBuoyOverview" src={ohBuoyOverview} width="950"/>
+                        <img loading="lazy" id="ohBuoyOverview" src={ohBuoyOverview} width="950"/>
                     </div>
                 </div>
 
@@ -76,11 +76,11 @@ function OhBuoy() {
                     </div>
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">What our <span id="designThinkingGradient">design thinking</span> looked like from start to end</h1>
-                        <img src={ohBuoyDesignThinking} width="1000"/>
+                        <img loading="lazy" src={ohBuoyDesignThinking} width="1000"/>
                     </div>
                 </div>
 
-                <img className="caseStudyHeading" src={ohBuoyUserResearch} width="1440"/>
+                <img loading="lazy" className="caseStudyHeading" src={ohBuoyUserResearch} width="1440"/>
 
                 <div className="caseSection">
                     <div className="caseSideHeader">
@@ -88,7 +88,7 @@ function OhBuoy() {
                         <h2>Problem Discovery</h2>
                     </div>
                     <div className="caseMain">
-                        <img src={ohBuoyProblemStatement} width="900"/>
+                        <img loading="lazy" src={ohBuoyProblemStatement} width="900"/>
                     </div>
                 </div>
 
@@ -100,7 +100,7 @@ function OhBuoy() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Identifying our users, purchasers, and relevant stakeholders</h1>
                         <p className="caseText">We conducted a stakeholder analysis to inform our design process to not only make it user-friendly, but make it <span className="fitkitchBoldText">appealing for parents to buy</span> and potentially partnering with other stakeholders who influence our <span className="fitkitchBoldText">product design and business plan.</span></p>
-                        <img src={ohBuoyStakeholders} width="800"/>
+                        <img loading="lazy" src={ohBuoyStakeholders} width="800"/>
                     </div>
                 </div>
 
@@ -112,7 +112,7 @@ function OhBuoy() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Current state-of-the-art solutions are inaccessible and ineffective</h1>
                         <p className="caseText">In charge of competitive analysis, I researched current state-of-the-art solutions and patents to <span className="fitkitchBoldText">discover how to differentiate our product and address shortcomings</span> in current solutions to prevent child drowning. We identified three main categories in the aquatic safety market and solidified how our product fills an unmet niche.</p>
-                        <img src={ohBuoyCompetitiveAnalysis} width="900"/>
+                        <img loading="lazy" src={ohBuoyCompetitiveAnalysis} width="900"/>
                     </div>
                 </div>
 
@@ -124,7 +124,7 @@ function OhBuoy() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Talking to users and purchasers about wearability</h1>
                         <p className="caseText">We all conducted user interviews with various parents of 2-4 year old children. Here are our three main takeaways.</p>
-                        <img src={ohBuoyInterviews} width="900"/>
+                        <img loading="lazy" src={ohBuoyInterviews} width="900"/>
                     </div>
                 </div>
 
@@ -136,11 +136,11 @@ function OhBuoy() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Launching a survey to collect purchaser input</h1>
                         <p className="caseText">While 2-4 year old children are our users, our purchasers are their parents, so it was important for us to receive feedback and input from them to inform our design decisions. We launched a survey on <span className="fitkitchBoldText">parent-related forums</span> on Facebook and Reddit to collect information, and we received <span className="fitkitchBoldText">34 responses.</span></p>
-                        <img src={ohBuoyPurchaserSurvey} width="950"/>
+                        <img loading="lazy" src={ohBuoyPurchaserSurvey} width="950"/>
                     </div>
                 </div>
 
-                <img className="caseStudyHeading" src={ohBuoyPrototyping} width="1440"/>
+                <img loading="lazy" className="caseStudyHeading" src={ohBuoyPrototyping} width="1440"/>
 
                 <div className="caseSection">
                     <div className="caseSideHeader">
@@ -150,7 +150,7 @@ function OhBuoy() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Establishing specifications for our product to achieve</h1>
                         <p className="caseText">Before we jump into ideation, we established <span className="fitkitchBoldText">11 specifications</span> to guide our design and prototyping process. We also defined a <span className="fitkitchBoldText">quantification</span> for each specification, and a <span className="fitkitchBoldText">test</span> to determine if our product meets each specification.</p>
-                        <img src={ohBuoySpecifications} width="950"/>
+                        <img loading="lazy" src={ohBuoySpecifications} width="950"/>
                     </div>
                 </div>
 
@@ -161,7 +161,7 @@ function OhBuoy() {
                     </div>
                     <div className="caseMain">
                         <p className="caseText" id="noSectionHeader">From our 11 specifications, these are three most important design objectives to strongly guide our design and engineering direction.</p>
-                        <img src={ohBuoyDesignObjectives} width="900"/>
+                        <img loading="lazy" src={ohBuoyDesignObjectives} width="900"/>
                     </div>
                 </div>
 
@@ -173,7 +173,7 @@ function OhBuoy() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Brainstorming and ranking possible solutions</h1>
                         <p className="caseText">After establishing our design objectives, we jumped into diverging and ideating as many creative, wild solutions as possible. To <span className="fitkitchBoldText">quantitatively assess the potential of our ideas,</span> we used an alternatives matrix to score each idea against our 11 specifications, which had different weights according to their importance. </p>
-                        <img src={ohBuoyAlternativesMatrix} width="950"/>
+                        <img loading="lazy" src={ohBuoyAlternativesMatrix} width="950"/>
                     </div>
                 </div>
 
@@ -185,7 +185,7 @@ function OhBuoy() {
                     <div className="caseMain">
                         <h1 className="caseSectionHeader">Sketching different variations of a necklace prototype</h1>
                         {/* <p className="caseText">After establishing our design objectives, we jumped into diverging and ideating as many creative, wild solutions as possible. To <span className="fitkitchBoldText">quantitatively assess the potential of our ideas,</span> we used an alternatives matrix to score each idea against our 11 specifications, which had different weights according to their importance. </p>
-                        <img src={ohBuoyAlternativesMatrix} width="950"/> */}
+                        <img loading="lazy" src={ohBuoyAlternativesMatrix} width="950"/> */}
                     </div>
                 </div>
             </div>

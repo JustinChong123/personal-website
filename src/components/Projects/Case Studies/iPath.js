@@ -22,7 +22,7 @@ function IPath() {
                     <h1 className="caseSectionHeader" id="ipathIntroQuestion">How does iPath increase equitable access to healthcare?</h1>
                     <p className="caseText" id="ipathIntroText">iPath is a mobile app that works offline to enable <span className="fitkitchBoldText">rural cancer patients to filter and search for local treatment providers for depression.</span> Its core features are a depression screening survey, interactive decision aid, and comparison of treatment options. </p>
                     <p className="caseText" id="ipathIntroText">In 10 weeks, we engaged in an end-to-end UX process and <span className="fitkitchBoldText">deployed a fully functional app</span> on TestFlight. The app is designed to work offline for rural patients who <span className="fitkitchBoldText">lack consistent Internet access</span> and uses Cloud Firebase and Google Identity Platform for HIPAA-compliant data protection and user authentication.</p>
-                    <img id="ipathStats" src={ipathStats} width="230" height="610" />
+                    <img loading="lazy" id="ipathStats" src={ipathStats} width="230" height="610" />
                 </div>
 
                 <div id="ipathGreenBackground"className="caseSection">
