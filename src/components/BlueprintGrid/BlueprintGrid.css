@@ -61,6 +61,41 @@
     font-size: 13px;
 }
 
+/* Page-load intro (~1s, finishing with the JUSTIN CHONG flicker) */
+.bpFlicker {
+    animation-timing-function: step-end;
+    animation-fill-mode: both;
+}
+
+.bpExtendH,
+.bpExtendV {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: bpExtendH 0.85s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
+}
+
+.bpExtendV {
+    animation-name: bpExtendV;
+}
+
+@keyframes bpExtendH {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+@keyframes bpExtendV {
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bpFlicker,
+    .bpExtendH,
+    .bpExtendV {
+        animation: none;
+    }
+}
+
 /* Hover crosshair */
 .bpCrosshair {
     transition: transform 0.12s ease-out;

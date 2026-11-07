@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import '../FlickerText/FlickerText.css'
 import './BlueprintGrid.css'
 
 const CELL = 24 // grid cell size; everything below is positioned in whole cells
@@ -70,8 +71,27 @@ const FLOWER_REACH = (() => {
     return max
 })()
 
-const HLine = ({ x1, x2, y }) => <rect className="bpGuide" x={x1} y={y - 0.5} width={x2 - x1} height="1" fill="url(#bpFadeH)" />
-const VLine = ({ x, y1, y2 }) => <rect className="bpGuide" x={x - 0.5} y={y1} width="1" height={y2 - y1} fill="url(#bpFadeV)" />
+// (on page load they grow outwards from the middle, i.e. from the shape)
+const HLine = ({ x1, x2, y }) => <rect className="bpGuide bpExtendH" x={x1} y={y - 0.5} width={x2 - x1} height="1" fill="url(#bpFadeH)" />
+const VLine = ({ x, y1, y2 }) => <rect className="bpGuide bpExtendV" x={x - 0.5} y={y1} width="1" height={y2 - y1} fill="url(#bpFadeV)" />
+
+/*
+ * Page-load intro, timed to finish with the JUSTIN CHONG flicker (~1s): each part of a shape flickers
+ * in, starting at a random moment in the first 0.6s and flickering for 0.4s.
+ */
+const INTRO_MAX_DELAY = 0.6
+const INTRO_FLICKER = 0.4
+function Flicker({ children }) {
+    const [{ delay, pattern }] = useState(() => ({
+        delay: (Math.random() * INTRO_MAX_DELAY).toFixed(2),
+        pattern: Math.floor(Math.random() * 3) + 1,
+    }))
+    return (
+        <g className={`bpFlicker flickerPattern${pattern}`} style={{ animationDelay: `${delay}s`, animationDuration: `${INTRO_FLICKER}s` }}>
+            {children}
+        </g>
+    )
+}
 
 const DIM_INSET = 3 // a ruler's ends stop just short of the grid lines it measures between
 
@@ -210,31 +230,31 @@ function BlueprintGrid() {
                 <HLine x1={BAR.x - 4 * CELL} x2={barRight + 4 * CELL} y={BAR.y + BAR.h} />
                 <VLine x={BAR.x} y1={BAR.y - 3 * CELL} y2={BAR.y + BAR.h + 3 * CELL} />
                 <VLine x={barRight} y1={BAR.y - 3 * CELL} y2={BAR.y + BAR.h + 3 * CELL} />
-                <rect className="bpShape" x={BAR.x} y={BAR.y} width={barW} height={BAR.h} rx={BAR.h / 2} />
-                <Dim x1={BAR.x} x2={barRight} y={BAR.y - 20} label={Math.round(barW / CELL) * 10} />
-                <text className="bpLabel" x={BAR.x - 16} y={BAR.y + BAR.h / 2 + 4} textAnchor="end">10</text>
+                <Flicker><rect className="bpShape" x={BAR.x} y={BAR.y} width={barW} height={BAR.h} rx={BAR.h / 2} /></Flicker>
+                <Flicker><Dim x1={BAR.x} x2={barRight} y={BAR.y - 20} label={Math.round(barW / CELL) * 10} /></Flicker>
+                <Flicker><text className="bpLabel" x={BAR.x - 16} y={BAR.y + BAR.h / 2 + 4} textAnchor="end">10</text></Flicker>
 
                 {/* Squiggly circle */}
-                <g className="bpStar">
+                <Flicker><g className="bpStar">
                     {[0, 45, 90, 135].map((a) => {
                         const rad = (a * Math.PI) / 180, len = box + 1.6 * CELL
                         return <line key={a} x1={FLOWER.cx - Math.cos(rad) * len} y1={FLOWER.cy - Math.sin(rad) * len} x2={FLOWER.cx + Math.cos(rad) * len} y2={FLOWER.cy + Math.sin(rad) * len} />
                     })}
-                </g>
+                </g></Flicker>
                 <HLine x1={FLOWER.cx - box - 3 * CELL} x2={FLOWER.cx + box + 3 * CELL} y={FLOWER.cy - box} />
                 <HLine x1={FLOWER.cx - box - 3 * CELL} x2={FLOWER.cx + box + 3 * CELL} y={FLOWER.cy + box} />
                 <VLine x={FLOWER.cx - box} y1={FLOWER.cy - box - 3 * CELL} y2={FLOWER.cy + box + 3 * CELL} />
                 <VLine x={FLOWER.cx + box} y1={FLOWER.cy - box - 3 * CELL} y2={FLOWER.cy + box + 3 * CELL} />
-                <path className="bpShape" d={flowerPath(FLOWER.cx, FLOWER.cy, r)} />
-                <VDim y1={FLOWER.cy - box} y2={FLOWER.cy + box} x={FLOWER.cx - box - 0.8 * CELL} label={Math.round((2 * box) / CELL) * 10} />
+                <Flicker><path className="bpShape" d={flowerPath(FLOWER.cx, FLOWER.cy, r)} /></Flicker>
+                <Flicker><VDim y1={FLOWER.cy - box} y2={FLOWER.cy + box} x={FLOWER.cx - box - 0.8 * CELL} label={Math.round((2 * box) / CELL) * 10} /></Flicker>
 
                 {/* Window header */}
                 <HLine x1={winX - 4 * CELL} x2={winRight + 4 * CELL} y={WINDOW.y} />
                 <VLine x={winX} y1={WINDOW.y - 3 * CELL} y2={WINDOW.y + 6 * CELL} />
                 <VLine x={winRight} y1={WINDOW.y - 3 * CELL} y2={WINDOW.y + 6 * CELL} />
-                <path className="bpShape" mask="url(#bpWindowMask)" d={`M${winX} ${WINDOW.y + 5 * CELL}V${WINDOW.y + 6}a6 6 0 0 1 6 -6H${winRight - 6}a6 6 0 0 1 6 6V${WINDOW.y + 5 * CELL}M${winX} ${WINDOW.y + WINDOW.bar}H${winRight}`} />
-                {[0, 1, 2].map((i) => <circle key={i} className="bpShape" cx={winX + 20 + i * 18} cy={WINDOW.y + WINDOW.bar / 2} r="4.5" />)}
-                <Dim x1={winX} x2={winRight} y={WINDOW.y - 22} label={(WINDOW.w / CELL) * 10} />
+                <Flicker><path className="bpShape" mask="url(#bpWindowMask)" d={`M${winX} ${WINDOW.y + 5 * CELL}V${WINDOW.y + 6}a6 6 0 0 1 6 -6H${winRight - 6}a6 6 0 0 1 6 6V${WINDOW.y + 5 * CELL}M${winX} ${WINDOW.y + WINDOW.bar}H${winRight}`} /></Flicker>
+                <Flicker>{[0, 1, 2].map((i) => <circle key={i} className="bpShape" cx={winX + 20 + i * 18} cy={WINDOW.y + WINDOW.bar / 2} r="4.5" />)}</Flicker>
+                <Flicker><Dim x1={winX} x2={winRight} y={WINDOW.y - 22} label={(WINDOW.w / CELL) * 10} /></Flicker>
 
                 {/* Crosshair at the grid intersection nearest the pointer: bright where the lines cross,
                     fading within one cell to a faint line that runs across the whole grid */}
