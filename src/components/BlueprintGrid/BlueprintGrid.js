@@ -3,7 +3,7 @@ import './BlueprintGrid.css'
 
 const CELL = 24 // grid cell size; everything below is positioned in whole cells
 const COLS = 22
-const ROWS = 24 // the drawing is 22 x 24 cells; it scales to fit the area's height
+const ROWS = 21 // the drawing is 22 x 21 cells; it scales to fit the area
 const W = COLS * CELL
 const H = ROWS * CELL
 
@@ -14,9 +14,9 @@ const H = ROWS * CELL
  * (centered on a cell, so its edges sit on grid lines), and the window header slides 3 cells left.
  * Each has its own timing, so they drift in and out of step instead of moving in unison.
  */
-const BAR = { x: 5 * CELL, y: 12 * CELL, h: CELL, w: [4 * CELL, 6 * CELL], hold: 1500, move: 1250, delay: 0 }
-const FLOWER = { cx: 16.5 * CELL, cy: 5.5 * CELL, half: [1.5 * CELL, 2.5 * CELL], hold: 1900, move: 1550, delay: 650 }
-const WINDOW = { x: [10 * CELL, 7 * CELL], y: 17 * CELL, w: 12 * CELL, bar: CELL, hold: 1700, move: 1400, delay: 1300 }
+const BAR = { x: 5 * CELL, y: 10 * CELL, h: CELL, w: [4 * CELL, 6 * CELL], hold: 1500, move: 1250, delay: 0 }
+const FLOWER = { cx: 16.5 * CELL, cy: 4.5 * CELL, half: [1.5 * CELL, 2.5 * CELL], hold: 1900, move: 1550, delay: 650 }
+const WINDOW = { x: [9 * CELL, 6 * CELL], y: 15 * CELL, w: 12 * CELL, bar: CELL, hold: 1700, move: 1400, delay: 1300 }
 const SHAPES = [BAR, FLOWER, WINDOW]
 
 const lerp = ([a, b], t) => a + (b - a) * t
