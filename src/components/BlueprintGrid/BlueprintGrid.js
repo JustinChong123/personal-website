@@ -18,7 +18,6 @@ const BAR = { x: 5 * CELL, y: 12 * CELL, h: CELL, w: [4 * CELL, 6 * CELL], hold:
 const FLOWER = { cx: 16.5 * CELL, cy: 5.5 * CELL, half: [1.5 * CELL, 2.5 * CELL], hold: 1900, move: 1550, delay: 650 }
 const WINDOW = { x: [10 * CELL, 7 * CELL], y: 17 * CELL, w: 12 * CELL, bar: CELL, hold: 1700, move: 1400, delay: 1300 }
 const SHAPES = [BAR, FLOWER, WINDOW]
-const BAR_INSET = 3 // the bar sits just inside its grid lines instead of on them
 
 const lerp = ([a, b], t) => a + (b - a) * t
 const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
@@ -59,12 +58,26 @@ const FLOWER_REACH = (() => {
 const HLine = ({ x1, x2, y }) => <rect className="bpGuide" x={x1} y={y - 0.5} width={x2 - x1} height="1" fill="url(#bpFadeH)" />
 const VLine = ({ x, y1, y2 }) => <rect className="bpGuide" x={x - 0.5} y={y1} width="1" height={y2 - y1} fill="url(#bpFadeV)" />
 
-// A measurement with end ticks and a centered label
+const DIM_INSET = 3 // a ruler's ends stop just short of the grid lines it measures between
+
+// A horizontal ruler with end ticks and a centered label above it
 function Dim({ x1, x2, y, label }) {
+    const a = x1 + DIM_INSET, b = x2 - DIM_INSET
     return (
         <g className="bpDim">
-            <path d={`M${x1} ${y}H${x2}M${x1} ${y - 4}v8M${x2} ${y - 4}v8`} />
+            <path d={`M${a} ${y}H${b}M${a} ${y - 4}v8M${b} ${y - 4}v8`} />
             <text x={(x1 + x2) / 2} y={y - 8} textAnchor="middle">{label}</text>
+        </g>
+    )
+}
+
+// A vertical ruler with end ticks and its label to the left
+function VDim({ y1, y2, x, label }) {
+    const a = y1 + DIM_INSET, b = y2 - DIM_INSET
+    return (
+        <g className="bpDim">
+            <path d={`M${x} ${a}V${b}M${x - 4} ${a}h8M${x - 4} ${b}h8`} />
+            <text x={x - 8} y={(y1 + y2) / 2 + 4} textAnchor="end">{label}</text>
         </g>
     )
 }
@@ -141,7 +154,7 @@ function BlueprintGrid() {
                 <HLine x1={BAR.x - 4 * CELL} x2={barRight + 4 * CELL} y={BAR.y + BAR.h} />
                 <VLine x={BAR.x} y1={BAR.y - 3 * CELL} y2={BAR.y + BAR.h + 3 * CELL} />
                 <VLine x={barRight} y1={BAR.y - 3 * CELL} y2={BAR.y + BAR.h + 3 * CELL} />
-                <rect className="bpShape" x={BAR.x + BAR_INSET} y={BAR.y + BAR_INSET} width={barW - 2 * BAR_INSET} height={BAR.h - 2 * BAR_INSET} rx={BAR.h / 2 - BAR_INSET} />
+                <rect className="bpShape" x={BAR.x} y={BAR.y} width={barW} height={BAR.h} rx={BAR.h / 2} />
                 <Dim x1={BAR.x} x2={barRight} y={BAR.y - 20} label={Math.round(barW / CELL) * 10} />
                 <text className="bpLabel" x={BAR.x - 16} y={BAR.y + BAR.h / 2 + 4} textAnchor="end">10</text>
 
@@ -157,7 +170,7 @@ function BlueprintGrid() {
                 <VLine x={FLOWER.cx - box} y1={FLOWER.cy - box - 3 * CELL} y2={FLOWER.cy + box + 3 * CELL} />
                 <VLine x={FLOWER.cx + box} y1={FLOWER.cy - box - 3 * CELL} y2={FLOWER.cy + box + 3 * CELL} />
                 <path className="bpShape" d={flowerPath(FLOWER.cx, FLOWER.cy, r)} />
-                <Dim x1={FLOWER.cx - box} x2={FLOWER.cx + box} y={FLOWER.cy - box - 0.8 * CELL} label={Math.round((2 * box) / CELL) * 10} />
+                <VDim y1={FLOWER.cy - box} y2={FLOWER.cy + box} x={FLOWER.cx - box - 0.8 * CELL} label={Math.round((2 * box) / CELL) * 10} />
 
                 {/* Window header */}
                 <HLine x1={winX - 4 * CELL} x2={winRight + 4 * CELL} y={WINDOW.y} />
