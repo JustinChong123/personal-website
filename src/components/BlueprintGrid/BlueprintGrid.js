@@ -8,6 +8,7 @@ const W = COLS * CELL
 const H = ROWS * CELL
 
 /*
+ * Measurement labels read 10 per grid cell.
  * The three shapes, each with a start and end state, in grid cells:
  * the bar stretches 2 cells to the right, the squiggly circle grows from a 3-cell to a 5-cell square
  * (centered on a cell, so its edges sit on grid lines), and the window header slides 3 cells left.
@@ -15,8 +16,9 @@ const H = ROWS * CELL
  */
 const BAR = { x: 5 * CELL, y: 12 * CELL, h: CELL, w: [4 * CELL, 6 * CELL], hold: 1500, move: 1250, delay: 0 }
 const FLOWER = { cx: 16.5 * CELL, cy: 5.5 * CELL, half: [1.5 * CELL, 2.5 * CELL], hold: 1900, move: 1550, delay: 650 }
-const WINDOW = { x: [10 * CELL, 7 * CELL], y: 17 * CELL, w: 10 * CELL, bar: CELL, hold: 1700, move: 1400, delay: 1300 }
+const WINDOW = { x: [10 * CELL, 7 * CELL], y: 17 * CELL, w: 12 * CELL, bar: CELL, hold: 1700, move: 1400, delay: 1300 }
 const SHAPES = [BAR, FLOWER, WINDOW]
+const BAR_INSET = 3 // the bar sits just inside its grid lines instead of on them
 
 const lerp = ([a, b], t) => a + (b - a) * t
 const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
@@ -139,7 +141,7 @@ function BlueprintGrid() {
                 <HLine x1={BAR.x - 4 * CELL} x2={barRight + 4 * CELL} y={BAR.y + BAR.h} />
                 <VLine x={BAR.x} y1={BAR.y - 3 * CELL} y2={BAR.y + BAR.h + 3 * CELL} />
                 <VLine x={barRight} y1={BAR.y - 3 * CELL} y2={BAR.y + BAR.h + 3 * CELL} />
-                <rect className="bpShape" x={BAR.x} y={BAR.y} width={barW} height={BAR.h} rx={BAR.h / 2} />
+                <rect className="bpShape" x={BAR.x + BAR_INSET} y={BAR.y + BAR_INSET} width={barW - 2 * BAR_INSET} height={BAR.h - 2 * BAR_INSET} rx={BAR.h / 2 - BAR_INSET} />
                 <Dim x1={BAR.x} x2={barRight} y={BAR.y - 20} label={Math.round(barW / CELL) * 10} />
                 <text className="bpLabel" x={BAR.x - 16} y={BAR.y + BAR.h / 2 + 4} textAnchor="end">10</text>
 
@@ -155,7 +157,7 @@ function BlueprintGrid() {
                 <VLine x={FLOWER.cx - box} y1={FLOWER.cy - box - 3 * CELL} y2={FLOWER.cy + box + 3 * CELL} />
                 <VLine x={FLOWER.cx + box} y1={FLOWER.cy - box - 3 * CELL} y2={FLOWER.cy + box + 3 * CELL} />
                 <path className="bpShape" d={flowerPath(FLOWER.cx, FLOWER.cy, r)} />
-                <text className="bpLabel" x={FLOWER.cx - box - 14} y={FLOWER.cy + 4} textAnchor="end">{Math.round((2 * box) / CELL) * 4}</text>
+                <Dim x1={FLOWER.cx - box} x2={FLOWER.cx + box} y={FLOWER.cy - box - 0.8 * CELL} label={Math.round((2 * box) / CELL) * 10} />
 
                 {/* Window header */}
                 <HLine x1={winX - 4 * CELL} x2={winRight + 4 * CELL} y={WINDOW.y} />
@@ -163,7 +165,7 @@ function BlueprintGrid() {
                 <VLine x={winRight} y1={WINDOW.y - 3 * CELL} y2={WINDOW.y + 6 * CELL} />
                 <path className="bpShape" mask="url(#bpWindowMask)" d={`M${winX} ${WINDOW.y + 5 * CELL}V${WINDOW.y + 6}a6 6 0 0 1 6 -6H${winRight - 6}a6 6 0 0 1 6 6V${WINDOW.y + 5 * CELL}M${winX} ${WINDOW.y + WINDOW.bar}H${winRight}`} />
                 {[0, 1, 2].map((i) => <circle key={i} className="bpShape" cx={winX + 20 + i * 18} cy={WINDOW.y + WINDOW.bar / 2} r="4.5" />)}
-                <Dim x1={winX} x2={winRight} y={WINDOW.y - 22} label="80" />
+                <Dim x1={winX} x2={winRight} y={WINDOW.y - 22} label={(WINDOW.w / CELL) * 10} />
             </svg>
         </div>
     )
