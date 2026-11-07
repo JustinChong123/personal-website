@@ -19,6 +19,21 @@ const FLOWER = { cx: 16.5 * CELL, cy: 4.5 * CELL, half: [1.5 * CELL, 2.5 * CELL]
 const WINDOW = { x: [9 * CELL, 6 * CELL], y: 15 * CELL, w: 12 * CELL, bar: CELL, hold: 1700, move: 1400, delay: 1300 }
 const SHAPES = [BAR, FLOWER, WINDOW]
 
+// Hover crosshair: long enough to cross the whole grid from any point; opacity by distance from the center
+const CROSS_REACH = 2 * Math.max(W, H)
+const CROSS_FALLOFF = [[0, 1], [0.25, 0.45], [1, 0.12], [2, 0.07]] // [cells from center, opacity]
+const CROSS_STOPS = (() => {
+    const at = (cells) => (CROSS_REACH + cells * CELL) / (2 * CROSS_REACH)
+    const side = CROSS_FALLOFF.slice(1).map(([c, o]) => [c, o])
+    return [
+        [0, 0.05],
+        ...side.slice().reverse().map(([c, o]) => [at(-c), o]),
+        [0.5, 1],
+        ...side.map(([c, o]) => [at(c), o]),
+        [1, 0.05],
+    ]
+})()
+
 const lerp = ([a, b], t) => a + (b - a) * t
 const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
 
@@ -179,6 +194,13 @@ function BlueprintGrid() {
                     <mask id="bpWindowMask" maskContentUnits="userSpaceOnUse">
                         <rect x={-W} y={WINDOW.y - CELL} width={3 * W} height={6 * CELL} fill="url(#bpWindowFade)" />
                     </mask>
+                    {['H', 'V'].map((dir) => (
+                        <linearGradient key={dir} id={`bpCross${dir}`} gradientUnits="userSpaceOnUse"
+                            x1={dir === 'H' ? -CROSS_REACH : 0} x2={dir === 'H' ? CROSS_REACH : 0}
+                            y1={dir === 'V' ? -CROSS_REACH : 0} y2={dir === 'V' ? CROSS_REACH : 0}>
+                            {CROSS_STOPS.map(([offset, opacity], i) => <stop key={i} offset={offset} stopColor="#fff" stopOpacity={opacity} />)}
+                        </linearGradient>
+                    ))}
                 </defs>
                 {/* the grid runs past the drawing so it fills the whole area whatever its shape */}
                 <rect x={-2 * W} y={-H} width={5 * W} height={3 * H} fill="url(#bpCell)" />
@@ -214,13 +236,13 @@ function BlueprintGrid() {
                 {[0, 1, 2].map((i) => <circle key={i} className="bpShape" cx={winX + 20 + i * 18} cy={WINDOW.y + WINDOW.bar / 2} r="4.5" />)}
                 <Dim x1={winX} x2={winRight} y={WINDOW.y - 22} label={(WINDOW.w / CELL) * 10} />
 
-                {/* Crosshair at the grid intersection nearest the pointer */}
+                {/* Crosshair at the grid intersection nearest the pointer: bright where the lines cross,
+                    fading within one cell to a faint line that runs across the whole grid */}
                 {hover && (
                     <g className="bpCrosshair" style={{ transform: `translate(${hover.col * CELL}px, ${hover.row * CELL}px)` }}>
-                        <HLine x1={-4 * CELL} x2={4 * CELL} y={0} />
-                        <VLine x={0} y1={-4 * CELL} y2={4 * CELL} />
-                        <circle r="2.5" />
-                        <text x="8" y="-8">[{hover.col}, {hover.row}]</text>
+                        <rect x={-CROSS_REACH} y={-0.5} width={2 * CROSS_REACH} height="1" fill="url(#bpCrossH)" />
+                        <rect x={-0.5} y={-CROSS_REACH} width="1" height={2 * CROSS_REACH} fill="url(#bpCrossV)" />
+                        <text x="8" y="-8">[{hover.col * 10}, {hover.row * 10}]</text>
                     </g>
                 )}
             </svg>
