@@ -1,16 +1,16 @@
-/* Right half of the landing page's first screen, fading out towards the text on the left */
+/* Right side of the landing page's first screen, fading out towards the text on the left */
 .blueprintGrid {
     position: absolute;
     /* start below the header buttons */
     top: calc(clamp(20px, 3.5vh, 44px) + 50px);
     right: 0;
     bottom: 0;
-    width: 50vw;
+    width: 58vw;
     z-index: -1;
     pointer-events: none;
-    -webkit-mask-image: linear-gradient(to right, transparent, #000 35%), linear-gradient(to bottom, transparent, #000 12%, #000 75%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 25%), linear-gradient(to bottom, transparent, #000 12%, #000 75%, transparent);
     -webkit-mask-composite: source-in;
-    mask-image: linear-gradient(to right, transparent, #000 35%), linear-gradient(to bottom, transparent, #000 12%, #000 75%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 25%), linear-gradient(to bottom, transparent, #000 12%, #000 75%, transparent);
     mask-composite: intersect;
 }
 
@@ -27,120 +27,42 @@
     vector-effect: non-scaling-stroke;
 }
 
-.bpGridAccent {
-    fill: none;
-    stroke: rgba(255, 255, 255, 0.22);
+/* Long guide lines framing each shape; their fill is a fade from transparent to white and back */
+.bpGuide {
+    opacity: 0.85;
+}
+
+.bpStar line {
+    stroke: rgba(255, 255, 255, 0.28);
     stroke-width: 1;
-    stroke-dasharray: 3 4;
     vector-effect: non-scaling-stroke;
 }
 
-/* Drawn items: white outlines that trace themselves in when they appear */
-.bpItems {
+.bpShape {
     fill: none;
-    stroke: rgba(255, 255, 255, 0.85);
-    stroke-width: 1.4;
-    stroke-linecap: round;
+    stroke: #fff;
+    stroke-width: 1.6;
     stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
 }
 
-.bpItems text {
-    fill: rgba(255, 255, 255, 0.75);
-    stroke: none;
+.bpDim path {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.75);
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+}
+
+.bpDim text,
+.bpLabel {
+    fill: rgba(255, 255, 255, 0.8);
     font-family: 'IBM Plex Mono', monospace;
     font-size: 13px;
-}
-
-.bpItem {
-    opacity: 0;
-    transition: opacity 0.6s ease;
-}
-
-.bpItemOn {
-    opacity: 1;
-}
-
-.bpItemOn [pathLength] {
-    stroke-dasharray: 1;
-    stroke-dashoffset: 1;
-    animation: bpDraw 0.9s cubic-bezier(0.5, 0, 0.2, 1) forwards;
-}
-
-.bpItemOn text {
-    opacity: 0;
-    animation: bpFadeIn 0.4s ease 0.5s forwards;
-}
-
-@keyframes bpDraw {
-    to { stroke-dashoffset: 0; }
-}
-
-@keyframes bpFadeIn {
-    to { opacity: 1; }
-}
-
-.bpGuide {
-    stroke: rgba(255, 255, 255, 0.35);
-    stroke-width: 1;
-}
-
-.bpItemOn .bpDashed {
-    animation: bpDraw 0.9s cubic-bezier(0.5, 0, 0.2, 1) forwards, bpDashIn 0s linear 0.9s forwards;
-}
-
-@keyframes bpDashIn {
-    to { stroke-dasharray: 0.012 0.012; }
-}
-
-/* the pill can be resized after it's drawn */
-.bpResizable {
-    transition: width 0.7s cubic-bezier(0.6, 0, 0.2, 1);
-}
-
-.bpItems text,
-.bpItems path {
-    transition: d 0.7s cubic-bezier(0.6, 0, 0.2, 1);
-}
-
-/* Pointer */
-.bpPointer {
-    transition: transform 0.9s cubic-bezier(0.6, 0, 0.2, 1);
-}
-
-.bpPointer path {
-    fill: #fff;
-    stroke: #000;
-    stroke-width: 1.2;
-    stroke-linejoin: round;
-}
-
-.bpClick {
-    fill: none;
-    stroke: rgba(255, 255, 255, 0.8);
-    stroke-width: 1.2;
-    opacity: 0;
-    transform-box: fill-box;
-    transform-origin: center;
-    animation: bpClick 0.5s ease-out 0.9s;
-}
-
-@keyframes bpClick {
-    from { opacity: 0.9; transform: scale(0.3); }
-    to { opacity: 0; transform: scale(1.4); }
 }
 
 /* No right-hand side on smaller screens */
 @media (max-width: 900px) {
     .blueprintGrid {
         display: none;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .bpItemOn [pathLength],
-    .bpItemOn text {
-        animation: none;
-        stroke-dashoffset: 0;
-        opacity: 1;
     }
 }

@@ -1,166 +1,134 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './BlueprintGrid.css'
 
-const STEP_MS = 1500
-
-// What's drawn in the grid, in viewBox units (grid cells are 40 wide)
-const PILL = { x: 240, y: 360, h: 40 }
+const CELL = 40
+const HOLD_MS = 1600 // pause at each end
+const MOVE_MS = 1400 // time to animate between the two states
 
 /*
- * Each step moves the pointer to `to`, then shows the listed items. `pillWidth` lets a step resize
- * the pill, so the grid shows things being changed, not just created. The last step clears it all.
+ * The three shapes, each with a start and end state (viewBox units, grid cells are 40 wide):
+ * the bar stretches 2 cells to the right, the squiggly circle grows, the window header slides 2 cells right.
  */
-const STEPS = [
-    { to: [240, 360], show: [] },
-    { to: [400, 400], show: ['pill'], pillWidth: 160 },
-    { to: [400, 330], show: ['pill', 'pillDims'], pillWidth: 160 },
-    { to: [580, 200], show: ['pill', 'pillDims', 'flower'], pillWidth: 160 },
-    { to: [620, 160], show: ['pill', 'pillDims', 'flower', 'flowerGuides'], pillWidth: 160 },
-    { to: [480, 600], show: ['pill', 'pillDims', 'flower', 'flowerGuides', 'window'], pillWidth: 160 },
-    { to: [480, 540], show: ['pill', 'pillDims', 'flower', 'flowerGuides', 'window', 'windowDims'], pillWidth: 160 },
-    { to: [480, 380], show: ['pill', 'pillDims', 'flower', 'flowerGuides', 'window', 'windowDims'], pillWidth: 240 },
-    { to: [360, 460], show: ['pill', 'pillDims', 'flower', 'flowerGuides', 'window', 'windowDims', 'dashed'], pillWidth: 240 },
-    { to: [280, 160], show: ['pill', 'pillDims', 'flower', 'flowerGuides', 'window', 'windowDims', 'dashed', 'circle'], pillWidth: 240 },
-    { to: [320, 120], show: ['pill', 'pillDims', 'flower', 'flowerGuides', 'window', 'windowDims', 'dashed', 'circle', 'circleDims'], pillWidth: 240 },
-    { to: [320, 120], show: ['pill', 'pillDims', 'flower', 'flowerGuides', 'window', 'windowDims', 'dashed', 'circle', 'circleDims'], pillWidth: 240 },
-    { to: [140, 440], show: [], pillWidth: 240 },
-]
-const ALL_ITEMS = STEPS[STEPS.length - 2].show
+const BAR = { x: 160, y: 320, h: 40, w: [120, 120 + 2 * CELL] }
+const FLOWER = { cx: 520, cy: 160, r: [26, 44] }
+const WINDOW = { x: [320, 320 + 2 * CELL], y: 460, w: 280, bar: 44 }
 
-// A measurement line with end ticks and a label in the middle
-function Dim({ x1, y1, x2, y2, label, vertical = false }) {
-    const mx = (x1 + x2) / 2, my = (y1 + y2) / 2
-    const ticks = vertical
-        ? `M${x1 - 5} ${y1}h10M${x2 - 5} ${y2}h10`
-        : `M${x1} ${y1 - 5}v10M${x2} ${y2 - 5}v10`
-    return (
-        <>
-            <path pathLength="1" d={`M${x1} ${y1}L${x2} ${y2}${ticks}`} />
-            <text x={vertical ? mx - 12 : mx} y={vertical ? my + 4 : my - 10} textAnchor={vertical ? 'end' : 'middle'}>{label}</text>
-        </>
-    )
-}
+const lerp = ([a, b], t) => a + (b - a) * t
+const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
 
 // 8-petal flower outline around (cx, cy)
-function flowerPath(cx, cy, r = 26, petals = 8) {
+function flowerPath(cx, cy, r, petals = 8) {
     let d = ''
     for (let i = 0; i <= petals; i++) {
         const a = (i / petals) * Math.PI * 2
         const x = cx + Math.cos(a) * r, y = cy + Math.sin(a) * r
-        if (i === 0) { d += `M${x.toFixed(1)} ${y.toFixed(1)}`; continue }
+        if (i === 0) { d += `M${x.toFixed(2)} ${y.toFixed(2)}`; continue }
         const am = ((i - 0.5) / petals) * Math.PI * 2
-        const qx = cx + Math.cos(am) * r * 1.45, qy = cy + Math.sin(am) * r * 1.45
-        d += `Q${qx.toFixed(1)} ${qy.toFixed(1)} ${x.toFixed(1)} ${y.toFixed(1)}`
+        d += `Q${(cx + Math.cos(am) * r * 1.45).toFixed(2)} ${(cy + Math.sin(am) * r * 1.45).toFixed(2)} ${x.toFixed(2)} ${y.toFixed(2)}`
     }
     return d
 }
 
-function renderItem(id, pillWidth) {
-    const { x, y, h } = PILL
-    switch (id) {
-        case 'pill':
-            return <rect pathLength="1" className="bpResizable" x={x} y={y} width={pillWidth} height={h} rx={h / 2} />
-        case 'pillDims':
-            return (
-                <>
-                    <Dim x1={x} y1={y - 22} x2={x + pillWidth} y2={y - 22} label={pillWidth} />
-                    <Dim x1={x - 22} y1={y} x2={x - 22} y2={y + h} label={h} vertical />
-                </>
-            )
-        case 'flower':
-            return <path pathLength="1" d={flowerPath(600, 200)} />
-        case 'flowerGuides':
-            return (
-                <g className="bpGuide">
-                    <path pathLength="1" d="M520 120L680 280M680 120L520 280M600 100V300M500 200H700" />
-                    <circle pathLength="1" cx="600" cy="200" r="38" />
-                    <text x="540" y="204" textAnchor="end">10</text>
-                </g>
-            )
-        case 'window':
-            return (
-                <>
-                    <rect pathLength="1" x="400" y="520" width="280" height="160" rx="6" />
-                    <path pathLength="1" d="M400 556H680" />
-                    <circle pathLength="1" cx="420" cy="538" r="5" />
-                    <circle pathLength="1" cx="440" cy="538" r="5" />
-                    <circle pathLength="1" cx="460" cy="538" r="5" />
-                </>
-            )
-        case 'windowDims':
-            return <Dim x1={400} y1={496} x2={680} y2={496} label="280" />
-        case 'dashed':
-            return <rect pathLength="1" className="bpDashed" x="160" y="440" width="200" height="40" rx="20" />
-        case 'circle':
-            return <circle pathLength="1" cx="280" cy="160" r="40" />
-        case 'circleDims':
-            return (
-                <g className="bpGuide">
-                    <path pathLength="1" d="M280 160L320 160" />
-                    <circle pathLength="1" cx="280" cy="160" r="2.5" />
-                    <text x="300" y="150" textAnchor="middle">r 40</text>
-                </g>
-            )
-        default:
-            return null
-    }
+// Guide lines that run past a shape's edges and fade out at both ends
+const HLine = ({ x1, x2, y }) => <rect className="bpGuide" x={x1} y={y - 0.5} width={x2 - x1} height="1" fill="url(#bpFadeH)" />
+const VLine = ({ x, y1, y2 }) => <rect className="bpGuide" x={x - 0.5} y={y1} width="1" height={y2 - y1} fill="url(#bpFadeV)" />
+
+// A measurement with end ticks and a centered label
+function Dim({ x1, x2, y, label }) {
+    return (
+        <g className="bpDim">
+            <path d={`M${x1} ${y}H${x2}M${x1} ${y - 4}v8M${x2} ${y - 4}v8`} />
+            <text x={(x1 + x2) / 2} y={y - 8} textAnchor="middle">{label}</text>
+        </g>
+    )
 }
 
 const prefersReducedMotion = () =>
     typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 /*
- * Blueprint-style grid behind the right side of the landing page. A pointer moves around it,
- * drawing, measuring and resizing small UI shapes, then clears them and starts over.
+ * Blueprint-style grid behind the right side of the landing page: three UI shapes framed by fading
+ * guide lines, all easing between two states at the same time, on a loop.
  */
 function BlueprintGrid() {
-    const reduced = useRef(prefersReducedMotion()).current
-    const [step, setStep] = useState(reduced ? STEPS.length - 2 : 0)
-    // bumped each time an item reappears, so its draw-in animation replays
-    const versions = useRef({})
-    const prevShown = useRef(new Set())
+    const [t, setT] = useState(0)
+    const frame = useRef(null)
 
     useEffect(() => {
-        if (reduced) return undefined
-        const timer = setInterval(() => setStep((s) => (s + 1) % STEPS.length), STEP_MS)
-        return () => clearInterval(timer)
-    }, [reduced])
+        if (prefersReducedMotion()) return undefined
+        const cycle = 2 * (HOLD_MS + MOVE_MS)
+        const start = performance.now()
+        const tick = (now) => {
+            const k = (now - start) % cycle
+            let p
+            if (k < HOLD_MS) p = 0
+            else if (k < HOLD_MS + MOVE_MS) p = (k - HOLD_MS) / MOVE_MS
+            else if (k < 2 * HOLD_MS + MOVE_MS) p = 1
+            else p = 1 - (k - 2 * HOLD_MS - MOVE_MS) / MOVE_MS
+            setT(ease(p))
+            frame.current = requestAnimationFrame(tick)
+        }
+        frame.current = requestAnimationFrame(tick)
+        return () => cancelAnimationFrame(frame.current)
+    }, [])
 
-    const { to, show, pillWidth = 160 } = STEPS[step]
-    const shown = new Set(show)
-    shown.forEach((id) => { if (!prevShown.current.has(id)) versions.current[id] = (versions.current[id] || 0) + 1 })
-    prevShown.current = shown
+    const barW = lerp(BAR.w, t)
+    const barRight = BAR.x + barW
+    const r = lerp(FLOWER.r, t)
+    const box = r * 1.45 // the flower's petal tips
+    const winX = lerp(WINDOW.x, t)
+    const winRight = winX + WINDOW.w
 
     return (
         <div className="blueprintGrid" aria-hidden="true">
             <svg viewBox="0 0 760 760" preserveAspectRatio="xMidYMin slice">
                 <defs>
-                    <pattern id="bpCell" width="40" height="40" patternUnits="userSpaceOnUse">
-                        <path d="M40 0H0V40" className="bpGridLine" />
+                    <pattern id="bpCell" width={CELL} height={CELL} patternUnits="userSpaceOnUse">
+                        <path d={`M${CELL} 0H0V${CELL}`} className="bpGridLine" />
                     </pattern>
-                    <radialGradient id="bpGlow" cx="0.75" cy="0.15" r="0.6">
-                        <stop offset="0" stopColor="#9B59B6" stopOpacity="0.28" />
-                        <stop offset="1" stopColor="#9B59B6" stopOpacity="0" />
-                    </radialGradient>
+                    <linearGradient id="bpFadeH" x1="0" x2="1" y1="0" y2="0">
+                        <stop offset="0" stopColor="#fff" stopOpacity="0" />
+                        <stop offset="0.5" stopColor="#fff" stopOpacity="0.9" />
+                        <stop offset="1" stopColor="#fff" stopOpacity="0" />
+                    </linearGradient>
+                    <linearGradient id="bpFadeV" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0" stopColor="#fff" stopOpacity="0" />
+                        <stop offset="0.5" stopColor="#fff" stopOpacity="0.9" />
+                        <stop offset="1" stopColor="#fff" stopOpacity="0" />
+                    </linearGradient>
                 </defs>
-                <rect width="760" height="760" fill="url(#bpGlow)" />
                 <rect width="760" height="760" fill="url(#bpCell)" />
-                <path className="bpGridAccent" d="M0 40H760M720 0V760M0 480H760" />
 
-                <g className="bpItems">
-                    {ALL_ITEMS.map((id) => (
-                        <g key={`${id}-${versions.current[id] || 0}`} className={shown.has(id) ? 'bpItem bpItemOn' : 'bpItem'}>
-                            {renderItem(id, pillWidth)}
-                        </g>
-                    ))}
+                {/* Bar */}
+                <HLine x1={BAR.x - 140} x2={barRight + 140} y={BAR.y} />
+                <HLine x1={BAR.x - 140} x2={barRight + 140} y={BAR.y + BAR.h} />
+                <VLine x={BAR.x} y1={BAR.y - 120} y2={BAR.y + BAR.h + 120} />
+                <VLine x={barRight} y1={BAR.y - 120} y2={BAR.y + BAR.h + 120} />
+                <rect className="bpShape" x={BAR.x} y={BAR.y} width={barW} height={BAR.h} rx={BAR.h / 2} />
+                <Dim x1={BAR.x} x2={barRight} y={BAR.y - 20} label={Math.round(barW / CELL) * 10} />
+                <text className="bpLabel" x={BAR.x - 16} y={BAR.y + BAR.h / 2 + 4} textAnchor="end">10</text>
+
+                {/* Squiggly circle */}
+                <g className="bpStar">
+                    {[0, 45, 90, 135].map((a) => {
+                        const rad = (a * Math.PI) / 180, len = box + 60
+                        return <line key={a} x1={FLOWER.cx - Math.cos(rad) * len} y1={FLOWER.cy - Math.sin(rad) * len} x2={FLOWER.cx + Math.cos(rad) * len} y2={FLOWER.cy + Math.sin(rad) * len} />
+                    })}
                 </g>
+                <HLine x1={FLOWER.cx - box - 110} x2={FLOWER.cx + box + 110} y={FLOWER.cy - box} />
+                <HLine x1={FLOWER.cx - box - 110} x2={FLOWER.cx + box + 110} y={FLOWER.cy + box} />
+                <VLine x={FLOWER.cx - box} y1={FLOWER.cy - box - 110} y2={FLOWER.cy + box + 110} />
+                <VLine x={FLOWER.cx + box} y1={FLOWER.cy - box - 110} y2={FLOWER.cy + box + 110} />
+                <path className="bpShape" d={flowerPath(FLOWER.cx, FLOWER.cy, r)} />
+                <text className="bpLabel" x={FLOWER.cx - box - 14} y={FLOWER.cy + 4} textAnchor="end">{Math.round(r / 2.6)}</text>
 
-                {!reduced && (
-                    <g className="bpPointer" style={{ transform: `translate(${to[0]}px, ${to[1]}px)` }}>
-                        <circle key={step} className="bpClick" r="14" />
-                        <path d="M0 0L0 22L6 16.5L10.5 26L14 24.5L9.5 15L17 15Z" />
-                    </g>
-                )}
+                {/* Window header */}
+                <HLine x1={winX - 160} x2={winRight + 160} y={WINDOW.y} />
+                <VLine x={winX} y1={WINDOW.y - 120} y2={WINDOW.y + 200} />
+                <VLine x={winRight} y1={WINDOW.y - 120} y2={WINDOW.y + 200} />
+                <path className="bpShape" d={`M${winX} ${WINDOW.y + 160}V${WINDOW.y + 6}a6 6 0 0 1 6 -6H${winRight - 6}a6 6 0 0 1 6 6V${WINDOW.y + 160}M${winX} ${WINDOW.y + WINDOW.bar}H${winRight}`} />
+                {[0, 1, 2].map((i) => <circle key={i} className="bpShape" cx={winX + 22 + i * 20} cy={WINDOW.y + WINDOW.bar / 2} r="5" />)}
+                <Dim x1={winX} x2={winRight} y={WINDOW.y - 22} label="80" />
             </svg>
         </div>
     )
