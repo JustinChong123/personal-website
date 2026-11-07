@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/NavBar/Navbar.js'
 import Projects from './components/Projects/Projects.js'
 import githubLogo from './icons8-github-480.png'
-import FloatingShapes from './components/FloatingShapes/FloatingShapes.js'
+import BlueprintGrid from './components/BlueprintGrid/BlueprintGrid.js'
 import Footer from './components/Footer/Footer.js'
 import Typewriter from './components/Typewriter.js'
 import useScrollToTopOnLoad from './components/CaseStudy/useScrollToTopOnLoad.js'
@@ -16,6 +16,7 @@ function App() {
   return (
     <div className="App">
       <div className="homeHero">
+      <BlueprintGrid />
       <Navbar />
       <div className='Intro'>
         <Typewriter />
@@ -25,7 +26,6 @@ function App() {
         <h3><a href="https://www.linkedin.com/in/justin-r-chong/" target="_blank" rel="noopener noreferrer">Github</a></h3> */}
       </div>
       </div>
-      <FloatingShapes />
       <Projects />
       <Footer />
     </div>

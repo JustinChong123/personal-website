@@ -1,0 +1,115 @@
+/* Right side of the landing page's first screen, fading out towards the text on the left */
+.blueprintGrid {
+    position: absolute;
+    /* start below the header buttons */
+    top: calc(clamp(20px, 3.5vh, 44px) + 50px);
+    right: 0;
+    /* run down to the top of the featured project cards (their top margin) */
+    bottom: -6vh;
+    width: 52vw;
+    z-index: -1;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 25%), linear-gradient(to bottom, transparent, #000 6%, #000 94%, transparent);
+    -webkit-mask-composite: source-in;
+    mask-image: linear-gradient(to right, transparent, #000 25%), linear-gradient(to bottom, transparent, #000 6%, #000 94%, transparent);
+    mask-composite: intersect;
+}
+
+.blueprintGrid svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.bpGridLine {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.12);
+    stroke-width: 1.6;
+    vector-effect: non-scaling-stroke;
+}
+
+/* Long guide lines framing each shape; their fill is a fade from transparent to white and back */
+.bpGuide {
+    opacity: 0.85;
+}
+
+.bpStar line {
+    stroke: rgba(255, 255, 255, 0.28);
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+}
+
+.bpShape {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 1.6;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+}
+
+.bpDim path {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.75);
+    stroke-width: 1;
+    vector-effect: non-scaling-stroke;
+}
+
+.bpDim text,
+.bpLabel {
+    fill: rgba(255, 255, 255, 0.8);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+}
+
+/* Page-load intro (~1s, finishing with the JUSTIN CHONG flicker) */
+.bpFlicker {
+    animation-timing-function: step-end;
+    animation-fill-mode: both;
+}
+
+.bpExtendH,
+.bpExtendV {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: bpExtendH 0.85s cubic-bezier(0.2, 0.7, 0.2, 1) 0.15s both;
+}
+
+.bpExtendV {
+    animation-name: bpExtendV;
+}
+
+@keyframes bpExtendH {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+@keyframes bpExtendV {
+    from { transform: scaleY(0); }
+    to { transform: scaleY(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bpFlicker,
+    .bpExtendH,
+    .bpExtendV {
+        animation: none;
+    }
+}
+
+/* Hover crosshair */
+.bpCrosshair {
+    transition: transform 0.12s ease-out;
+}
+
+.bpCrosshair text {
+    fill: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+}
+
+/* No right-hand side on smaller screens */
+@media (max-width: 900px) {
+    .blueprintGrid {
+        display: none;
+    }
+}
