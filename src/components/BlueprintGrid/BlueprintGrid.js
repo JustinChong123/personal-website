@@ -1,22 +1,24 @@
 import React, { useEffect, useRef, useState } from 'react'
 import './BlueprintGrid.css'
 
-const CELL = 40
+const CELL = 24 // grid cell size; everything below is positioned in whole cells
+const SIZE = 32 * CELL // the drawing is 32 x 32 cells
 const HOLD_MS = 1600 // pause at each end
 const MOVE_MS = 1400 // time to animate between the two states
 
 /*
- * The three shapes, each with a start and end state (viewBox units, grid cells are 40 wide):
- * the bar stretches 2 cells to the right, the squiggly circle grows, the window header slides 2 cells right.
+ * The three shapes, each with a start and end state, in grid cells:
+ * the bar stretches 2 cells to the right, the squiggly circle grows from a 4-cell to a 6-cell square,
+ * and the window header slides 3 cells right.
  */
-const BAR = { x: 160, y: 320, h: 40, w: [120, 120 + 2 * CELL] }
-const FLOWER = { cx: 520, cy: 160, r: [26, 44] }
-const WINDOW = { x: [320, 320 + 2 * CELL], y: 460, w: 280, bar: 44 }
+const BAR = { x: 8 * CELL, y: 11 * CELL, h: 2 * CELL, w: [5 * CELL, 7 * CELL] }
+const FLOWER = { cx: 22 * CELL, cy: 6 * CELL, half: [2 * CELL, 3 * CELL] }
+const WINDOW = { x: [12 * CELL, 15 * CELL], y: 16 * CELL, w: 12 * CELL, bar: 2 * CELL }
 
 const lerp = ([a, b], t) => a + (b - a) * t
 const ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2)
 
-// 8-petal flower outline around (cx, cy)
+// 8-petal flower outline around (cx, cy); r is the radius of the dips between petals
 function flowerPath(cx, cy, r, petals = 8) {
     let d = ''
     for (let i = 0; i <= petals; i++) {
@@ -30,6 +32,25 @@ function flowerPath(cx, cy, r, petals = 8) {
 }
 
 // Guide lines that run past a shape's edges and fade out at both ends
+// How far the flower outline reaches from its center (along x or y), per unit of r
+const FLOWER_REACH = (() => {
+    const d = flowerPath(0, 0, 1, 8)
+    const nums = d.match(/-?[\d.]+/g).map(Number)
+    let max = 0
+    // sample each quadratic segment finely and keep the largest |x|
+    let px = nums[0]
+    for (let i = 2; i + 3 < nums.length; i += 4) {
+        const [qx, , x] = nums.slice(i, i + 4)
+        for (let k = 0; k <= 50; k++) {
+            const t = k / 50
+            const bx = (1 - t) * (1 - t) * px + 2 * (1 - t) * t * qx + t * t * x
+            max = Math.max(max, Math.abs(bx))
+        }
+        px = x
+    }
+    return max
+})()
+
 const HLine = ({ x1, x2, y }) => <rect className="bpGuide" x={x1} y={y - 0.5} width={x2 - x1} height="1" fill="url(#bpFadeH)" />
 const VLine = ({ x, y1, y2 }) => <rect className="bpGuide" x={x - 0.5} y={y1} width="1" height={y2 - y1} fill="url(#bpFadeV)" />
 
@@ -74,14 +95,14 @@ function BlueprintGrid() {
 
     const barW = lerp(BAR.w, t)
     const barRight = BAR.x + barW
-    const r = lerp(FLOWER.r, t)
-    const box = r * 1.45 // the flower's petal tips
+    const box = lerp(FLOWER.half, t) // half-size of the flower's square, on grid lines at both ends
+    const r = box / FLOWER_REACH
     const winX = lerp(WINDOW.x, t)
     const winRight = winX + WINDOW.w
 
     return (
         <div className="blueprintGrid" aria-hidden="true">
-            <svg viewBox="0 0 760 760" preserveAspectRatio="xMidYMin slice">
+            <svg viewBox={`0 0 ${SIZE} ${SIZE}`} preserveAspectRatio="xMidYMin meet">
                 <defs>
                     <pattern id="bpCell" width={CELL} height={CELL} patternUnits="userSpaceOnUse">
                         <path d={`M${CELL} 0H0V${CELL}`} className="bpGridLine" />
@@ -96,38 +117,47 @@ function BlueprintGrid() {
                         <stop offset="0.5" stopColor="#fff" stopOpacity="0.9" />
                         <stop offset="1" stopColor="#fff" stopOpacity="0" />
                     </linearGradient>
+                    {/* the window's sides fade out downwards, like a page cut off */}
+                    <linearGradient id="bpWindowFade" x1="0" x2="0" y1="0" y2="1">
+                        <stop offset="0.35" stopColor="#fff" />
+                        <stop offset="1" stopColor="#fff" stopOpacity="0" />
+                    </linearGradient>
+                    <mask id="bpWindowMask" maskContentUnits="userSpaceOnUse">
+                        <rect x={-SIZE} y={WINDOW.y - CELL} width={3 * SIZE} height={7 * CELL} fill="url(#bpWindowFade)" />
+                    </mask>
                 </defs>
-                <rect width="760" height="760" fill="url(#bpCell)" />
+                {/* the grid runs past the drawing so it fills the whole area whatever its shape */}
+                <rect x={-SIZE} y={-SIZE} width={3 * SIZE} height={3 * SIZE} fill="url(#bpCell)" />
 
                 {/* Bar */}
-                <HLine x1={BAR.x - 140} x2={barRight + 140} y={BAR.y} />
-                <HLine x1={BAR.x - 140} x2={barRight + 140} y={BAR.y + BAR.h} />
-                <VLine x={BAR.x} y1={BAR.y - 120} y2={BAR.y + BAR.h + 120} />
-                <VLine x={barRight} y1={BAR.y - 120} y2={BAR.y + BAR.h + 120} />
+                <HLine x1={BAR.x - 6 * CELL} x2={barRight + 6 * CELL} y={BAR.y} />
+                <HLine x1={BAR.x - 6 * CELL} x2={barRight + 6 * CELL} y={BAR.y + BAR.h} />
+                <VLine x={BAR.x} y1={BAR.y - 5 * CELL} y2={BAR.y + BAR.h + 5 * CELL} />
+                <VLine x={barRight} y1={BAR.y - 5 * CELL} y2={BAR.y + BAR.h + 5 * CELL} />
                 <rect className="bpShape" x={BAR.x} y={BAR.y} width={barW} height={BAR.h} rx={BAR.h / 2} />
-                <Dim x1={BAR.x} x2={barRight} y={BAR.y - 20} label={Math.round(barW / CELL) * 10} />
+                <Dim x1={BAR.x} x2={barRight} y={BAR.y - 20} label={Math.round(barW / CELL) * 8} />
                 <text className="bpLabel" x={BAR.x - 16} y={BAR.y + BAR.h / 2 + 4} textAnchor="end">10</text>
 
                 {/* Squiggly circle */}
                 <g className="bpStar">
                     {[0, 45, 90, 135].map((a) => {
-                        const rad = (a * Math.PI) / 180, len = box + 60
+                        const rad = (a * Math.PI) / 180, len = box + 2.5 * CELL
                         return <line key={a} x1={FLOWER.cx - Math.cos(rad) * len} y1={FLOWER.cy - Math.sin(rad) * len} x2={FLOWER.cx + Math.cos(rad) * len} y2={FLOWER.cy + Math.sin(rad) * len} />
                     })}
                 </g>
-                <HLine x1={FLOWER.cx - box - 110} x2={FLOWER.cx + box + 110} y={FLOWER.cy - box} />
-                <HLine x1={FLOWER.cx - box - 110} x2={FLOWER.cx + box + 110} y={FLOWER.cy + box} />
-                <VLine x={FLOWER.cx - box} y1={FLOWER.cy - box - 110} y2={FLOWER.cy + box + 110} />
-                <VLine x={FLOWER.cx + box} y1={FLOWER.cy - box - 110} y2={FLOWER.cy + box + 110} />
+                <HLine x1={FLOWER.cx - box - 5 * CELL} x2={FLOWER.cx + box + 5 * CELL} y={FLOWER.cy - box} />
+                <HLine x1={FLOWER.cx - box - 5 * CELL} x2={FLOWER.cx + box + 5 * CELL} y={FLOWER.cy + box} />
+                <VLine x={FLOWER.cx - box} y1={FLOWER.cy - box - 4 * CELL} y2={FLOWER.cy + box + 4 * CELL} />
+                <VLine x={FLOWER.cx + box} y1={FLOWER.cy - box - 4 * CELL} y2={FLOWER.cy + box + 4 * CELL} />
                 <path className="bpShape" d={flowerPath(FLOWER.cx, FLOWER.cy, r)} />
-                <text className="bpLabel" x={FLOWER.cx - box - 14} y={FLOWER.cy + 4} textAnchor="end">{Math.round(r / 2.6)}</text>
+                <text className="bpLabel" x={FLOWER.cx - box - 14} y={FLOWER.cy + 4} textAnchor="end">{Math.round((2 * box) / CELL) * 4}</text>
 
                 {/* Window header */}
-                <HLine x1={winX - 160} x2={winRight + 160} y={WINDOW.y} />
-                <VLine x={winX} y1={WINDOW.y - 120} y2={WINDOW.y + 200} />
-                <VLine x={winRight} y1={WINDOW.y - 120} y2={WINDOW.y + 200} />
-                <path className="bpShape" d={`M${winX} ${WINDOW.y + 160}V${WINDOW.y + 6}a6 6 0 0 1 6 -6H${winRight - 6}a6 6 0 0 1 6 6V${WINDOW.y + 160}M${winX} ${WINDOW.y + WINDOW.bar}H${winRight}`} />
-                {[0, 1, 2].map((i) => <circle key={i} className="bpShape" cx={winX + 22 + i * 20} cy={WINDOW.y + WINDOW.bar / 2} r="5" />)}
+                <HLine x1={winX - 6 * CELL} x2={winRight + 6 * CELL} y={WINDOW.y} />
+                <VLine x={winX} y1={WINDOW.y - 4 * CELL} y2={WINDOW.y + 8 * CELL} />
+                <VLine x={winRight} y1={WINDOW.y - 4 * CELL} y2={WINDOW.y + 8 * CELL} />
+                <path className="bpShape" mask="url(#bpWindowMask)" d={`M${winX} ${WINDOW.y + 6 * CELL}V${WINDOW.y + 6}a6 6 0 0 1 6 -6H${winRight - 6}a6 6 0 0 1 6 6V${WINDOW.y + 6 * CELL}M${winX} ${WINDOW.y + WINDOW.bar}H${winRight}`} />
+                {[0, 1, 2].map((i) => <circle key={i} className="bpShape" cx={winX + 20 + i * 18} cy={WINDOW.y + WINDOW.bar / 2} r="4.5" />)}
                 <Dim x1={winX} x2={winRight} y={WINDOW.y - 22} label="80" />
             </svg>
         </div>
