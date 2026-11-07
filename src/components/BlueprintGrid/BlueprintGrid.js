@@ -92,6 +92,40 @@ const prefersReducedMotion = () =>
 function BlueprintGrid() {
     const [[tBar, tFlower, tWindow], setT] = useState([0, 0, 0])
     const frame = useRef(null)
+    const containerRef = useRef(null)
+    const svgRef = useRef(null)
+    // grid intersection nearest the pointer, in cells, or null when the pointer isn't over the grid
+    const [hover, setHover] = useState(null)
+
+    // Text sits on top of the grid, so follow the mouse across the page rather than listening on the grid
+    useEffect(() => {
+        let last = null
+        let queued = false
+        const update = () => {
+            queued = false
+            const box = containerRef.current?.getBoundingClientRect()
+            const svg = svgRef.current
+            if (!last || !box || !svg || getComputedStyle(containerRef.current).display === 'none'
+                || last.x < box.left || last.x > box.right || last.y < box.top || last.y > box.bottom) {
+                setHover(null)
+                return
+            }
+            const point = new DOMPoint(last.x, last.y).matrixTransform(svg.getScreenCTM().inverse())
+            const col = Math.round(point.x / CELL), row = Math.round(point.y / CELL)
+            setHover((h) => (h && h.col === col && h.row === row ? h : { col, row }))
+        }
+        const queue = () => { if (!queued) { queued = true; requestAnimationFrame(update) } }
+        const onMove = (event) => { last = { x: event.clientX, y: event.clientY }; queue() }
+        const onLeave = () => { last = null; queue() }
+        window.addEventListener('mousemove', onMove, { passive: true })
+        window.addEventListener('scroll', queue, { passive: true })
+        document.documentElement.addEventListener('mouseleave', onLeave)
+        return () => {
+            window.removeEventListener('mousemove', onMove)
+            window.removeEventListener('scroll', queue)
+            document.documentElement.removeEventListener('mouseleave', onLeave)
+        }
+    }, [])
 
     useEffect(() => {
         if (prefersReducedMotion()) return undefined
@@ -121,8 +155,8 @@ function BlueprintGrid() {
     const winRight = winX + WINDOW.w
 
     return (
-        <div className="blueprintGrid" aria-hidden="true">
-            <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMin meet">
+        <div className="blueprintGrid" aria-hidden="true" ref={containerRef}>
+            <svg ref={svgRef} viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMin meet">
                 <defs>
                     <pattern id="bpCell" width={CELL} height={CELL} patternUnits="userSpaceOnUse">
                         <path d={`M${CELL} 0H0V${CELL}`} className="bpGridLine" />
@@ -179,6 +213,16 @@ function BlueprintGrid() {
                 <path className="bpShape" mask="url(#bpWindowMask)" d={`M${winX} ${WINDOW.y + 5 * CELL}V${WINDOW.y + 6}a6 6 0 0 1 6 -6H${winRight - 6}a6 6 0 0 1 6 6V${WINDOW.y + 5 * CELL}M${winX} ${WINDOW.y + WINDOW.bar}H${winRight}`} />
                 {[0, 1, 2].map((i) => <circle key={i} className="bpShape" cx={winX + 20 + i * 18} cy={WINDOW.y + WINDOW.bar / 2} r="4.5" />)}
                 <Dim x1={winX} x2={winRight} y={WINDOW.y - 22} label={(WINDOW.w / CELL) * 10} />
+
+                {/* Crosshair at the grid intersection nearest the pointer */}
+                {hover && (
+                    <g className="bpCrosshair" style={{ transform: `translate(${hover.col * CELL}px, ${hover.row * CELL}px)` }}>
+                        <HLine x1={-4 * CELL} x2={4 * CELL} y={0} />
+                        <VLine x={0} y1={-4 * CELL} y2={4 * CELL} />
+                        <circle r="2.5" />
+                        <text x="8" y="-8">[{hover.col}, {hover.row}]</text>
+                    </g>
+                )}
             </svg>
         </div>
     )

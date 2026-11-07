@@ -61,6 +61,25 @@
     font-size: 13px;
 }
 
+/* Hover crosshair */
+.bpCrosshair {
+    transition: transform 0.12s ease-out;
+}
+
+.bpCrosshair .bpGuide {
+    opacity: 1;
+}
+
+.bpCrosshair circle {
+    fill: #fff;
+}
+
+.bpCrosshair text {
+    fill: #fff;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+}
+
 /* No right-hand side on smaller screens */
 @media (max-width: 900px) {
     .blueprintGrid {
