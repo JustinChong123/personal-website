@@ -47,19 +47,6 @@
     background-origin: padding-box, border-box;
 }
 
-.container4 {
-    border: 2px solid #31363C;
-}
-
-.container4:hover {
-    border: 2px solid transparent;
-    background: 
-        linear-gradient(to right, #171B21, #171B21), 
-        linear-gradient(to right, #FF6A2B , #FFB088); 
-    background-clip: padding-box, border-box;
-    background-origin: padding-box, border-box;
-}
-
 #projectContainer {
     position: relative;
     color: white;
@@ -401,12 +388,6 @@
     background-clip: text;
     color: transparent;
 }
-#toastDescriptionGradient {
-    background-image: linear-gradient(to right, #FF6A2B, #FFB088);
-    background-clip: text;
-    color: transparent;
-}
-
 #moreFitkitchMockup {
     width: 55%;
     height: auto;

@@ -99,12 +99,12 @@ function Projects() {
                 </Link> */}
 
                 {/* Toast — link it to "/toast-case-study" once the case study page exists; mockup coming */}
-                <div class="container4" id="projectContainer">
+                <div class="container2" id="projectContainer">
                     <div class="projectIdentifiers">
                         <h2>Toast</h2>
                         <h4>MOBILE</h4>
                     </div>
-                    <h1 id="toastDescriptionGradient">Streamlining <span style={{whiteSpace: "nowrap"}}>on-the-go</span> tasks for merchants</h1>
+                    <h1 id="chronicleDescriptionGradient">Streamlining <span style={{whiteSpace: "nowrap"}}>on-the-go</span> tasks for merchants</h1>
                     <div class="projectTags">
                         <h3 class="projectTag">Retail</h3>
                         <h3 class="projectTag">iOS</h3>
