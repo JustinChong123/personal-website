@@ -98,19 +98,20 @@ function Projects() {
                     </div>
                 </Link> */}
 
-                {/* Toast — link it to "/toast-case-study" once the case study page exists; mockup coming */}
-                <div class="container2" id="projectContainer">
-                    <div class="projectIdentifiers">
-                        <h2>Toast</h2>
-                        <h4>MOBILE</h4>
+                <Link to="/toast-case-study">
+                    <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container2" id="projectContainer">
+                        <div class="projectIdentifiers">
+                            <h2>Toast</h2>
+                            <h4>MOBILE</h4>
+                        </div>
+                        <h1 id="chronicleDescriptionGradient">Streamlining <span style={{whiteSpace: "nowrap"}}>on-the-go</span> tasks for merchants</h1>
+                        <div class="projectTags">
+                            <h3 class="projectTag">Retail</h3>
+                            <h3 class="projectTag">iOS</h3>
+                            <h3 class="projectTag">Android</h3>
+                        </div>
                     </div>
-                    <h1 id="chronicleDescriptionGradient">Streamlining <span style={{whiteSpace: "nowrap"}}>on-the-go</span> tasks for merchants</h1>
-                    <div class="projectTags">
-                        <h3 class="projectTag">Retail</h3>
-                        <h3 class="projectTag">iOS</h3>
-                        <h3 class="projectTag">Android</h3>
-                    </div>
-                </div>
+                </Link>
 
             </div>
             

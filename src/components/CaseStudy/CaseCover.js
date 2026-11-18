@@ -16,8 +16,9 @@ const DESIGN_WIDTH = 1434
  * accent: color of the arrow and role. dividerColor: color of the divider lines (defaults to accent).
  * progressColor: color of the scroll progress bar.
  * taglineWidth: max width of the tagline (in % of the page width), to control where it wraps.
+ * titleWidth: optional max width of the title (same units), to control where it wraps.
  */
-function CaseCover({ title, tagline, company, role, mockups, mockupsHeight, background, accent, dividerColor = accent, progressColor, taglineWidth = 24 }) {
+function CaseCover({ title, tagline, company, role, mockups, mockupsHeight, background, accent, dividerColor = accent, progressColor, taglineWidth = 24, titleWidth }) {
     return (
         <div className="caseCover" style={{ background, '--caseCoverAccent': accent, '--caseCoverDivider': dividerColor }}>
             <ScrollIndicator color={progressColor} />
@@ -40,7 +41,7 @@ function CaseCover({ title, tagline, company, role, mockups, mockupsHeight, back
                     ))}
                 </div>
                 <div className="caseCoverBand">
-                    <h1 className="caseCoverTitle">
+                    <h1 className="caseCoverTitle" style={titleWidth ? { maxWidth: `${titleWidth}cqw` } : undefined}>
                         <FlickerText text={title} />
                         <svg className="caseCoverArrow flickerChar flickerPattern2" style={{ animationDelay: '0.25s' }} viewBox="0 0 30 30" aria-hidden="true">
                             <path d="M2 2 L28 28 M28 4 V28 H4" />

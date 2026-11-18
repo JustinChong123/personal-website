@@ -107,6 +107,7 @@
 
     .caseCover .caseCoverTitle {
         font-size: 32px;
+        max-width: none !important;
     }
 
     .caseCoverTagline,

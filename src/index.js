@@ -17,6 +17,7 @@ import ConferenceCupUSA from './components/Projects/Case Studies/ConferenceCupUS
 import OhBuoy from './components/Projects/Case Studies/OhBuoy.js';
 import AISalesIntelligence from './components/Projects/Case Studies/AISalesIntelligence.js';
 import AccountPortfolio from './components/Projects/Case Studies/AccountPortfolio.js'
+import Toast from './components/Projects/Case Studies/Toast.js'
 import './responsive.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -35,6 +36,7 @@ root.render(
         <Route path='ipath-case-study' element={<IPath />} />
         <Route path='/ai-sales-intelligence-case-study' element={<AISalesIntelligence />} />
         <Route path='/account-portfolio-case-study' element={<AccountPortfolio />} />
+        <Route path='/toast-case-study' element={<Toast />} />
       </Routes>
     </Router>
 );
