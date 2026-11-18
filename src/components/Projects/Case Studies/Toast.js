@@ -1,7 +1,6 @@
 import React from 'react'
 import Footer from '../../Footer/Footer.js'
 import './PerformanceAdvisor.css'
-import './Toast.css'
 
 import toastContextStats from './Toast Images/toast-context-stats.svg'
 import toastSolutionFeatures from './Toast Images/toast-solution-features.svg'
@@ -41,9 +40,9 @@ function Toast() {
                 tagline="Streamlining how merchants update their inventory on-the-go"
                 company="Toast"
                 role="Product Designer"
-                background="linear-gradient(to bottom right, #F6A3C4, #F7C1A6)"
-                accent="#E55E9F"
-                progressColor="#E55E9F"
+                background="linear-gradient(to bottom right, #FFB1B1, #FF89C0)"
+                accent="#FF7777"
+                progressColor="#E96060"
                 mockupsHeight={399}
                 mockups={[]}
             />
@@ -52,8 +51,8 @@ function Toast() {
 
                 <CaseOverview
                     category="Inventory Management"
-                    highlightColor="#E55E9F"
-                    detailTitleColor="#E55E9F"
+                    highlightColor="#FF7777"
+                    detailTitleColor="#FF8080"
                     headline="I designed a way for retail businesses to scan multiple items in their inventory and complete critical everyday tasks from receiving new shipments to updating stock counts."
                     description="Managing inventory is a physical, often chaotic task happening directly in the aisles of the store. My team is focused on making it easier to manage inventory from a phone, without ever having to open a laptop. We design for businesses of all types, from mom-and-pop convenience stores to grocery chains."
                     details={[
@@ -66,7 +65,7 @@ function Toast() {
                 />
 
                 <CaseBody
-                    accent="#E55E9F"
+                    accent="#E96060"
                     sections={[
                         { id: 'project-summary', label: 'Project Summary' },
                         { id: 'research', label: 'Research' },
@@ -79,7 +78,7 @@ function Toast() {
                 >
                     {/* <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">PROJECT SUMMARY</h3>
+                            <h3 id="redCaseSideHeader">PROJECT SUMMARY</h3>
                             <h2>Solution</h2>
                         </div>
                         <div className="caseMain">
@@ -90,7 +89,7 @@ function Toast() {
 
                     <div className="caseSection" id="project-summary">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">CONTEXT</h3>
+                            <h3 id="redCaseSideHeader">CONTEXT</h3>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">What is Toast (besides bread)?</h1>
@@ -102,7 +101,7 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">PROBLEM</h3>
+                            <h3 id="redCaseSideHeader">PROBLEM</h3>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">Managing inventory one item at a time is slow</h1>
@@ -112,7 +111,7 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">SOLUTION</h3>
+                            <h3 id="redCaseSideHeader">SOLUTION</h3>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">Update inventory as fast as ringing up a sale</h1>
@@ -125,7 +124,7 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">RESEARCH</h3>
+                            <h3 id="redCaseSideHeader">RESEARCH</h3>
                             <h2>Current Product State</h2>
                         </div>
                         <div className="caseMain">
@@ -137,7 +136,7 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">RESEARCH</h3>
+                            <h3 id="redCaseSideHeader">RESEARCH</h3>
                             <h2>Competitive Analysis</h2>
                         </div>
                         <div className="caseMain">
@@ -149,7 +148,7 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">RESEARCH</h3>
+                            <h3 id="redCaseSideHeader">RESEARCH</h3>
                             <h2>User Interviews & Needs</h2>
                         </div>
                         <div className="caseMain">
@@ -161,7 +160,7 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">RESEARCH</h3>
+                            <h3 id="redCaseSideHeader">RESEARCH</h3>
                             <h2>User Personas</h2>
                         </div>
                         <div className="caseMain">
@@ -173,7 +172,7 @@ function Toast() {
 
                     <div className="caseSection" id="define">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">DEFINE</h3>
+                            <h3 id="redCaseSideHeader">DEFINE</h3>
                             <h2>Point-of-View Statement</h2>
                         </div>
                         <div className="caseMain">
@@ -183,7 +182,7 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">DEFINE</h3>
+                            <h3 id="redCaseSideHeader">DEFINE</h3>
                             <h2>How Might We Statements</h2>
                         </div>
                         <div className="caseMain">
@@ -195,7 +194,7 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">DEFINE</h3>
+                            <h3 id="redCaseSideHeader">DEFINE</h3>
                             <h2>Design Objectives</h2>
                         </div>
                         <div className="caseMain">
@@ -205,7 +204,7 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">IDEATE</h3>
+                            <h3 id="redCaseSideHeader">IDEATE</h3>
                             <h2>Flow Sketches</h2>
                         </div>
                         <div className="caseMain">
@@ -217,7 +216,7 @@ function Toast() {
 
                     <div className="caseSection" id="prototype">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">PROTOTYPE</h3>
+                            <h3 id="redCaseSideHeader">PROTOTYPE</h3>
                             <h2>Low-Fidelity Sketches</h2>
                         </div>
                         <div className="caseMain">
@@ -229,7 +228,7 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">IDEATE</h3>
+                            <h3 id="redCaseSideHeader">IDEATE</h3>
                             <h2>Concept Testing</h2>
                         </div>
                         <div className="caseMain">
@@ -241,7 +240,7 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">PROTOTYPE</h3>
+                            <h3 id="redCaseSideHeader">PROTOTYPE</h3>
                             <h2>Sketches & Low-Fidelity Wireframes</h2>
                         </div>
                         <div className="caseMain">
@@ -253,7 +252,7 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">PROTOTYPE</h3>
+                            <h3 id="redCaseSideHeader">PROTOTYPE</h3>
                             <h2>High-Fidelity Mockups</h2>
                         </div>
                         <div className="caseMain">
@@ -265,7 +264,7 @@ function Toast() {
 
                     <div className="caseSection" id="test">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">TEST</h3>
+                            <h3 id="redCaseSideHeader">TEST</h3>
                             <h2>User Testing</h2>
                         </div>
                         <div className="caseMain">
@@ -277,7 +276,7 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">TEST</h3>
+                            <h3 id="redCaseSideHeader">TEST</h3>
                             <h2>Outcomes</h2>
                         </div>
                         <div className="caseMain">
@@ -289,7 +288,7 @@ function Toast() {
 
                     <div className="caseSection" id="reflect">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">REFLECT</h3>
+                            <h3 id="redCaseSideHeader">REFLECT</h3>
                             <h2>Next Steps</h2>
                         </div>
                         <div className="caseMain">
@@ -301,7 +300,7 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">REFLECT</h3>
+                            <h3 id="redCaseSideHeader">REFLECT</h3>
                             <h2>Takeaways</h2>
                         </div>
                         <div className="caseMain">
