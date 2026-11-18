@@ -2,14 +2,14 @@ import React from 'react'
 import Footer from '../../Footer/Footer.js'
 import './PerformanceAdvisor.css'
 import './Toast.css'
+
+import toastContextStats from './Toast Images/toast-context-stats.svg'
+import toastSolutionFeatures from './Toast Images/toast-solution-features.svg'
 import CaseCover from '../../CaseStudy/CaseCover.js'
 import CaseOverview from '../../CaseStudy/CaseOverview.js'
 import CaseBody from '../../CaseStudy/CaseBody.js'
 import useScrollToTopOnLoad from '../../CaseStudy/useScrollToTopOnLoad.js'
 
-import AISalesContext from './AI Sales Intelligence Images/ai-sales-context.png'
-import aiSalesSolution from './AI Sales Intelligence Images/ai-sales-solution.png'
-import AISalesFeatures from './AI Sales Intelligence Images/ai-sales-features.png'
 import AISalesResearchHeading from './AI Sales Intelligence Images/ai-sales-research-heading.png'
 import AISalesCurrentProduct from './AI Sales Intelligence Images/ai-sales-current-product.png'
 import AISalesCompetitiveAnalysis from './AI Sales Intelligence Images/ai-sales-competitive-analysis.png'
@@ -90,49 +90,34 @@ function Toast() {
 
                     <div className="caseSection" id="project-summary">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">PROJECT SUMMARY</h3>
-                            <h2>Context</h2>
+                            <h3 id="toastCaseSideHeader">CONTEXT</h3>
                         </div>
                         <div className="caseMain">
-                            <h1 className="caseSectionHeader">You might be wondering... what is MongoDB?</h1>
-                            <p className="caseText">MongoDB is the world’s <span className="fitkitchBoldText">most popular non-relational cloud database</span> where developers can flexibly manage their data to build applications faster. It’s used by everyone from junior developers to mid-sized startups to  <span className="fitkitchBoldText">massive enterprises like Adobe and JP Morgan Chase.</span></p>
-                            <img loading="lazy" src={AISalesContext} width="800" alt=''/>
+                            <h1 className="caseSectionHeader">What is Toast (besides bread)?</h1>
+                            <p className="caseText">Toast builds software that helps restaurants run their business, from taking orders to managing payroll. You’ve likely used it when paying at a restaurant or a local coffee shop.</p>
+                            <p className="caseText">Toast is now <span className="fitkitchBoldText">expanding into new verticals,</span> including convenience stores, bottle shops, and grocery stores. My team is building an <span className="fitkitchBoldText">inventory solution for retail businesses</span> to track, manage, and optimize the products they sell.</p>
+                            <img loading="lazy" src={toastContextStats} width="800" alt='20% of U.S. restaurants use Toast. 189k businesses across the globe use Toast. $240B of transactions processed every year.'/>
                         </div>
                     </div>
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">PROJECT SUMMARY</h3>
-                            <h2>Solution</h2>
+                            <h3 id="toastCaseSideHeader">PROBLEM</h3>
                         </div>
                         <div className="caseMain">
-                            <h1 className="caseSectionHeader">AI-powered customer intelligence for business leaders at MongoDB</h1>
-                            <p className="caseText">Born out of a need to accelerate data-driven decision-making for key business leaders at MongoDB, we launched a conversational AI chatbot that <span className="fitkitchBoldText">aggregates customer insights and trends from a previously untapped body</span> of historical sales call transcripts. Leaders spanning multiple business units like Sales, Marketing, and Product can ask any question they want to quickly understand customer sentiment, product feedback, and success of sales messaging and marketing campaigns. </p>
-                            <p className="caseText">By getting these high-level insights about MongoDB’s customers into the hands of our business leadership, they can quickly make <span className="fitkitchBoldText">data-backed decisions</span> to optimize product and Go-to-Market (GTM) strategy, ultimately <span className="fitkitchBoldText">acquiring more customers and driving revenue.</span></p>
-                            <img loading="lazy" src={aiSalesSolution} width="900" alt=''/>
+                            <h1 className="caseSectionHeader">Managing inventory one item at a time is slow</h1>
+                            <p className="caseText">Our mobile app only lets users update inventory one item at a time. If a customer breaks five bottles of wine, an employee has to log each one separately, which is extremely <span className="fitkitchBoldText">time-consuming and error-prone.</span> Typically, they skip the task entirely, which leads to <span className="fitkitchBoldText">inaccurate inventory and reporting.</span></p>
                         </div>
                     </div>
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">PROJECT SUMMARY</h3>
-                            <h2>Problem</h2>
+                            <h3 id="toastCaseSideHeader">SOLUTION</h3>
                         </div>
                         <div className="caseMain">
-                            <h1 className="caseSectionHeader">Business leaders are too removed from our customers in their day-to-day</h1>
-                            <p className="caseText">For years, senior business leaders at MongoDB have attempted to understand our customers by talking with the sales team, who consistently and actively talk with customers. However, this process of <span className="fitkitchBoldText">collecting anecdotal feedback from sales reps is time-consuming,</span> labor-intensive, and more subjective than objective.</p>
-                            <p className="caseText">Meanwhile, almost every conversation a sales rep has with a prospective or existing customer is recorded as a transcript. We decided to leverage this <span className="fitkitchBoldText">unused, ever-growing database of 100,000+ sales call transcripts</span> to make actionable customer insights more accessible to all leaders.</p>
-                        </div>
-                    </div>
-
-                    <div className="caseSection">
-                        <div className="caseSideHeader">
-                            <h3 id="toastCaseSideHeader">PROJECT SUMMARY</h3>
-                            <h2>Solution Overview</h2>
-                        </div>
-                        <div className="caseMain">
-                            <h1 className="caseSectionHeader">Main features of this AI sales intelligence chatbot</h1>
-                            <img loading="lazy" src={AISalesFeatures} width="1000" alt=''/>
+                            <h1 className="caseSectionHeader">Update inventory as fast as ringing up a sale</h1>
+                            <p className="caseText">We built a single scanning flow that powers critical bulk inventory tasks. Users build a list once and apply it across tasks, turning dozens of individual updates into <span className="fitkitchBoldText">one continuous workflow.</span></p>
+                            <img loading="lazy" src={toastSolutionFeatures} width="1000" alt='01: Scan and build your list. 02: Complete critical tasks, like adjusting quantities, low stock alerts, and printing labels.' style={{ marginTop: "30px" }}/>
                         </div>
                     </div>
 
