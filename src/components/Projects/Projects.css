@@ -388,3 +388,11 @@
     background-clip: text;
     color: transparent;
 }
+#moreFitkitchMockup {
+    width: 55%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}

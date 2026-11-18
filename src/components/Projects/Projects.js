@@ -98,20 +98,7 @@ function Projects() {
                     </div>
                 </Link> */}
 
-                <Link to="/fitkitch-case-study">
-                    <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container2" id="projectContainer">
-                        <div class="projectIdentifiers">
-                            <h2>FitKitch</h2>
-                            <h4>MOBILE</h4>
-                        </div>
-                        <h1 id="chronicleDescriptionGradient">Promoting daily fitness through community action</h1>
-                        <div class="projectTags">
-                            <h3 class="projectTag">B2C</h3>
-                            <h3 class="projectTag">Health</h3>
-                        </div>
-                        <img id="container2Mockup" src={fitkitchBetterMockup} alt='' />
-                    </div>
-                </Link>
+                {/* FitKitch moved to More Projects */}
 
             </div>
             
@@ -136,14 +123,16 @@ function Projects() {
                     </div>
                 </Link>
 
-                <Link class="dartmouthPathfinder">
+                <Link to="/fitkitch-case-study" onClick={() => {window.scrollTo({top: 0, left: 0});}}>
                     <div class="chronicle">
-                        <h3>Budget Balloon</h3>
-                        <h2>Motivating teens to build healthy spending habits</h2>
+                        <h3>FitKitch</h3>
+                        <h2>Promoting daily fitness through community action</h2>
                         <h4>UX Design</h4>
-                        <img id="dartmouthPathfinderMockup" src={budgetBalloonMockup} alt="Dartmouth Pathfinder Laptop Mockup" />
+                        <img id="moreFitkitchMockup" src={fitkitchBetterMockup} alt="FitKitch mobile mockup" />
                     </div>
                 </Link>
+
+                {/* Hidden for now
 
                 <Link class="dartmouthPathfinder">
                     <div class="budgetBalloon">
@@ -174,6 +163,7 @@ function Projects() {
                     <h4>Software Engineer</h4>
                     <img id="personalWebsiteMockup" src={personalWebsiteMockup} alt="Personal Website Laptop Mockup" />
                 </div>
+                */}
                 {/* <div class="personalWebsite">
                     <h3>Personal Website</h3>
                     <h2>Developed personal website using React.js</h2>
