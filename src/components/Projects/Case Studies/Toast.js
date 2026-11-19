@@ -205,7 +205,7 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">IDEATE</h3>
+                            <h3 id="redCaseSideHeader">PROTOTYPE</h3>
                             <h2>Concept Testing</h2>
                         </div>
                         <div className="caseMain">
