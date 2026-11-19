@@ -17,10 +17,10 @@ import AISparkleIcon from './ai-sparkle-icon.png'
 import AISalesCoverChatbot from './Case Studies/AI Sales Intelligence Images/ai-sales-cover-chatbot.svg'
 import AISalesCoverChartTable from './Case Studies/AI Sales Intelligence Images/ai-sales-cover-chart-table.svg'
 import PortfolioCoverMockups from './Case Studies/Account Portfolio Images/portfolio-cover-mockups.svg'
-import FitkitchCoverMockups from './Case Studies/Fitkitch Images/fitkitch-cover-mockups.svg'
+import ToastCoverMockups from './Case Studies/Toast Images/toast-cover-mockups.svg'
 
 // Cover mockups of the featured case studies, fetched in the background so they show instantly on click
-const FEATURED_COVER_MOCKUPS = [AISalesCoverChatbot, AISalesCoverChartTable, PortfolioCoverMockups, FitkitchCoverMockups]
+const FEATURED_COVER_MOCKUPS = [AISalesCoverChatbot, AISalesCoverChartTable, PortfolioCoverMockups, ToastCoverMockups]
 
 function Projects() {
     useEffect(() => {
@@ -98,18 +98,19 @@ function Projects() {
                     </div>
                 </Link> */}
 
-                <Link to="/fitkitch-case-study">
+                <Link to="/toast-case-study">
                     <div onClick={() => {window.scrollTo({top: 0, left: 0});}} class="container2" id="projectContainer">
                         <div class="projectIdentifiers">
-                            <h2>FitKitch</h2>
+                            <h2>Toast</h2>
                             <h4>MOBILE</h4>
                         </div>
-                        <h1 id="chronicleDescriptionGradient">Promoting daily fitness through community action</h1>
+                        <h1 id="chronicleDescriptionGradient">Streamlining <span style={{whiteSpace: "nowrap"}}>on-the-go</span> tasks for merchants</h1>
                         <div class="projectTags">
-                            <h3 class="projectTag">B2C</h3>
-                            <h3 class="projectTag">Health</h3>
+                            <h3 class="projectTag">Retail</h3>
+                            <h3 class="projectTag">iOS</h3>
+                            <h3 class="projectTag">Android</h3>
                         </div>
-                        <img id="container2Mockup" src={fitkitchBetterMockup} alt='' />
+                        <img className="cardPhones" src={ToastCoverMockups} alt='Barcode scanner and Adjust quantities screens' />
                     </div>
                 </Link>
 
@@ -136,14 +137,17 @@ function Projects() {
                     </div>
                 </Link>
 
-                <Link class="dartmouthPathfinder">
+                {/* Not clickable for now; the span lays out like the link wrappers on the other cards */}
+                <span>
                     <div class="chronicle">
-                        <h3>Budget Balloon</h3>
-                        <h2>Motivating teens to build healthy spending habits</h2>
+                        <h3>FitKitch</h3>
+                        <h2>Promoting daily fitness through community action</h2>
                         <h4>UX Design</h4>
-                        <img id="dartmouthPathfinderMockup" src={budgetBalloonMockup} alt="Dartmouth Pathfinder Laptop Mockup" />
+                        <img id="moreFitkitchMockup" src={fitkitchBetterMockup} alt="FitKitch mobile mockup" />
                     </div>
-                </Link>
+                </span>
+
+                {/* Hidden for now
 
                 <Link class="dartmouthPathfinder">
                     <div class="budgetBalloon">
@@ -174,6 +178,7 @@ function Projects() {
                     <h4>Software Engineer</h4>
                     <img id="personalWebsiteMockup" src={personalWebsiteMockup} alt="Personal Website Laptop Mockup" />
                 </div>
+                */}
                 {/* <div class="personalWebsite">
                     <h3>Personal Website</h3>
                     <h2>Developed personal website using React.js</h2>
