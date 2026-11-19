@@ -40,7 +40,7 @@ function Toast() {
                 background="linear-gradient(to bottom right, #FFB1B1, #FF89C0)"
                 accent="#FF7777"
                 progressColor="#E96060"
-                mockupsHeight={498}
+                mockupsHeight={399}
                 mockups={[
                     { src: toastCoverMockups, alt: 'Barcode scanner and Adjust quantities screens', x: 161, y: 15, width: 457 },
                 ]}
