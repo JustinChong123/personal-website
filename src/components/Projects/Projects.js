@@ -17,10 +17,10 @@ import AISparkleIcon from './ai-sparkle-icon.png'
 import AISalesCoverChatbot from './Case Studies/AI Sales Intelligence Images/ai-sales-cover-chatbot.svg'
 import AISalesCoverChartTable from './Case Studies/AI Sales Intelligence Images/ai-sales-cover-chart-table.svg'
 import PortfolioCoverMockups from './Case Studies/Account Portfolio Images/portfolio-cover-mockups.svg'
-import FitkitchCoverMockups from './Case Studies/Fitkitch Images/fitkitch-cover-mockups.svg'
+import ToastCoverMockups from './Case Studies/Toast Images/toast-cover-mockups.svg'
 
 // Cover mockups of the featured case studies, fetched in the background so they show instantly on click
-const FEATURED_COVER_MOCKUPS = [AISalesCoverChatbot, AISalesCoverChartTable, PortfolioCoverMockups, FitkitchCoverMockups]
+const FEATURED_COVER_MOCKUPS = [AISalesCoverChatbot, AISalesCoverChartTable, PortfolioCoverMockups, ToastCoverMockups]
 
 function Projects() {
     useEffect(() => {
@@ -110,6 +110,7 @@ function Projects() {
                             <h3 class="projectTag">iOS</h3>
                             <h3 class="projectTag">Android</h3>
                         </div>
+                        <img className="cardPhones" src={ToastCoverMockups} alt='Barcode scanner and Adjust quantities screens' />
                     </div>
                 </Link>
 

@@ -2,6 +2,7 @@ import React from 'react'
 import Footer from '../../Footer/Footer.js'
 import './PerformanceAdvisor.css'
 
+import toastCoverMockups from './Toast Images/toast-cover-mockups.svg'
 import toastContextStats from './Toast Images/toast-context-stats.svg'
 import toastSolutionFeatures from './Toast Images/toast-solution-features.svg'
 import toastCompetitiveAnalysis from './Toast Images/toast-competitive-analysis.svg'
@@ -39,8 +40,10 @@ function Toast() {
                 background="linear-gradient(to bottom right, #FFB1B1, #FF89C0)"
                 accent="#FF7777"
                 progressColor="#E96060"
-                mockupsHeight={399}
-                mockups={[]}
+                mockupsHeight={498}
+                mockups={[
+                    { src: toastCoverMockups, alt: 'Barcode scanner and Adjust quantities screens', x: 161, y: 15, width: 457 },
+                ]}
             />
 
             <div className="budgetBalloonContent">
