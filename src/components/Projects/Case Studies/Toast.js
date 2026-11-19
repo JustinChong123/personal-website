@@ -4,18 +4,17 @@ import './PerformanceAdvisor.css'
 
 import toastContextStats from './Toast Images/toast-context-stats.svg'
 import toastSolutionFeatures from './Toast Images/toast-solution-features.svg'
+import toastCompetitiveAnalysis from './Toast Images/toast-competitive-analysis.svg'
+import toastKeyNeeds from './Toast Images/toast-key-needs.svg'
+import toastPersonas from './Toast Images/toast-personas.svg'
+import toastPOV from './Toast Images/toast-pov.svg'
+import toastHMW from './Toast Images/toast-hmw.svg'
 import CaseCover from '../../CaseStudy/CaseCover.js'
 import CaseOverview from '../../CaseStudy/CaseOverview.js'
 import CaseBody from '../../CaseStudy/CaseBody.js'
 import useScrollToTopOnLoad from '../../CaseStudy/useScrollToTopOnLoad.js'
 
 import AISalesResearchHeading from './AI Sales Intelligence Images/ai-sales-research-heading.png'
-import AISalesCurrentProduct from './AI Sales Intelligence Images/ai-sales-current-product.png'
-import AISalesCompetitiveAnalysis from './AI Sales Intelligence Images/ai-sales-competitive-analysis.png'
-import AISalesNeeds from './AI Sales Intelligence Images/ai-sales-needs.png'
-import AISalesPersonas from './AI Sales Intelligence Images/ai-sales-personas.png'
-import AISalesPOV from './AI Sales Intelligence Images/ai-sales-pov.png'
-import AISalesHMW from './AI Sales Intelligence Images/ai-sales-hmw.png'
 import AISalesDesignHeading from './AI Sales Intelligence Images/ai-sales-design-heading.png'
 import AISalesObjectives from './AI Sales Intelligence Images/ai-sales-objectives.png'
 import AISalesSketches from './AI Sales Intelligence Images/ai-sales-sketches.png'
@@ -125,68 +124,56 @@ function Toast() {
                     <div className="caseSection">
                         <div className="caseSideHeader">
                             <h3 id="redCaseSideHeader">RESEARCH</h3>
-                            <h2>Current Product State</h2>
-                        </div>
-                        <div className="caseMain">
-                            <h1 className="caseSectionHeader">Our goal: take a no-frills proof of concept to the next level</h1>
-                            <p className="caseText">The currently existing tool consists of pre-made analyses with their own pre-built prompts that our LLM uses to <span className="fitkitchBoldText">generate a dataset of results to answer the core question of the analysis.</span> For example, if the analysis is “Identify top 10 complaints from existing customers in the last 30 days”, the tool outputs a table with complaints and a list of customers who mentioned that complaint in sales calls.</p>
-                            <img loading="lazy" src={AISalesCurrentProduct} width="950" alt=''/>
-                        </div>
-                    </div>
-
-                    <div className="caseSection">
-                        <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">RESEARCH</h3>
                             <h2>Competitive Analysis</h2>
                         </div>
                         <div className="caseMain">
-                            <h1 className="caseSectionHeader">Understanding how B2B data analytics tools integrate AI</h1>
-                            <p className="caseText">I conducted industry research on AI-powered data analytics tools meant for enterprises and <span className="fitkitchBoldText">categorized the vendors into 3 core functionalities</span> we want to blend into our tool. <span className="fitkitchBoldText">Business intelligence (BI) tools</span> transform raw data into meaningful insights for corporations, <span className="fitkitchBoldText">self-service data analytics</span> use AI to lower the technical barrier for data exploration, and <span className="fitkitchBoldText">CRM platforms</span> specialize in aggregating customer data and interactions.</p>
-                            <img loading="lazy" src={AISalesCompetitiveAnalysis} width="900" alt=''/>
+                            <h1 className="caseSectionHeader">How do other apps make bulk actions intuitive and powerful?</h1>
+                            <p className="caseText">I researched how other products handle bulk actions, looking at <span className="fitkitchBoldText">direct competitors</span> in inventory management and <span className="fitkitchBoldText">tools outside the industry,</span> like Gmail and CVS Health. The goal was to understand what makes working with many items at once feel natural.</p>
+                            <img loading="lazy" src={toastCompetitiveAnalysis} width="1000" alt='Three takeaways: an obvious entry point, handling mixed actions, and flexible selection.'/>
                         </div>
                     </div>
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
                             <h3 id="redCaseSideHeader">RESEARCH</h3>
-                            <h2>User Interviews & Needs</h2>
+                            <h2>User Interviews</h2>
                         </div>
                         <div className="caseMain">
-                            <h1 className="caseSectionHeader">Users want to abstract away the technical grunt work</h1>
-                            <p className="caseText">I conducted user interviews with 9 business leaders at MongoDB <span className="fitkitchBoldText">ranging from Directors to Senior Vice Presidents.</span> While the type of questions they want to answer differ, I discovered key common needs among all of them that we needed to address to <span className="fitkitchBoldText">make this tool scalable and powerful.</span></p>
-                            <img loading="lazy" src={AISalesNeeds} width="950" alt=''/>
-                        </div>
-                    </div>
-
-                    <div className="caseSection">
-                        <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">RESEARCH</h3>
-                            <h2>User Personas</h2>
-                        </div>
-                        <div className="caseMain">
-                            <h1 className="caseSectionHeader">Leaders care about customer sentiment, personas, and outcomes</h1>
-                            <p className="caseText">We interviewed 9 leaders across 4 business units who would benefit the most from getting their finger closer to the pulse of what’s happening with customers. By investigating the types of questions leaders want to drill into, we better understood our <span className="fitkitchBoldText">users’ mental model and what their objectives are coming into this tool.</span></p>
-                            <img loading="lazy" src={AISalesPersonas} width="950" alt=''/>
+                            <h1 className="caseSectionHeader">Users prioritize customizability and speed</h1>
+                            <p className="caseText">I <span className="fitkitchBoldText">interviewed 7 owners, managers, and employees</span> across a range of businesses, from an Italian specialty deli to a cigarette shop.</p>
+                            <img loading="lazy" src={toastKeyNeeds} width="1000" alt='Key needs: a barcode-first approach, agentic freedom, and speed and convenience.'/>
                         </div>
                     </div>
 
                     <div className="caseSection" id="define">
                         <div className="caseSideHeader">
                             <h3 id="redCaseSideHeader">DEFINE</h3>
-                            <h2>Point-of-View Statement</h2>
+                            <h2>User Personas</h2>
                         </div>
                         <div className="caseMain">
-                        <img loading="lazy" src={AISalesPOV} width="800" alt=''/>
+                            <h1 className="caseSectionHeader">Two personas need different levels of access</h1>
+                            <p className="caseText">We identified two main types of users in retail and grocery stores. Their responsibilities differ, which shape the <span className="fitkitchBoldText">actions and features they need to access.</span></p>
+                            <img loading="lazy" src={toastPersonas} width="1000" alt='Personas: frontline staff, who only need access to their assigned tasks, and managers and owners, who need full access.'/>
                         </div>
                     </div>
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
                             <h3 id="redCaseSideHeader">DEFINE</h3>
-                            <h2>How Might We Statements</h2>
+                            <h2>Point of View Statements</h2>
                         </div>
                         <div className="caseMain">
-                        <img loading="lazy" src={AISalesHMW} width="800" alt=''/>
+                            <img loading="lazy" src={toastPOV} width="920" alt='Store staff need to update many items at once in order to keep inventory accurate without taking time away from customers.'/>
+                        </div>
+                    </div>
+
+                    <div className="caseSection">
+                        <div className="caseSideHeader">
+                            <h3 id="redCaseSideHeader">DEFINE</h3>
+                            <h2>How Might We (HMW) Statements</h2>
+                        </div>
+                        <div className="caseMain">
+                            <img loading="lazy" src={toastHMW} width="1000" alt='HMW enable store staff to move through their inventory work as fast as they move through the store? HMW empower store staff to turn a walk down the aisle into getting all their inventory work done?'/>
                         </div>
                     </div>
 
