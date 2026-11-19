@@ -160,7 +160,7 @@ function Toast() {
                             <h2>How Might We (HMW) Statements</h2>
                         </div>
                         <div className="caseMain">
-                            <img loading="lazy" src={toastHMW} width="1000" alt='HMW enable store staff to move through their inventory work as fast as they move through the store? HMW empower store staff to turn a walk down the aisle into getting all their inventory work done?'/>
+                            <img loading="lazy" src={toastHMW} width="750" style={{ maxWidth: "75%" }} alt='HMW enable store staff to move through their inventory work as fast as they move through the store? HMW empower store staff to turn a walk down the aisle into getting all their inventory work done?'/>
                         </div>
                     </div>
 
@@ -220,7 +220,7 @@ function Toast() {
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">Designing for speed on the shop floor</h1>
                             <p className="caseText">Beyond core tasks, we focused on delightful moments that make inventory work <span className="fitkitchBoldText">go smoother in a hectic store.</span> Inventory is just one of many things store teams juggle each day, so every second saved makes a difference.</p>
-                            <img loading="lazy" src={toastHighFiMockups} width="1000" alt='High-fidelity mockups: hardware interaction, manual item lookup, and reusing lists across tasks.' style={{ marginTop: "20px" }}/>
+                            <img loading="lazy" src={toastHighFiMockups} width="938" alt='High-fidelity mockups: hardware interaction, manual item lookup, and reusing lists across tasks.' style={{ marginTop: "20px", maxWidth: "93.84%" }}/>
                         </div>
                     </div>
 
