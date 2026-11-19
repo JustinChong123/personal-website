@@ -10,18 +10,15 @@ import toastPersonas from './Toast Images/toast-personas.svg'
 import toastPOV from './Toast Images/toast-pov.svg'
 import toastHMW from './Toast Images/toast-hmw.svg'
 import toastResearchHeading from './Toast Images/toast-research-heading.svg'
+import toastDesignHeading from './Toast Images/toast-design-heading.svg'
+import toastObjectives from './Toast Images/toast-objectives.svg'
+import toastSketches from './Toast Images/toast-sketches.svg'
+import toastMidFiPrototypes from './Toast Images/toast-mid-fi-prototypes.svg'
 import CaseCover from '../../CaseStudy/CaseCover.js'
 import CaseOverview from '../../CaseStudy/CaseOverview.js'
 import CaseBody from '../../CaseStudy/CaseBody.js'
 import useScrollToTopOnLoad from '../../CaseStudy/useScrollToTopOnLoad.js'
 
-import AISalesDesignHeading from './AI Sales Intelligence Images/ai-sales-design-heading.png'
-import AISalesObjectives from './AI Sales Intelligence Images/ai-sales-objectives.png'
-import AISalesSketches from './AI Sales Intelligence Images/ai-sales-sketches.png'
-import AISalesWireframes from './AI Sales Intelligence Images/ai-sales-wireframes.png'
-import AISalesConceptTesting from './AI Sales Intelligence Images/ai-sales-concept-testing.png'
-import AISalesNewWireframes from './AI Sales Intelligence Images/ai-sales-new-wireframes.png'
-import AISalesMockups from './AI Sales Intelligence Images/ai-sales-mockups.png'
 import AISalesUserTesting from './AI Sales Intelligence Images/ai-sales-user-testing.png'
 import AISalesNextSteps from './AI Sales Intelligence Images/ai-sales-next-steps.png'
 import AISalesOutcomes from './AI Sales Intelligence Images/ai-sales-outcomes.svg'
@@ -177,7 +174,7 @@ function Toast() {
                         </div>
                     </div>
 
-                    <img loading="lazy" id="ideate" src={AISalesDesignHeading} className="caseStudyHeading" width='100%' alt=''/>
+                    <img loading="lazy" id="ideate" src={toastDesignHeading} className="caseStudyHeading" width='100%' alt='UX/UI Design: using AI prototyping tools like Claude Design and Magic Patterns, I quickly explored concepts and honed in on a robust direction.'/>
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
@@ -185,67 +182,31 @@ function Toast() {
                             <h2>Design Objectives</h2>
                         </div>
                         <div className="caseMain">
-                        <img loading="lazy" src={AISalesObjectives} width="900" alt=''/>
+                            <img loading="lazy" src={toastObjectives} width="830" alt='Design objectives: speedy, flexible, and identity-aware.'/>
                         </div>
                     </div>
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
                             <h3 id="redCaseSideHeader">IDEATE</h3>
-                            <h2>Flow Sketches</h2>
+                            <h2>User Flows and Paper Sketches</h2>
                         </div>
                         <div className="caseMain">
-                            <h1 className="caseSectionHeader">A tool to test & perfect a prompt that outputs a dataset of results</h1>
-                            <p className="caseText">Using rough paper sketches, I thought about how users could create their own analyses to remove their reliance on our team painstakingly building them. I <span className="fitkitchBoldText">envisioned a sandbox (testing environment)</span> where users could write a prompt, preview a dataset generated on a small subset of call transcripts, iterate on the prompt, and finally create the analysis.</p>
-                            <img loading="lazy" src={AISalesSketches} width="950" alt=''/>
+                            <h1 className="caseSectionHeader">Separating bulk actions from single-scan</h1>
+                            <p className="caseText">I used flow diagrams and paper sketches to explore how users might select multiple items and act on them all at once. After feedback from stakeholders and engineering, we deprioritized other directions and pursued a bulk actions mode the user <span className="fitkitchBoldText">intentionally enables</span> from the default single scan.</p>
+                            <img loading="lazy" src={toastSketches} width="1000" alt='Paper sketches: separating single-scan from multi-scan (chosen), picking from the catalog, and queueing from single scan.'/>
                         </div>
                     </div>
 
                     <div className="caseSection" id="prototype">
                         <div className="caseSideHeader">
                             <h3 id="redCaseSideHeader">PROTOTYPE</h3>
-                            <h2>Low-Fidelity Sketches</h2>
+                            <h2>Mid-Fidelity Prototyping with AI</h2>
                         </div>
                         <div className="caseMain">
-                            <h1 className="caseSectionHeader">Making prompt building as easy, fast, and non-technical as possible</h1>
-                            <p className="caseText">Through multiple iterations with constant feedback from my stakeholders, I expanded different ideas to make prompt building more accessible to leaders with <span className="fitkitchBoldText">limited time and varying technical backgrounds.</span> Here are a couple features we explored:</p>
-                            <img loading="lazy" src={AISalesWireframes} width="1000" alt=''/>
-                        </div>
-                    </div>
-
-                    <div className="caseSection">
-                        <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">IDEATE</h3>
-                            <h2>Concept Testing</h2>
-                        </div>
-                        <div className="caseMain">
-                            <h1 className="caseSectionHeader">Major concept shift to prioritize result usability over prompt building</h1>
-                            <p className="caseText">We tested these concepts with a couple business leaders. They liked writing their own prompts, but they thought that effort was anti-climactic since the result was essentially a massive Excel sheet they had to dig through for insights. After discussing with my PM and engineers, we decided to <span className="fitkitchBoldText">de-prioritize prompt building capabilities</span> for a future version and <span className="fitkitchBoldText">focus on immediately surfacing more meaningful answers.</span></p>
-                            <img loading="lazy" src={AISalesConceptTesting} width="1000" alt=''/>
-                        </div>
-                    </div>
-
-                    <div className="caseSection">
-                        <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">PROTOTYPE</h3>
-                            <h2>Sketches & Low-Fidelity Wireframes</h2>
-                        </div>
-                        <div className="caseMain">
-                            <h1 className="caseSectionHeader">Chat with your data in natural language for insights in mere seconds</h1>
-                            <p className="caseText">Going back to the drawing board, I brainstormed how to <span className="fitkitchBoldText">package insights from complex data</span> in an understandable, actionable way. We iterated on an tool that <span className="fitkitchBoldText">analyzes the AI-generated dataset, uncovers patterns,</span> and surfaces valuable insights in natural language. Users can ask questions in a conversational environment to progressively dig deeper, find examples from the data, and discover related insights.</p>
-                            <img loading="lazy" src={AISalesNewWireframes} width="1000" alt=''/>
-                        </div>
-                    </div>
-
-                    <div className="caseSection">
-                        <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">PROTOTYPE</h3>
-                            <h2>High-Fidelity Mockups</h2>
-                        </div>
-                        <div className="caseMain">
-                            <h1 className="caseSectionHeader">Polishing features to flatten technical barriers to data exploration</h1>
-                            <p className="caseText">Moving to high-fidelity designs with this core workflow of “chatting with your data”, we iterated on additional features that would <span className="fitkitchBoldText">accelerate the process of capturing meaningful insights.</span> Here are some key decisions we made:</p>
-                            <img loading="lazy" src={AISalesMockups} width="1000" alt=''/>
+                            <h1 className="caseSectionHeader">Designing for the most common user tasks</h1>
+                            <p className="caseText">Using research insights, I identified the most common tasks in a store’s daily operations and prototyped those flows in Magic Patterns, an AI design tool. <span className="fitkitchBoldText">Building interactivity early was key,</span> since the speed of scanning and building a list is hard to convey in static screens.</p>
+                            <img loading="lazy" src={toastMidFiPrototypes} width="1000" alt='Mid-fidelity prototypes: adjust quantities, enable low stock alerts, and print barcode labels.' style={{ marginTop: "20px" }}/>
                         </div>
                     </div>
 
