@@ -9,12 +9,12 @@ import toastKeyNeeds from './Toast Images/toast-key-needs.svg'
 import toastPersonas from './Toast Images/toast-personas.svg'
 import toastPOV from './Toast Images/toast-pov.svg'
 import toastHMW from './Toast Images/toast-hmw.svg'
+import toastResearchHeading from './Toast Images/toast-research-heading.svg'
 import CaseCover from '../../CaseStudy/CaseCover.js'
 import CaseOverview from '../../CaseStudy/CaseOverview.js'
 import CaseBody from '../../CaseStudy/CaseBody.js'
 import useScrollToTopOnLoad from '../../CaseStudy/useScrollToTopOnLoad.js'
 
-import AISalesResearchHeading from './AI Sales Intelligence Images/ai-sales-research-heading.png'
 import AISalesDesignHeading from './AI Sales Intelligence Images/ai-sales-design-heading.png'
 import AISalesObjectives from './AI Sales Intelligence Images/ai-sales-objectives.png'
 import AISalesSketches from './AI Sales Intelligence Images/ai-sales-sketches.png'
@@ -119,7 +119,7 @@ function Toast() {
                         </div>
                     </div>
 
-                    <img loading="lazy" id="research" src={AISalesResearchHeading} className="caseStudyHeading" width='100%' alt=''/>
+                    <img loading="lazy" id="research" src={toastResearchHeading} className="caseStudyHeading" width='100%' alt='User Research: we conducted research to understand users’ current workflows and pain points, segmented by persona.'/>
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
