@@ -17,7 +17,7 @@ import AISparkleIcon from './ai-sparkle-icon.png'
 import AISalesCoverChatbot from './Case Studies/AI Sales Intelligence Images/ai-sales-cover-chatbot.svg'
 import AISalesCoverChartTable from './Case Studies/AI Sales Intelligence Images/ai-sales-cover-chart-table.svg'
 import PortfolioCoverMockups from './Case Studies/Account Portfolio Images/portfolio-cover-mockups.svg'
-import ToastCoverMockups from './Case Studies/Toast Images/toast-cover-mockups.svg'
+import ToastCoverMockups from './Case Studies/Toast Images/toast-cover-mockups.webp'
 
 // Cover mockups of the featured case studies, fetched in the background so they show instantly on click
 const FEATURED_COVER_MOCKUPS = [AISalesCoverChatbot, AISalesCoverChartTable, PortfolioCoverMockups, ToastCoverMockups]
