@@ -14,17 +14,17 @@ import toastDesignHeading from './Toast Images/toast-design-heading.svg'
 import toastObjectives from './Toast Images/toast-objectives.svg'
 import toastSketches from './Toast Images/toast-sketches.svg'
 import toastMidFiPrototypes from './Toast Images/toast-mid-fi-prototypes.svg'
+import toastConceptTesting from './Toast Images/toast-concept-testing.svg'
+import toastHighFiMockups from './Toast Images/toast-high-fi-mockups.svg'
+import toastImprovements from './Toast Images/toast-improvements.svg'
+import toastNextSteps from './Toast Images/toast-next-steps.svg'
+import toastTakeaways from './Toast Images/toast-takeaways.svg'
 import CaseCover from '../../CaseStudy/CaseCover.js'
 import CaseOverview from '../../CaseStudy/CaseOverview.js'
 import CaseBody from '../../CaseStudy/CaseBody.js'
 import useScrollToTopOnLoad from '../../CaseStudy/useScrollToTopOnLoad.js'
 
-import AISalesUserTesting from './AI Sales Intelligence Images/ai-sales-user-testing.png'
-import AISalesNextSteps from './AI Sales Intelligence Images/ai-sales-next-steps.png'
-import AISalesOutcomes from './AI Sales Intelligence Images/ai-sales-outcomes.svg'
-import AISalesTakeaways from './AI Sales Intelligence Images/ai-sales-takeaways.png'
 
-// Structure copied from the AI Sales Intelligence case study; body content below is still the MongoDB placeholder
 function Toast() {
     useScrollToTopOnLoad()
 
@@ -72,16 +72,6 @@ function Toast() {
                         { id: 'reflect', label: 'Reflect' },
                     ]}
                 >
-                    {/* <div className="caseSection">
-                        <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">PROJECT SUMMARY</h3>
-                            <h2>Solution</h2>
-                        </div>
-                        <div className="caseMain">
-                            <h1 className="caseSectionHeader">Enabling developers to holistically diagnose performance issues</h1>
-                            <p className="caseText">Performance Advisor is a <span className="fitkitchBoldText">cloud analytics tool</span> that enables developers to diagnose slow queries and improve performance on their MongoDB database clusters. I <span className="fitkitchBoldText">re-designed Performance Advisor to be “cluster-centric,”</span> enabling novice users and enterprise customers <span className="fitkitchBoldText">to gain high-level, aggregated insights about their performance</span> across different deployment models.</p>
-                        </div>
-                    </div> */}
 
                     <div className="caseSection" id="project-summary">
                         <div className="caseSideHeader">
@@ -210,27 +200,39 @@ function Toast() {
                         </div>
                     </div>
 
-                    <div className="caseSection" id="test">
+                    <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">TEST</h3>
-                            <h2>User Testing</h2>
+                            <h3 id="redCaseSideHeader">IDEATE</h3>
+                            <h2>Concept Testing</h2>
                         </div>
                         <div className="caseMain">
-                            <h1 className="caseSectionHeader">Testing a live, coded prototype revealed gaps in LLM transparency</h1>
-                            <p className="caseText">A Figma prototype of a chatbot poorly simulates the real experience of receiving tailored answers to your inputs. Knowing this in advance, I <span className="fitkitchBoldText">worked Agile with our engineers to begin coding a scrappy prototype</span> after we converged on the core idea during low-fidelity designs. We tested our coded prototype with our original group of 9 business leaders, and we collected insightful feedback. Our engineering team had limited bandwidth so we couldn’t implement large-scale changes, but we are <span className="fitkitchBoldText">prioritizing these features in our future roadmap.</span></p>
-                            <img loading="lazy" src={AISalesUserTesting} width="1000" alt=''/>
+                            <h1 className="caseSectionHeader">Pivoting to an action-oriented UX</h1>
+                            <p className="caseText">After testing this conceptual prototype with stakeholders and customers, we decided to change directions so users select their task before scanning. This allows each list to be <span className="fitkitchBoldText">tailored to the specific task,</span> with the tradeoff that users must define the list’s purpose from the very beginning.</p>
+                            <img loading="lazy" src={toastConceptTesting} width="1000" alt='Old direction: users build their list first, then choose an action. Feedback from users and stakeholders. New direction: users choose their task first, so the list is customized to the action.' style={{ marginTop: "20px" }}/>
                         </div>
                     </div>
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">TEST</h3>
-                            <h2>Outcomes</h2>
+                            <h3 id="redCaseSideHeader">PROTOTYPE</h3>
+                            <h2>High-Fidelity Mockups</h2>
                         </div>
                         <div className="caseMain">
-                            <h1 className="caseSectionHeader">Equipping diverse business leaders with customer foresight</h1>
-                            <p className="caseText">Qualitative and quantitative data about customers is powerful for many different business leaders at MongoDB, from <span className="fitkitchBoldText">driving the north-star vision</span> of our product portfolio or <span className="fitkitchBoldText">quickly adapting to the evolving needs</span> of our largest customers as AI radically disrupts the database industry.</p>
-                            <img loading="lazy" src={AISalesOutcomes} width="1000" alt=''/>
+                            <h1 className="caseSectionHeader">Designing for speed on the shop floor</h1>
+                            <p className="caseText">Beyond core tasks, we focused on delightful moments that make inventory work <span className="fitkitchBoldText">go smoother in a hectic store.</span> Inventory is just one of many things store teams juggle each day, so every second saved makes a difference.</p>
+                            <img loading="lazy" src={toastHighFiMockups} width="1000" alt='High-fidelity mockups: hardware interaction, manual item lookup, and reusing lists across tasks.' style={{ marginTop: "20px" }}/>
+                        </div>
+                    </div>
+
+                    <div className="caseSection" id="test">
+                        <div className="caseSideHeader">
+                            <h3 id="redCaseSideHeader">TEST</h3>
+                            <h2>Usability Testing</h2>
+                        </div>
+                        <div className="caseMain">
+                            <h1 className="caseSectionHeader">Optimizing error-prone workflows</h1>
+                            <p className="caseText">After <span className="fitkitchBoldText">testing with 10 users</span> ranging from retail associates to inventory managers, I improved key moments in the experience where users tend to <span className="fitkitchBoldText">get stuck or make critical mistakes.</span></p>
+                            <img loading="lazy" src={toastImprovements} width="1000" alt='Improvements: preventing accidental scans, data-backed barcode matching, and previewing labels before printing.'/>
                         </div>
                     </div>
 
@@ -240,9 +242,9 @@ function Toast() {
                             <h2>Next Steps</h2>
                         </div>
                         <div className="caseMain">
-                            <h1 className="caseSectionHeader">Strategically expanding to other leaders for buy-in</h1>
-                            <p className="caseText">Once we enable users to ad-hoc build their analysis from scratch, this will <span className="fitkitchBoldText">unlock scalability and accessibility.</span> After we gather enough <span className="fitkitchBoldText">buy-in across senior leadership,</span> we will launch this product to all MongoDB leaders (Directors and above).</p>
-                            <img loading="lazy" src={AISalesNextSteps} width="900" alt=''/>
+                            <h1 className="caseSectionHeader">Driving feature stickiness and subscription upgrades</h1>
+                            <p className="caseText">After a promising response to the MVP, we identified key areas to invest in to make bulk actions more <span className="fitkitchBoldText">powerful and autonomous.</span> These improvements will also serve as an <span className="fitkitchBoldText">acquisition lever</span> to convert more users from our Basic to Pro plan.</p>
+                            <img loading="lazy" src={toastNextSteps} width="1000" alt='Next steps: custom actions with AI, support for more tasks, and collaborative lists.'/>
                         </div>
                     </div>
 
@@ -252,9 +254,9 @@ function Toast() {
                             <h2>Takeaways</h2>
                         </div>
                         <div className="caseMain">
-                            <h1 className="caseSectionHeader">Designing AI experiences is challenging, but rewarding</h1>
-                            <p className="caseText">I faced <span className="fitkitchBoldText">two main challenges</span> in this project that helped me immensely grow as a product designer. First, designing  conversational AI taught me how to <span className="fitkitchBoldText">anticipate the needs of users with an unpredictable LLM.</span> Second, I learned how to <span className="fitkitchBoldText">navigate a complex political web of users</span> since they were all highly opinionated business leaders with different agendas.</p>
-                            <img loading="lazy" style={{ marginBottom: "10vh" }}  src={AISalesTakeaways} width="1000" alt=''/>
+                            <h1 className="caseSectionHeader">Building a foundation that lasts</h1>
+                            <p className="caseText">This project was challenging in the best way. We met the needs of very different users running very different businesses, all while designing a template that fits the shapes and sizes of many tasks (current and future).</p>
+                            <img loading="lazy" src={toastTakeaways} width="1000" alt='Takeaways: prototype at the right fidelity with AI, design for the physical environment, and measure success in context.' style={{ marginBottom: "10vh" }}/>
                         </div>
                     </div>
                 </CaseBody>
