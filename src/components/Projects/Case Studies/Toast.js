@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../../Footer/Footer.js'
 import './PerformanceAdvisor.css'
 
-import toastCoverMockups from './Toast Images/toast-cover-mockups.svg'
+import toastCoverMockups from './Toast Images/toast-cover-mockups.webp'
 import toastContextStats from './Toast Images/toast-context-stats.svg'
 import toastSolutionFeatures from './Toast Images/toast-solution-features.webp'
 import toastCompetitiveAnalysis from './Toast Images/toast-competitive-analysis.svg'
