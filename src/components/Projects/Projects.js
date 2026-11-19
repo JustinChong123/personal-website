@@ -137,14 +137,15 @@ function Projects() {
                     </div>
                 </Link>
 
-                <Link to="/fitkitch-case-study" onClick={() => {window.scrollTo({top: 0, left: 0});}}>
+                {/* Not clickable for now; the span lays out like the link wrappers on the other cards */}
+                <span>
                     <div class="chronicle">
                         <h3>FitKitch</h3>
                         <h2>Promoting daily fitness through community action</h2>
                         <h4>UX Design</h4>
                         <img id="moreFitkitchMockup" src={fitkitchBetterMockup} alt="FitKitch mobile mockup" />
                     </div>
-                </Link>
+                </span>
 
                 {/* Hidden for now
 
