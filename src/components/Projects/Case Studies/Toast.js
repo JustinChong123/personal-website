@@ -4,7 +4,7 @@ import './PerformanceAdvisor.css'
 
 import toastCoverMockups from './Toast Images/toast-cover-mockups.svg'
 import toastContextStats from './Toast Images/toast-context-stats.svg'
-import toastSolutionFeatures from './Toast Images/toast-solution-features.svg'
+import toastSolutionFeatures from './Toast Images/toast-solution-features.webp'
 import toastCompetitiveAnalysis from './Toast Images/toast-competitive-analysis.svg'
 import toastKeyNeeds from './Toast Images/toast-key-needs.svg'
 import toastPersonas from './Toast Images/toast-personas.svg'
