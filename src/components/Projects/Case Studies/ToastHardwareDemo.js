@@ -22,7 +22,8 @@ function Barcode() {
         x += w
     })
     return (
-        <g className="toastBarcode">
+        // Drawn at its original size, then scaled up to match the larger phones in the base image
+        <g className="toastBarcode" transform="translate(-139.4 8.1) scale(1.18)">
             <rect x={852} y={94} width={98} height={82} rx={8} fill="white" />
             {bars}
             <text x={901} y={168} textAnchor="middle" fontSize="10" fontFamily="'IBM Plex Mono', monospace" fill="#1D1D1F">0 41500 00270 6</text>
@@ -33,7 +34,7 @@ function Barcode() {
 /*
  * High-fidelity mockups with the "Hardware interaction" panel brought to life: a looping screen
  * recording next to a handheld scanner whose beam fires across a barcode each time an item is added.
- * Everything is laid out in the base SVG's 1279-wide coordinate space so it scales with the image.
+ * Everything is laid out in the base SVG's 1287-wide coordinate space so it scales with the image.
  */
 function ToastHardwareDemo() {
     const videoRef = useRef(null)
@@ -92,7 +93,7 @@ function ToastHardwareDemo() {
                 preload="metadata"
                 aria-label="Screen recording: items are added to the Adjust quantities list as they're scanned"
             />
-            <svg className="toastHardwareOverlay" viewBox="0 0 1279 1310" aria-hidden="true">
+            <svg className="toastHardwareOverlay" viewBox="0 0 1287 1395" aria-hidden="true">
                 <defs>
                     <linearGradient id="toastBeamFade" x1="1" y1="0" x2="0" y2="0">
                         <stop offset="0" stopColor="#FF3B30" stopOpacity="0.55" />
@@ -103,8 +104,8 @@ function ToastHardwareDemo() {
                 {/* Remounting the beam on every scan restarts its CSS animation */}
                 {scanCount > 0 && (
                     <g key={scanCount} className="toastScan">
-                        <polygon className="toastBeam" points="1040,131 1040,139 950,154 950,116" fill="url(#toastBeamFade)" />
-                        <rect className="toastScanLine" x={858} y={129} width={86} height={3} rx={1.5} fill="#FF3B30" />
+                        <polygon className="toastBeam" points="1074,162 1074,172 982,192 982,142" fill="url(#toastBeamFade)" />
+                        <rect className="toastScanLine" x={873} y={159} width={102} height={3.5} rx={1.75} fill="#FF3B30" />
                     </g>
                 )}
             </svg>

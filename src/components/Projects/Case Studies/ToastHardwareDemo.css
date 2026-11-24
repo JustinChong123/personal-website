@@ -1,18 +1,18 @@
 /*
- * Same width as the mid-fidelity panels above it: that image is 1363 wide with 1279-wide panels,
- * so this 1279-wide image renders at 1279/1363 of it. The top margin leaves room for the phone,
- * which rises above the first panel.
+ * Panels the same width as the mid-fidelity ones above: that image is 1363 wide with 1279-wide
+ * panels, and this one is 1287 wide with 1279-wide panels, so it renders at 1287/1363 of it.
+ * The top margin leaves room for the phone, which rises above the first panel.
  */
 .toastHardware {
     position: relative;
     container-type: inline-size;
-    width: min(938px, 93.84%);
-    margin-top: calc(20px + min(51px, 5.14%));
+    width: min(944.2px, 94.43%);
+    margin-top: calc(20px + min(74px, 7.41%));
 }
 
-/* One unit of the base SVG's 1279-wide coordinate space */
+/* One unit of the base SVG's 1287-wide coordinate space */
 .toastHardware > * {
-    --u: calc(100cqw / 1279);
+    --u: calc(100cqw / 1287);
 }
 
 .toastHardware .toastHardwareBase {
@@ -24,11 +24,12 @@
 
 .toastHardwareVideo {
     position: absolute;
-    left: calc(600 * var(--u));
-    top: calc(-62 * var(--u));
-    width: calc(210 * var(--u));
+    /* Same size as the phones in the base image, lined up with the phone column in panel 03 */
+    left: calc(586 * var(--u));
+    top: calc(-101 * var(--u));
+    width: calc(248 * var(--u));
     aspect-ratio: 750 / 1624;
-    border-radius: calc(20 * var(--u));
+    border-radius: calc(22 * var(--u));
     box-shadow: 0 calc(6 * var(--u)) calc(28 * var(--u)) rgba(0, 0, 0, 0.14);
     background: #f3f3f3;
     object-fit: cover;
@@ -45,9 +46,9 @@
 
 .toastHardware .toastHardwareScanner {
     position: absolute;
-    left: calc(1010 * var(--u));
-    top: calc(60 * var(--u));
-    width: calc(230 * var(--u));
+    left: calc(1040 * var(--u));
+    top: calc(79 * var(--u));
+    width: calc(272 * var(--u));
     max-width: none;
     height: auto;
 }
