@@ -1,0 +1,101 @@
+/*
+ * Panels the same width as the mid-fidelity ones above: that image is 1363 wide with 1279-wide
+ * panels, and this one is 1287 wide with 1279-wide panels, so it renders at 1287/1363 of it.
+ * The top margin leaves room for the phone, which rises above the first panel.
+ */
+.toastHardware {
+    position: relative;
+    container-type: inline-size;
+    width: min(944.2px, 94.43%);
+    margin-top: calc(20px + min(74px, 7.41%));
+}
+
+/* One unit of the base SVG's 1287-wide coordinate space */
+.toastHardware > * {
+    --u: calc(100cqw / 1287);
+}
+
+.toastHardware .toastHardwareBase {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+.toastHardwareVideo {
+    position: absolute;
+    /* Same size as the phones in the base image, lined up with the phone column in panel 03 */
+    left: calc(586 * var(--u));
+    top: calc(-101 * var(--u));
+    width: calc(248 * var(--u));
+    aspect-ratio: 750 / 1624;
+    border-radius: calc(22 * var(--u));
+    box-shadow: 0 calc(6 * var(--u)) calc(28 * var(--u)) rgba(0, 0, 0, 0.14);
+    background: #f3f3f3;
+    object-fit: cover;
+}
+
+.toastHardwareOverlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+}
+
+.toastHardware .toastHardwareScanner {
+    position: absolute;
+    left: calc(1040 * var(--u));
+    top: calc(79 * var(--u));
+    width: calc(272 * var(--u));
+    max-width: none;
+    height: auto;
+}
+
+/* Scan: the beam flashes from the scanner's nose and a red line lights across the barcode */
+.toastBeam {
+    animation: toastBeamFlash 0.5s ease-out both;
+}
+
+.toastScanLine {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: toastScanLine 0.5s ease-out both;
+}
+
+.toastScannerKick {
+    animation: toastScannerKick 0.35s ease-out;
+}
+
+@keyframes toastBeamFlash {
+    0% { opacity: 0; }
+    12% { opacity: 1; }
+    60% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+@keyframes toastScanLine {
+    0% { opacity: 0; transform: scaleX(0.2); }
+    15% { opacity: 1; transform: scaleX(1); }
+    60% { opacity: 1; transform: scaleX(1); }
+    100% { opacity: 0; transform: scaleX(1); }
+}
+
+@keyframes toastScannerKick {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    30% { transform: translate(calc(-3 * var(--u)), calc(-2 * var(--u))) rotate(-1.5deg); }
+    100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .toastBeam,
+    .toastScanLine {
+        animation: none;
+        opacity: 0;
+    }
+
+    .toastScannerKick {
+        animation: none;
+    }
+}
