@@ -1,6 +1,7 @@
 import React from 'react'
 import Footer from '../../Footer/Footer.js'
 import './PerformanceAdvisor.css'
+import ToastHardwareDemo from './ToastHardwareDemo.js'
 
 import toastCoverMockups from './Toast Images/toast-cover-mockups.webp'
 import toastContextStats from './Toast Images/toast-context-stats.svg'
@@ -16,7 +17,6 @@ import toastObjectives from './Toast Images/toast-objectives.svg'
 import toastSketches from './Toast Images/toast-sketches.svg'
 import toastMidFiPrototypes from './Toast Images/toast-mid-fi-prototypes.svg'
 import toastConceptTesting from './Toast Images/toast-concept-testing.svg'
-import toastHighFiMockups from './Toast Images/toast-high-fi-mockups.svg'
 import toastImprovements from './Toast Images/toast-improvements.svg'
 import toastNextSteps from './Toast Images/toast-next-steps.svg'
 import toastTakeaways from './Toast Images/toast-takeaways.svg'
@@ -223,7 +223,7 @@ function Toast() {
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">Designing for speed on the shop floor</h1>
                             <p className="caseText">Beyond core tasks, we focused on delightful moments that make inventory work <span className="fitkitchBoldText">go smoother in a hectic store.</span> Inventory is just one of many things store teams juggle each day, so every second saved makes a difference.</p>
-                            <img loading="lazy" src={toastHighFiMockups} width="938" alt='High-fidelity mockups: hardware interaction, manual item lookup, and reusing lists across tasks.' style={{ marginTop: "20px", maxWidth: "93.84%" }}/>
+                            <ToastHardwareDemo />
                         </div>
                     </div>
 
