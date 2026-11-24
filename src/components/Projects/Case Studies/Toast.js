@@ -78,7 +78,8 @@ function Toast() {
 
                     <div className="caseSection" id="project-summary">
                         <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">CONTEXT</h3>
+                            <h3 id="redCaseSideHeader">PROJECT SUMMARY</h3>
+                            <h2>Context</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">What is Toast (besides bread)?</h1>
@@ -90,7 +91,8 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">PROBLEM</h3>
+                            <h3 id="redCaseSideHeader">PROJECT SUMMARY</h3>
+                            <h2>Problem</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">Managing inventory one item at a time is slow</h1>
@@ -100,7 +102,8 @@ function Toast() {
 
                     <div className="caseSection">
                         <div className="caseSideHeader">
-                            <h3 id="redCaseSideHeader">SOLUTION</h3>
+                            <h3 id="redCaseSideHeader">PROJECT SUMMARY</h3>
+                            <h2>Solution</h2>
                         </div>
                         <div className="caseMain">
                             <h1 className="caseSectionHeader">Update inventory as fast as ringing up a sale</h1>
