@@ -52,8 +52,8 @@ function Toast() {
                     category="Inventory Management"
                     highlightColor="#FF7777"
                     detailTitleColor="#FF8080"
-                    headline="I designed a way for retail businesses to scan multiple items in their inventory and complete critical everyday tasks from receiving new shipments to updating stock counts."
-                    description="Managing inventory is a physical, often chaotic task happening directly in the aisles of the store. My team is focused on making it easier to manage inventory from a phone, without ever having to open a laptop. We design for businesses of all types, from mom-and-pop convenience stores to grocery chains."
+                    headline="I designed bulk scanning for Toast’s inventory app, so businesses can scan a whole shelf and then receive shipments, log waste, or print labels in one go."
+                    description="Inventory work happens in store aisles and on loading docks, not at a desk. My team brings it all to the phone, so staff never have to open a laptop, whether they work at a convenience store or a grocery chain."
                     details={[
                         { title: 'Context', items: ['Product Designer @ Toast'], note: 'Mobile Inventory in Retail' },
                         { title: 'Team', items: ['1 Product Manager', '1 Engineering Lead', '3 iOS Engineers', '3 Android Engineers'] },
